@@ -408,6 +408,7 @@ body {
 
     position:fixed;
 
+
     top:50%;
 
     left:50%;
@@ -416,6 +417,7 @@ body {
     transform:
 
     translate(-50%,-50%);
+
 
 
     background:#222;
@@ -436,6 +438,12 @@ body {
     max-width:90%;
 
 
+    max-height:80vh;
+
+
+    overflow-y:auto;
+
+
     z-index:1000;
 
 
@@ -449,7 +457,13 @@ body {
 #close-details {
 
 
+    position:sticky;
+
+    top:0;
+
+
     float:right;
+
 
     background:red;
 
@@ -467,7 +481,6 @@ body {
 
 
 }
-
 
 
 
