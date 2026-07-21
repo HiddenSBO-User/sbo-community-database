@@ -80,10 +80,19 @@ error
 function setupCategoryButtons(){
 
 
+const buttons =
 document
-.querySelectorAll(".gear-category-button")
-.forEach(button => {
+.querySelectorAll(".gear-category-button");
 
+
+buttons.forEach(button => {
+
+
+if(button.dataset.type === currentCategory){
+
+button.classList.add("active");
+
+}
 
 
 button.onclick = function(){
@@ -92,6 +101,14 @@ button.onclick = function(){
 
 currentCategory =
 this.dataset.type;
+
+
+
+buttons.forEach(b =>
+b.classList.remove("active")
+);
+
+this.classList.add("active");
 
 
 
@@ -161,6 +178,28 @@ document.getElementById(
 
 
 container.innerHTML = "";
+
+
+
+
+if(gear.length === 0){
+
+
+container.innerHTML = `
+
+<h2 class="no-results">
+
+No gear found
+
+</h2>
+
+`;
+
+
+return;
+
+
+}
 
 
 
@@ -666,7 +705,7 @@ ${item.obtain}
 
 
 box.style.display =
-"block";
+"flex";
 
 
 
