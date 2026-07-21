@@ -146,6 +146,21 @@ body {
 
 
 
+.blacksmith-category-button.active {
+
+    background: #0066ff;
+
+    border-color: #ffd700;
+
+    box-shadow:
+    0 0 0 2px #ffd700;
+
+    font-weight: bold;
+
+}
+
+
+
 
 
 
@@ -190,6 +205,27 @@ body {
 
     cursor:pointer;
 
+
+}
+
+
+
+#blacksmith-subcategories button:hover {
+
+    background: #444;
+
+}
+
+
+
+#blacksmith-subcategories button.active {
+
+    background: #0066ff;
+
+    box-shadow:
+    0 0 0 2px #ffd700;
+
+    font-weight: bold;
 
 }
 
@@ -241,6 +277,29 @@ body {
 
 
 
+.blacksmith-filter-buttons button:hover {
+
+    background: #333;
+
+}
+
+
+
+.blacksmith-filter-buttons button.active {
+
+    background: #0066ff;
+
+    border-color: #ffd700;
+
+    box-shadow:
+    0 0 0 2px #ffd700;
+
+    font-weight: bold;
+
+}
+
+
+
 
 
 
@@ -263,6 +322,20 @@ body {
 
     gap:20px;
 
+
+}
+
+
+
+/* No results message */
+
+.no-results {
+
+    text-align:center;
+
+    width:100%;
+
+    color:#f87171;
 
 }
 
