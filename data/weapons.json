@@ -1,0 +1,3451 @@
+[
+  {
+    "name": "Beginner Sword",
+    "type": "1 Handed",
+    "attack": 3.4,
+    "level": 1,
+    "obtain": "Starter Inventory"
+  },
+  {
+    "name": "Iron Sword",
+    "type": "1 Handed",
+    "attack": 3.4,
+    "level": 1,
+    "obtain": "Floor 1 Shop"
+  },
+  {
+    "name": "Steel Sword",
+    "type": "1 Handed",
+    "attack": 8.4,
+    "level": 5,
+    "obtain": "Floor 1 Shop, Floor 2 Shop"
+  },
+  {
+    "name": "Master Steel Sword",
+    "type": "1 Handed",
+    "attack": 17.4,
+    "level": 10,
+    "obtain": "Blacksmithing, Floor 1 Shop, Floor 2 Shop"
+  },
+  {
+    "name": "Master Steel Sword Mk II",
+    "type": "1 Handed",
+    "attack": 23,
+    "level": 13,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "GrandMaster Steel Blade",
+    "type": "1 Handed",
+    "attack": 30,
+    "level": 16,
+    "obtain": "Kobold Sentinel"
+  },
+  {
+    "name": "GrandMaster Steel Blade Mk II",
+    "type": "1 Handed",
+    "attack": 35,
+    "level": 18,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Corruption Slicer",
+    "type": "1 Handed",
+    "attack": 41,
+    "level": 20,
+    "obtain": "Quest #8 Reward"
+  },
+  {
+    "name": "Basin Broadsword",
+    "type": "1 Handed",
+    "attack": 58,
+    "level": 26,
+    "obtain": "Floor 2 Shop, Floor 3 Shop"
+  },
+  {
+    "name": "Glade Blade",
+    "type": "1 Handed",
+    "attack": 70,
+    "level": 30,
+    "obtain": "Snail"
+  },
+  {
+    "name": "GrandMaster Steel Blade Mk III",
+    "type": "1 Handed",
+    "attack": 86,
+    "level": 35,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Scimitar",
+    "type": "1 Handed",
+    "attack": 121,
+    "level": 45,
+    "obtain": "Floor 4 Shop"
+  },
+  {
+    "name": "Inferno Staff",
+    "type": "1 Handed",
+    "attack": 121,
+    "level": 45,
+    "obtain": "Halloween Event: Event Quest Reward, Event Boss Rare Drop [2021 - 2022]"
+  },
+  {
+    "name": "Neko Slayer",
+    "type": "1 Handed",
+    "attack": 140,
+    "level": 50,
+    "obtain": "Scorpion"
+  },
+  {
+    "name": "Malachite Blade",
+    "type": "1 Handed",
+    "attack": 159,
+    "level": 55,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Rajah Mutaharik",
+    "type": "1 Handed",
+    "attack": 179,
+    "level": 60,
+    "obtain": "Unknown"
+  },
+  {
+    "name": "Mirror Blade",
+    "type": "1 Handed",
+    "attack": 200,
+    "level": 65,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+      "name": "Blade of Ice",
+        "type": "1 Handed",
+        "level": 70,
+        "attack": 221,
+        "obtain": "White Baby Wyrm"
+    },
+    {
+        "name": "Sandstorm Blade",
+        "type": "1 Handed",
+        "level": 75,
+        "attack": 243,
+        "obtain": "Blacksmithing"
+    },
+    {
+        "name": "Eggceptional Katana",
+        "type": "1 Handed",
+        "level": 75,
+        "attack": 243,
+        "obtain": "Easter Event: Easter Shop [2023 - 2024]"
+    },
+    {
+        "name": "Summer Water Sword",
+        "type": "1 Handed",
+        "level": 76,
+        "attack": 248,
+        "obtain": "Summer Event: Summer Shop [2023]"
+    },
+    {
+        "name": "Summer Atlantean Blade",
+        "type": "1 Handed",
+        "level": 76,
+        "attack": 248,
+        "obtain": "Summer Event: Summer Shop [2024]"
+    },
+    {
+        "name": "Ghouls Grace",
+        "type": "1 Handed",
+        "level": 76,
+        "attack": 248,
+        "obtain": "Halloween Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Frostbitten Blade",
+        "type": "1 Handed",
+        "level": 76,
+        "attack": 248,
+        "obtain": "Christmas Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Lunar Reaper",
+        "type": "1 Handed",
+        "level": 77,
+        "attack": 252,
+        "obtain": "Halloween Event: Blacksmithing [2024]"
+    },
+    {
+        "name": "Winter Holiday Blade",
+        "type": "1 Handed",
+        "level": 77,
+        "attack": 252,
+        "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+    },
+    {
+        "name": "Easter Royale Sword",
+        "type": "1 Handed",
+        "level": 78,
+        "attack": 256,
+        "obtain": "Easter Event: QE15 Reward unlocks in Blacksmithing [2025]"
+    },
+    {
+        "name": "Dark Steel Blade",
+        "type": "1 Handed",
+        "level": 85,
+        "attack": 288,
+        "obtain": "Floor 5 Shop"
+    },
+    {
+        "name": "Dark Repulser",
+        "type": "1 Handed",
+        "level": 90,
+        "attack": 312,
+        "obtain": "Blacksmithing"
+    },
+    {
+        "name": "Volcanic Blade",
+        "type": "1 Handed",
+        "level": 90,
+        "attack": 312,
+        "obtain": "Bloodsilk Spider"
+    },
+    {
+        "name": "Permafrost Sword",
+        "type": "1 Handed",
+        "level": 95,
+        "attack": 336,
+        "obtain": "Blacksmithing"
+    },
+    {
+        "name": "Trinity Longsword",
+        "type": "1 Handed",
+        "level": 95,
+        "attack": 336,
+        "obtain": "Easter Event: Easter Shop [2021 - 2022]"
+    },
+    {
+        "name": "Chimera",
+        "type": "1 Handed",
+        "level": 105,
+        "attack": 385,
+        "obtain": "Floor 7 Shop"
+    },
+    {
+        "name": "Gran",
+        "type": "1 Handed",
+        "level": 110,
+        "attack": 410,
+        "obtain": "Magic Shroom"
+    },
+    {
+        "name": "Demonic Blade",
+        "type": "1 Handed",
+        "level": 115,
+        "attack": 436,
+        "obtain": "Blacksmithing"
+    },
+    {
+    "name": "Inferno Staff Mk II",
+    "type": "1 Handed",
+    "level": 115,
+    "attack": 436,
+    "obtain": "Halloween Event: Blacksmithing [2021 - 2022]"
+},
+{
+    "name": "Shadow Eater",
+    "type": "1 Handed",
+    "level": 125,
+    "attack": 488,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "The Green Flame Sword",
+    "type": "1 Handed",
+    "level": 132,
+    "attack": 526,
+    "obtain": "«Storm Atronach»"
+},
+{
+    "name": "Ancient Warrior",
+    "type": "1 Handed",
+    "level": 135,
+    "attack": 542,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Shadow Guardian",
+    "type": "1 Handed",
+    "level": 140,
+    "attack": 570,
+    "obtain": "Lizard"
+},
+{
+    "name": "Dark Repulser Mk II",
+    "type": "1 Handed",
+    "level": 140,
+    "attack": 570,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Deepsea SwiftBlade",
+    "type": "1 Handed",
+    "level": 145,
+    "attack": 598,
+    "obtain": "Floor 9 Shop"
+},
+{
+    "name": "Aqua Blade",
+    "type": "1 Handed",
+    "level": 150,
+    "attack": 627,
+    "obtain": "Jellyfish"
+},
+{
+    "name": "Eggceptional Katana Mk II",
+    "type": "1 Handed",
+    "level": 150,
+    "attack": 627,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Water Sword Mk II",
+    "type": "1 Handed",
+    "level": 152,
+    "attack": 638,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Blade Mk II",
+    "type": "1 Handed",
+    "level": 152,
+    "attack": 638,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Ghouls Grace Mk II",
+    "type": "1 Handed",
+    "level": 152,
+    "attack": 638,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frostbitten Blade Mk II",
+    "type": "1 Handed",
+    "level": 152,
+    "attack": 638,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Lunar Reaper MK II",
+    "type": "1 Handed",
+    "level": 154,
+    "attack": 649,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Blade Mk II",
+    "type": "1 Handed",
+    "level": 154,
+    "attack": 649,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Sword Mk II",
+    "type": "1 Handed",
+    "level": 155,
+    "attack": 655,
+    "obtain": "Easter Event: QE18 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Corroded Crusader",
+    "type": "1 Handed",
+    "level": 155,
+    "attack": 655,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Butterfly Blade",
+    "type": "1 Handed",
+    "level": 165,
+    "attack": 714,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Butterfly Katana",
+    "type": "1 Handed",
+    "level": 170,
+    "attack": 743,
+    "obtain": "Samurai"
+},
+{
+    "name": "Poseidons Repulser",
+    "type": "1 Handed",
+    "level": 175,
+    "attack": 774,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Crimson Shadow",
+    "type": "1 Handed",
+    "level": 185,
+    "attack": 835,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Dark Repulser Mk III",
+    "type": "1 Handed",
+    "level": 190,
+    "attack": 866,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Vindictus Blade",
+    "type": "1 Handed",
+    "level": 190,
+    "attack": 866,
+    "obtain": "Knight"
+},
+{
+    "name": "Yang Katana",
+    "type": "1 Handed",
+    "level": 192,
+    "attack": 878,
+    "obtain": "«Hotoke The Enlightened»"
+},
+{
+    "name": "Trinity Longsword MII",
+    "type": "1 Handed",
+    "level": 195,
+    "attack": 897,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2023]"
+},
+{
+    "name": "Forest Warrior",
+    "type": "1 Handed",
+    "level": 200,
+    "attack": 929,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Stalhrim Blade",
+    "type": "1 Handed",
+    "level": 205,
+    "attack": 961,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Purification",
+    "type": "1 Handed",
+    "level": 210,
+    "attack": 993,
+    "obtain": "Land Anemone"
+},
+{
+    "name": "Queens Resolve",
+    "type": "1 Handed",
+    "level": 211,
+    "attack": 999,
+    "obtain": "«Buffed Knight»"
+},
+{
+    "name": "Impartial Edge",
+    "type": "1 Handed",
+    "level": 215,
+    "attack": 1025,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Poseidons Scale",
+    "type": "1 Handed",
+    "level": 220,
+    "attack": 1270,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Dark Viel",
+    "type": "1 Handed",
+    "level": 225,
+    "attack": 1091,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Eggceptional Katana Mk III",
+    "type": "1 Handed",
+    "level": 225,
+    "attack": 1091,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Water Sword Mk III",
+    "type": "1 Handed",
+    "level": 228,
+    "attack": 1111,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Blade Mk III",
+    "type": "1 Handed",
+    "level": 228,
+    "attack": 1111,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Ghouls Grace Mk III",
+    "type": "1 Handed",
+    "level": 228,
+    "attack": 1111,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frostbitten Blade Mk III",
+    "type": "1 Handed",
+    "level": 228,
+    "attack": 1111,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Cursed Blade",
+    "type": "1 Handed",
+    "level": 230,
+    "attack": 1124,
+    "obtain": "Kaimen"
+},
+{
+    "name": "Harmony Renaissance",
+    "type": "1 Handed",
+    "level": 231,
+    "attack": 1131,
+    "obtain": "«Laurellis Convict»"
+},
+{
+    "name": "Lunar Reaper MK III",
+    "type": "1 Handed",
+    "level": 231,
+    "attack": 1131,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Blade Mk III",
+    "type": "1 Handed",
+    "level": 232,
+    "attack": 1138,
+    "obtain": "Christmas Event: QE53 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Sword Mk III",
+    "type": "1 Handed",
+    "level": 232,
+    "attack": 1138,
+    "obtain": "Easter Event: QE19 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Floral Blade",
+    "type": "1 Handed",
+    "level": 235,
+    "attack": 1158,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Dark Repulser Mk IV",
+    "type": "1 Handed",
+    "level": 240,
+    "attack": 1192,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Holy Blade",
+    "type": "1 Handed",
+    "level": 250,
+    "attack": 1260,
+    "obtain": "«Grimm»"
+},
+{
+    "name": "Hope Blade",
+    "type": "1 Handed",
+    "level": 252,
+    "attack": 1274,
+    "obtain": "«The Tormented Soul»"
+},
+{
+    "name": "Akikos Will",
+    "type": "1 Handed",
+    "level": 255,
+    "attack": 1295,
+    "obtain": "Quest #60 Reward"
+},
+{
+    "name": "Blessed Blade",
+    "type": "1 Handed",
+    "level": 260,
+    "attack": 1330,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Das Chaos",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1400,
+    "obtain": "«Young Celestia»"
+},
+{
+    "name": "Forsaken Soul Slayer",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1400,
+    "obtain": "«Soulbane the Forsaken» (2%)"
+},
+{
+    "name": "Bloodred Knight Blade",
+    "type": "1 Handed",
+    "level": 275,
+    "attack": 1436,
+    "obtain": "«Bloodred Knight Commander» (1.66%)"
+},
+{
+    "name": "Gigas Spirit",
+    "type": "1 Handed",
+    "level": 280,
+    "attack": 1766,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Gilded Blade",
+    "type": "1 Handed",
+    "level": 290,
+    "attack": 1544,
+    "obtain": "Orc"
+},
+{
+    "name": "Eggceptional Katana Mk IV",
+    "type": "1 Handed",
+    "level": 300,
+    "attack": 1618,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Water Sword Mk IV",
+    "type": "1 Handed",
+    "level": 304,
+    "attack": 1647,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Blade Mk IV",
+    "type": "1 Handed",
+    "level": 304,
+    "attack": 1647,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Ghouls Grace Mk IV",
+    "type": "1 Handed",
+    "level": 304,
+    "attack": 1647,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frostbitten Blade Mk IV",
+    "type": "1 Handed",
+    "level": 304,
+    "attack": 1647,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Sweet Blade",
+    "type": "1 Handed",
+    "level": 305,
+    "attack": 1655,
+    "obtain": "Floor 17 Shop"
+},
+{
+    "name": "Lunar Reaper MK IV",
+    "type": "1 Handed",
+    "level": 308,
+    "attack": 1677,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Blade Mk IV",
+    "type": "1 Handed",
+    "level": 309,
+    "attack": 1684,
+    "obtain": "Christmas Event: QE54 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Sword Mk IV",
+    "type": "1 Handed",
+    "level": 309,
+    "attack": 1684,
+    "obtain": "Easter Event: QE20 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Candy Katana",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1692,
+    "obtain": "Candy Soldier"
+},
+{
+    "name": "Poisonous Cleaver",
+    "type": "1 Handed",
+    "level": 311,
+    "attack": 1699,
+    "obtain": "«Leader Goblin»"
+},
+{
+    "name": "Trinity Longsword MIII",
+    "type": "1 Handed",
+    "level": 325,
+    "attack": 1805,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2023]"
+},
+{
+    "name": "Crowbar Edge",
+    "type": "1 Handed",
+    "level": 325,
+    "attack": 1805,
+    "obtain": "Slugger Street Thug"
+},
+{
+    "name": "Enforcer Blade",
+    "type": "1 Handed",
+    "level": 330,
+    "attack": 1843,
+    "obtain": "Floor 18 Squid Game Dungeon Merchant"
+},
+{
+    "name": "Butterscotch Blade",
+    "type": "1 Handed",
+    "level": 335,
+    "attack": 1881,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Redline Protocol",
+    "type": "1 Handed",
+    "level": 337,
+    "attack": 1897,
+    "obtain": "«The Arbitrator»"
+},
+{
+    "name": "Divinity",
+    "type": "1 Handed",
+    "level": 340,
+    "attack": 2304,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Icebound Slasher",
+    "type": "1 Handed",
+    "level": 370,
+    "attack": 2156,
+    "obtain": "Floor 19 Sunstone Tree Merchant"
+},
+{
+    "name": "Black Verdict",
+    "type": "1 Handed",
+    "level": 375,
+    "attack": 2196,
+    "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Eggceptional Katana Mk V",
+    "type": "1 Handed",
+    "level": 375,
+    "attack": 2196,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Water Sword Mk V",
+    "type": "1 Handed",
+    "level": 380,
+    "attack": 2236,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Blade Mk V",
+    "type": "1 Handed",
+    "level": 380,
+    "attack": 2236,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Ghouls Grace Mk V",
+    "type": "1 Handed",
+    "level": 380,
+    "attack": 2236,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frostbitten Blade Mk V",
+    "type": "1 Handed",
+    "level": 380,
+    "attack": 2236,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Lunar Reaper MK V",
+    "type": "1 Handed",
+    "level": 385,
+    "attack": 2276,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Blade Mk V",
+    "type": "1 Handed",
+    "level": 386,
+    "attack": 2284,
+    "obtain": "Christmas Event: QE55 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Sword Mk V",
+    "type": "1 Handed",
+    "level": 386,
+    "attack": 2284,
+    "obtain": "Easter Event: QE20-2 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Decree",
+    "type": "1 Handed",
+    "level": 395,
+    "attack": 2357,
+    "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Oath of the North",
+    "type": "1 Handed",
+    "level": 400,
+    "attack": 2398,
+    "obtain": "Corrupted Glacial Golem"
+},
+{
+    "name": "Blackfrost Oathblade",
+    "type": "1 Handed",
+    "level": 410,
+    "attack": 2481,
+    "obtain": "Frostveil_Echo"
+},
+{
+    "name": "Sanctum Edge",
+    "type": "1 Handed",
+    "level": 420,
+    "attack": 2564,
+    "obtain": "Blacksmithing: Q118 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Sanctum Edge Dawnforged",
+    "type": "1 Handed",
+    "level": 435,
+    "attack": 2690,
+    "obtain": "Blacksmithing: Q117 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Sanctum Edge Oathbreaker",
+    "type": "1 Handed",
+    "level": 435,
+    "attack": 2690,
+    "obtain": "Blacksmithing: Q125 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Purple Death",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1375,
+    "obtain": "Floor 1 Shop, Requires 1K Likes Badge"
+},
+{
+    "name": "Ordinal Scale Sword",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1528,
+    "obtain": "Floor 1 Shop, Requires 10K Likes Badge"
+},
+{
+    "name": "Ascending Blade",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1528,
+    "obtain": "Floor 1 Shop, Requires 2 Million Visits Badge"
+},
+{
+    "name": "Lighted Fir Blade",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1528,
+    "obtain": "Christmas Event: Christmas Shop [2020 - 2022]"
+},
+{
+    "name": "Silver Beater 1H",
+    "type": "1 Handed",
+    "level": 270,
+    "attack": 1535,
+    "obtain": "Floor 1 Shop, Requires Beater Badge"
+},
+{
+    "name": "Victorious Blade",
+    "type": "1 Handed",
+    "level": 275,
+    "attack": 1567,
+    "obtain": "Floor 1 Shop, Requires 25K Likes Badge"
+},
+{
+    "name": "Webripper",
+    "type": "1 Handed",
+    "level": 280,
+    "attack": 1606,
+    "obtain": "Halloween Event: Halloween Shop [2021 - 2022]"
+},
+{
+    "name": "Crescent Blood Moon Bayonet",
+    "type": "1 Handed",
+    "level": 280,
+    "attack": 1606,
+    "obtain": "Halloween Event: Halloween Shop/Boss Drop/Blacksmithing [2022 - 2023]"
+},
+{
+    "name": "Wishbone",
+    "type": "1 Handed",
+    "level": 290,
+    "attack": 1685,
+    "obtain": "Thanksgiving Event: Thanksgiving Shop [2021 - 2022]"
+},
+{
+    "name": "Turkish Axe",
+    "type": "1 Handed",
+    "level": 295,
+    "attack": 1725,
+    "obtain": "Thanksgiving Event: «Kufuku no Toruko» [2020]"
+},
+{
+    "name": "Rabbit Fang",
+    "type": "1 Handed",
+    "level": 295,
+    "attack": 1725,
+    "obtain": "Easter Event: Easter Shop [2022]"
+},
+{
+    "name": "Christmas Blade",
+    "type": "1 Handed",
+    "level": 305,
+    "attack": 1805,
+    "obtain": "Christmas Event: Christmas Shop [2021 - 2022]"
+},
+{
+    "name": "Lovers Edge (All Colors)",
+    "type": "1 Handed",
+    "level": 305,
+    "attack": 1805,
+    "obtain": "Valentines Day Event: Valentines Day Shop [2023, 2024]"
+},
+{
+    "name": "Master Smiths Mace",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1846,
+    "obtain": "Floor 1 Shop, Requires Master Blacksmith Gamepass"
+},
+{
+    "name": "Karakurenai",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1846,
+    "obtain": "Floor 1 Shop, Requires Red Samurai Gamepass"
+},
+{
+    "name": "Elucidator VI",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1862,
+    "obtain": "Floor 1 Shop, Requires Black Swordsman Gamepass"
+},
+{
+    "name": "Blue Rose Sword",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1862,
+    "obtain": "Floor 1 Shop, Requires Blue Swordsman Gamepass"
+},
+{
+    "name": "Clover Blade",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1846,
+    "obtain": "Saint Patricks Event: Saint Patrick's Day Shop [2023, 2024]"
+},
+{
+    "name": "Liberator Sword",
+    "type": "1 Handed",
+    "level": 310,
+    "attack": 1843,
+    "obtain": "Floor 1 Shop, Requires Grandmaster Liberator Gamepass"
+},
+{
+    "name": "Iron Greatsword",
+    "type": "2 Handed",
+    "level": 1,
+    "attack": 3,
+    "obtain": "Starter Inventory, Floor 1 Shop"
+},
+{
+    "name": "Steel Greatsword",
+    "type": "2 Handed",
+    "level": 5,
+    "attack": 10,
+    "obtain": "Floor 1 Shop, Floor 2 Shop"
+},
+{
+    "name": "Master Steel Greatsword",
+    "type": "2 Handed",
+    "level": 10,
+    "attack": 21,
+    "obtain": "Blacksmithing, Floor 1 Shop, Floor 2 Shop"
+},
+{
+    "name": "Master Steel Greatsword Mk II",
+    "type": "2 Handed",
+    "level": 13,
+    "attack": 29,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "GrandMaster Steel Greatsword",
+    "type": "2 Handed",
+    "level": 16,
+    "attack": 38,
+    "obtain": "Corrupted Sentinel"
+},
+{
+    "name": "Corruption Buster",
+    "type": "2 Handed",
+    "level": 20,
+    "attack": 51,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "GrandMaster Steel Greatsword Mk II",
+    "type": "2 Handed",
+    "level": 24,
+    "attack": 65,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Basin Buster",
+    "type": "2 Handed",
+    "level": 26,
+    "attack": 72,
+    "obtain": "Floor 2 Shop, Floor 3 Shop"
+},
+{
+    "name": "Glade Striker",
+    "type": "2 Handed",
+    "level": 30,
+    "attack": 88,
+    "obtain": "Marshland Crocodile"
+},
+{
+    "name": "GrandMaster Steel Greatsword Mk III",
+    "type": "2 Handed",
+    "level": 35,
+    "attack": 108,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Great Scimitar",
+    "type": "2 Handed",
+    "level": 45,
+    "attack": 152,
+    "obtain": "Floor 4 Shop"
+},
+{
+    "name": "Grand Inert Staff",
+    "type": "2 Handed",
+    "level": 45,
+    "attack": 152,
+    "obtain": "Halloween Event: Event Quest Reward, Event Boss Rare Drop [2021 - 2022]"
+},
+{
+    "name": "Lightning Edge",
+    "type": "2 Handed",
+    "level": 50,
+    "attack": 175,
+    "obtain": "Albino Scorpion"
+},
+{
+    "name": "Legendary Malachite Blade",
+    "type": "2 Handed",
+    "level": 52,
+    "attack": 185,
+    "obtain": "«Lord Slug»"
+},
+{
+    "name": "Malachite Greatsword",
+    "type": "2 Handed",
+    "level": 55,
+    "attack": 199,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Rajah Klaymur",
+    "type": "2 Handed",
+    "level": 60,
+    "attack": 224,
+    "obtain": "Flying giant scarab"
+},
+{
+    "name": "Mirror Shatterer",
+    "type": "2 Handed",
+    "level": 65,
+    "attack": 300,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Legendary Stalhrim Blade",
+    "type": "2 Handed",
+    "level": 70,
+    "attack": 277,
+    "obtain": "Frost Chaurus"
+},
+{
+    "name": "Sandstorm Buster",
+    "type": "2 Handed",
+    "level": 75,
+    "attack": 304,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Eggsecution Claymore",
+    "type": "2 Handed",
+    "level": 75,
+    "attack": 304,
+    "obtain": "Easter Event: Easter Shop [2023 - 2024]"
+},
+{
+    "name": "Summer Cracked Greatsword",
+    "type": "2 Handed",
+    "level": 76,
+    "attack": 310,
+    "obtain": "Summer Event: Summer Shop [2023]"
+},
+{
+    "name": "Summer Atlantean Trident",
+    "type": "2 Handed",
+    "level": 76,
+    "attack": 310,
+    "obtain": "Summer Event: Summer Shop [2024]"
+},
+{
+    "name": "Labrys Soul Cleaver",
+    "type": "2 Handed",
+    "level": 76,
+    "attack": 310,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frosted Onyx Buster",
+    "type": "2 Handed",
+    "level": 76,
+    "attack": 310,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Emberwrath",
+    "type": "2 Handed",
+    "level": 77,
+    "attack": 315,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Axe",
+    "type": "2 Handed",
+    "level": 77,
+    "attack": 315,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Claymore",
+    "type": "2 Handed",
+    "level": 78,
+    "attack": 321,
+    "obtain": "Easter Event: QE15 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Dark Steel Greatsword",
+    "type": "2 Handed",
+    "level": 85,
+    "attack": 361,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Infernal Cleaver",
+    "type": "2 Handed",
+    "level": 90,
+    "attack": 390,
+    "obtain": "Ember Spider"
+},
+{
+    "name": "Permafrost Greatsword",
+    "type": "2 Handed",
+    "level": 95,
+    "attack": 420,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Eostre Claymore",
+    "type": "2 Handed",
+    "level": 95,
+    "attack": 420,
+    "obtain": "Easter Event: Easter Shop [2020 - 2022]"
+},
+{
+    "name": "Inyo Buster",
+    "type": "2 Handed",
+    "level": 105,
+    "attack": 481,
+    "obtain": "Floor 7 Shop"
+},
+{
+    "name": "Shiek Greatsword",
+    "type": "2 Handed",
+    "level": 110,
+    "attack": 513,
+    "obtain": "Stone Golem"
+},
+{
+    "name": "Yukkis Mourne",
+    "type": "2 Handed",
+    "level": 112,
+    "attack": 525,
+    "obtain": "«Uakmaroth, the Demon Lord»"
+},
+{
+    "name": "Demonic Greatsword",
+    "type": "2 Handed",
+    "level": 115,
+    "attack": 545,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Grand Inert Staff Mk II",
+    "type": "2 Handed",
+    "level": 115,
+    "attack": 545,
+    "obtain": "Halloween Event: Blacksmithing [2021 - 2022]"
+},
+{
+    "name": "Shadow Destroyer",
+    "type": "2 Handed",
+    "level": 125,
+    "attack": 610,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Wretched Greatsword",
+    "type": "2 Handed",
+    "level": 130,
+    "attack": 644,
+    "obtain": "Shadow Walker"
+},
+{
+    "name": "Ancient Berserker",
+    "type": "2 Handed",
+    "level": 135,
+    "attack": 678,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Charus Claymore",
+    "type": "2 Handed",
+    "level": 145,
+    "attack": 748,
+    "obtain": "Floor 9 Shop"
+},
+{
+    "name": "Aqua Buster",
+    "type": "2 Handed",
+    "level": 150,
+    "attack": 783,
+    "obtain": "Sea Turtle"
+},
+{
+    "name": "Eggsecution Claymore Mk II",
+    "type": "2 Handed",
+    "level": 150,
+    "attack": 783,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Cracked Greatsword Mk II",
+    "type": "2 Handed",
+    "level": 152,
+    "attack": 798,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Trident Mk II",
+    "type": "2 Handed",
+    "level": 152,
+    "attack": 798,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Labrys Soul Cleaver Mk II",
+    "type": "2 Handed",
+    "level": 152,
+    "attack": 798,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frosted Onyx Buster Mk II",
+    "type": "2 Handed",
+    "level": 152,
+    "attack": 798,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Emberwrath MK II",
+    "type": "2 Handed",
+    "level": 154,
+    "attack": 812,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Axe Mk II",
+    "type": "2 Handed",
+    "level": 154,
+    "attack": 812,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Claymore Mk II",
+    "type": "2 Handed",
+    "level": 155,
+    "attack": 819,
+    "obtain": "Easter Event: QE18 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Corroded Berserker",
+    "type": "2 Handed",
+    "level": 155,
+    "attack": 819,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Butterfly Buster",
+    "type": "2 Handed",
+    "level": 165,
+    "attack": 892,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Kamikaze Katana",
+    "type": "2 Handed",
+    "level": 170,
+    "attack": 929,
+    "obtain": "Oni"
+},
+{
+    "name": "Atlantic Destroyer",
+    "type": "2 Handed",
+    "level": 175,
+    "attack": 967,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Shadow Edge",
+    "type": "2 Handed",
+    "level": 185,
+    "attack": 1043,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Doomed Treasure",
+    "type": "2 Handed",
+    "level": 190,
+    "attack": 1082,
+    "obtain": "Fallen Noble"
+},
+{
+    "name": "Eostre Claymore MII",
+    "type": "2 Handed",
+    "level": 195,
+    "attack": 1121,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2022]"
+},
+{
+    "name": "Forest Buster",
+    "type": "2 Handed",
+    "level": 200,
+    "attack": 1161,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Stalhrim Greatsword",
+    "type": "2 Handed",
+    "level": 205,
+    "attack": 1201,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Trunk Destroyer",
+    "type": "2 Handed",
+    "level": 210,
+    "attack": 1241,
+    "obtain": "Land Anemone, «Laurellis Convict»"
+},
+{
+    "name": "Whale",
+    "type": "2 Handed",
+    "level": 212,
+    "attack": 1257,
+    "obtain": "«Grimlock the Fallen King»"
+},
+{
+    "name": "Zweihander",
+    "type": "2 Handed",
+    "level": 215,
+    "attack": 1282,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Twilight Buster",
+    "type": "2 Handed",
+    "level": 220,
+    "attack": 1587,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Shadow Buster",
+    "type": "2 Handed",
+    "level": 225,
+    "attack": 1364,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Eggsecution Claymore Mk III",
+    "type": "2 Handed",
+    "level": 225,
+    "attack": 1364,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Cracked Greatsword Mk III",
+    "type": "2 Handed",
+    "level": 228,
+    "attack": 1389,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Trident Mk III",
+    "type": "2 Handed",
+    "level": 228,
+    "attack": 1389,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Labrys Soul Cleaver Mk III",
+    "type": "2 Handed",
+    "level": 228,
+    "attack": 1389,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frosted Onyx Buster Mk III",
+    "type": "2 Handed",
+    "level": 228,
+    "attack": 1389,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Cursed Buster",
+    "type": "2 Handed",
+    "level": 230,
+    "attack": 1406,
+    "obtain": "«Tormented Spectrum»"
+},
+{
+    "name": "Emberwrath MK III",
+    "type": "2 Handed",
+    "level": 231,
+    "attack": 1414,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Axe Mk III",
+    "type": "2 Handed",
+    "level": 232,
+    "attack": 1422,
+    "obtain": "Christmas Event: QE53 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Claymore Mk III",
+    "type": "2 Handed",
+    "level": 232,
+    "attack": 1422,
+    "obtain": "Easter Event: QE19 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Floral Buster",
+    "type": "2 Handed",
+    "level": 235,
+    "attack": 1448,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Holy Buster",
+    "type": "2 Handed",
+    "level": 250,
+    "attack": 1575,
+    "obtain": "Luo"
+},
+{
+    "name": "Hope Buster",
+    "type": "2 Handed",
+    "level": 252,
+    "attack": 1593,
+    "obtain": "«The Tormented Soul»"
+},
+{
+    "name": "Blessed Greatsword",
+    "type": "2 Handed",
+    "level": 260,
+    "attack": 1662,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Der Zerstorer",
+    "type": "2 Handed",
+    "level": 270,
+    "attack": 1751,
+    "obtain": "«Young Celestia»"
+},
+{
+    "name": "Gigas Soul",
+    "type": "2 Handed",
+    "level": 280,
+    "attack": 2208,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Rugged Greatsword",
+    "type": "2 Handed",
+    "level": 290,
+    "attack": 1930,
+    "obtain": "Werewolf"
+},
+{
+    "name": "Eggsecution Claymore Mk IV",
+    "type": "2 Handed",
+    "level": 300,
+    "attack": 2022,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Cracked Greatsword Mk IV",
+    "type": "2 Handed",
+    "level": 304,
+    "attack": 2059,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Trident Mk IV",
+    "type": "2 Handed",
+    "level": 304,
+    "attack": 2059,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Labrys Soul Cleaver Mk IV",
+    "type": "2 Handed",
+    "level": 304,
+    "attack": 2059,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frosted Onyx Buster Mk IV",
+    "type": "2 Handed",
+    "level": 304,
+    "attack": 2059,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Sweet Buster",
+    "type": "2 Handed",
+    "level": 305,
+    "attack": 2068,
+    "obtain": "Floor 17 Shop"
+},
+{
+    "name": "Demon Clover Scythe",
+    "type": "2 Handed",
+    "level": 305,
+    "attack": 2068,
+    "obtain": "Halloween Event: «Demon of the Dark Clover»"
+},
+{
+    "name": "Grimveil",
+    "type": "2 Handed",
+    "level": 305,
+    "attack": 2068,
+    "obtain": "Halloween Event: «Harbinger Anselith»"
+},
+{
+    "name": "Emberwrath MK IV",
+    "type": "2 Handed",
+    "level": 308,
+    "attack": 2096,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Axe Mk IV",
+    "type": "2 Handed",
+    "level": 309,
+    "attack": 2106,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Claymore Mk IV",
+    "type": "2 Handed",
+    "level": 309,
+    "attack": 2106,
+    "obtain": "Easter Event: QE20 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Candy Halberd",
+    "type": "2 Handed",
+    "level": 310,
+    "attack": 2115,
+    "obtain": "Chubby Dragon"
+},
+{
+    "name": "Bloodred Knight Veil Buster",
+    "type": "2 Handed",
+    "level": 310,
+    "attack": 2115,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Giant Hammer",
+    "type": "2 Handed",
+    "level": 312,
+    "attack": 2134,
+    "obtain": "«Two-Headed Giant»"
+},
+{
+    "name": "Eostre Claymore MIII",
+    "type": "2 Handed",
+    "level": 325,
+    "attack": 2256,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2022]"
+},
+{
+    "name": "Rebar Crusher",
+    "type": "2 Handed",
+    "level": 325,
+    "attack": 2256,
+    "obtain": "Wrecker Street Thug"
+},
+{
+    "name": "Executioner Buster",
+    "type": "2 Handed",
+    "level": 330,
+    "attack": 2304,
+    "obtain": "Floor 18 Squid Game Dungeon Merchant"
+},
+{
+    "name": "Cinnamon Sword",
+    "type": "2 Handed",
+    "level": 335,
+    "attack": 2532,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Gamebreaker Greatsword",
+    "type": "2 Handed",
+    "level": 337,
+    "attack": 2371,
+    "obtain": "«The Arbitrator»"
+},
+{
+    "name": "Zurandal",
+    "type": "2 Handed",
+    "level": 340,
+    "attack": 2880,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Glacier Splitter",
+    "type": "2 Handed",
+    "level": 370,
+    "attack": 2695,
+    "obtain": "Floor 19 Sunstone Tree Merchant"
+},
+{
+    "name": "Obsidian Breaker",
+    "type": "2 Handed",
+    "level": 375,
+    "attack": 2745,
+    "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Eggsecution Claymore Mk V",
+    "type": "2 Handed",
+    "level": 375,
+    "attack": 2745,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Cracked Greatsword Mk V",
+    "type": "2 Handed",
+    "level": 380,
+    "attack": 2795,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Trident Mk V",
+    "type": "2 Handed",
+    "level": 380,
+    "attack": 2795,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Labrys Soul Cleaver Mk V",
+    "type": "2 Handed",
+    "level": 380,
+    "attack": 2795,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Frosted Onyx Buster Mk V",
+    "type": "2 Handed",
+    "level": 380,
+    "attack": 2795,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Emberwrath MK V",
+    "type": "2 Handed",
+    "level": 385,
+    "attack": 2845,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Axe Mk V",
+    "type": "2 Handed",
+    "level": 386,
+    "attack": 2855,
+    "obtain": "Christmas Event: QE55 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Claymore Mk V",
+    "type": "2 Handed",
+    "level": 386,
+    "attack": 2855,
+    "obtain": "Easter Event: QE20-2 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Finale",
+    "type": "2 Handed",
+    "level": 395,
+    "attack": 2947,
+    "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "The Monolith",
+    "type": "2 Handed",
+    "level": 270,
+    "attack": 1910,
+    "obtain": "Floor 1 Shop, Requires 5K Likes Badge"
+},
+{
+    "name": "Grimms Scythe",
+    "type": "2 Handed",
+    "level": 270,
+    "attack": 1910,
+    "obtain": "Halloween Event: «Grim»"
+},
+{
+    "name": "Wreath Buster",
+    "type": "2 Handed",
+    "level": 270,
+    "attack": 1910,
+    "obtain": "Christmas Event: Christmas Shop [2020 - 2022]"
+},
+{
+    "name": "Silver Beater 2H",
+    "type": "2 Handed",
+    "level": 270,
+    "attack": 1919,
+    "obtain": "Floor 1 Shop, Requires Beater Badge"
+},
+{
+    "name": "Victorious Claymore",
+    "type": "2 Handed",
+    "level": 275,
+    "attack": 1958,
+    "obtain": "Floor 1 Shop, Requires 25K Likes Badge"
+},
+{
+    "name": "Jackenmoure",
+    "type": "2 Handed",
+    "level": 280,
+    "attack": 2007,
+    "obtain": "Halloween Event: Halloween Shop [2021 - 2022]"
+},
+{
+    "name": "Crescent Blood Moon Halberd",
+    "type": "2 Handed",
+    "level": 280,
+    "attack": 2007,
+    "obtain": "Halloween Event: Halloween Shop/Boss Drop/Blacksmithing [2022 - 2023]"
+},
+{
+    "name": "Scorched Crucible Backsword",
+    "type": "2 Handed",
+    "level": 285,
+    "attack": 2056,
+    "obtain": "Halloween Event: «One-Eyed Spirit»"
+},
+{
+    "name": "Iron Rapier",
+    "type": "Rapier",
+    "level": 1,
+    "attack": 2.6,
+    "obtain": "Starter Inventory, Floor 1 Shop"
+},
+{
+    "name": "Steel Rapier",
+    "type": "Rapier",
+    "level": 5,
+    "attack": 7.6,
+    "obtain": "Floor 1 Shop, Floor 2 Shop"
+},
+{
+    "name": "Noble Rapier",
+    "type": "Rapier",
+    "level": 10,
+    "attack": 15.6,
+    "obtain": "Blacksmithing, Floor 1 Shop, Floor 2 Shop"
+},
+{
+    "name": "Noble Rapier Mk II",
+    "type": "Rapier",
+    "level": 13,
+    "attack": 20,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "GrandMaster Steel Rapier",
+    "type": "Rapier",
+    "level": 16,
+    "attack": 26,
+    "obtain": "Corrupted Sentinel"
+},
+{
+    "name": "GrandMaster Steel Rapier Mk II",
+    "type": "Rapier",
+    "level": 18,
+    "attack": 31,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Corruption Stinger",
+    "type": "Rapier",
+    "level": 20,
+    "attack": 36,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Tree Branch Rapier",
+    "type": "Rapier",
+    "level": 26,
+    "attack": 51,
+    "obtain": "Floor 2 Shop"
+},
+{
+    "name": "Swamp Striker",
+    "type": "Rapier",
+    "level": 30,
+    "attack": 61,
+    "obtain": "Swamp Snake"
+},
+{
+    "name": "GrandMaster Steel Rapier Mk III",
+    "type": "Rapier",
+    "level": 35,
+    "attack": 75,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Glacier Staff",
+    "type": "Rapier",
+    "level": 45,
+    "attack": 106,
+    "obtain": "Halloween Event: Event Quest Reward, Event Boss Rare Drop [2021 - 2022]"
+},
+{
+    "name": "Timeless Rapier",
+    "type": "Rapier",
+    "level": 45,
+    "attack": 106,
+    "obtain": "Floor 4 Shop"
+},
+{
+    "name": "Desert Striker",
+    "type": "Rapier",
+    "level": 50,
+    "attack": 122,
+    "obtain": "Albino Scorpion"
+},
+{
+    "name": "Malachite Rapier",
+    "type": "Rapier",
+    "level": 55,
+    "attack": 139,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Rajah Hadayn",
+    "type": "Rapier",
+    "level": 60,
+    "attack": 157,
+    "obtain": ""
+},
+{
+    "name": "Mirror Rapier",
+    "type": "Rapier",
+    "level": 65,
+    "attack": 175,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Frostberge Skewer",
+    "type": "Rapier",
+    "level": 70,
+    "attack": 194,
+    "obtain": "White Baby Wyrm"
+},
+{
+    "name": "Sandstorm Rapier",
+    "type": "Rapier",
+    "level": 75,
+    "attack": 213,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Eggcelerate Épée",
+    "type": "Rapier",
+    "level": 75,
+    "attack": 213,
+    "obtain": "Easter Event: Easter Shop [2023 - 2024]"
+},
+{
+    "name": "Summer Rain Rapier",
+    "type": "Rapier",
+    "level": 76,
+    "attack": 217,
+    "obtain": "Summer Event: Summer Shop [2023]"
+},
+{
+    "name": "Summer Atlantean Sabre",
+    "type": "Rapier",
+    "level": 76,
+    "attack": 217,
+    "obtain": "Summer Event: Summer Shop [2024]"
+},
+{
+    "name": "Woeful Rapier",
+    "type": "Rapier",
+    "level": 76,
+    "attack": 217,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Caroler Piercer",
+    "type": "Rapier",
+    "level": 76,
+    "attack": 217,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Spectral Whisper",
+    "type": "Rapier",
+    "level": 77,
+    "attack": 220,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Rapier",
+    "type": "Rapier",
+    "level": 77,
+    "attack": 220,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Rapier",
+    "type": "Rapier",
+    "level": 78,
+    "attack": 224,
+    "obtain": "Easter Event: QE15 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Dark Steel Rapier",
+    "type": "Rapier",
+    "level": 85,
+    "attack": 252,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Molten Lance",
+    "type": "Rapier",
+    "level": 90,
+    "attack": 273,
+    "obtain": "Bloodsilk Spider"
+},
+{
+    "name": "Permafrost Rapier",
+    "type": "Rapier",
+    "level": 95,
+    "attack": 294,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Blessed Lance",
+    "type": "Rapier",
+    "level": 95,
+    "attack": 294,
+    "obtain": "Easter Event: Easter Shop [2020 - 2022]"
+},
+{
+    "name": "Inyo Striker",
+    "type": "Rapier",
+    "level": 105,
+    "attack": 337,
+    "obtain": "Floor 7 Shop"
+},
+{
+    "name": "Timberland Striker",
+    "type": "Rapier",
+    "level": 110,
+    "attack": 359,
+    "obtain": "Spriggan"
+},
+{
+    "name": "Demonic Rapier",
+    "type": "Rapier",
+    "level": 115,
+    "attack": 381,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Glacier Staff Mk II",
+    "type": "Rapier",
+    "level": 115,
+    "attack": 381,
+    "obtain": "Halloween Event: Blacksmithing [2021 - 2022]"
+},
+{
+    "name": "Shadow Striker",
+    "type": "Rapier",
+    "level": 125,
+    "attack": 427,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Deaths Kiss",
+    "type": "Rapier",
+    "level": 130,
+    "attack": 451,
+    "obtain": "Skeleton"
+},
+{
+    "name": "Ancient Maiden",
+    "type": "Rapier",
+    "level": 135,
+    "attack": 475,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Deepsea Challenger",
+    "type": "Rapier",
+    "level": 145,
+    "attack": 523,
+    "obtain": "Floor 9 Shop"
+},
+{
+    "name": "Aquatic Striker",
+    "type": "Rapier",
+    "level": 150,
+    "attack": 548,
+    "obtain": "Giant Crab"
+},
+{
+    "name": "Eggcelerate Épée Mk II",
+    "type": "Rapier",
+    "level": 150,
+    "attack": 548,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Rain Rapier Mk II",
+    "type": "Rapier",
+    "level": 152,
+    "attack": 558,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Sabre Mk II",
+    "type": "Rapier",
+    "level": 152,
+    "attack": 558,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Woeful Rapier Mk II",
+    "type": "Rapier",
+    "level": 152,
+    "attack": 558,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Caroler Piercer Mk II",
+    "type": "Rapier",
+    "level": 152,
+    "attack": 558,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Spectral Whisper MK II",
+    "type": "Rapier",
+    "level": 154,
+    "attack": 568,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Rapier Mk II",
+    "type": "Rapier",
+    "level": 154,
+    "attack": 568,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Rapier Mk II",
+    "type": "Rapier",
+    "level": 155,
+    "attack": 573,
+    "obtain": "Easter Event: QE18 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Corroded Piercer",
+    "type": "Rapier",
+    "level": 155,
+    "attack": 573,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Butterfly Rapier",
+    "type": "Rapier",
+    "level": 165,
+    "attack": 624,
+    "obtain": "Dead Samurai, Floor 10 Shop"
+},
+{
+    "name": "Cyber Rapier",
+    "type": "Rapier",
+    "level": 170,
+    "attack": 650,
+    "obtain": "Mantis"
+},
+{
+    "name": "Poseidons Trident",
+    "type": "Rapier",
+    "level": 172,
+    "attack": 661,
+    "obtain": "«Guardian of the Gate»"
+},
+{
+    "name": "Atlantic Enguarde",
+    "type": "Rapier",
+    "level": 175,
+    "attack": 677,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Ember Challenger",
+    "type": "Rapier",
+    "level": 185,
+    "attack": 730,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Coladas Black Blade",
+    "type": "Rapier",
+    "level": 190,
+    "attack": 757,
+    "obtain": "Noble"
+},
+{
+    "name": "Blessed Lance MII",
+    "type": "Rapier",
+    "level": 195,
+    "attack": 785,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2023]"
+},
+{
+    "name": "Forest Maiden",
+    "type": "Rapier",
+    "level": 200,
+    "attack": 812,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Stalhrim Lance",
+    "type": "Rapier",
+    "level": 205,
+    "attack": 840,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Rose Rapier",
+    "type": "Rapier",
+    "level": 210,
+    "attack": 869,
+    "obtain": "Giant Venus Flytrap"
+},
+{
+    "name": "Royal Guard Rapier",
+    "type": "Rapier",
+    "level": 215,
+    "attack": 897,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Hells Slayer",
+    "type": "Rapier",
+    "level": 220,
+    "attack": 1111,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Blackened Riposte",
+    "type": "Rapier",
+    "level": 225,
+    "attack": 955,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Eggcelerate Épée Mk III",
+    "type": "Rapier",
+    "level": 225,
+    "attack": 955,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Rain Rapier Mk III",
+    "type": "Rapier",
+    "level": 228,
+    "attack": 972,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Sabre Mk III",
+    "type": "Rapier",
+    "level": 228,
+    "attack": 972,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Woeful Rapier Mk III",
+    "type": "Rapier",
+    "level": 228,
+    "attack": 972,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Caroler Piercer Mk III",
+    "type": "Rapier",
+    "level": 228,
+    "attack": 972,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Cursed Rapier",
+    "type": "Rapier",
+    "level": 230,
+    "attack": 984,
+    "obtain": "Undead Reprobate"
+},
+{
+    "name": "Spectral Whisper MK III",
+    "type": "Rapier",
+    "level": 231,
+    "attack": 990,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Eternity Branches",
+    "type": "Rapier",
+    "level": 232,
+    "attack": 996,
+    "obtain": "«Slime Lord Pengonis»"
+},
+{
+    "name": "Winter Holiday Rapier Mk III",
+    "type": "Rapier",
+    "level": 232,
+    "attack": 996,
+    "obtain": "Christmas Event: QE53 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Rapier Mk III",
+    "type": "Rapier",
+    "level": 232,
+    "attack": 996,
+    "obtain": "Easter Event: QE19 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Floral Rapier",
+    "type": "Rapier",
+    "level": 235,
+    "attack": 1013,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Holy Rapier",
+    "type": "Rapier",
+    "level": 250,
+    "attack": 1103,
+    "obtain": "Celatid"
+},
+{
+    "name": "Hope Rapier",
+    "type": "Rapier",
+    "level": 252,
+    "attack": 1115,
+    "obtain": "«The Tormented Soul»"
+},
+{
+    "name": "Blessed Rapier",
+    "type": "Rapier",
+    "level": 260,
+    "attack": 1164,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Die Klarheit",
+    "type": "Rapier",
+    "level": 270,
+    "attack": 1225,
+    "obtain": "«Young Celestia»"
+},
+{
+    "name": "Gigas Lacerator",
+    "type": "Rapier",
+    "level": 280,
+    "attack": 1545,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Gilded Rapier",
+    "type": "Rapier",
+    "level": 290,
+    "attack": 1351,
+    "obtain": "Goblin"
+},
+{
+    "name": "Eggcelerate Épée Mk IV",
+    "type": "Rapier",
+    "level": 300,
+    "attack": 1415,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Rain Rapier Mk IV",
+    "type": "Rapier",
+    "level": 304,
+    "attack": 1441,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Sabre Mk IV",
+    "type": "Rapier",
+    "level": 304,
+    "attack": 1441,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Woeful Rapier Mk IV",
+    "type": "Rapier",
+    "level": 304,
+    "attack": 1441,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Caroler Piercer Mk IV",
+    "type": "Rapier",
+    "level": 304,
+    "attack": 1441,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Sweet Rapier",
+    "type": "Rapier",
+    "level": 305,
+    "attack": 1448,
+    "obtain": "Floor 17 Shop"
+},
+{
+    "name": "Spectral Whisper MK IV",
+    "type": "Rapier",
+    "level": 308,
+    "attack": 1467,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Rapier Mk IV",
+    "type": "Rapier",
+    "level": 309,
+    "attack": 1474,
+    "obtain": "Christmas Event: QE54 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Rapier Mk IV",
+    "type": "Rapier",
+    "level": 309,
+    "attack": 1474,
+    "obtain": "Easter Event: QE20 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Candy Striker",
+    "type": "Rapier",
+    "level": 310,
+    "attack": 1480,
+    "obtain": "Slim Dragon"
+},
+{
+    "name": "Blessed Lance MIII",
+    "type": "Rapier",
+    "level": 325,
+    "attack": 1579,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2023]"
+},
+{
+    "name": "Pipe Stinger",
+    "type": "Rapier",
+    "level": 325,
+    "attack": 1579,
+    "obtain": "Prowler Street Thug, Street Enforcer"
+},
+{
+    "name": "Sentry Sting",
+    "type": "Rapier",
+    "level": 330,
+    "attack": 1613,
+    "obtain": "Floor 18 Squid Game Dungeon Merchant"
+},
+{
+    "name": "Licorice Lancer",
+    "type": "Rapier",
+    "level": 335,
+    "attack": 1646,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Redline Lace",
+    "type": "Rapier",
+    "level": 337,
+    "attack": 1660,
+    "obtain": "The Custodian"
+},
+{
+    "name": "Queens Maiden",
+    "type": "Rapier",
+    "level": 340,
+    "attack": 2016,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Aurora Rapier",
+    "type": "Rapier",
+    "level": 370,
+    "attack": 1886,
+    "obtain": "Floor 19 Shop"
+},
+{
+    "name": "Spire of Judgement",
+    "type": "Rapier",
+    "level": 375,
+    "attack": 1921,
+    "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Eggcelerate Épée Mk V",
+    "type": "Rapier",
+    "level": 375,
+    "attack": 1921,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Summer Rain Rapier Mk V",
+    "type": "Rapier",
+    "level": 380,
+    "attack": 1956,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Sabre Mk V",
+    "type": "Rapier",
+    "level": 380,
+    "attack": 1956,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Woeful Rapier Mk V",
+    "type": "Rapier",
+    "level": 380,
+    "attack": 1956,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Caroler Piercer Mk V",
+    "type": "Rapier",
+    "level": 380,
+    "attack": 1956,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Spectral Whisper MK V",
+    "type": "Rapier",
+    "level": 385,
+    "attack": 1992,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Rapier Mk V",
+    "type": "Rapier",
+    "level": 386,
+    "attack": 1999,
+    "obtain": "Christmas Event: QE55 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Rapier Mk V",
+    "type": "Rapier",
+    "level": 386,
+    "attack": 1999,
+    "obtain": "Easter Event: QE20-2 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Purge",
+    "type": "Rapier",
+    "level": 395,
+    "attack": 2063,
+    "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+},
+{
+    "name": "Candy Cane Rapier",
+    "type": "Rapier",
+    "level": 270,
+    "attack": 1337,
+    "obtain": "Christmas Event: Christmas Shop [2020 - 2022]"
+},
+{
+    "name": "Silver Beater Rapier",
+    "type": "Rapier",
+    "level": 270,
+    "attack": 1343,
+    "obtain": "Floor 1 Starter Shop, Requires Beater Badge"
+},
+{
+    "name": "Victorious Rapier",
+    "type": "Rapier",
+    "level": 275,
+    "attack": 1371,
+    "obtain": "Floor 1 Starter Shop, Requires 25K Likes Badge"
+},
+{
+    "name": "Swiftstroke",
+    "type": "Rapier",
+    "level": 280,
+    "attack": 1405,
+    "obtain": "Halloween Event: Halloween Shop [2021 - 2022]"
+},
+{
+    "name": "Crescent Blood Moon Lancer",
+    "type": "Rapier",
+    "level": 280,
+    "attack": 1405,
+    "obtain": "Halloween Event: Halloween Shop/Boss Drop/Blacksmithing [2022 - 2023]"
+},
+{
+    "name": "Turkey Probe",
+    "type": "Rapier",
+    "level": 290,
+    "attack": 1474,
+    "obtain": "Thanksgiving Event: Thanksgiving Shop [2021 - 2022]"
+},
+{
+    "name": "Egg Rapier",
+    "type": "Rapier",
+    "level": 295,
+    "attack": 1509,
+    "obtain": "Easter Event: Easter Shop [2022]"
+},
+{
+    "name": "Icepick",
+    "type": "Rapier",
+    "level": 305,
+    "attack": 1579,
+    "obtain": "Christmas Event: Christmas Shop [2021 - 2022]"
+},
+{
+    "name": "Lovers Stiletto (All Colors)",
+    "type": "Rapier",
+    "level": 305,
+    "attack": 1579,
+    "obtain": "Valentines Day Event: Valentines Day Shop [2023, 2024]"
+},
+{
+    "name": "Clover Rapier",
+    "type": "Rapier",
+    "level": 310,
+    "attack": 1615,
+    "obtain": "Saint Patricks Event: Saint Patrick's Day Shop [2023, 2024]"
+},
+{
+    "name": "Lambent Light VI",
+    "type": "Rapier",
+    "level": 310,
+    "attack": 1629,
+    "obtain": "Floor 1 Starter Shop, Requires Blood Enforcer Gamepass"
+},
+{
+    "name": "Silent Snowpiercer",
+    "type": "Rapier",
+    "level": 400,
+    "attack": 2099,
+    "obtain": "Sabertooth Tiger"
+},
+{
+    "name": "Iron Dagger",
+    "type": "Dagger",
+    "level": 1,
+    "attack": 2.5,
+    "obtain": "Starter Inventory, Floor 1 Shop"
+},
+{
+    "name": "Steel Dagger",
+    "type": "Dagger",
+    "level": 5,
+    "attack": 7.5,
+    "obtain": "Floor 1 Shop, Floor 2 Shop"
+},
+{
+    "name": "Master Steel Dagger",
+    "type": "Dagger",
+    "level": 10,
+    "attack": 14.5,
+    "obtain": "Blacksmithing, Floor 1 Shop, Floor 2 Shop"
+},
+{
+    "name": "Obsidibite",
+    "type": "Dagger",
+    "level": 10,
+    "attack": 14.5,
+    "obtain": "«Shadesworn the Corrupted»"
+},
+{
+    "name": "Master Steel Dagger Mk II",
+    "type": "Dagger",
+    "level": 13,
+    "attack": 19,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "GrandMaster Steel Dagger",
+    "type": "Dagger",
+    "level": 16,
+    "attack": 25,
+    "obtain": "Kobold Sentinel"
+},
+{
+    "name": "GrandMaster Steel Dagger Mk II",
+    "type": "Dagger",
+    "level": 18,
+    "attack": 29,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Corruption Carver",
+    "type": "Dagger",
+    "level": 20,
+    "attack": 33,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Swamp Edge",
+    "type": "Dagger",
+    "level": 26,
+    "attack": 47,
+    "obtain": "Floor 2 Shop, Floor 3 Shop"
+},
+{
+    "name": "Moras Edge",
+    "type": "Dagger",
+    "level": 30,
+    "attack": 57,
+    "obtain": "Swamp Cobra"
+},
+{
+    "name": "GrandMaster Steel Dagger Mk III",
+    "type": "Dagger",
+    "level": 35,
+    "attack": 70,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Timeless Dagger",
+    "type": "Dagger",
+    "level": 45,
+    "attack": 99,
+    "obtain": "Floor 4 Shop"
+},
+{
+    "name": "Bane Wand",
+    "type": "Dagger",
+    "level": 45,
+    "attack": 99,
+    "obtain": "Halloween Event: Event Quest Reward, Event Boss Rare Drop [2021 - 2022]"
+},
+{
+    "name": "Deserts Fury",
+    "type": "Dagger",
+    "level": 50,
+    "attack": 114,
+    "obtain": "Sand Scorpion, Egyptian Cobra"
+},
+{
+    "name": "Malachite Dagger",
+    "type": "Dagger",
+    "level": 55,
+    "attack": 129,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Rajah Khinjar",
+    "type": "Dagger",
+    "level": 60,
+    "attack": 146,
+    "obtain": ""
+},
+{
+    "name": "Mirror Dagger",
+    "type": "Dagger",
+    "level": 65,
+    "attack": 162,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Crystalized Edge",
+    "type": "Dagger",
+    "level": 70,
+    "attack": 180,
+    "obtain": "Frost Chaurus"
+},
+{
+    "name": "Pharaoh's Edge",
+    "type": "Dagger",
+    "level": 72,
+    "attack": 187,
+    "obtain": "«Stallord»"
+},
+{
+    "name": "Sandstorm Dagger",
+    "type": "Dagger",
+    "level": 75,
+    "attack": 197,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Eggsacting Edge",
+    "type": "Dagger",
+    "level": 75,
+    "attack": 197,
+    "obtain": "Easter Event: Easter Shop [2023 - 2024]"
+},
+{
+    "name": "Shark Tooth Dagger",
+    "type": "Dagger",
+    "level": 76,
+    "attack": 201,
+    "obtain": "Summer Event: Summer Shop [2023]"
+},
+{
+    "name": "Summer Atlantean Dagger",
+    "type": "Dagger",
+    "level": 76,
+    "attack": 201,
+    "obtain": "Summer Event: Summer Shop [2024]"
+},
+{
+    "name": "Harvest Reaver",
+    "type": "Dagger",
+    "level": 76,
+    "attack": 201,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Mistletoe Dagger",
+    "type": "Dagger",
+    "level": 76,
+    "attack": 201,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Nightshade Fang",
+    "type": "Dagger",
+    "level": 77,
+    "attack": 205,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Dagger",
+    "type": "Dagger",
+    "level": 77,
+    "attack": 205,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Dagger",
+    "type": "Dagger",
+    "level": 78,
+    "attack": 208,
+    "obtain": "Easter Event: QE15 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Dark Steel Dagger",
+    "type": "Dagger",
+    "level": 85,
+    "attack": 234,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Molten Thief",
+    "type": "Dagger",
+    "level": 90,
+    "attack": 253,
+    "obtain": "Twin-Tailed Blood Wolf"
+},{
+    "name": "Permafrost Dagger",
+    "type": "Dagger",
+    "level": 95,
+    "attack": 273,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Holy Dagger",
+    "type": "Dagger",
+    "level": 95,
+    "attack": 273,
+    "obtain": "Easter Event: Easter Shop [2020 - 2022 Only]"
+},
+{
+    "name": "Beta Slasher",
+    "type": "Dagger",
+    "level": 105,
+    "attack": 313,
+    "obtain": "Floor 7 Shop"
+},
+{
+    "name": "Eternal Shard",
+    "type": "Dagger",
+    "level": 110,
+    "attack": 333,
+    "obtain": "Chomper"
+},
+{
+    "name": "Demonic Dagger",
+    "type": "Dagger",
+    "level": 115,
+    "attack": 354,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Bane Wand Mk II",
+    "type": "Dagger",
+    "level": 115,
+    "attack": 354,
+    "obtain": "Halloween Event: Blacksmithing [2021 - 2022]"
+},
+{
+    "name": "Shadow Void",
+    "type": "Dagger",
+    "level": 125,
+    "attack": 397,
+    "obtain": "Floor 5 Shop"
+},
+{
+    "name": "Tourmaline Edge",
+    "type": "Dagger",
+    "level": 130,
+    "attack": 419,
+    "obtain": "Worm"
+},
+{
+    "name": "Ancient Assassin",
+    "type": "Dagger",
+    "level": 135,
+    "attack": 441,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Deepsea Crescent",
+    "type": "Dagger",
+    "level": 145,
+    "attack": 486,
+    "obtain": "Floor 9 Shop"
+},
+{
+    "name": "Aquatic Dagger",
+    "type": "Dagger",
+    "level": 150,
+    "attack": 509,
+    "obtain": "Atlantian Guard"
+},
+{
+    "name": "Eggsacting Edge Mk II",
+    "type": "Dagger",
+    "level": 150,
+    "attack": 509,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Shark Tooth Dagger Mk II",
+    "type": "Dagger",
+    "level": 152,
+    "attack": 518,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Dagger Mk II",
+    "type": "Dagger",
+    "level": 152,
+    "attack": 518,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Harvest Reaver Mk II",
+    "type": "Dagger",
+    "level": 152,
+    "attack": 518,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Mistletoe Dagger Mk II",
+    "type": "Dagger",
+    "level": 152,
+    "attack": 518,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Nightshade Fang MK II",
+    "type": "Dagger",
+    "level": 154,
+    "attack": 528,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Dagger Mk II",
+    "type": "Dagger",
+    "level": 154,
+    "attack": 528,
+    "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Dagger Mk II",
+    "type": "Dagger",
+    "level": 155,
+    "attack": 532,
+    "obtain": "Easter Event: QE18 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Corroded Shank",
+    "type": "Dagger",
+    "level": 155,
+    "attack": 532,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Butterfly Dagger",
+    "type": "Dagger",
+    "level": 165,
+    "attack": 580,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Sai",
+    "type": "Dagger",
+    "level": 170,
+    "attack": 604,
+    "obtain": "Dragon"
+},
+{
+    "name": "Apocalyptic Bringer",
+    "type": "Dagger",
+    "level": 175,
+    "attack": 628,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Ember Strike",
+    "type": "Dagger",
+    "level": 185,
+    "attack": 678,
+    "obtain": "Floor 10 Shop"
+},
+{
+    "name": "Vindictus Edge",
+    "type": "Dagger",
+    "level": 190,
+    "attack": 703,
+    "obtain": "Commoner"
+},
+{
+    "name": "Holy Dagger MII",
+    "type": "Dagger",
+    "level": 195,
+    "attack": 729,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2023]"
+},
+{
+    "name": "Forest Assassin",
+    "type": "Dagger",
+    "level": 200,
+    "attack": 754,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Stalhrim Dagger",
+    "type": "Dagger",
+    "level": 205,
+    "attack": 780,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Vine Striker",
+    "type": "Dagger",
+    "level": 210,
+    "attack": 807,
+    "obtain": "Garish Garbera"
+},
+{
+    "name": "Thiefs Blade",
+    "type": "Dagger",
+    "level": 215,
+    "attack": 833,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Anguish Carver",
+    "type": "Dagger",
+    "level": 220,
+    "attack": 1032,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Echoe",
+    "type": "Dagger",
+    "level": 225,
+    "attack": 886,
+    "obtain": "Floor 12 Shop"
+},
+{
+    "name": "Eggsacting Edge Mk III",
+    "type": "Dagger",
+    "level": 225,
+    "attack": 886,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Shark Tooth Dagger Mk III",
+    "type": "Dagger",
+    "level": 228,
+    "attack": 903,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Dagger Mk III",
+    "type": "Dagger",
+    "level": 228,
+    "attack": 903,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Harvest Reaver Mk III",
+    "type": "Dagger",
+    "level": 228,
+    "attack": 903,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Mistletoe Dagger Mk III",
+    "type": "Dagger",
+    "level": 228,
+    "attack": 903,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Xantheril",
+    "type": "Dagger",
+    "level": 230,
+    "attack": 913,
+    "obtain": "Ghost Panther"
+},
+{
+    "name": "Nightshade Fang MK III",
+    "type": "Dagger",
+    "level": 231,
+    "attack": 919,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Dagger Mk III",
+    "type": "Dagger",
+    "level": 232,
+    "attack": 924,
+    "obtain": "Christmas Event: QE53 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Dagger Mk III",
+    "type": "Dagger",
+    "level": 232,
+    "attack": 924,
+    "obtain": "Easter Event: QE19 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Floral Dagger",
+    "type": "Dagger",
+    "level": 235,
+    "attack": 941,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Holy Light Dagger",
+    "type": "Dagger",
+    "level": 250,
+    "attack": 1024,
+    "obtain": "«Super Luo»"
+},
+{
+    "name": "Hope Dagger",
+    "type": "Dagger",
+    "level": 252,
+    "attack": 1035,
+    "obtain": "«The Tormented Soul»"
+},
+{
+    "name": "Blessed Dagger",
+    "type": "Dagger",
+    "level": 260,
+    "attack": 1080,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Die Vergangenheit",
+    "type": "Dagger",
+    "level": 270,
+    "attack": 1138,
+    "obtain": "«Young Celestia»"
+},
+{
+    "name": "Gigas Grinder",
+    "type": "Dagger",
+    "level": 280,
+    "attack": 1435,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Gilded Dagger",
+    "type": "Dagger",
+    "level": 290,
+    "attack": 1255,
+    "obtain": "Goblin"
+},
+{
+    "name": "Eggsacting Edge Mk IV",
+    "type": "Dagger",
+    "level": 300,
+    "attack": 1314,
+    "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+},
+{
+    "name": "Shark Tooth Dagger Mk IV",
+    "type": "Dagger",
+    "level": 304,
+    "attack": 1338,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+},
+{
+    "name": "Summer Atlantean Dagger Mk IV",
+    "type": "Dagger",
+    "level": 304,
+    "attack": 1338,
+    "obtain": "Summer Event: Blacksmithing [2024]"
+},
+{
+    "name": "Harvest Reaver Mk IV",
+    "type": "Dagger",
+    "level": 304,
+    "attack": 1338,
+    "obtain": "Halloween Event: Blacksmithing [2023]"
+},
+{
+    "name": "Mistletoe Dagger Mk IV",
+    "type": "Dagger",
+    "level": 304,
+    "attack": 1338,
+    "obtain": "Christmas Event: Blacksmithing [2023]"
+},
+{
+    "name": "Sweet Dagger",
+    "type": "Dagger",
+    "level": 305,
+    "attack": 1344,
+    "obtain": "Floor 17 Shop"
+},
+{
+    "name": "Nightshade Fang MK IV",
+    "type": "Dagger",
+    "level": 308,
+    "attack": 1362,
+    "obtain": "Halloween Event: Blacksmithing [2024]"
+},
+{
+    "name": "Winter Holiday Dagger Mk IV",
+    "type": "Dagger",
+    "level": 309,
+    "attack": 1368,
+    "obtain": "Christmas Event: QE54 Reward unlocks in Blacksmithing [2024]"
+},
+{
+    "name": "Easter Royale Dagger Mk IV",
+    "type": "Dagger",
+    "level": 309,
+    "attack": 1368,
+    "obtain": "Easter Event: QE20 Reward unlocks in Blacksmithing [2025]"
+},
+{
+    "name": "Candy Kunai",
+    "type": "Dagger",
+    "level": 310,
+    "attack": 1375,
+    "obtain": "Candy Crab"
+},
+{
+    "name": "Box Cutter",
+    "type": "Dagger",
+    "level": 325,
+    "attack": 1466,
+    "obtain": "Cutter Street Thug"
+},
+{
+    "name": "Holy Dagger MIII",
+    "type": "Dagger",
+    "level": 325,
+    "attack": 1466,
+    "obtain": "Easter Event: Blacksmithing [2021 - 2023]"
+},
+{
+    "name": "Catchblade",
+    "type": "Dagger",
+    "level": 330,
+    "attack": 1497,
+    "obtain": "Floor 18 Squid Game Dungeon Merchant"
+},
+{
+    "name": "Sour Lemon Stabber",
+    "type": "Dagger",
+    "level": 335,
+    "attack": 1529,
+    "obtain": "Blacksmithing"
+},
+{
+    "name": "Failshard",
+    "type": "Dagger",
+    "level": 337,
+    "attack": 1541,
+    "obtain": "«The Custodian»"
+},
+{
+    "name": "Katherines Dagger",
+    "type": "Dagger",
+    "level": 340,
+    "attack": 1872,
+    "obtain": "Blacksmithing: Legendary Tier"
+},
+{
+    "name": "Frostfang Dagger",
+    "type": "Dagger",
+    "level": 370,
+    "attack": 1751,
+    "obtain": "Floor 19 Shop"
+},
+[
+    {
+        "name": "Null Fang",
+        "type": "Dagger",
+        "level": 375,
+        "attack": 1784,
+        "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+    },
+    {
+        "name": "Eggsacting Edge Mk V",
+        "type": "Dagger",
+        "level": 375,
+        "attack": 1784,
+        "obtain": "Easter Event: Blacksmithing [2023 - 2024]"
+    },
+    {
+        "name": "Shark Tooth Dagger Mk V",
+        "type": "Dagger",
+        "level": 380,
+        "attack": 1816,
+        "obtain": "Summer Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Summer Atlantean Dagger Mk V",
+        "type": "Dagger",
+        "level": 380,
+        "attack": 1816,
+        "obtain": "Summer Event: Blacksmithing [2024]"
+    },
+    {
+        "name": "Harvest Reaver Mk V",
+        "type": "Dagger",
+        "level": 380,
+        "attack": 1816,
+        "obtain": "Halloween Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Mistletoe Dagger Mk V",
+        "type": "Dagger",
+        "level": 380,
+        "attack": 1816,
+        "obtain": "Christmas Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Nightshade Fang MK V",
+        "type": "Dagger",
+        "level": 385,
+        "attack": 1849,
+        "obtain": "Halloween Event: Blacksmithing [2024]"
+    },
+    {
+        "name": "Winter Holiday Dagger Mk V",
+        "type": "Dagger",
+        "level": 386,
+        "attack": 1856,
+        "obtain": "Christmas Event: QE52 Reward unlocks in Blacksmithing [2024]"
+    },
+    {
+        "name": "Easter Royale Dagger Mk V",
+        "type": "Dagger",
+        "level": 386,
+        "attack": 1856,
+        "obtain": "Easter Event: QE20-2 Reward unlocks in Blacksmithing [2025]"
+    },
+    {
+        "name": "Silence",
+        "type": "Dagger",
+        "level": 395,
+        "attack": 1915,
+        "obtain": "Blacksmithing: Q111 Reward unlocks in Blacksmithing"
+    },
+    {
+        "name": "Coal Dagger",
+        "type": "Dagger",
+        "level": 270,
+        "attack": 1241,
+        "obtain": "Christmas Event: Christmas Shop [2020 - 2022]",
+        "max": true
+    },
+    {
+        "name": "Silver Beater Dagger",
+        "type": "Dagger",
+        "level": 270,
+        "attack": 1247,
+        "obtain": "Floor 1 Shop, Requires Beater Badge",
+        "max": true
+    },
+    {
+        "name": "Victorious Dagger",
+        "type": "Dagger",
+        "level": 275,
+        "attack": 1273,
+        "obtain": "Floor 1 Shop, Requires 25K Likes Badge",
+        "max": true
+    },
+    {
+        "name": "Webcutter",
+        "type": "Dagger",
+        "level": 280,
+        "attack": 1305,
+        "obtain": "Halloween Event: Halloween Shop [2021 - 2022]",
+        "max": true
+    },
+    {
+        "name": "Crescent Blood Moon Gar",
+        "type": "Dagger",
+        "level": 280,
+        "attack": 1305,
+        "obtain": "Halloween Event: Halloween Shop/Boss Drop/Blacksmithing [2022 - 2023]",
+        "max": true
+    },
+    {
+        "name": "Carver",
+        "type": "Dagger",
+        "level": 290,
+        "attack": 1369,
+        "obtain": "Thanksgiving Event: Thanksgiving Shop [2021 - 2022]",
+        "max": true
+    },
+    {
+        "name": "Duck Decimator",
+        "type": "Dagger",
+        "level": 295,
+        "attack": 1401,
+        "obtain": "Easter Event: Easter Shop [2022]",
+        "max": true
+    },
+    {
+        "name": "Peppermint Dagger",
+        "type": "Dagger",
+        "level": 305,
+        "attack": 1467,
+        "obtain": "Christmas Event: Christmas Shop [2021 - 2022]",
+        "max": true
+    },
+    {
+        "name": "Lovers Micro Edge (All Colors)",
+        "type": "Dagger",
+        "level": 305,
+        "attack": 1467,
+        "obtain": "Valentines Day Event: Valentines Day Shop [2023, 2024]",
+        "max": true
+    },
+    {
+        "name": "Clover Dagger",
+        "type": "Dagger",
+        "level": 310,
+        "attack": 1500,
+        "obtain": "Saint Patricks Event: Saint Patrick's Day Shop [2023, 2024]",
+        "max": true
+    },
+    {
+        "name": "Ebon Dagger",
+        "type": "Dagger",
+        "level": 310,
+        "attack": 1500,
+        "obtain": "Floor 1 Starter Shop, Requires Beast Tamer Gamepass",
+        "max": true
+    }
+]
+]

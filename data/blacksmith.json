@@ -1,0 +1,5866 @@
+[
+  {
+    "name": "Trout Oil",
+    "category": "Materials",
+    "subCategory": "Consumable",
+    "sk": 1,
+    "exp": 1,
+    "materials": [
+      {
+        "name": "Raw Trout",
+        "amount": 5
+      }
+    ]
+  },
+
+  {
+    "name": "Iron Ingot",
+    "category": "Materials",
+    "subCategory": "Material",
+    "sk": 1,
+    "exp": 1,
+    "materials": [
+      {
+        "name": "Iron Ore",
+        "amount": 2
+      }
+    ]
+  },
+
+  {
+    "name": "Copper Ingot",
+    "category": "Materials",
+    "subCategory": "Material",
+    "sk": 3,
+    "exp": 3,
+    "materials": [
+      {
+        "name": "Copper Ore",
+        "amount": 2
+      }
+    ]
+  },
+
+  {
+    "name": "Master Steel Sword",
+    "category": "Weapons",
+    "subCategory": "One-Handed",
+    "sk": 4,
+    "exp": 5,
+    "materials": [
+      {
+        "name": "Boar Hide",
+        "amount": 8
+      },
+      {
+        "name": "Wolf Hide",
+        "amount": 6
+      },
+      {
+        "name": "Iron Ingot",
+        "amount": 10
+      },
+      {
+        "name": "Copper Ingot",
+        "amount": 10
+      }
+    ]
+  },
+
+  {
+    "name": "Master Steel Greatsword",
+    "category": "Weapons",
+    "subCategory": "Two-Handed",
+    "sk": 4,
+    "exp": 5,
+    "materials": [
+      {
+        "name": "Boar Hide",
+        "amount": 8
+      },
+      {
+        "name": "Wolf Hide",
+        "amount": 6
+      },
+      {
+        "name": "Iron Ingot",
+        "amount": 10
+      },
+      {
+        "name": "Copper Ingot",
+        "amount": 10
+      }
+    ]
+  },
+
+  {
+    "name": "Noble Rapier",
+    "category": "Weapons",
+    "subCategory": "Rapier",
+    "sk": 4,
+    "exp": 5,
+    "materials": [
+      {
+        "name": "Boar Hide",
+        "amount": 8
+      },
+      {
+        "name": "Wolf Hide",
+        "amount": 6
+      },
+      {
+        "name": "Iron Ingot",
+        "amount": 10
+      },
+      {
+        "name": "Copper Ingot",
+        "amount": 10
+      }
+    ]
+  },
+
+  {
+    "name": "Master Steel Dagger",
+    "category": "Weapons",
+    "subCategory": "Dagger",
+    "sk": 4,
+    "exp": 5,
+    "materials": [
+      {
+        "name": "Boar Hide",
+        "amount": 8
+      },
+      {
+        "name": "Wolf Hide",
+        "amount": 6
+      },
+      {
+        "name": "Iron Ingot",
+        "amount": 10
+      },
+      {
+        "name": "Copper Ingot",
+        "amount": 10
+      }
+    ]
+  },
+  {
+  "name": "Master Shield Mk II",
+  "category": "Defense",
+  "subCategory": "Shield",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 4},
+    {"name": "Wolf Hide", "amount": 3},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Shield", "amount": 1},
+    {"name": "Boar Hide", "amount": 2},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+
+{
+  "name": "Master Steel Sword Mk II",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Steel Sword", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Master Steel Greatsword Mk II",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Steel Greatsword", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Noble Rapier Mk II",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 10},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 10},
+    {"name": "Noble Rapier", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Master Steel Dagger Mk II",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Steel Dagger", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Corruption Buster",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Iron Greatsword", "amount": 1},
+    {"name": "Copper Ingot", "amount": 2},
+    {"name": "Corruption Slicer", "amount": 1}
+  ]
+},
+
+{
+  "name": "Corruption Stinger",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Iron Rapier", "amount": 1},
+    {"name": "Copper Ingot", "amount": 2},
+    {"name": "Corruption Slicer", "amount": 1}
+  ]
+},
+
+{
+  "name": "Corruption Carver",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Iron Dagger", "amount": 1},
+    {"name": "Copper Ingot", "amount": 2},
+    {"name": "Corruption Slicer", "amount": 1}
+  ]
+},
+
+{
+  "name": "Enhanced Cloak",
+  "category": "Defense",
+  "subCategory": "Lower Headgear",
+  "sk": 7,
+  "exp": 8,
+  "materials": [
+    {"name": "Boar Hide", "amount": 6},
+    {"name": "Beginners Cloak", "amount": 1},
+    {"name": "Copper Ingot", "amount": 4},
+    {"name": "Wolf Hide", "amount": 5}
+  ]
+},
+
+{
+  "name": "Enhanced Coned Helmet",
+  "category": "Defense",
+  "subCategory": "Upper Headgear",
+  "sk": 7,
+  "exp": 8,
+  "materials": [
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Coned Helmet", "amount": 1},
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Wolf Hide", "amount": 5},
+    {"name": "Iron Ingot", "amount": 6}
+  ]
+},
+
+{
+  "name": "GrandMaster Shield Mk II",
+  "category": "Defense",
+  "subCategory": "Shield",
+  "sk": 8,
+  "exp": 10,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 6},
+    {"name": "Wolf Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 7},
+    {"name": "GrandMaster Shield", "amount": 1},
+    {"name": "Boar Hide", "amount": 2},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+
+{
+  "name": "GrandMaster Steel Blade Mk II",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 8,
+  "exp": 10,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 6},
+    {"name": "Boar Hide", "amount": 3},
+    {"name": "Iron Ingot", "amount": 6},
+    {"name": "GrandMaster Steel Blade", "amount": 1},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+
+{
+  "name": "GrandMaster Steel Greatsword Mk II",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 8,
+  "exp": 10,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 6},
+    {"name": "Boar Hide", "amount": 3},
+    {"name": "Iron Ingot", "amount": 7},
+    {"name": "GrandMaster Steel Greatsword", "amount": 1},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+{
+  "name": "Master Shield Mk II",
+  "category": "Defense",
+  "subCategory": "Shield",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 4},
+    {"name": "Wolf Hide", "amount": 3},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Shield", "amount": 1},
+    {"name": "Boar Hide", "amount": 2},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+
+{
+  "name": "Master Steel Sword Mk II",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Steel Sword", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Master Steel Greatsword Mk II",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Steel Greatsword", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Noble Rapier Mk II",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 10},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 10},
+    {"name": "Noble Rapier", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Master Steel Dagger Mk II",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 5},
+    {"name": "Master Steel Dagger", "amount": 1},
+    {"name": "Wolf Hide", "amount": 3}
+  ]
+},
+
+{
+  "name": "Corruption Buster",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Iron Greatsword", "amount": 1},
+    {"name": "Copper Ingot", "amount": 2},
+    {"name": "Corruption Slicer", "amount": 1}
+  ]
+},
+
+{
+  "name": "Corruption Stinger",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Iron Rapier", "amount": 1},
+    {"name": "Copper Ingot", "amount": 2},
+    {"name": "Corruption Slicer", "amount": 1}
+  ]
+},
+
+{
+  "name": "Corruption Carver",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 6,
+  "exp": 7,
+  "materials": [
+    {"name": "Iron Dagger", "amount": 1},
+    {"name": "Copper Ingot", "amount": 2},
+    {"name": "Corruption Slicer", "amount": 1}
+  ]
+},
+
+{
+  "name": "Enhanced Cloak",
+  "category": "Defense",
+  "subCategory": "Lower Headgear",
+  "sk": 7,
+  "exp": 8,
+  "materials": [
+    {"name": "Boar Hide", "amount": 6},
+    {"name": "Beginners Cloak", "amount": 1},
+    {"name": "Copper Ingot", "amount": 4},
+    {"name": "Wolf Hide", "amount": 5}
+  ]
+},
+
+{
+  "name": "Enhanced Coned Helmet",
+  "category": "Defense",
+  "subCategory": "Upper Headgear",
+  "sk": 7,
+  "exp": 8,
+  "materials": [
+    {"name": "Boar Hide", "amount": 4},
+    {"name": "Coned Helmet", "amount": 1},
+    {"name": "Copper Ingot", "amount": 5},
+    {"name": "Wolf Hide", "amount": 5},
+    {"name": "Iron Ingot", "amount": 6}
+  ]
+},
+
+{
+  "name": "GrandMaster Shield Mk II",
+  "category": "Defense",
+  "subCategory": "Shield",
+  "sk": 8,
+  "exp": 10,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 6},
+    {"name": "Wolf Hide", "amount": 4},
+    {"name": "Iron Ingot", "amount": 7},
+    {"name": "GrandMaster Shield", "amount": 1},
+    {"name": "Boar Hide", "amount": 2},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+
+{
+  "name": "GrandMaster Steel Blade Mk II",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 8,
+  "exp": 10,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 6},
+    {"name": "Boar Hide", "amount": 3},
+    {"name": "Iron Ingot", "amount": 6},
+    {"name": "GrandMaster Steel Blade", "amount": 1},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+
+{
+  "name": "GrandMaster Steel Greatsword Mk II",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 8,
+  "exp": 10,
+  "materials": [
+    {"name": "Copper Ingot", "amount": 6},
+    {"name": "Boar Hide", "amount": 3},
+    {"name": "Iron Ingot", "amount": 7},
+    {"name": "GrandMaster Steel Greatsword", "amount": 1},
+    {"name": "Illfangs Tooth", "amount": 1}
+  ]
+},
+{
+  "name": "Malachite Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 10,
+  "exp": 12,
+  "materials": [
+    {
+      "name": "Malachite Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Corundum Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 12,
+  "exp": 15,
+  "materials": [
+    {
+      "name": "Corundum Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Gold Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 20,
+  "exp": 25,
+  "materials": [
+    {
+      "name": "Gold Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Bourne Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 32,
+  "exp": 40,
+  "materials": [
+    {
+      "name": "Bourne Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Silver Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 35,
+  "exp": 43,
+  "materials": [
+    {
+      "name": "Silver Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Demonite Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 40,
+  "exp": 50,
+  "materials": [
+    {
+      "name": "Demonite",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Mossy Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 50,
+  "exp": 62,
+  "materials": [
+    {
+      "name": "Mossy Stone",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Holy Silver Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 52,
+  "exp": 65,
+  "materials": [
+    {
+      "name": "Silver Ingot",
+      "amount": 2
+    },
+    {
+      "name": "Angels Dust",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Ebony Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 60,
+  "exp": 75,
+  "materials": [
+    {
+      "name": "Ebony Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Reinforced Bone",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 62,
+  "exp": 77,
+  "materials": [
+    {
+      "name": "Bone Meal",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Reinforced Coral",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 75,
+  "exp": 93,
+  "materials": [
+    {
+      "name": "Coral",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Refined Gem",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 80,
+  "exp": 100,
+  "materials": [
+    {
+      "name": "Gem Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Moons Light",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 85,
+  "exp": 106,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 5
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 15
+    }
+  ]
+},
+
+{
+  "name": "Slayers Brew",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 90,
+  "exp": 112,
+  "materials": [
+    {
+      "name": "Illfangs Tooth",
+      "amount": 1
+    },
+    {
+      "name": "Lord Slugs Slime",
+      "amount": 1
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Harrowed Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 100,
+  "exp": 125,
+  "materials": [
+    {
+      "name": "Harrowed Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Plant Matter Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 110,
+  "exp": 131,
+  "materials": [
+    {
+      "name": "Plant Matter",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Slayers Essence",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 118,
+  "exp": 147,
+  "materials": [
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monks Sash",
+      "amount": 1
+    }
+  ]
+},
+{
+  "name": "Dark Energy",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Dark Matter",
+      "amount": 3
+    }
+  ]
+},
+
+{
+  "name": "Dark Source",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 122,
+  "exp": 152,
+  "materials": [
+    {
+      "name": "Dark Energy",
+      "amount": 10
+    }
+  ]
+},
+
+{
+  "name": "Heavenly Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 130,
+  "exp": 162,
+  "materials": [
+    {
+      "name": "Heavenly Ore",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Candy Ingot",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 160,
+  "exp": 200,
+  "materials": [
+    {
+      "name": "Rock Candy",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Candy Bar",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 160,
+  "exp": 200,
+  "materials": [
+    {
+      "name": "Sweet Candy",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Pure Candy",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 162,
+  "exp": 202,
+  "materials": [
+    {
+      "name": "Candy Ingot",
+      "amount": 1
+    },
+    {
+      "name": "Candy Bar",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Necromancer Brew",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Soul",
+      "amount": 1
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 5
+    },
+    {
+      "name": "Giant Chains",
+      "amount": 1
+    },
+    {
+      "name": "Captains Tooth",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Refined Obsidium",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    }
+  ]
+},
+
+{
+  "name": "Obsidian Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 175,
+  "exp": 218,
+  "materials": [
+    {
+      "name": "Obsidian Shard",
+      "amount": 10
+    },
+    {
+      "name": "Obsidian Dust",
+      "amount": 10
+    }
+  ],
+  "requirements": [
+    "Requires Debt Collectors (Q#95) Completed"
+  ]
+},
+
+{
+  "name": "Frostforged Inert Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Candy Bar",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Dark Matter",
+      "amount": 10
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q132 (Shape of a Frozen Will) Active"
+  ]
+},
+
+{
+  "name": "Glimmerbind Fragment",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Candy Bar",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Dark Matter",
+      "amount": 10
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q135 (A Light That Won't Die) Active"
+  ]
+},
+
+{
+  "name": "Stilled Nerves Alloy",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monks Sash",
+      "amount": 1
+    },
+    {
+      "name": "Soul",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q133 (Stillness That Cuts) Active"
+  ]
+},
+{
+  "name": "Purified Lumen Thread",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monk Sash",
+      "amount": 1
+    },
+    {
+      "name": "Soul",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q136 (Threads of the First Dawn) Active"
+  ]
+},
+
+{
+  "name": "Silent Tempest Conduit",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Giant Hammer",
+      "amount": 10
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 1
+    },
+    {
+      "name": "Sweet Candy",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q134 (The Silent Tempest) Active"
+  ]
+},
+
+{
+  "name": "Hallowed Ember Vessel",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Giant Hammer",
+      "amount": 10
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 1
+    },
+    {
+      "name": "Sweet Candy",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q137 (Kindling Against the Abyss) Active"
+  ]
+},
+
+{
+  "name": "Sigil of Frozen Accord",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Rite of Undying Dawn",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+},
+
+{
+  "name": "Alloy Smithing Plate",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 36,
+  "exp": 45,
+  "materials": [
+    {
+      "name": "Iron Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Copper Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Malachite Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Gold Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Lord Slugs Slime",
+      "amount": 1
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    },
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest C71 (Making of a Sword) Active"
+  ]
+},
+
+{
+  "name": "Crystaline Smithing Plate",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 38,
+  "exp": 47,
+  "materials": [
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 10
+    },
+    {
+      "name": "Gem Ore",
+      "amount": 30
+    },
+    {
+      "name": "Harrowed Ore",
+      "amount": 20
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monks Sash",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest C72 (The Refined Edge) Active"
+  ]
+},
+
+{
+  "name": "Angelic Smithing Plate",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 40,
+  "exp": 50,
+  "materials": [
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Angels Dust",
+      "amount": 50
+    },
+    {
+      "name": "Dark Matter",
+      "amount": 80
+    },
+    {
+      "name": "Soul",
+      "amount": 2
+    },
+    {
+      "name": "Heavenly Ore",
+      "amount": 20
+    },
+    {
+      "name": "Poisonous Cleaver",
+      "amount": 1
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires C71 & C72 Complete",
+    "Requires Quest C73 (A Sharpened Shape) Active"
+  ]
+},
+{
+  "name": "Purified Lumen Thread",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monk Sash",
+      "amount": 1
+    },
+    {
+      "name": "Soul",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q136 (Threads of the First Dawn) Active"
+  ]
+},
+
+{
+  "name": "Silent Tempest Conduit",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Giant Hammer",
+      "amount": 10
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 1
+    },
+    {
+      "name": "Sweet Candy",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q134 (The Silent Tempest) Active"
+  ]
+},
+
+{
+  "name": "Hallowed Ember Vessel",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Giant Hammer",
+      "amount": 10
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 1
+    },
+    {
+      "name": "Sweet Candy",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q137 (Kindling Against the Abyss) Active"
+  ]
+},
+
+{
+  "name": "Sigil of Frozen Accord",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Rite of Undying Dawn",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+},
+
+{
+  "name": "Alloy Smithing Plate",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 36,
+  "exp": 45,
+  "materials": [
+    {
+      "name": "Iron Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Copper Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Malachite Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Gold Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Lord Slugs Slime",
+      "amount": 1
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    },
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest C71 (Making of a Sword) Active"
+  ]
+},
+
+{
+  "name": "Crystaline Smithing Plate",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 38,
+  "exp": 47,
+  "materials": [
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 10
+    },
+    {
+      "name": "Gem Ore",
+      "amount": 30
+    },
+    {
+      "name": "Harrowed Ore",
+      "amount": 20
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monks Sash",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest C72 (The Refined Edge) Active"
+  ]
+},
+
+{
+  "name": "Angelic Smithing Plate",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 40,
+  "exp": 50,
+  "materials": [
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Angels Dust",
+      "amount": 50
+    },
+    {
+      "name": "Dark Matter",
+      "amount": 80
+    },
+    {
+      "name": "Soul",
+      "amount": 2
+    },
+    {
+      "name": "Heavenly Ore",
+      "amount": 20
+    },
+    {
+      "name": "Poisonous Cleaver",
+      "amount": 1
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires C71 & C72 Complete",
+    "Requires Quest C73 (A Sharpened Shape) Active"
+  ]
+},
+{
+  "name": "Refined Obsidium",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    }
+  ]
+},
+
+{
+  "name": "Obsidian Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 175,
+  "exp": 218,
+  "materials": [
+    {
+      "name": "Obsidian Shard",
+      "amount": 10
+    },
+    {
+      "name": "Obsidian Dust",
+      "amount": 10
+    }
+  ],
+  "requirements": [
+    "Requires Debt Collectors (Q#95) Completed"
+  ]
+},
+
+{
+  "name": "Refined Obsidium Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    }
+  ]
+},
+
+{
+  "name": "Glimmerbind Fragment",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Stilled Nerves Alloy",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Purified Lumen Thread",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Silent Tempest Conduit",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Hallowed Ember Vessel",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Frostforged Inert Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Glacial Dust",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Golem Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Radiant Frost Sigil",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Veiled Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Frozen Tear",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Glacial Crystal Shard",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Glacial Crystal Gem",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Pure Glacial Essence",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Spiritbound Frost",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Obsidibite",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Urban Alloy",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Black Tag",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Legacy Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Control Chip",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Worn Blade Fragment",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Encrypted Data Chip",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "VIP Fabric",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+
+{
+  "name": "Red Visor Fragment",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": []
+},
+{
+  "name": "Blackwyrm Coat 3D Overlay",
+  "category": "Events / Overlays",
+  "subCategory": "3D Cosmetic Bundle",
+  "sk": 30,
+  "exp": 37,
+  "materials": [
+    {
+      "name": "Coat of Midnight",
+      "amount": 1
+    },
+    {
+      "name": "Black Dye",
+      "amount": 1
+    },
+    {
+      "name": "Bourne Ore",
+      "amount": 5
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 2
+    },
+    {
+      "name": "Boar Hide",
+      "amount": 10
+    },
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Bought the Black Swordsman Gamepass"
+  ]
+},
+
+{
+  "name": "Ancient Mask",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 55,
+  "exp": 68,
+  "materials": [
+    {
+      "name": "Mossy Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Blessed Pendant of Light",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 92,
+  "exp": 115,
+  "materials": [
+    {
+      "name": "Moons Light",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 15
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Flora",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Queens Vine",
+      "amount": 4
+    },
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Candy Mask",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Pure Candy",
+      "amount": 25
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 1
+    },
+    {
+      "name": "Graciousness",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Custodian Mask",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Unknown Material",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+{
+  "name": "Blackwyrm Coat 3D Overlay",
+  "category": "Events / Overlays",
+  "subCategory": "3D Cosmetic Bundle",
+  "sk": 30,
+  "exp": 37,
+  "materials": [
+    {
+      "name": "Coat of Midnight",
+      "amount": 1
+    },
+    {
+      "name": "Black Dye",
+      "amount": 1
+    },
+    {
+      "name": "Bourne Ore",
+      "amount": 5
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 2
+    },
+    {
+      "name": "Boar Hide",
+      "amount": 10
+    },
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Bought the Black Swordsman Gamepass"
+  ]
+},
+
+{
+  "name": "Ancient Mask",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 55,
+  "exp": 68,
+  "materials": [
+    {
+      "name": "Mossy Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Blessed Pendant of Light",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 92,
+  "exp": 115,
+  "materials": [
+    {
+      "name": "Moons Light",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 15
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Flora",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Queens Vine",
+      "amount": 4
+    },
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Candy Mask",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Pure Candy",
+      "amount": 25
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 1
+    },
+    {
+      "name": "Graciousness",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Custodian Mask",
+  "category": "Events / Overlays",
+  "subCategory": "Headwear",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Unknown Material",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+{
+  "name": "Sandstorm Blade",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 25,
+  "exp": 31,
+  "materials": [
+    {
+      "name": "Gold Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Malachite Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Sandstorm Buster",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 25,
+  "exp": 31,
+  "materials": [
+    {
+      "name": "Gold Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Malachite Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Sandstorm Rapier",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 25,
+  "exp": 31,
+  "materials": [
+    {
+      "name": "Gold Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Malachite Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Sandstorm Dagger",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 25,
+  "exp": 31,
+  "materials": [
+    {
+      "name": "Gold Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Malachite Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Permafrost Shield",
+  "category": "Weapons",
+  "subCategory": "Shield",
+  "sk": 35,
+  "exp": 43,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 15
+    }
+  ]
+},
+
+{
+  "name": "Permafrost Sword",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 35,
+  "exp": 43,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 20
+    }
+  ]
+},
+
+{
+  "name": "Permafrost Greatsword",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 35,
+  "exp": 43,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 20
+    }
+  ]
+},
+
+{
+  "name": "Permafrost Rapier",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 35,
+  "exp": 43,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 20
+    }
+  ]
+},
+
+{
+  "name": "Permafrost Dagger",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 35,
+  "exp": 43,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 20
+    }
+  ]
+},
+
+{
+  "name": "Dark Repulser",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 40,
+  "exp": 50,
+  "materials": [
+    {
+      "name": "Xrphans Feather",
+      "amount": 1
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 20
+    }
+  ]
+},
+
+{
+  "name": "Demonic Blade",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 45,
+  "exp": 56,
+  "materials": [
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Wolf Hide",
+      "amount": 20
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Demonic Greatsword",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 45,
+  "exp": 56,
+  "materials": [
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Wolf Hide",
+      "amount": 20
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Demonic Rapier",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 45,
+  "exp": 56,
+  "materials": [
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Wolf Hide",
+      "amount": 20
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Demonic Dagger",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 45,
+  "exp": 56,
+  "materials": [
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Wolf Hide",
+      "amount": 20
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    }
+  ]
+},
+{
+  "name": "Ancient Warrior",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 55,
+  "exp": 68,
+  "materials": [
+    {
+      "name": "Mossy Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Ancient Berserker",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 55,
+  "exp": 68,
+  "materials": [
+    {
+      "name": "Mossy Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Ancient Maiden",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 55,
+  "exp": 68,
+  "materials": [
+    {
+      "name": "Mossy Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Ancient Assassin",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 55,
+  "exp": 68,
+  "materials": [
+    {
+      "name": "Mossy Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Dark Repulser Mk II",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 60,
+  "exp": 75,
+  "materials": [
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Demonite Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Dark Repulser",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Corroded Crusader",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 65,
+  "exp": 81,
+  "materials": [
+    {
+      "name": "Reinforced Bone",
+      "amount": 45
+    },
+    {
+      "name": "Ebony Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Corroded Berserker",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 65,
+  "exp": 81,
+  "materials": [
+    {
+      "name": "Reinforced Bone",
+      "amount": 45
+    },
+    {
+      "name": "Ebony Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Corroded Piercer",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 65,
+  "exp": 81,
+  "materials": [
+    {
+      "name": "Reinforced Bone",
+      "amount": 45
+    },
+    {
+      "name": "Ebony Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Corroded Shank",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 65,
+  "exp": 81,
+  "materials": [
+    {
+      "name": "Reinforced Bone",
+      "amount": 45
+    },
+    {
+      "name": "Ebony Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Poseidons Repulser",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 80,
+  "exp": 100,
+  "materials": [
+    {
+      "name": "Reinforced Coral",
+      "amount": 25
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 25
+    },
+    {
+      "name": "Scale",
+      "amount": 5
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Atlantic Destroyer",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 80,
+  "exp": 100,
+  "materials": [
+    {
+      "name": "Reinforced Coral",
+      "amount": 25
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 25
+    },
+    {
+      "name": "Scale",
+      "amount": 5
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Atlantic Enguarde",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 80,
+  "exp": 100,
+  "materials": [
+    {
+      "name": "Reinforced Coral",
+      "amount": 25
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 25
+    },
+    {
+      "name": "Scale",
+      "amount": 5
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Apocalyptic Bringer",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 80,
+  "exp": 100,
+  "materials": [
+    {
+      "name": "Reinforced Coral",
+      "amount": 25
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 25
+    },
+    {
+      "name": "Scale",
+      "amount": 5
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Dark Repulser Mk III",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 80,
+  "exp": 100,
+  "materials": [
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 20
+    },
+    {
+      "name": "Reinforced Coral",
+      "amount": 20
+    },
+    {
+      "name": "Dark Repulser Mk II",
+      "amount": 1
+    }
+  ]
+},
+{
+  "name": "Forest Warrior",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 95,
+  "exp": 118,
+  "materials": [
+    {
+      "name": "Moons Light",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Forest Buster",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 95,
+  "exp": 118,
+  "materials": [
+    {
+      "name": "Moons Light",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Forest Maiden",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 95,
+  "exp": 118,
+  "materials": [
+    {
+      "name": "Moons Light",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Forest Assassin",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 95,
+  "exp": 118,
+  "materials": [
+    {
+      "name": "Moons Light",
+      "amount": 1
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Impartial Edge",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 105,
+  "exp": 131,
+  "materials": [
+    {
+      "name": "Corruption Tendrils",
+      "amount": 20
+    },
+    {
+      "name": "Harrowed Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Zweihander",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 105,
+  "exp": 131,
+  "materials": [
+    {
+      "name": "Corruption Tendrils",
+      "amount": 20
+    },
+    {
+      "name": "Harrowed Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Royal Guard Rapier",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 105,
+  "exp": 131,
+  "materials": [
+    {
+      "name": "Corruption Tendrils",
+      "amount": 20
+    },
+    {
+      "name": "Harrowed Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Thiefs Blade",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 105,
+  "exp": 131,
+  "materials": [
+    {
+      "name": "Corruption Tendrils",
+      "amount": 20
+    },
+    {
+      "name": "Harrowed Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Dark Repulser Mk IV",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 110,
+  "exp": 137,
+  "materials": [
+    {
+      "name": "Harrowed Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Oak Wood",
+      "amount": 1
+    },
+    {
+      "name": "Dark Repulser Mk III",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Floral Blade",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 115,
+  "exp": 143,
+  "materials": [
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 20
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Oak Wood",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Floral Buster",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 115,
+  "exp": 143,
+  "materials": [
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 20
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Oak Wood",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Floral Rapier",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 115,
+  "exp": 143,
+  "materials": [
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 20
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Oak Wood",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Floral Dagger",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 115,
+  "exp": 143,
+  "materials": [
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 20
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Oak Wood",
+      "amount": 1
+    }
+  ]
+},
+{
+  "name": "Poseidons Scale",
+  "category": "Legendary",
+  "subCategory": "One-Handed",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Scale",
+      "amount": 15
+    },
+    {
+      "name": "Reinforced Coral",
+      "amount": 25
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 25
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 5
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 3
+    }
+  ]
+},
+
+{
+  "name": "Twilight Buster",
+  "category": "Legendary",
+  "subCategory": "Two-Handed",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Ebony Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 15
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 3
+    },
+    {
+      "name": "Impurity",
+      "amount": 1
+    },
+    {
+      "name": "Moons Light",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Hells Slayer",
+  "category": "Legendary",
+  "subCategory": "Rapier",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Demonite Ingot",
+      "amount": 30
+    },
+    {
+      "name": "Reinforced Bone",
+      "amount": 20
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 2
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 2
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Anguish Carver",
+  "category": "Legendary",
+  "subCategory": "Dagger",
+  "sk": 120,
+  "exp": 150,
+  "materials": [
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 30
+    },
+    {
+      "name": "Illfangs Tooth",
+      "amount": 1
+    },
+    {
+      "name": "Stallords Eye",
+      "amount": 1
+    },
+    {
+      "name": "Monks Sash",
+      "amount": 1
+    },
+    {
+      "name": "Moons Light",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Blessed Blade",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 125,
+  "exp": 156,
+  "materials": [
+    {
+      "name": "Blessed Pendant of Light",
+      "amount": 1
+    },
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Dark Energy",
+      "amount": 1
+    },
+    {
+      "name": "Dark Source",
+      "amount": 1
+    },
+    {
+      "name": "Akikos Will",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Blessed Greatsword",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 125,
+  "exp": 156,
+  "materials": [
+    {
+      "name": "Iron Greatsword",
+      "amount": 1
+    },
+    {
+      "name": "Dark Energy",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Blessed Rapier",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 125,
+  "exp": 156,
+  "materials": [
+    {
+      "name": "Iron Rapier",
+      "amount": 1
+    },
+    {
+      "name": "Dark Energy",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Blessed Dagger",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 125,
+  "exp": 156,
+  "materials": [
+    {
+      "name": "Iron Dagger",
+      "amount": 1
+    },
+    {
+      "name": "Dark Energy",
+      "amount": 2
+    }
+  ]
+},
+
+{
+  "name": "Gigas Spirit",
+  "category": "Legendary",
+  "subCategory": "One-Handed",
+  "sk": 42,
+  "exp": 52,
+  "materials": [
+    {
+      "name": "Alloy Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Crystaline Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Angelic Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests C71, C72 & C73 Complete"
+  ]
+},
+
+{
+  "name": "Gigas Soul",
+  "category": "Legendary",
+  "subCategory": "Two-Handed",
+  "sk": 42,
+  "exp": 52,
+  "materials": [
+    {
+      "name": "Alloy Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Crystaline Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Angelic Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests C71, C72 & C73 Complete"
+  ]
+},
+
+{
+  "name": "Gigas Lacerator",
+  "category": "Legendary",
+  "subCategory": "Rapier",
+  "sk": 42,
+  "exp": 52,
+  "materials": [
+    {
+      "name": "Alloy Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Crystaline Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Angelic Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests C71, C72 & C73 Complete"
+  ]
+},
+
+{
+  "name": "Gigas Grinder",
+  "category": "Legendary",
+  "subCategory": "Dagger",
+  "sk": 42,
+  "exp": 52,
+  "materials": [
+    {
+      "name": "Alloy Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Crystaline Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Angelic Smithing Plate",
+      "amount": 1
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests C71, C72 & C73 Complete"
+  ]
+},
+{
+  "name": "Butterscotch Blade",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Pure Candy",
+      "amount": 25
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 5
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 1
+    },
+    {
+      "name": "Das Chaos",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Cinnamon Sword",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Pure Candy",
+      "amount": 25
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 5
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 1
+    },
+    {
+      "name": "Der Zerstorer",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Licorice Lancer",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Pure Candy",
+      "amount": 25
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 5
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 1
+    },
+    {
+      "name": "Die Klarheit",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Sour Lemon Stabber",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 165,
+  "exp": 206,
+  "materials": [
+    {
+      "name": "Pure Candy",
+      "amount": 25
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 5
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 1
+    },
+    {
+      "name": "Die Vergangenheit",
+      "amount": 1
+    }
+  ]
+},
+
+{
+  "name": "Water Elemental Handle",
+  "category": "Weapons",
+  "subCategory": "Weapon Handle",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Harrowed Ingot",
+      "amount": 20
+    },
+    {
+      "name": "Plant Matter Ingot",
+      "amount": 5
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 15
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 5
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 5
+    },
+    {
+      "name": "Soul",
+      "amount": 5
+    },
+    {
+      "name": "Impurity",
+      "amount": 2
+    },
+    {
+      "name": "Oak Wood",
+      "amount": 2
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 1
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 1
+    },
+    {
+      "name": "Dark Source",
+      "amount": 5
+    },
+    {
+      "name": "Legendary Cinders",
+      "amount": 1
+    },
+    {
+      "name": "Doomed Treasure",
+      "amount": 2
+    },
+    {
+      "name": "Purification",
+      "amount": 2
+    },
+    {
+      "name": "Xantheril",
+      "amount": 2
+    },
+    {
+      "name": "Whale",
+      "amount": 2
+    },
+    {
+      "name": "Floral Blade",
+      "amount": 1
+    },
+    {
+      "name": "Blessed Blade",
+      "amount": 1
+    },
+    {
+      "name": "Hope Blade",
+      "amount": 2
+    },
+    {
+      "name": "Holy Blade",
+      "amount": 2
+    },
+    {
+      "name": "Das Chaos",
+      "amount": 2
+    }
+  ],
+  "requirements": [
+    "Requires The First Threat (C#70) Completed"
+  ]
+},
+
+{
+  "name": "Fire Elemental Handle",
+  "category": "Weapons",
+  "subCategory": "Weapon Handle",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Floral Buster",
+      "amount": 1
+    },
+    {
+      "name": "Blessed Greatsword",
+      "amount": 1
+    },
+    {
+      "name": "Hope Buster",
+      "amount": 2
+    },
+    {
+      "name": "Holy Buster",
+      "amount": 2
+    },
+    {
+      "name": "Der Zerstorer",
+      "amount": 2
+    }
+  ],
+  "requirements": [
+    "Requires The First Threat (C#70) Completed"
+  ]
+},
+
+{
+  "name": "Air Elemental Handle",
+  "category": "Weapons",
+  "subCategory": "Weapon Handle",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Floral Rapier",
+      "amount": 1
+    },
+    {
+      "name": "Blessed Rapier",
+      "amount": 1
+    },
+    {
+      "name": "Hope Rapier",
+      "amount": 2
+    },
+    {
+      "name": "Holy Rapier",
+      "amount": 2
+    },
+    {
+      "name": "Die Klarheit",
+      "amount": 2
+    }
+  ],
+  "requirements": [
+    "Requires The First Threat (C#70) Completed"
+  ]
+},
+
+{
+  "name": "Earth Elemental Handle",
+  "category": "Weapons",
+  "subCategory": "Weapon Handle",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Floral Dagger",
+      "amount": 1
+    },
+    {
+      "name": "Blessed Dagger",
+      "amount": 1
+    },
+    {
+      "name": "Hope Dagger",
+      "amount": 2
+    },
+    {
+      "name": "Holy Light Dagger",
+      "amount": 2
+    },
+    {
+      "name": "Die Vergangenheit",
+      "amount": 2
+    }
+  ],
+  "requirements": [
+    "Requires The First Threat (C#70) Completed"
+  ]
+},
+{
+  "name": "Divinity",
+  "category": "Legendary",
+  "subCategory": "One-Handed",
+  "sk": 180,
+  "exp": 225,
+  "materials": [
+    {
+      "name": "Slayers Brew",
+      "amount": 8
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 8
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 6
+    },
+    {
+      "name": "Moons Light",
+      "amount": 2
+    },
+    {
+      "name": "Yang Katana",
+      "amount": 2
+    },
+    {
+      "name": "Poseidons Trident",
+      "amount": 2
+    },
+    {
+      "name": "The Green Flame Sword",
+      "amount": 1
+    },
+    {
+      "name": "Sandstorm Blade",
+      "amount": 1
+    },
+    {
+      "name": "Sea Jewel",
+      "amount": 40
+    },
+    {
+      "name": "Reinforced Bone",
+      "amount": 30
+    },
+    {
+      "name": "Corundum Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Gold Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Holy Silver Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Rulids Lonely Giant (Q#82) Completed"
+  ]
+},
+
+{
+  "name": "Zurandal",
+  "category": "Legendary",
+  "subCategory": "Two-Handed",
+  "sk": 180,
+  "exp": 225,
+  "materials": [
+    {
+      "name": "Slayers Brew",
+      "amount": 8
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 8
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 6
+    },
+    {
+      "name": "Moons Light",
+      "amount": 2
+    },
+    {
+      "name": "Legendary Malachite Blade",
+      "amount": 2
+    },
+    {
+      "name": "Yukkis Mourne",
+      "amount": 2
+    },
+    {
+      "name": "Kamikaze Katana",
+      "amount": 3
+    },
+    {
+      "name": "Wretched Greatsword",
+      "amount": 3
+    },
+    {
+      "name": "Atlantic Destroyer",
+      "amount": 1
+    },
+    {
+      "name": "Reinforced Coral",
+      "amount": 30
+    },
+    {
+      "name": "Copper Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Ebony Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Refined Gem",
+      "amount": 25
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Rulids Lonely Giant (Q#82) Completed"
+  ]
+},
+
+{
+  "name": "Queens Maiden",
+  "category": "Legendary",
+  "subCategory": "Rapier",
+  "sk": 180,
+  "exp": 225,
+  "materials": [
+    {
+      "name": "Slayers Brew",
+      "amount": 8
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 8
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 6
+    },
+    {
+      "name": "Moons Light",
+      "amount": 2
+    },
+    {
+      "name": "Titans Guard",
+      "amount": 2
+    },
+    {
+      "name": "Krakens Skin",
+      "amount": 2
+    },
+    {
+      "name": "Deaths Kiss",
+      "amount": 3
+    },
+    {
+      "name": "Desert Striker",
+      "amount": 3
+    },
+    {
+      "name": "Ancient Maiden",
+      "amount": 1
+    },
+    {
+      "name": "Mossy Ingot",
+      "amount": 30
+    },
+    {
+      "name": "Scale",
+      "amount": 40
+    },
+    {
+      "name": "Iron Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 25
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Rulids Lonely Giant (Q#82) Completed"
+  ]
+},
+
+{
+  "name": "Katherines Dagger",
+  "category": "Legendary",
+  "subCategory": "Dagger",
+  "sk": 180,
+  "exp": 225,
+  "materials": [
+    {
+      "name": "Slayers Brew",
+      "amount": 8
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 8
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 6
+    },
+    {
+      "name": "Moons Light",
+      "amount": 2
+    },
+    {
+      "name": "Illfangs Shield",
+      "amount": 2
+    },
+    {
+      "name": "Pharaoh's Edge",
+      "amount": 2
+    },
+    {
+      "name": "Tourmaline Edge",
+      "amount": 3
+    },
+    {
+      "name": "Molten Thief",
+      "amount": 3
+    },
+    {
+      "name": "Apocalyptic Bringer",
+      "amount": 1
+    },
+    {
+      "name": "Bourne Ingot",
+      "amount": 30
+    },
+    {
+      "name": "Demonite Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Gold Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Silver Ingot",
+      "amount": 40
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Rulids Lonely Giant (Q#82) Completed"
+  ]
+},
+
+{
+  "name": "Refined Obsidium",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 170,
+  "exp": 212,
+  "materials": [
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    }
+  ]
+},
+
+{
+  "name": "Obsidian Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 175,
+  "exp": 218,
+  "materials": [
+    {
+      "name": "Obsidian Shard",
+      "amount": 10
+    },
+    {
+      "name": "Obsidian Dust",
+      "amount": 10
+    }
+  ],
+  "requirements": [
+    "Requires Debt Collectors (Q#95) Completed"
+  ]
+},
+{
+  "name": "Black Verdict",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 190,
+  "exp": 237,
+  "materials": [
+    {
+      "name": "Urban Alloy",
+      "amount": 15
+    },
+    {
+      "name": "Worn Blade Fragment",
+      "amount": 20
+    },
+    {
+      "name": "Control Chip",
+      "amount": 2
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Black Tag",
+      "amount": 12
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 12
+    },
+    {
+      "name": "Redline Protocol",
+      "amount": 1
+    },
+    {
+      "name": "Crowbar Edge",
+      "amount": 1
+    },
+    {
+      "name": "Enforcer Blade",
+      "amount": 1
+    },
+    {
+      "name": "Cats Approval",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Obsidian Breaker",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 190,
+  "exp": 237,
+  "materials": [
+    {
+      "name": "Gilded Plate Fragment",
+      "amount": 20
+    },
+    {
+      "name": "City Enforcement Core",
+      "amount": 2
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Black Tag",
+      "amount": 12
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 12
+    },
+    {
+      "name": "Gamebreaker Greatsword",
+      "amount": 1
+    },
+    {
+      "name": "Executioner Buster",
+      "amount": 1
+    },
+    {
+      "name": "Rebar Crusher",
+      "amount": 1
+    },
+    {
+      "name": "Cats Approval",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Spire of Judgement",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 190,
+  "exp": 237,
+  "materials": [
+    {
+      "name": "Encrypted Data Chip",
+      "amount": 20
+    },
+    {
+      "name": "VIP Fabric",
+      "amount": 20
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Black Tag",
+      "amount": 12
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 12
+    },
+    {
+      "name": "Redline Lace",
+      "amount": 1
+    },
+    {
+      "name": "Sentry Sting",
+      "amount": 1
+    },
+    {
+      "name": "Pipe Stinger",
+      "amount": 1
+    },
+    {
+      "name": "Cats Approval",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Null Fang",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 190,
+  "exp": 237,
+  "materials": [
+    {
+      "name": "Red Visor Fragment",
+      "amount": 16
+    },
+    {
+      "name": "Encrypted Data Chip",
+      "amount": 15
+    },
+    {
+      "name": "Wraith Bone Shard",
+      "amount": 1
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Black Tag",
+      "amount": 12
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 12
+    },
+    {
+      "name": "Failshard",
+      "amount": 1
+    },
+    {
+      "name": "Catchblade",
+      "amount": 1
+    },
+    {
+      "name": "Box Cutter",
+      "amount": 1
+    },
+    {
+      "name": "Cats Approval",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Decree",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 15
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 15
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 15
+    },
+    {
+      "name": "Black Verdict",
+      "amount": 1
+    },
+    {
+      "name": "Redline Protocol",
+      "amount": 1
+    },
+    {
+      "name": "Enforcer Blade",
+      "amount": 1
+    },
+    {
+      "name": "Crowbar Edge",
+      "amount": 1
+    },
+    {
+      "name": "Obsidian Core",
+      "amount": 15
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+{
+  "name": "Finale",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 15
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 15
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 15
+    },
+    {
+      "name": "Obsidian Breaker",
+      "amount": 1
+    },
+    {
+      "name": "Gamebreaker Greatsword",
+      "amount": 1
+    },
+    {
+      "name": "Executioner Buster",
+      "amount": 1
+    },
+    {
+      "name": "Rebar Crusher",
+      "amount": 1
+    },
+    {
+      "name": "Obsidian Core",
+      "amount": 15
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Purge",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 15
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 15
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 15
+    },
+    {
+      "name": "Spire of Judgement",
+      "amount": 1
+    },
+    {
+      "name": "Redline Lace",
+      "amount": 1
+    },
+    {
+      "name": "Sentry Sting",
+      "amount": 1
+    },
+    {
+      "name": "Pipe Stinger",
+      "amount": 1
+    },
+    {
+      "name": "Obsidian Core",
+      "amount": 15
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Silence",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 15
+    },
+    {
+      "name": "Gigas Blessed Branch",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 15
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 15
+    },
+    {
+      "name": "Null Fang",
+      "amount": 1
+    },
+    {
+      "name": "Failshard",
+      "amount": 1
+    },
+    {
+      "name": "Catchblade",
+      "amount": 1
+    },
+    {
+      "name": "Box Cutter",
+      "amount": 1
+    },
+    {
+      "name": "Obsidian Core",
+      "amount": 15
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+
+{
+  "name": "Custodian Attire",
+  "category": "Defense",
+  "subCategory": "Armor",
+  "sk": 195,
+  "exp": 242,
+  "materials": [
+    {
+      "name": "Necromancer Brew",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Cats Approval",
+      "amount": 1
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 20
+    },
+    {
+      "name": "Black Tag",
+      "amount": 5
+    },
+    {
+      "name": "Legacy Core",
+      "amount": 5
+    },
+    {
+      "name": "Marble Core",
+      "amount": 20
+    },
+    {
+      "name": "Custodian Mask",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Face of the System (Q#111) Completed"
+  ]
+},
+{
+  "name": "Frostforged Inert Core",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Candy Bar",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Dark Matter",
+      "amount": 10
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q132 (Shape of a Frozen Will) Active"
+  ]
+},
+
+{
+  "name": "Glimmerbind Fragment",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0, 
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Candy Bar",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Dark Matter",
+      "amount": 10
+    },
+    {
+      "name": "Uakmaroths Horn",
+      "amount": 1
+    },
+    {
+      "name": "Plasma Extract",
+      "amount": 1
+    },
+    {
+      "name": "Petrified Skull",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q135 (A Light That Won't Die) Active"
+  ]
+},
+
+{
+  "name": "Stilled Nerves Alloy",
+  "category": "Materials",
+  "subCategory": "Material",   
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monks Sash",
+      "amount": 1
+    },
+    {
+      "name": "Soul",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q133 (Stillness That Cuts) Active"
+  ]
+},
+
+{
+  "name": "Purified Lumen Thread",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Scale",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Obsidium Fragment",
+      "amount": 10
+    },
+    {
+      "name": "Krakens Beak",
+      "amount": 1
+    },
+    {
+      "name": "Monk Sash",
+      "amount": 1
+    },
+    {
+      "name": "Soul",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q136 (Threads of the First Dawn) Active"
+  ]
+},
+
+{
+  "name": "Silent Tempest Conduit",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Giant Hammer",
+      "amount": 10
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 1
+    },
+    {
+      "name": "Sweet Candy",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q134 (The Silent Tempest) Active"
+  ]
+},
+
+{
+  "name": "Hallowed Ember Vessel",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Refined Gem",
+      "amount": 10
+    },
+    {
+      "name": "Heavenly Ingot",
+      "amount": 10
+    },
+    {
+      "name": "Refined Obsidium",
+      "amount": 10
+    },
+    {
+      "name": "Giant Hammer",
+      "amount": 10
+    },
+    {
+      "name": "Queens Vine",
+      "amount": 1
+    },
+    {
+      "name": "Kings Crown",
+      "amount": 1
+    },
+    {
+      "name": "Black Tag",
+      "amount": 1
+    },
+    {
+      "name": "Sweet Candy",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quest Q137 (Kindling Against the Abyss) Active"
+  ]
+},
+
+{
+  "name": "Sigil of Frozen Accord",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Rite of Undying Dawn",
+  "category": "Materials",
+  "subCategory": "Material",
+  "sk": 0,
+  "exp": 0,
+  "materials": [],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+},
+{
+  "name": "Frostveil Echo Armor",
+  "category": "Defense",
+  "subCategory": "Armor",
+  "sk": 195,
+  "exp": 0,
+  "materials": [
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 1
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 20
+    },
+    {
+      "name": "Glacial Crystal Shard",
+      "amount": 20
+    },
+    {
+      "name": "Frostveil Echo Helm",
+      "amount": 1
+    },
+    {
+      "name": "Frostveil Echo Mantle",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 8
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 12
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    },
+    {
+      "name": "Slayers Essence",
+      "amount": 4
+    },
+    {
+      "name": "Necromancer Brew",
+      "amount": 4
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Q#113 & Q#116 completed"
+  ]
+},
+
+{
+  "name": "Sanctum Edge",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 200,
+  "exp": 525,
+  "materials": [
+    {
+      "name": "Glacial Dust",
+      "amount": 100
+    },
+    {
+      "name": "Golem Core",
+      "amount": 10
+    },
+    {
+      "name": "Oath of the North",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 5
+    },
+    {
+      "name": "Blackfrost Oathblade",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 12
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 5
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    }
+  ],
+  "requirements": [
+    "Requires Q#118 completed"
+  ]
+},
+
+{
+  "name": "Sanctum Edge Oathbreaker",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Sanctum Edge",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 220
+    },
+    {
+      "name": "Golem Core",
+      "amount": 15
+    },
+    {
+      "name": "Oath of the North",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 17
+    },
+    {
+      "name": "Blackfrost Oathblade",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 21
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 12
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 6
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 8
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Sigil of Frozen Accord",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Sanctum Edge Dawnforged",
+  "category": "Weapons",
+  "subCategory": "One-Handed",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Sanctum Edge",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 220
+    },
+    {
+      "name": "Golem Core",
+      "amount": 15
+    },
+    {
+      "name": "Oath of the North",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 17
+    },
+    {
+      "name": "Blackfrost Oathblade",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 21
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 12
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 6
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 8
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Rite of Undying Dawn",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+},
+{
+  "name": "Glacialis Judgement",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 200,
+  "exp": 525,
+  "materials": [
+    {
+      "name": "Glacial Dust",
+      "amount": 150
+    },
+    {
+      "name": "Golem Core",
+      "amount": 12
+    },
+    {
+      "name": "Eirrend Breaker",
+      "amount": 1
+    },
+    {
+      "name": "Ruin of the North",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 7
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 14
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 6
+    },
+    {
+      "name": "Impurity",
+      "amount": 6
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 5
+    }
+  ]
+},
+
+{
+  "name": "Glacialis Judgement Thunderfall",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Glacialis Judgement",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 250
+    },
+    {
+      "name": "Golem Core",
+      "amount": 18
+    },
+    {
+      "name": "Eirrend Breaker",
+      "amount": 1
+    },
+    {
+      "name": "Ruin of the North",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 18
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 25
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 12
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 8
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 9
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Sigil of Frozen Accord",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Glacialis Judgement Radiant Fall",
+  "category": "Weapons",
+  "subCategory": "Two-Handed",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Glacialis Judgement",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 250
+    },
+    {
+      "name": "Golem Core",
+      "amount": 18
+    },
+    {
+      "name": "Eirrend Breaker",
+      "amount": 1
+    },
+    {
+      "name": "Ruin of the North",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 18
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 25
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 12
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 8
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 9
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Rite of Undying Dawn",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+},
+{
+  "name": "Frostlit Covenant",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 200,
+  "exp": 525,
+  "materials": [
+    {
+      "name": "Glacial Dust",
+      "amount": 100
+    },
+    {
+      "name": "Golem Core",
+      "amount": 10
+    },
+    {
+      "name": "Silent Snowpiercer",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Veilpiercer",
+      "amount": 1
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 5
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 12
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 5
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    }
+  ]
+},
+
+{
+  "name": "Frostlit Covenant Static Oath",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Frostlit Covenant",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 200
+    },
+    {
+      "name": "Golem Core",
+      "amount": 15
+    },
+    {
+      "name": "Silent Snowpiercer",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veilpiercer",
+      "amount": 1
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 15
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 20
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 10
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 7
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Sigil of Frozen Accord",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Frostlit Covenant Luminant Oath",
+  "category": "Weapons",
+  "subCategory": "Rapier",
+  "sk": 0,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Frostlit Covenant",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 200
+    },
+    {
+      "name": "Golem Core",
+      "amount": 15
+    },
+    {
+      "name": "Silent Snowpiercer",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veilpiercer",
+      "amount": 1
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 15
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 20
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 10
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 7
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Rite of Undying Dawn",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+},
+{
+  "name": "Silent Absolution",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 0,
+  "exp": 525,
+  "materials": [
+    {
+      "name": "Glacial Dust",
+      "amount": 80
+    },
+    {
+      "name": "Golem Core",
+      "amount": 8
+    },
+    {
+      "name": "Frozen Whisper",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 5
+    },
+    {
+      "name": "Shard of Regret",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 10
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 5
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 4
+    }
+  ]
+},
+
+{
+  "name": "Silent Absolution Stormveil",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Silent Absolution",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 200
+    },
+    {
+      "name": "Golem Core",
+      "amount": 15
+    },
+    {
+      "name": "Frozen Whisper",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 15
+    },
+    {
+      "name": "Shard of Regret",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 20
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 10
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 7
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Sigil of Frozen Accord",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q132, Q133 & Q134 Completed"
+  ]
+},
+
+{
+  "name": "Silent Absolution Lumenveil",
+  "category": "Weapons",
+  "subCategory": "Dagger",
+  "sk": 200,
+  "exp": 543,
+  "materials": [
+    {
+      "name": "Silent Absolution",
+      "amount": 1
+    },
+    {
+      "name": "Glacial Dust",
+      "amount": 200
+    },
+    {
+      "name": "Golem Core",
+      "amount": 15
+    },
+    {
+      "name": "Frozen Whisper",
+      "amount": 1
+    },
+    {
+      "name": "Radiant Frost Sigil",
+      "amount": 8
+    },
+    {
+      "name": "Pure Glacial Essence",
+      "amount": 12
+    },
+    {
+      "name": "Veiled Core",
+      "amount": 15
+    },
+    {
+      "name": "Shard of Regret",
+      "amount": 1
+    },
+    {
+      "name": "Frozen Tear",
+      "amount": 20
+    },
+    {
+      "name": "Glacial Crystal Gem",
+      "amount": 10
+    },
+    {
+      "name": "Spiritbound Frost",
+      "amount": 10
+    },
+    {
+      "name": "Impurity",
+      "amount": 5
+    },
+    {
+      "name": "Obsidibite",
+      "amount": 5
+    },
+    {
+      "name": "Slayers Brew",
+      "amount": 7
+    },
+    {
+      "name": "Unstable Hunger Fragment",
+      "amount": 1
+    },
+    {
+      "name": "Rite of Undying Dawn",
+      "amount": 1
+    }
+  ],
+  "requirements": [
+    "Requires Quests Q135, Q136 & Q137 Completed"
+  ]
+}
+]

@@ -1,0 +1,2028 @@
+[
+{
+"name":"Arctic Cloak",
+"type":"Armor",
+"level":30,
+"defense":23,
+"dexterity":130,
+"obtain":"Floor 4 Shop, Floor 5 Shop"
+},
+
+{
+"name":"Rabbit Hunters Armor",
+"type":"Armor",
+"level":34,
+"defense":27.5,
+"dexterity":155,
+"obtain":"Easter Event: Blacksmithing [2023 - 2024]"
+},
+
+{
+"name":"Winter Wolf Armor",
+"type":"Armor",
+"level":35,
+"defense":28.5,
+"dexterity":161,
+"obtain":"Floor 5 Shop"
+},
+
+{
+"name":"Rabbit Plated Armor",
+"type":"Armor",
+"level":36,
+"defense":29.5,
+"dexterity":167,
+"obtain":"Easter Event: Blacksmithing [2025]"
+},
+
+{
+"name":"Flame Samurai",
+"type":"Armor",
+"level":45,
+"defense":40,
+"dexterity":226,
+"obtain":"Floor 5 Shop"
+},
+
+{
+"name":"Auroras Cloak",
+"type":"Armor",
+"level":46,
+"defense":41.5,
+"dexterity":233,
+"obtain":"X'rphan the White Wyrm"
+},
+
+{
+"name":"Dark Samurai",
+"type":"Armor",
+"level":50,
+"defense":46.5,
+"dexterity":261,
+"obtain":"Flame Boar"
+},
+
+{
+"name":"Wanderers Robes",
+"type":"Armor",
+"level":53,
+"defense":50,
+"dexterity":283,
+"obtain":"Floor 7 Shop"
+},
+
+{
+"name":"Iron Samurai",
+"type":"Armor",
+"level":55,
+"defense":52.5,
+"dexterity":297,
+"obtain":"Floor 5 Shop"
+},
+
+{
+"name":"Midnight Attire",
+"type":"Armor",
+"level":57,
+"defense":55.5,
+"dexterity":312,
+"obtain":"Floor 7 Shop"
+},
+
+{
+"name":"Pilgrim Shroud",
+"type":"Armor",
+"level":60,
+"defense":59.5,
+"dexterity":335,
+"obtain":"Kufuku no Toruko [2020]"
+},
+
+{
+"name":"Corrupt Platemail",
+"type":"Armor",
+"level":65,
+"defense":66,
+"dexterity":373,
+"obtain":"Floor 5 Shop"
+},
+
+{
+"name":"Stone Armor",
+"type":"Armor",
+"level":66,
+"defense":67.5,
+"dexterity":381,
+"obtain":"Storm Atronach"
+},
+
+{
+"name":"Rabbit Hunters Armor Mk II",
+"type":"Armor",
+"level":68,
+"defense":70,
+"dexterity":397,
+"obtain":"Easter Event: Blacksmithing [2023 - 2024]"
+},
+
+{
+"name":"Rabbit Plated Armor Mk II",
+"type":"Armor",
+"level":72,
+"defense":76,
+"dexterity":429,
+"obtain":"Easter Event: Blacksmithing [2025]"
+},
+
+{
+"name":"Burutori",
+"type":"Armor",
+"level":75,
+"defense":80,
+"dexterity":454,
+"obtain":"Floor 9 Shop"
+},
+
+{
+"name":"Rabbit Pelt Armor",
+"type":"Armor",
+"level":80,
+"defense":87.5,
+"dexterity":495,
+"obtain":"Easter Event: Easter Quest #1 Reward"
+},
+
+{
+"name":"Chinese Cloak",
+"type":"Armor",
+"level":85,
+"defense":95,
+"dexterity":538,
+"obtain":"Floor 10 Shop"
+},
+
+{
+"name":"Krakens Platemail",
+"type":"Armor",
+"level":86,
+"defense":96.5,
+"dexterity":546,
+"obtain":"Karth'uk The Crystal Kraken"
+},
+{
+"name":"Light Samurai",
+"type":"Armor",
+"level":90,
+"defense":102.5,
+"dexterity":581,
+"obtain":"Floor 10 Shop"
+},
+
+{
+"name":"Commoner Garments",
+"type":"Armor",
+"level":93,
+"defense":107.5,
+"dexterity":608,
+"obtain":"Floor 10 Shop"
+},
+
+{
+"name":"Guardian Platemail",
+"type":"Armor",
+"level":95,
+"defense":110.5,
+"dexterity":626,
+"obtain":"Floor 10 Shop"
+},
+
+{
+"name":"Laurel Armor",
+"type":"Armor",
+"level":98,
+"defense":115,
+"dexterity":652,
+"obtain":"Knight"
+},
+
+{
+"name":"Rabbit Hunters Armor Mk III",
+"type":"Armor",
+"level":102,
+"defense":121.5,
+"dexterity":689,
+"obtain":"Easter Event: Blacksmithing [2023 - 2024]"
+},
+
+{
+"name":"Eternal Loyalty",
+"type":"Armor",
+"level":105,
+"defense":126.5,
+"dexterity":717,
+"obtain":"Floor 12 Shop"
+},
+
+{
+"name":"Vehement Resistance",
+"type":"Armor",
+"level":106,
+"defense":128,
+"dexterity":726,
+"obtain":"Grimlock the Fallen King"
+},
+
+{
+"name":"Rabbit Plated Armor Mk III",
+"type":"Armor",
+"level":108,
+"defense":131.5,
+"dexterity":744,
+"obtain":"Easter Event: Blacksmithing [2025]"
+},
+
+{
+"name":"Floral Armor",
+"type":"Armor",
+"level":110,
+"defense":135,
+"dexterity":763,
+"obtain":"Floor 12 Shop"
+},
+
+{
+"name":"Forest Shadow",
+"type":"Armor",
+"level":112,
+"defense":138,
+"dexterity":782,
+"obtain":"Floor 12 Shop, Ghost Panther"
+},
+
+{
+"name":"Peaceful Rest",
+"type":"Armor",
+"level":115,
+"defense":143,
+"dexterity":811,
+"obtain":"The Tormented Soul"
+},
+
+{
+"name":"Ghost Memories",
+"type":"Armor",
+"level":118,
+"defense":148,
+"dexterity":839,
+"obtain":"Quest #61 Reward"
+},
+
+{
+"name":"Sky Armor",
+"type":"Armor",
+"level":122,
+"defense":155,
+"dexterity":878,
+"obtain":"Grimm"
+},
+
+{
+"name":"Corrupted Sky",
+"type":"Armor",
+"level":126,
+"defense":162,
+"dexterity":917,
+"obtain":"Leader Grimm"
+},
+
+{
+"name":"Heavens Apprentice",
+"type":"Armor",
+"level":128,
+"defense":165.5,
+"dexterity":937,
+"obtain":"Quest #65 Reward"
+},
+
+{
+"name":"Graceful Armor",
+"type":"Armor",
+"level":130,
+"defense":169,
+"dexterity":957,
+"obtain":"Quest #67 Reward"
+},
+
+{
+"name":"Rulid Combatant",
+"type":"Armor",
+"level":136,
+"defense":179.5,
+"dexterity":1018,
+"obtain":"Floor 16 Shop"
+},
+
+{
+"name":"Rabbit Hunters Armor Mk IV",
+"type":"Armor",
+"level":136,
+"defense":179.5,
+"dexterity":1018,
+"obtain":"Easter Event: Blacksmithing [2023 - 2024]"
+},
+
+{
+"name":"Rulid Battle Attire",
+"type":"Armor",
+"level":139,
+"defense":185,
+"dexterity":1048,
+"obtain":"Floor 16 Shop"
+},
+
+{
+"name":"Rulid Priest",
+"type":"Armor",
+"level":142,
+"defense":190.5,
+"dexterity":1079,
+"obtain":"Floor 16 Shop"
+},
+{
+"name":"Rabbit Plated Armor Mk IV",
+"type":"Armor",
+"level":142,
+"defense":190.5,
+"dexterity":1079,
+"obtain":"Easter Event: Blacksmithing [2025]"
+},
+
+{
+"name":"Goblin Garments",
+"type":"Armor",
+"level":152,
+"defense":209,
+"dexterity":1183,
+"obtain":"Leader Goblin"
+},
+
+{
+"name":"Two-Headed Soul",
+"type":"Armor",
+"level":158,
+"defense":220,
+"dexterity":1247,
+"obtain":"Two-Headed Giant"
+},
+
+{
+"name":"Rabbit Pelt Armor MK II",
+"type":"Armor",
+"level":160,
+"defense":224,
+"dexterity":1268,
+"obtain":"Easter Event: Blacksmithing"
+},
+
+{
+"name":"Candy Soldier Uniform",
+"type":"Armor",
+"level":162,
+"defense":227.5,
+"dexterity":1290,
+"obtain":"Captain Sweet the Forever Child"
+},
+
+{
+"name":"Rabbit Hunters Armor Mk V",
+"type":"Armor",
+"level":170,
+"defense":243,
+"dexterity":1377,
+"obtain":"Easter Event: Blacksmithing [2023 - 2024]"
+},
+
+{
+"name":"Winter Guardian Armor",
+"type":"Armor",
+"level":170,
+"defense":243,
+"dexterity":1377,
+"obtain":"Christmas Event: Blacksmithing [2023]"
+},
+
+{
+"name":"Bloodred Knight Armor",
+"type":"Armor",
+"level":170,
+"defense":243,
+"dexterity":1377,
+"obtain":"Halloween Event: Blacksmithing [2024]"
+},
+
+{
+"name":"Winter Holiday Armor",
+"type":"Armor",
+"level":175,
+"defense":253,
+"dexterity":1432,
+"obtain":"Christmas Event: Unlocks in Blacksmithing after completing QE60-2 [2024]"
+},
+
+{
+"name":"Rabbit Plated Armor Mk V",
+"type":"Armor",
+"level":178,
+"defense":258.5,
+"dexterity":1466,
+"obtain":"Easter Event: Blacksmithing [2025]"
+},
+
+{
+"name":"Heavy Ledger Coat",
+"type":"Armor",
+"level":185,
+"defense":272.5,
+"dexterity":1544,
+"obtain":"Loan Shark Boss"
+},
+
+{
+"name":"Frostbound Traveler Garb",
+"type":"Armor",
+"level":185,
+"defense":272.5,
+"dexterity":1544,
+"obtain":"Floor 19 Shop"
+},
+
+{
+"name":"Warbound Vestments",
+"type":"Armor",
+"level":185,
+"defense":272.5,
+"dexterity":1544,
+"obtain":"Floor 19 Shop"
+},
+
+{
+"name":"Custodian Attire",
+"type":"Armor",
+"level":195,
+"defense":292.5,
+"dexterity":1658,
+"obtain":"Blacksmithing"
+},
+
+{
+"name":"Kringlewrath Iron Mantle",
+"type":"Armor",
+"level":205,
+"defense":313,
+"dexterity":1775,
+"obtain":"Christmas Event: Blacksmithing"
+},
+
+{
+"name":"Oslund Coat",
+"type":"Armor",
+"level":217,
+"defense":338,
+"dexterity":1917,
+"obtain":"Oslund the Hollow Flame"
+},
+
+{
+"name":"Easter Sangreal Armor MKV",
+"type":"Armor",
+"level":220,
+"defense":344.5,
+"dexterity":1953,
+"obtain":"Easter Event: Blacksmithing"
+},
+
+{
+"name":"Frostveil Echo Armor",
+"type":"Armor",
+"level":225,
+"defense":355,
+"dexterity":2013,
+"obtain":"Blacksmithing"
+},
+{
+"name":"Pilgrim Light Armor",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Thanksgiving Event: Fall Magic Shroom [2021 - 2022 Only]"
+},
+
+{
+"name":"Midnight Combat Armor",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Floor 1 Starter Shop, Requires Beta Tester Badge"
+},
+
+{
+"name":"Spriggan Knight Armor",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Floor 1 Starter Shop, Requires 5K Likes Badge"
+},
+
+{
+"name":"Ordinal Scale Armor",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Floor 1 Starter Shop, Requires 10K Likes Badge"
+},
+
+{
+"name":"Elf Outfit",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Christmas Event: Christmas Shop"
+},
+
+{
+"name":"Santa Outfit",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Christmas Event: Christmas Shop"
+},
+
+{
+"name":"Ms Santa Outfit",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Christmas Event: Christmas Shop"
+},
+
+{
+"name":"Akumu Cloak",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Halloween Event: Cursed Wolfpack Leader [2021 Only]"
+},
+
+{
+"name":"Pilgrim Heavy Armor",
+"type":"Armor",
+"level":140,
+"defense":208.5,
+"dexterity":1069,
+"obtain":"Thanksgiving Event: Father Shroom [2021 Only], Grandfather Shroom [2022 Only]"
+},
+
+{
+"name":"Festive Kimono",
+"type":"Armor",
+"level":148,
+"defense":224.5,
+"dexterity":1152,
+"obtain":"Floor 1 Starter Shop, Requires 7 Million Visits / 100 Thousand Favorites Badge"
+},
+
+{
+"name":"Silica Attire",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Beast Tamer Gamepass"
+},
+
+{
+"name":"Blue Swordsman Outfit",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Blue Swordsman Gamepass"
+},
+
+{
+"name":"Field Heavy Armor",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Veteran Merchant Gamepass"
+},
+
+{
+"name":"Novice Heavy Armor",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Veteran Merchant Gamepass"
+},
+
+{
+"name":"Red Samurai Armor",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Red Samurai Gamepass"
+},
+{
+"name":"Kamakura Combat Armor",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Red Samurai Gamepass"
+},
+
+{
+"name":"Sinon Attire VI",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Sharp Shooter Gamepass"
+},
+
+{
+"name":"Lisbeth Attire",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Master Blacksmith Gamepass"
+},
+
+{
+"name":"Blood Enforcer VI",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Blood Enforcer Gamepass"
+},
+
+{
+"name":"Blackwyrm Coat VI",
+"type":"Armor",
+"level":160,
+"defense":249.5,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Black Swordsman Gamepass"
+},
+
+{
+"name":"Grandmaster Armor",
+"type":"Armor",
+"level":160,
+"defense":279,
+"dexterity":1279,
+"obtain":"Floor 1 Starter Shop, Requires Grandmaster Liberator Gamepass"
+},
+{
+
+"name":"Wooden Shield",
+
+"level":1,
+
+"defense":0.6,
+
+"dexterity":0,
+
+"obtain":"Starter Inventory, Floor 1 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Steel Shield",
+
+"level":5,
+
+"defense":1.5,
+
+"dexterity":0,
+
+"obtain":"Floor 1 Shop, Floor 2 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Master Shield",
+
+"level":10,
+
+"defense":3.3,
+
+"dexterity":0,
+
+"obtain":"Floor 1 Shop, Floor 2 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Master Shield Mk II",
+
+"level":13,
+
+"defense":4.8,
+
+"dexterity":0,
+
+"obtain":"Blacksmithing",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"GrandMaster Shield",
+
+"level":16,
+
+"defense":6.3,
+
+"dexterity":0,
+
+"obtain":"Shadesworn the Corrupted",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Knights Shield",
+
+"level":18,
+
+"defense":7.2,
+
+"dexterity":0,
+
+"obtain":"Floor 3 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"GrandMaster Shield Mk II",
+
+"level":20,
+
+"defense":8.4,
+
+"dexterity":0,
+
+"obtain":"Blacksmithing",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"GrandMaster Shield Mk III",
+
+"level":24,
+
+"defense":10.8,
+
+"dexterity":0,
+
+"obtain":"Blacksmithing",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Illfangs Shield",
+
+"level":26,
+
+"defense":12,
+
+"dexterity":0,
+
+"obtain":"Illfang The Kobold Lord",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Malachite Shield",
+
+"level":35,
+
+"defense":18,
+
+"dexterity":0,
+
+"obtain":"Blacksmithing",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Summer Seashell Shield",
+
+"level":35,
+
+"defense":18,
+
+"dexterity":0,
+
+"obtain":"Summer Event: Summer Shop [2023]",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Summer Atlantean Shield",
+
+"level":35,
+
+"defense":18,
+
+"dexterity":0,
+
+"obtain":"Summer Event: Summer Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Easter Royale Shield",
+
+"level":40,
+
+"defense":21.6,
+
+"dexterity":0,
+
+"obtain":"Easter Event: QE17 Reward unlocks in Blacksmithing [2025]",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"IronClad",
+
+"level":45,
+
+"defense":25.2,
+
+"dexterity":0,
+
+"obtain":"Floor 4 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Mirror Shield",
+
+"level":50,
+
+"defense":29.1,
+
+"dexterity":0,
+
+"obtain":"Floor 5 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Permafrost Shield",
+
+"level":55,
+
+"defense":33.3,
+
+"dexterity":0,
+
+"obtain":"Blacksmithing",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Obsidiguard",
+
+"level":60,
+
+"defense":37.2,
+
+"dexterity":0,
+
+"obtain":"Floor 5 Shop",
+
+"type":"Shield"
+
+},
+
+
+
+{
+
+"name":"Titans Guard",
+
+"level":70,
+
+"defense":45.9,
+
+"dexterity":0,
+
+"obtain":"Floor 7 Shop",
+
+"type":"Shield"
+
+},
+{
+        "name": "Summer Seashell Shield Mk II",
+        "type": "Shield",
+        "level": 70,
+        "defense": 45.9,
+        "dexterity": 0,
+        "obtain": "Summer Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Summer Atlantean Shield Mk II",
+        "type": "Shield",
+        "level": 70,
+        "defense": 45.9,
+        "dexterity": 0,
+        "obtain": "Summer Event: Blacksmithing"
+    },
+    {
+        "name": "Easter Royale Shield Mk II",
+        "type": "Shield",
+        "level": 78,
+        "defense": 53.4,
+        "dexterity": 0,
+        "obtain": "Easter Event: QE18 Reward unlocks in Blacksmithing [2025]"
+    },
+    {
+        "name": "Ancient Guardian",
+        "type": "Shield",
+        "level": 80,
+        "defense": 55.2,
+        "dexterity": 0,
+        "obtain": "Blacksmithing"
+    },
+    {
+        "name": "Arachnophobias Shield",
+        "type": "Shield",
+        "level": 80,
+        "defense": 55.2,
+        "dexterity": 0,
+        "obtain": "Hellscape Event, Halloween Event: Boss Drop [2020 - 2021]"
+    },
+    {
+        "name": "Easter Island Shield",
+        "type": "Shield",
+        "level": 80,
+        "defense": 55.2,
+        "dexterity": 0,
+        "obtain": "Easter Event Shop"
+    },
+    {
+        "name": "Aquatic Guard",
+        "type": "Shield",
+        "level": 85,
+        "defense": 60,
+        "dexterity": 0,
+        "obtain": "Floor 9 Hidden Shop"
+    },
+    {
+        "name": "Stone Shield",
+        "type": "Shield",
+        "level": 90,
+        "defense": 64.8,
+        "dexterity": 0,
+        "obtain": "«Bonnz the Skeleton Lord»"
+    },
+    {
+        "name": "Cornucopia Shield Mk I",
+        "type": "Shield",
+        "level": 90,
+        "defense": 64.8,
+        "dexterity": 0,
+        "obtain": "Thanksgiving Event: Blacksmithing"
+    },
+    {
+        "name": "Golden Shield",
+        "type": "Shield",
+        "level": 95,
+        "defense": 69.6,
+        "dexterity": 0,
+        "obtain": "Floor 10 Shop"
+    },
+    {
+        "name": "Peppermint Shield MK I",
+        "type": "Shield",
+        "level": 100,
+        "defense": 74.7,
+        "dexterity": 0,
+        "obtain": "Christmas Event: Event Quest Reward [2021]"
+    },
+    {
+        "name": "Krakens Skin",
+        "type": "Shield",
+        "level": 105,
+        "defense": 79.8,
+        "dexterity": 0,
+        "obtain": "«Karth'uk The Crystal Kraken»"
+    },
+    {
+        "name": "Summer Seashell Shield Mk III",
+        "type": "Shield",
+        "level": 105,
+        "defense": 79.8,
+        "dexterity": 0,
+        "obtain": "Summer Event: Blacksmithing [2023]"
+    },
+    {
+        "name": "Summer Atlantean Shield Mk III",
+        "type": "Shield",
+        "level": 105,
+        "defense": 79.8,
+        "dexterity": 0,
+        "obtain": "Summer Event: Blacksmithing"
+    },
+    {
+        "name": "Comedy Tragic",
+        "type": "Shield",
+        "level": 110,
+        "defense": 84.9,
+        "dexterity": 0,
+        "obtain": "Floor 10 Shop"
+    },
+    {
+        "name": "Royal Guard",
+        "type": "Shield",
+        "level": 115,
+        "defense": 90.3,
+        "dexterity": 0,
+        "obtain": "Floor 10 Shop"
+    },
+    {
+  "name": "Easter Royale Shield Mk III",
+  "category": "Shield",
+  "level": 116,
+  "defense": 91.2,
+  "dexterity": 0,
+  "obtain": "Easter Event: QE19 Reward unlocks in Blacksmithing [2025]"
+},
+{
+"name": "Floral Shield",
+"type": "Shield",
+"level": 120,
+"defense": 95.4,
+"dexterity": 0,
+"obtain": "Floor 12 Shop"
+},
+{
+"name": "Laurel Shield",
+"type": "Shield",
+"level": 122,
+"defense": 97.8,
+"dexterity": 0,
+"obtain": "Knight"
+},
+{
+"name": "Cursed Shield",
+"type": "Shield",
+"level": 127,
+"defense": 103.2,
+"dexterity": 0,
+"obtain": "Tormented Spectrum"
+},
+{
+    "name": "Sky Shield",
+    "type": "Shield",
+    "level": 135,
+    "defense": 112.2,
+    "dexterity": 0,
+    "obtain": "Quest #66 Reward"
+  },
+  {
+    "name": "Magic Guard",
+    "type": "Shield",
+    "level": 138,
+    "defense": 115.5,
+    "dexterity": 0,
+    "obtain": "Quest #68 Reward"
+  },
+  {
+    "name": "Summer Seashell Shield Mk IV",
+    "type": "Shield",
+    "level": 140,
+    "defense": 117.6,
+    "dexterity": 0,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+  },
+  {
+    "name": "Summer Atlantean Shield Mk IV",
+    "type": "Shield",
+    "level": 140,
+    "defense": 117.6,
+    "dexterity": 0,
+    "obtain": "Summer Event: Blacksmithing"
+  },
+  {
+    "name": "College Protection",
+    "type": "Shield",
+    "level": 142,
+    "defense": 120,
+    "dexterity": 0,
+    "obtain": "Floor 15 Shop"
+  },
+  {
+    "name": "Broken Wood Shield",
+    "type": "Shield",
+    "level": 147,
+    "defense": 125.7,
+    "dexterity": 0,
+    "obtain": "Floor 16 Shop"
+  },
+  {
+    "name": "Divine Guard",
+    "type": "Shield",
+    "level": 148,
+    "defense": 126.9,
+    "dexterity": 0,
+    "obtain": "Young Celestia"
+  },
+  {
+    "name": "Sweet Shield",
+    "type": "Shield",
+    "level": 150,
+    "defense": 129.3,
+    "dexterity": 0,
+    "obtain": "Floor 17 Shop"
+  },
+  {
+    "name": "Easter Royale Shield Mk IV",
+    "type": "Shield",
+    "level": 154,
+    "defense": 133.8,
+    "dexterity": 0,
+    "obtain": "Easter Event: QE20 Reward unlocks in Blacksmithing [2025]"
+  },
+  {
+    "name": "Arachnophobias Shield MK II",
+    "type": "Shield",
+    "level": 160,
+    "defense": 141,
+    "dexterity": 0,
+    "obtain": "Hellscape Event: Blacksmithing [2021 - 2023]"
+  },
+  {
+    "name": "Easter Island Shield Mk II",
+    "type": "Shield",
+    "level": 160,
+    "defense": 141,
+    "dexterity": 0,
+    "obtain": "Easter Event: Blacksmithing"
+  },
+  {
+    "name": "Makeshift Riot Guard",
+    "type": "Shield",
+    "level": 160,
+    "defense": 141,
+    "dexterity": 0,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Wafer Shield",
+    "type": "Shield",
+    "level": 170,
+    "defense": 153,
+    "dexterity": 0,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Protocol Aegis",
+    "type": "Shield",
+    "level": 170,
+    "defense": 153,
+    "dexterity": 0,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Glacial Ward Shield",
+    "type": "Shield",
+    "level": 175,
+    "defense": 159.3,
+    "dexterity": 0,
+    "obtain": "Floor 19 Shop"
+  },
+  {
+    "name": "Summer Seashell Shield Mk V",
+    "type": "Shield",
+    "level": 175,
+    "defense": 159.3,
+    "dexterity": 0,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+  },
+  {
+    "name": "Summer Atlantean Shield Mk V",
+    "type": "Shield",
+    "level": 175,
+    "defense": 159.3,
+    "dexterity": 0,
+    "obtain": "Summer Event: Blacksmithing"
+  },
+  {
+    "name": "Cornucopia Shield Mk II",
+    "type": "Shield",
+    "level": 180,
+    "defense": 165.3,
+    "dexterity": 0,
+    "obtain": "Thanksgiving Event: Blacksmithing"
+  },
+  {
+    "name": "Cornucopia Shield Mk III",
+    "type": "Shield",
+    "level": 190,
+    "defense": 177.9,
+    "dexterity": 0,
+    "obtain": "Thanksgiving Event: Blacksmithing"
+  },
+  {
+    "name": "Stillfrost Mirror",
+    "type": "Shield",
+    "level": 190,
+    "defense": 177.9,
+    "dexterity": 0,
+    "obtain": "Quest #118 Reward"
+  },
+  {
+    "name": "Peppermint Shield MK II",
+    "type": "Shield",
+    "level": 192,
+    "defense": 180.6,
+    "dexterity": 0,
+    "obtain": "Christmas Event: Blacksmithing [2020 - 2023]"
+  },
+  {
+    "name": "Easter Royale Shield Mk V",
+    "type": "Shield",
+    "level": 192,
+    "defense": 180.6,
+    "dexterity": 0,
+    "obtain": "Easter Event: QE20-2 Reward unlocks in Blacksmithing [2025]"
+  },
+  {
+    "name": "Easter Egg Shield",
+    "type": "Shield",
+    "level": 150,
+    "defense": 137.4,
+    "dexterity": 0,
+    "obtain": "Easter Event: Demented Bunny"
+  },
+  {
+    "name": "Liberator Shield",
+    "type": "Shield",
+    "level": 160,
+    "defense": 167.4,
+    "dexterity": 0,
+    "obtain": "Floor 1 Starter Shop, Requires Grandmaster Liberator Gamepass"
+  },
+  {
+    "name": "Coned Helmet",
+    "type": "Upper Gear",
+    "level": 8,
+    "defense": 0,
+    "dexterity": 8,
+    "obtain": "Floor 1 Shop, Floor 2 Shop"
+  },
+  {
+    "name": "Witch Cap",
+    "type": "Upper Gear",
+    "level": 10,
+    "defense": 0,
+    "dexterity": 10,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Enhanced Coned Helmet",
+    "type": "Upper Gear",
+    "level": 14,
+    "defense": 0,
+    "dexterity": 16,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Bucket Helmet",
+    "type": "Upper Gear",
+    "level": 22,
+    "defense": 0,
+    "dexterity": 29,
+    "obtain": "Floor 2 Shop, Floor 3 Shop"
+  },
+  {
+    "name": "Desert Helmet",
+    "type": "Upper Gear",
+    "level": 35,
+    "defense": 0,
+    "dexterity": 54,
+    "obtain": "Floor 4 Shop"
+  },
+  {
+    "name": "Summer Floral Halo Mk II",
+    "type": "Upper Gear",
+    "level": 44,
+    "defense": 6,
+    "dexterity": 78,
+    "obtain": "Summer Event: Blacksmithing"
+  },
+  {
+    "name": "Ancient Helmet",
+    "type": "Upper Gear",
+    "level": 45,
+    "defense": 0,
+    "dexterity": 76,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+    "name": "Summer Flower Crown Mk II",
+    "type": "Upper Gear",
+    "level": 50,
+    "defense": 9,
+    "dexterity": 155,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+  },
+  {
+    "name": "Knight's Helmet",
+    "type": "Upper Gear",
+    "level": 55,
+    "defense": 0,
+    "dexterity": 99,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+    "name": "Reinforced Knight's Helmet",
+    "type": "Upper Gear",
+    "level": 65,
+    "defense": 0,
+    "dexterity": 125,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+    "name": "Ancient Mask",
+    "type": "Upper Gear",
+    "level": 70,
+    "defense": 0,
+    "dexterity": 138,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Guardsman Helmet",
+    "type": "Upper Gear",
+    "level": 75,
+    "defense": 0,
+    "dexterity": 152,
+    "obtain": "Floor 9 Hidden Shop"
+  },
+  {
+    "name": "Skull of the Forgotten",
+    "type": "Upper Gear",
+    "level": 80,
+    "defense": 0,
+    "dexterity": 165,
+    "obtain": "Bonnz the Skeleton Lord"
+  },
+  {
+    "name": "Sickly Beaks Satiation",
+    "type": "Upper Gear",
+    "level": 80,
+    "defense": 0,
+    "dexterity": 165,
+    "obtain": "Hellscape Event, Halloween Event: Sir Sickly Beak [2020 - 2021]"
+  },
+  {
+    "name": "Straw Hat",
+    "type": "Upper Gear",
+    "level": 85,
+    "defense": 0,
+    "dexterity": 180,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Summer Floral Halo Mk III",
+    "type": "Upper Gear",
+    "level": 88,
+    "defense": 14,
+    "dexterity": 194,
+    "obtain": "Summer Event: Blacksmithing"
+  },
+  {
+    "name": "Shinobi Hat",
+    "type": "Upper Gear",
+    "level": 90,
+    "defense": 0,
+    "dexterity": 194,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Crusader Helmet",
+    "type": "Upper Gear",
+    "level": 95,
+    "defense": 0,
+    "dexterity": 209,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Samurai Helmet",
+    "type": "Upper Gear",
+    "level": 97,
+    "defense": 0,
+    "dexterity": 215,
+    "obtain": "Samurai, Dead Samurai"
+  },
+  {
+    "name": "Crown",
+    "type": "Upper Gear",
+    "level": 100,
+    "defense": 0,
+    "dexterity": 224,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Ghost Warrior",
+    "type": "Upper Gear",
+    "level": 115,
+    "defense": 0,
+    "dexterity": 270,
+    "obtain": "Quest#61 Reward"
+  },
+  {
+    "name": "Summer Floral Halo Mk IV",
+    "type": "Upper Gear",
+    "level": 132,
+    "defense": 23,
+    "dexterity": 333,
+    "obtain": "Summer Event: Blacksmithing"
+  },
+  {
+    "name": "Guardian Angel",
+    "type": "Upper Gear",
+    "level": 136,
+    "defense": 0,
+    "dexterity": 340,
+    "obtain": "Quest#69 Reward"
+  },
+  {
+    "name": "Markless Hood",
+    "type": "Upper Gear",
+    "level": 165,
+    "defense": 0,
+    "dexterity": 441,
+    "obtain": "Loan Shark Henchman"
+  },
+  {
+    "name": "Candy Soldier Hat",
+    "type": "Upper Gear",
+    "level": 166,
+    "defense": 0,
+    "dexterity": 445,
+    "obtain": "Captain Sweet the Forever Child"
+  },
+  {
+    "name": "Candy Mask",
+    "type": "Upper Gear",
+    "level": 168,
+    "defense": 0,
+    "dexterity": 452,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "V-Class Visor",
+    "type": "Upper Gear",
+    "level": 168,
+    "defense": 0,
+    "dexterity": 452,
+    "obtain": "Masked VIP Scout"
+  },
+  {
+    "name": "Summer Flower Crown Mk III",
+    "type": "Upper Gear",
+    "level": 175,
+    "defense": 35,
+    "dexterity": 485,
+    "obtain": "Summer Event: Blacksmithing [2023]"
+  },
+  {
+    "name": "Summer Floral Halo Mk V",
+    "type": "Upper Gear",
+    "level": 176,
+    "defense": 34,
+    "dexterity": 489,
+    "obtain": "Summer Event: Blacksmithing"
+  },
+  {
+    "name": "Easter Bobbers",
+    "type": "Upper Gear",
+    "level": 180,
+    "defense": 0,
+    "dexterity": 496,
+    "obtain": "Easter Event: Blacksmithing [2021]"
+  },
+  {
+    "name": "Easter Egg Bobbers",
+    "type": "Upper Gear",
+    "level": 180,
+    "defense": 0,
+    "dexterity": 496,
+    "obtain": "Easter Event: Blacksmithing [2022 - 2023]"
+  },
+   {
+    "name": "Custodian Mask",
+    "type": "Upper Gear",
+    "level": 195,
+    "defense": 0,
+    "dexterity": 553,
+    "obtain": "The Custodian"
+  },
+  {
+    "name": "Kringlewrath Sanctified Helm",
+    "type": "Upper Gear",
+    "level": 205,
+    "defense": 37,
+    "dexterity": 592,
+    "obtain": "Christmas Event: Blacksmithing"
+  },
+  {
+    "name": "Oslund Headguard",
+    "type": "Upper Gear",
+    "level": 217,
+    "defense": 0,
+    "dexterity": 639,
+    "obtain": "Oslund the Hollow Flame"
+  },
+  {
+    "name": "Frostveil Echo Helm",
+    "type": "Upper Gear",
+    "level": 225,
+    "defense": 0,
+    "dexterity": 671,
+    "obtain": "Frostveil Echo"
+  },
+  {
+    "name": "Pumpkin",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Grim"
+  },
+  {
+    "name": "Hallows Jack",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Plump Jack",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Citrus Jack",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Crimson Jack",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Sunshine Jack",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Blackshine Jack",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Bonnzskull",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Hallows Garbera",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Halloween Event: Event Drop [2020 - 2021]"
+  },
+  {
+    "name": "Top Hat",
+    "type": "Upper Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Christmas Event: Snowman"
+  },
+  {
+    "name": "Santa Red Hat",
+    "type": "Upper Gear",
+    "level": 150,
+    "defense": 0,
+    "dexterity": 391,
+    "obtain": "Christmas Event: Renegade Saint Nick"
+  },
+  {
+    "name": "Santa Green Hat",
+    "type": "Upper Gear",
+    "level": 175,
+    "defense": 0,
+    "dexterity": 481,
+    "obtain": "Christmas Event: Perfidious Krampus, Krampus"
+  },
+  {
+    "name": "Antlers",
+    "type": "Upper Gear",
+    "level": 190,
+    "defense": 0,
+    "dexterity": 538,
+    "obtain": "Christmas Event: Perfidious Krampus, Krampus"
+  },
+  {
+    "name": "Head of Pengonis",
+    "type": "Upper Gear",
+    "level": 200,
+    "defense": 0,
+    "dexterity": 576,
+    "obtain": "Hellscape Event, Halloween Event: Slime Lord Pengonis [2020 - 2021]"
+  },
+  {
+    "name": "Head of Skaal",
+    "type": "Upper Gear",
+    "level": 225,
+    "defense": 0,
+    "dexterity": 675,
+    "obtain": "Hellscape Event, Halloween Event: Skaal the Undead Penguin Lord [2020 - 2021]"
+  },
+  {
+    "name": "Snowflake Necklace",
+    "type": "Lower Gear",
+    "level": 0,
+    "defense": 0,
+    "dexterity": 0,
+    "obtain": "Christmas Event: Blacksmithing, Requires QE52 Completed first"
+  },
+  {
+    "name": "Beginners Cloak",
+    "type": "Lower Gear",
+    "level": 6,
+    "defense": 0,
+    "dexterity": 5,
+    "obtain": "Floor 1 Shop, Floor 2 Shop"
+  },
+  {
+    "name": "Enhanced Cloak",
+    "type": "Lower Gear",
+    "level": 12,
+    "defense": 0,
+    "dexterity": 13,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Swamp Coat",
+    "type": "Lower Gear",
+    "level": 18,
+    "defense": 0,
+    "dexterity": 22,
+    "obtain": "Floor 2 Shop, Floor 3 Shop"
+  },
+  {
+    "name": "Desert Pancho",
+    "type": "Lower Gear",
+    "level": 30,
+    "defense": 0,
+    "dexterity": 44,
+    "obtain": "Floor 4 Shop"
+  },
+  {
+    "name": "Cloak of Ice",
+    "type": "Lower Gear",
+    "level": 40,
+    "defense": 0,
+    "dexterity": 65,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+    "name": "Devils Cloak",
+    "type": "Lower Gear",
+    "level": 50,
+    "defense": 0,
+    "dexterity": 87,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+    "name": "Bloodsuckers Cloak",
+    "type": "Lower Gear",
+    "level": 50,
+    "defense": 0,
+    "dexterity": 87,
+    "obtain": "Halloween Event: Special Mob Variants (2020 - 2021 Only)"
+  },
+  {
+    "name": "Forest Cape",
+    "type": "Lower Gear",
+    "level": 60,
+    "defense": 0,
+    "dexterity": 112,
+    "obtain": "Floor 7 Shop"
+  },
+  {
+    "name": "Summer Conch Necklace Mk II",
+    "type": "Lower Gear",
+    "level": 65,
+    "defense": 9,
+    "dexterity": 125,
+    "obtain": "Summer Event: Blacksmithing, Requires QE23 Completed first"
+  },
+  {
+    "name": "Black Cape",
+    "type": "Lower Gear",
+    "level": 70,
+    "defense": 0,
+    "dexterity": 138,
+    "obtain": "Floor 5 Shop"
+  },
+  {
+    "name": "Aquatic Poach",
+    "type": "Lower Gear",
+    "level": 75,
+    "defense": 0,
+    "dexterity": 152,
+    "obtain": "Floor 9 Hidden Shop"
+  },
+  {
+    "name": "Samurais Cloak",
+    "type": "Lower Gear",
+    "level": 85,
+    "defense": 0,
+    "dexterity": 180,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Yin Yang Amulet",
+    "type": "Lower Gear",
+    "level": 87,
+    "defense": 0,
+    "dexterity": 185,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Corrupted Cape",
+    "type": "Lower Gear",
+    "level": 90,
+    "defense": 0,
+    "dexterity": 194,
+    "obtain": "Floor 10 Shop"
+  },
+  {
+    "name": "Blessed Pendant of Light",
+    "type": "Lower Gear",
+    "level": 95,
+    "defense": 30,
+    "dexterity": 0,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Petal Cloak",
+    "type": "Lower Gear",
+    "level": 105,
+    "defense": 0,
+    "dexterity": 239,
+    "obtain": "Floor 12 Shop"
+  },
+  {
+    "name": "Flora",
+    "type": "Lower Gear",
+    "level": 115,
+    "defense": 0,
+    "dexterity": 270,
+    "obtain": "Blacksmithing"
+  },
+  {
+    "name": "Ghost Reminder",
+    "type": "Lower Gear",
+    "level": 115,
+    "defense": 0,
+    "dexterity": 270,
+    "obtain": "Quest #61 Reward"
+  },
+  {
+    "name": "Graciousness",
+    "type": "Lower Gear",
+    "level": 125,
+    "defense": 0,
+    "dexterity": 303,
+    "obtain": "Floor 15 Shop"
+  },
+  {
+    "name": "College Cloak",
+    "type": "Lower Gear",
+    "level": 135,
+    "defense": 0,
+    "dexterity": 336,
+    "obtain": "Floor 15 Shop"
+  },
+  {
+    "name": "Heavenly Wings",
+    "type": "Lower Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 353,
+    "obtain": "Quest #69 Reward"
+  },
+  {
+    "name": "Sweet Cape",
+    "type": "Lower Gear",
+    "level": 155,
+    "defense": 0,
+    "dexterity": 405,
+    "obtain": "Floor 17 Shop"
+  },
+  {
+    "name": "Two-Headed Cape",
+    "type": "Lower Gear",
+    "level": 164,
+    "defense": 0,
+    "dexterity": 438,
+    "obtain": "Two-Headed Giant"
+  },
+  {
+    "name": "Summer Conch Necklace Mk III",
+    "type": "Lower Gear",
+    "level": 165,
+    "defense": 35,
+    "dexterity": 441,
+    "obtain": "Summer Event: Blacksmithing, Requires QE23 and QE24 Completed first"
+  },
+  {
+    "name": "Cape of Compliance",
+    "type": "Lower Gear",
+    "level": 168,
+    "defense": 0,
+    "dexterity": 452,
+    "obtain": "Masked VIP Scout"
+  },
+  {
+    "name": "Easter Pendant",
+    "type": "Lower Gear",
+    "level": 170,
+    "defense": 0,
+    "dexterity": 459,
+    "obtain": "Easter Event: Blacksmithing (2021 Only)"
+  },
+  {
+    "name": "Easter Egg Pendant",
+    "type": "Lower Gear",
+    "level": 170,
+    "defense": 0,
+    "dexterity": 459,
+    "obtain": "Easter Event: Blacksmithing (2022 -)"
+  },
+  {
+    "name": "Frostveil Echo Mantle",
+    "type": "Lower Gear",
+    "level": 225,
+    "defense": 0,
+    "dexterity": 671,
+    "obtain": "Frostveil Echo"
+  },
+  {
+    "name": "Tear of Eir",
+    "type": "Lower Gear",
+    "level": 225,
+    "defense": 0,
+    "dexterity": 671,
+    "obtain": "Quest #126 Reward"
+  },
+  {
+    "name": "Winter Red Scarf",
+    "type": "Lower Gear",
+    "level": 140,
+    "defense": 0,
+    "dexterity": 357,
+    "obtain": "Christmas Event: Snowman"
+  },
+  {
+    "name": "Grandmaster Mantle",
+    "type": "Lower Gear",
+    "level": 160,
+    "defense": 0,
+    "dexterity": 427,
+    "obtain": "Floor 1 Shop, Requires Grandmaster Liberator Gamepass"
+  }
+]

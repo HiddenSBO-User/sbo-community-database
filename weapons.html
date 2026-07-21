@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Weapons</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<h2>⚔ Weapons</h2>
+
+<a href="index.html">Home</a>
+
+<a href="weapons.html">
+Weapons
+</a>
+
+<a href="gear.html">
+Gear
+</a>
+
+<a href="blacksmith.html">
+Blacksmith
+</a>
+
+</nav>
+
+
+
+<h1 class="page-title">
+Weapon Database
+</h1>
+
+
+
+<div class="database-controls">
+
+
+<input
+
+type="text"
+
+id="weapon-search"
+
+placeholder="Search weapons..."
+
+>
+
+
+
+<select id="weapon-sort">
+
+
+<option value="default">
+Default
+</option>
+
+
+<option value="level-high">
+Highest Level
+</option>
+
+
+<option value="level-low">
+Lowest Level
+</option>
+
+
+<option value="attack-high">
+Highest Attack
+</option>
+
+
+<option value="attack-low">
+Lowest Attack
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="category-buttons">
+
+
+<button 
+class="weapon-category-button"
+data-type="1 Handed">
+
+1 Handed
+
+</button>
+
+
+
+<button 
+class="weapon-category-button"
+data-type="2 Handed">
+
+2 Handed
+
+</button>
+
+
+
+
+<button 
+class="weapon-category-button"
+data-type="Rapier">
+
+Rapier
+
+</button>
+
+
+
+
+<button 
+class="weapon-category-button"
+data-type="Dagger">
+
+Dagger
+
+</button>
+
+
+<button 
+id="show-all-weapons">
+
+Show All
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="weapon-container">
+
+</div>
+
+
+
+
+
+
+<!-- DETAILS POPUP -->
+
+
+<div id="weapon-details-box"
+class="details-box">
+
+
+<div class="details-content">
+
+
+<button id="close-details">
+
+X
+
+</button>
+
+
+<div id="weapon-details-content">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="js/weapons.js"></script>
+
+
+</body>
+
+</html>

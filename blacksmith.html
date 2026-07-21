@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blacksmith</title>
+
+
+<link rel="stylesheet" href="css/blacksmith.css">
+
+
+</head>
+
+
+<body>
+
+    
+
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
+<nav class="site-navigation">
+
+
+<a href="index.html">
+Home
+</a>
+
+
+<a href="weapons.html">
+Weapons
+</a>
+
+
+<a href="gear.html">
+Gear
+</a>
+
+
+<a href="blacksmith.html">
+Blacksmith
+</a>
+
+
+</nav>
+
+<!-- =========================
+BLACKSMITH HEADER
+========================= -->
+
+
+<h1 class="page-title">
+
+Blacksmith
+
+</h1>
+
+
+
+<!-- =========================
+SEARCH + SORT
+========================= -->
+
+
+<div class="blacksmith-controls">
+
+
+<input
+
+type="text"
+
+id="blacksmith-search"
+
+placeholder="Search items, materials, quests..."
+
+>
+
+
+
+<select id="blacksmith-sort">
+
+
+<option value="sk-high">
+
+Highest SK
+
+</option>
+
+
+<option value="sk-low">
+
+Lowest SK
+
+</option>
+
+
+<option value="exp-high">
+
+Highest EXP
+
+</option>
+
+
+<option value="exp-low">
+
+Lowest EXP
+
+</option>
+
+
+<option value="az">
+
+A-Z
+
+</option>
+
+
+<option value="za">
+
+Z-A
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+MAIN CATEGORIES
+========================= -->
+
+
+<div class="blacksmith-category-buttons">
+
+
+<button
+
+class="blacksmith-category-button"
+
+data-category="Weapons"
+
+>
+
+⚔ Weapons
+
+</button>
+
+
+
+<button
+
+class="blacksmith-category-button"
+
+data-category="Defense"
+
+>
+
+🛡 Defense
+
+</button>
+
+
+
+<button
+
+class="blacksmith-category-button"
+
+data-category="Materials"
+
+>
+
+🧱 Materials
+
+</button>
+
+
+
+
+<button
+
+class="blacksmith-category-button"
+
+data-category="Events / Overlays"
+
+>
+
+✨ Events / Overlays
+
+</button>
+
+
+
+
+<button
+
+class="blacksmith-category-button"
+
+data-category="Legendary"
+
+>
+
+👑 Legendary
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+SUB CATEGORY BUTTONS
+========================= -->
+
+
+<div id="blacksmith-subcategories">
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+FILTER BUTTONS
+========================= -->
+
+
+<div class="blacksmith-filter-buttons">
+
+
+<button data-filter="all">
+
+All
+
+</button>
+
+
+<button data-filter="craftable">
+
+Can Craft
+
+</button>
+
+
+<button data-filter="almost">
+
+Almost Ready
+
+</button>
+
+
+<button data-filter="missing">
+
+Missing Materials
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+ITEM DISPLAY
+========================= -->
+
+
+<div id="blacksmith-container">
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+DETAIL POPUP
+========================= -->
+
+
+<div
+
+id="blacksmith-details-box"
+
+class="details-popup"
+
+style="display:none;"
+
+>
+
+
+<button
+
+id="close-details"
+
+>
+
+X
+
+</button>
+
+
+
+<div
+
+id="blacksmith-details-content"
+
+>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+INVENTORY PANEL
+========================= -->
+
+
+<div class="inventory-panel">
+
+
+<h2>
+My Materials
+</h2>
+
+
+<div class="inventory-add">
+
+
+<input
+
+id="material-name"
+
+placeholder="Material Name"
+
+>
+
+
+<input
+
+id="material-amount"
+
+type="number"
+
+placeholder="Amount"
+
+>
+
+
+<button id="add-material">
+
+Add
+
+</button>
+
+
+</div>
+
+
+
+
+<div id="inventory-container">
+
+</div>
+
+
+
+
+<button id="reset-inventory">
+
+Reset Inventory
+
+</button>
+
+
+</div>
+
+
+
+
+
+<script src="js/blacksmith.js"></script>
+
+
+</body>
+
+
+</html>
