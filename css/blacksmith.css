@@ -425,6 +425,42 @@ body {
 }
 
 
+.progress-label {
+    text-align:center;
+    margin-top:6px;
+    font-size:14px;
+    color:#ccc;
+}
+
+
+/* =========================
+   RECIPE MATERIALS (details popup)
+========================= */
+
+.recipe-material {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e1e1e;
+    border:1px solid #333;
+    border-radius:8px;
+    padding:8px 12px;
+    margin-bottom:6px;
+}
+
+.recipe-material h3 {
+    margin:0;
+    font-size:15px;
+}
+
+.recipe-material p {
+    margin:0;
+    font-size:13px;
+    color:#aaa;
+}
+
+
+
 
 
 
@@ -475,54 +511,47 @@ body {
    DETAILS POPUP
 ========================= */
 
-
 .details-popup {
-
 
     position:fixed;
 
     top:50%;
-
     left:50%;
 
-
-    transform:
-
-    translate(-50%,-50%);
-
+    transform:translate(-50%,-50%);
 
     background:#222;
 
-
     padding:30px;
-
 
     border-radius:15px;
 
-
     border:2px solid #555;
 
+    width:450px;
 
-    width:400px;
+    max-width:90vw;
 
+    max-height:85vh;
 
-    max-width:90%;
+    overflow-y:auto;
 
+    overflow-x:hidden;
 
     z-index:1000;
-
 
 }
 
 
-
-
-
+/* CLOSE BUTTON */
 
 #close-details {
 
+    position:absolute;
 
-    float:right;
+    top:15px;
+
+    right:15px;
 
     background:red;
 
@@ -532,18 +561,39 @@ body {
 
     border-radius:50%;
 
-    width:30px;
+    width:35px;
 
-    height:30px;
+    height:35px;
+
+    font-size:20px;
 
     cursor:pointer;
 
+    z-index:1100;
 
 }
 
 
+#close-details:hover {
+
+    background:#ff5555;
+
+}
+
+.details-popup ul {
+
+    padding-left:20px;
+
+    text-align:left;
+
+}
 
 
+.details-popup li {
+
+    margin-bottom:8px;
+
+}
 
 
 
@@ -602,166 +652,16 @@ body {
 
 .inventory-item {
 
+
     background:#222;
+
     padding:10px;
+
     border-radius:8px;
+
     text-align:center;
-}
 
 
-/* =========================
-   INVENTORY - SUMMARY / TOOLBAR
-========================= */
-
-.inventory-summary {
-    text-align:center;
-    margin:10px 0 15px;
-    font-size:15px;
-    color:#ccc;
-}
-
-.inventory-summary strong {
-    color:#4caf50;
-    font-size:18px;
-}
-
-.inventory-toolbar {
-    display:flex;
-    gap:12px;
-    margin-bottom:15px;
-    flex-wrap:wrap;
-}
-
-.inventory-toolbar input,
-.inventory-toolbar select {
-    flex:1;
-    min-width:160px;
-    padding:10px;
-    border-radius:8px;
-    border:none;
-    font-size:14px;
-}
-
-.inventory-error {
-    color:#ff5c5c;
-    text-align:center;
-    min-height:18px;
-    margin-top:8px;
-    font-size:14px;
-}
-
-.inventory-empty {
-    text-align:center;
-    color:#888;
-    padding:20px;
-}
-
-
-/* =========================
-   INVENTORY - ITEM ROWS
-========================= */
-
-#inventory-container {
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-}
-
-.inventory-item {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    text-align:left;
-    border-left:4px solid #444;
-    gap:10px;
-}
-
-.inventory-item.has-stock {
-    border-left-color:#4caf50;
-}
-
-.inventory-item.no-stock {
-    border-left-color:#555;
-    opacity:0.85;
-}
-
-.inventory-item-info h3 {
-    margin:0 0 4px;
-    font-size:15px;
-}
-
-.inventory-usage {
-    font-size:12px;
-    color:#999;
-}
-
-.inventory-item-controls {
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
-
-.qty-btn {
-    width:28px;
-    height:28px;
-    border-radius:6px;
-    border:none;
-    background:#333;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
-    line-height:1;
-}
-
-.qty-btn:hover {
-    background:#444;
-}
-
-.qty-input {
-    width:52px;
-    padding:5px 2px;
-    text-align:center;
-    border-radius:6px;
-    border:none;
-    font-size:14px;
-}
-
-
-/* =========================
-   RECIPE MATERIALS (details popup)
-========================= */
-
-.recipe-material {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#1e1e1e;
-    border:1px solid #333;
-    border-radius:8px;
-    padding:8px 12px;
-    margin-bottom:6px;
-}
-
-.recipe-material h3 {
-    margin:0;
-    font-size:15px;
-}
-
-.recipe-material p {
-    margin:0;
-    font-size:13px;
-    color:#aaa;
-}
-
-
-/* =========================
-   CRAFT PROGRESS
-========================= */
-
-.progress-label {
-    text-align:center;
-    margin-top:6px;
-    font-size:14px;
-    color:#ccc;
 }
 
 
