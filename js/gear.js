@@ -5,7 +5,7 @@
 
 let allGear = [];
 
-let currentCategory = "Armor";
+let currentCategory = "All";
 
 let currentGear = [];
 
@@ -85,12 +85,31 @@ document
 .querySelectorAll(".gear-category-button");
 
 
+const showAll =
+document.getElementById("show-all-gear");
+
+
+function setActive(activeButton){
+
+buttons.forEach(b =>
+b.classList.remove("active")
+);
+
+if(showAll)
+showAll.classList.remove("active");
+
+if(activeButton)
+activeButton.classList.add("active");
+
+}
+
+
 buttons.forEach(button => {
 
 
 if(button.dataset.type === currentCategory){
 
-button.classList.add("active");
+setActive(button);
 
 }
 
@@ -104,11 +123,7 @@ this.dataset.type;
 
 
 
-buttons.forEach(b =>
-b.classList.remove("active")
-);
-
-this.classList.add("active");
+setActive(this);
 
 
 
@@ -123,6 +138,25 @@ currentCategory
 
 
 });
+
+
+if(showAll){
+
+showAll.onclick = function(){
+
+currentCategory = "All";
+
+setActive(showAll);
+
+showCategory(currentCategory);
+
+};
+
+if(currentCategory === "All"){
+setActive(showAll);
+}
+
+}
 
 
 }
@@ -143,7 +177,9 @@ function showCategory(category){
 
 
 currentGear =
-allGear.filter(
+category === "All"
+? allGear.slice()
+: allGear.filter(
 item =>
 item.type === category
 );
@@ -776,7 +812,6 @@ location.hash.substring(1)
 
 
 
-console.log("Looking for:", itemName);
 
 
 
@@ -784,7 +819,6 @@ let cards = document.querySelectorAll(".card");
 
 
 
-console.log("Cards found:", cards.length);
 
 
 
@@ -794,7 +828,6 @@ cards.forEach(card=>{
 if(card.innerText.includes(itemName)){
 
 
-console.log("Found:", card);
 
 
 
