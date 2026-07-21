@@ -1147,7 +1147,7 @@
     },
     {
   "name": "Easter Royale Shield Mk III",
-  "category": "Shield",
+  "type": "Shield",
   "level": 116,
   "defense": 91.2,
   "dexterity": 0,
