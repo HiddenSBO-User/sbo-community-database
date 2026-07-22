@@ -13,6 +13,39 @@ let selectedCategory = "All";
 
 
 // =========================
+// SCALING STAT FORMATTING
+// =========================
+
+
+function formatAttack(weapon){
+
+if(weapon.scaling && weapon.attackMin !== undefined){
+
+return `${weapon.attackMin} - ${weapon.attack}`;
+
+}
+
+return weapon.attack;
+
+}
+
+
+function formatLevel(weapon){
+
+if(weapon.scaling && weapon.levelMin !== undefined){
+
+return `${weapon.levelMin} - ${weapon.level}`;
+
+}
+
+return weapon.level;
+
+}
+
+
+
+
+// =========================
 // LOAD WEAPONS
 // =========================
 
@@ -172,7 +205,7 @@ ${weapon.name}
 <p>
 
 ⚔ Attack:
-${weapon.attack}
+${formatAttack(weapon)}
 
 </p>
 
@@ -181,7 +214,7 @@ ${weapon.attack}
 <p>
 
 Level:
-${weapon.level}
+${formatLevel(weapon)}
 
 </p>
 
@@ -616,7 +649,7 @@ ${weapon.name}
 <p>
 
 ⚔ Attack:
-${weapon.attack}
+${formatAttack(weapon)}
 
 </p>
 
@@ -625,9 +658,12 @@ ${weapon.attack}
 <p>
 
 Level Requirement:
-${weapon.level}
+${formatLevel(weapon)}
 
 </p>
+
+
+${weapon.scaling ? `<p class="scaling-note">📈 Stats scale with player level</p>` : ""}
 
 
 
