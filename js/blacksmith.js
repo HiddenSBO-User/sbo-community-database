@@ -21,6 +21,12 @@ let currentCraftFilter = "all";
 
 let inventory = {};
 
+let inventorySearchTerm = "";
+
+let inventorySort = "az";
+
+let materialUsage = {};
+
 
 // =========================
 // LOAD BLACKSMITH JSON
@@ -44,6 +50,9 @@ fetch("data/blacksmith.json")
 allItems = items;
 
 
+buildMaterialUsage();
+
+
 loadInventory();
 
 
@@ -62,6 +71,8 @@ setupSorting();
 setupFilterButtons();
 
 setupDetailsButtons();
+
+setupInventoryControls();
 
 
 })
@@ -1411,6 +1422,47 @@ document
 // =========================
 
 
+// =========================
+// MATERIAL USAGE MAP
+// =========================
+
+
+function buildMaterialUsage(){
+
+
+materialUsage = {};
+
+
+allItems.forEach(item=>{
+
+
+if(!item.materials) return;
+
+
+item.materials.forEach(mat=>{
+
+
+if(materialUsage[mat.name] === undefined){
+
+materialUsage[mat.name] = 0;
+
+}
+
+
+materialUsage[mat.name]++;
+
+
+});
+
+
+});
+
+
+}
+
+
+
+
 function createInventory(){
 
 
@@ -1469,6 +1521,8 @@ inventory[material] = 0;
 
 
 saveInventory();
+
+populateMaterialOptions();
 
 
 displayInventory();
@@ -1566,7 +1620,6 @@ JSON.stringify(inventory)
 function displayInventory(){
 
 
-
 const container =
 
 document.getElementById(
@@ -1574,78 +1627,233 @@ document.getElementById(
 );
 
 
-
 if(!container)
 return;
 
+
+const summaryBox =
+document.getElementById("inventory-summary");
+
+
+let names = Object.keys(inventory);
+
+
+const totalCount = names.length;
+
+const collectedCount =
+names.filter(n => inventory[n] > 0).length;
+
+
+if(summaryBox){
+
+summaryBox.innerHTML =
+`<strong>${collectedCount}</strong> / ${totalCount} materials collected`;
+
+}
+
+
+const term = inventorySearchTerm.trim().toLowerCase();
+
+if(term){
+
+names = names.filter(n =>
+n.toLowerCase().includes(term)
+);
+
+}
+
+
+if(inventorySort === "az"){
+
+names.sort();
+
+}
+else if(inventorySort === "owned-high"){
+
+names.sort((a,b) => inventory[b] - inventory[a] || a.localeCompare(b));
+
+}
+else if(inventorySort === "owned-low"){
+
+names.sort((a,b) => inventory[a] - inventory[b] || a.localeCompare(b));
+
+}
+else if(inventorySort === "needed"){
+
+names.sort((a,b) => {
+
+const aZero = inventory[a] === 0 ? 0 : 1;
+
+const bZero = inventory[b] === 0 ? 0 : 1;
+
+return aZero - bZero || a.localeCompare(b);
+
+});
+
+}
 
 
 container.innerHTML="";
 
 
+if(names.length === 0){
+
+container.innerHTML =
+`<p class="inventory-empty">No materials match "${inventorySearchTerm}".</p>`;
+
+return;
+
+}
 
 
+names.forEach(material=>{
 
-Object.keys(inventory)
 
-.sort()
+const owned = inventory[material] || 0;
 
-.forEach(material=>{
+const usedIn = materialUsage[material] || 0;
 
+const ownedClass = owned > 0 ? "has-stock" : "no-stock";
 
 
 container.innerHTML += `
 
 
-
-<div class="inventory-item">
-
+<div class="inventory-item ${ownedClass}">
 
 
-<h3>
+<div class="inventory-item-info">
 
-${material}
+<h3>${material}</h3>
 
-</h3>
+<span class="inventory-usage">Used in ${usedIn} recipe${usedIn === 1 ? "" : "s"}</span>
 
-
-
-<p>
-
-Owned:
-
-${inventory[material]}
-
-</p>
+</div>
 
 
+<div class="inventory-item-controls">
 
-<button onclick="changeMaterial('${material}',-1)">
+<button class="qty-btn" onclick="changeMaterial('${material}',-1)">-</button>
 
--
+<input
 
-</button>
+class="qty-input"
 
+type="number"
 
+min="0"
 
-<button onclick="changeMaterial('${material}',1)">
+value="${owned}"
 
-+
+onchange="setMaterialAmount('${material}', this.value)"
 
-</button>
+>
 
+<button class="qty-btn" onclick="changeMaterial('${material}',1)">+</button>
+
+</div>
 
 
 </div>
 
 
-
 `;
-
 
 
 });
 
+
+}
+
+
+
+
+function setMaterialAmount(name, value){
+
+
+let amount = Number(value);
+
+
+if(isNaN(amount) || amount < 0){
+
+amount = 0;
+
+}
+
+
+inventory[name] = amount;
+
+
+saveInventory();
+
+displayInventory();
+
+showCategory(currentCategory);
+
+
+}
+
+
+
+
+function populateMaterialOptions(){
+
+
+const list =
+document.getElementById("material-name-options");
+
+
+if(!list)
+return;
+
+
+list.innerHTML =
+Object.keys(inventory)
+.sort()
+.map(name => `<option value="${name}"></option>`)
+.join("");
+
+
+}
+
+
+
+
+function setupInventoryControls(){
+
+
+const searchInput =
+document.getElementById("inventory-search");
+
+
+const sortSelect =
+document.getElementById("inventory-sort");
+
+
+if(searchInput){
+
+searchInput.oninput = function(){
+
+inventorySearchTerm = this.value;
+
+displayInventory();
+
+};
+
+}
+
+
+if(sortSelect){
+
+sortSelect.onchange = function(){
+
+inventorySort = this.value;
+
+displayInventory();
+
+};
+
+}
 
 
 }
@@ -1719,6 +1927,12 @@ if(
 event.target.id === "reset-inventory"
 ){
 
+
+if(!confirm("Reset all material quantities to 0? This can't be undone.")){
+
+return;
+
+}
 
 
 Object.keys(inventory)
@@ -1807,7 +2021,8 @@ return;
 }
 
 
-
+const errorBox =
+document.getElementById("material-add-error");
 
 
 // find matching material name
@@ -1825,29 +2040,25 @@ material.toLowerCase() === name.toLowerCase()
 );
 
 
-
-
-
 if(found){
-
 
 
 inventory[found]+=amount;
 
-
+if(errorBox) errorBox.textContent = "";
 
 }
 
 else{
 
+if(errorBox){
 
-alert(
-"Material not found"
-);
+errorBox.textContent =
+`No material named "${name}" found. Pick one from the suggestions list.`;
 
+}
 
 return;
-
 
 }
 
