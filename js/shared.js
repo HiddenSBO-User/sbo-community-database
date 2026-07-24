@@ -9,22 +9,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const scrim = document.getElementById("sidebar-scrim");
 
   if (toggle && sidebar && scrim) {
-    toggle.addEventListener("click", function () {
+    function openSidebar() {
       sidebar.classList.add("open");
       scrim.classList.add("visible");
-    });
+      // Stop the page behind the drawer from scrolling while it's open.
+      document.body.classList.add("no-scroll");
+    }
 
-    scrim.addEventListener("click", function () {
+    function closeSidebar() {
       sidebar.classList.remove("open");
       scrim.classList.remove("visible");
+      document.body.classList.remove("no-scroll");
+    }
+
+    toggle.addEventListener("click", function () {
+      // Tapping the hamburger again should close it, not just re-open it.
+      if (sidebar.classList.contains("open")) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
     });
+
+    scrim.addEventListener("click", closeSidebar);
 
     // Close sidebar after navigating on mobile
     sidebar.querySelectorAll(".nav-link").forEach(function (link) {
-      link.addEventListener("click", function () {
-        sidebar.classList.remove("open");
-        scrim.classList.remove("visible");
-      });
+      link.addEventListener("click", closeSidebar);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && sidebar.classList.contains("open")) {
+        closeSidebar();
+      }
     });
   }
 });
