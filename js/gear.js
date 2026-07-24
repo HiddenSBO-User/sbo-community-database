@@ -1,179 +1,907 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gear</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-</head>
+// =========================
+// GEAR DATABASE
+// =========================
 
 
-<body>
+let allGear = [];
 
-
-<nav>
-
-<h2>🛡 Gear</h2>
-
-<a href="index.html">Home</a>
-<a href="weapons.html">Weapons</a>
-<a href="gear.html">Gear</a>
-<a href="blacksmith.html">Blacksmith</a>
-<a href="materials.html">Materials</a>
-
-</nav>
+let currentCategory = "All";
 
 
 
 
-<h1 class="page-title">
-Gear Database
-</h1>
+// =========================
+// SCALING STAT FORMATTING
+// =========================
+
+
+function formatDefense(item){
+
+if(item.scaling && item.defenseMin !== undefined){
+
+return `${item.defenseMin} - ${item.defense}`;
+
+}
+
+return item.defense;
+
+}
+
+
+function formatDexterity(item){
+
+if(item.scaling && item.dexterityMin !== undefined){
+
+return `${item.dexterityMin} - ${item.dexterity}`;
+
+}
+
+return item.dexterity;
+
+}
+
+
+function formatGearLevel(item){
+
+if(item.scaling && item.levelMin !== undefined){
+
+return `${item.levelMin} - ${item.level}`;
+
+}
+
+return item.level;
+
+}
+
+let currentGear = [];
+
+
+
+
+// =========================
+// LOAD GEAR JSON
+// =========================
+
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+
+fetch("data/gear.json")
+
+
+.then(response => response.json())
+
+
+.then(gear => {
+
+
+allGear = gear;
+
+
+showCategory(
+currentCategory
+);
+
+
+
+setupCategoryButtons();
+
+setupSearch();
+
+setupSorting();
+
+setupDetailsButtons();
+
+
+
+})
+
+
+.catch(error => {
+
+
+console.error(
+"Gear loading error:",
+error
+);
+
+
+});
+
+
+});
 
 
 
 
 
-<!-- CATEGORY BUTTONS -->
 
-<div class="gear-buttons">
-
-
-<button class="gear-category-button" data-type="Armor">
-Armor
-</button>
+// =========================
+// CATEGORY BUTTONS
+// =========================
 
 
-<button class="gear-category-button" data-type="Shield">
-Shield
-</button>
+function setupCategoryButtons(){
 
 
-<button class="gear-category-button" data-type="Upper Gear">
-Upper Gear
-</button>
+const buttons =
+document
+.querySelectorAll(".gear-category-button");
 
 
-<button class="gear-category-button" data-type="Lower Gear">
-Lower Gear
-</button>
+const showAll =
+document.getElementById("show-all-gear");
 
 
-<button class="gear-category-button" id="show-all-gear">
-Show All
-</button>
+function setActive(activeButton){
+
+buttons.forEach(b =>
+b.classList.remove("active")
+);
+
+if(showAll)
+showAll.classList.remove("active");
+
+if(activeButton)
+activeButton.classList.add("active");
+
+}
 
 
-</div>
+buttons.forEach(button => {
+
+
+if(button.dataset.type === currentCategory){
+
+setActive(button);
+
+}
+
+
+button.onclick = function(){
+
+
+
+currentCategory =
+this.dataset.type;
+
+
+
+setActive(this);
+
+
+
+showCategory(
+currentCategory
+);
+
+
+
+};
+
+
+
+});
+
+
+if(showAll){
+
+showAll.onclick = function(){
+
+currentCategory = "All";
+
+setActive(showAll);
+
+showCategory(currentCategory);
+
+};
+
+if(currentCategory === "All"){
+setActive(showAll);
+}
+
+}
+
+
+}
 
 
 
 
 
 
-<!-- SEARCH + SORT -->
 
 
-<div class="gear-controls">
+// =========================
+// SHOW CATEGORY
+// =========================
 
 
-<input
-id="gear-search"
-type="text"
-placeholder="Search gear..."
+function showCategory(category){
+
+
+currentGear =
+category === "All"
+? allGear.slice()
+: allGear.filter(
+item =>
+item.type === category
+);
+
+
+
+applyFilters();
+
+
+}
+
+
+
+
+
+
+
+// =========================
+// DISPLAY GEAR
+// =========================
+
+
+function displayGear(gear){
+
+
+
+const container =
+document.getElementById(
+"gear-container"
+);
+
+
+
+container.innerHTML = "";
+
+
+
+
+if(gear.length === 0){
+
+
+container.innerHTML = `
+
+<h2 class="no-results">
+
+No gear found
+
+</h2>
+
+`;
+
+
+return;
+
+
+}
+
+
+
+
+gear.forEach(item => {
+
+
+
+container.innerHTML += `
+
+
+<div class="card">
+
+
+
+<h2>
+
+${item.name}
+
+</h2>
+
+
+
+
+<p>
+
+🛡 Defense:
+${formatDefense(item)}
+
+</p>
+
+
+
+
+<p>
+
+⚡ Dexterity:
+${formatDexterity(item)}
+
+</p>
+
+
+
+
+<p>
+
+Lv. ${formatGearLevel(item)}
+
+</p>
+
+
+
+
+
+<button
+
+class="details-button"
+
+data-name="${item.name}"
+
 >
 
-
-
-<select id="gear-sort">
-
-
-<option value="default">
-Default
-</option>
-
-
-<option value="level-high">
-Highest Level
-</option>
-
-
-<option value="level-low">
-Lowest Level
-</option>
-
-
-<option value="defense-high">
-Highest Defense
-</option>
-
-
-<option value="defense-low">
-Lowest Defense
-</option>
-
-
-<option value="dex-high">
-Highest Dexterity
-</option>
-
-
-<option value="dex-low">
-Lowest Dexterity
-</option>
-
-
-</select>
-
-
-</div>
-
-
-
-
-
-
-<div id="gear-container"></div>
-
-
-
-
-
-<!-- DETAILS -->
-
-<div id="gear-details-box" class="details-box">
-
-
-<div class="details-content">
-
-
-<button id="close-details">
-
-X
+View Details
 
 </button>
 
 
-<div id="gear-details-content"></div>
-
 
 </div>
 
 
-</div>
+`;
+
+
+
+});
+
+
+
+setupDetailsButtons();
+
+
+
+}
 
 
 
 
-<script src="js/gear.js"></script>
 
 
-</body>
 
-</html>
+
+// =========================
+// SEARCH
+// =========================
+
+
+function setupSearch(){
+
+
+const search =
+document.getElementById(
+"gear-search"
+);
+
+
+
+if(!search)
+return;
+
+
+
+search.addEventListener(
+"input",
+function(){
+
+
+applyFilters();
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+
+
+// =========================
+// SORTING
+// =========================
+
+
+function setupSorting(){
+
+
+
+const sort =
+document.getElementById(
+"gear-sort"
+);
+
+
+
+if(!sort)
+return;
+
+
+
+sort.addEventListener(
+"change",
+function(){
+
+
+applyFilters();
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+
+
+function applyFilters(){
+
+
+
+let filtered =
+[...currentGear];
+
+
+
+const search =
+document
+.getElementById(
+"gear-search"
+)
+.value
+.toLowerCase()
+.trim();
+
+
+
+
+if(search){
+
+
+
+filtered =
+filtered.filter(item =>
+
+
+
+(item.name || "")
+.toLowerCase()
+.includes(search)
+
+
+
+||
+
+
+
+(item.obtain || "")
+.toLowerCase()
+.includes(search)
+
+
+
+);
+
+
+
+}
+
+
+
+
+
+
+const sort =
+document
+.getElementById(
+"gear-sort"
+)
+.value;
+
+
+
+
+
+
+switch(sort){
+
+
+
+case "level-high":
+
+
+filtered.sort(
+(a,b)=>
+b.level-a.level
+);
+
+
+break;
+
+
+
+
+case "level-low":
+
+
+filtered.sort(
+(a,b)=>
+a.level-b.level
+);
+
+
+break;
+
+
+
+
+
+
+case "defense-high":
+
+
+filtered.sort(
+(a,b)=>
+b.defense-a.defense
+);
+
+
+break;
+
+
+
+
+
+
+case "defense-low":
+
+
+filtered.sort(
+(a,b)=>
+a.defense-b.defense
+);
+
+
+break;
+
+
+
+
+
+
+case "dex-high":
+
+
+filtered.sort(
+(a,b)=>
+b.dexterity-a.dexterity
+);
+
+
+break;
+
+
+
+
+
+
+case "dex-low":
+
+
+filtered.sort(
+(a,b)=>
+a.dexterity-b.dexterity
+);
+
+
+break;
+
+
+}
+
+
+
+
+
+displayGear(filtered);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// =========================
+// DETAILS BUTTON
+// =========================
+
+
+function setupDetailsButtons(){
+
+
+
+document
+.querySelectorAll(".details-button")
+.forEach(button => {
+
+
+
+button.onclick=function(){
+
+
+
+const gear =
+allGear.find(
+item =>
+item.name === this.dataset.name
+);
+
+
+
+showGearDetails(
+gear
+);
+
+
+
+};
+
+
+
+});
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// =========================
+// DETAILS POPUP
+// =========================
+
+
+function showGearDetails(item){
+
+
+
+const box =
+document.getElementById(
+"gear-details-box"
+);
+
+
+
+const content =
+document.getElementById(
+"gear-details-content"
+);
+
+
+
+
+content.innerHTML = `
+
+
+
+<h2>
+
+${item.name}
+
+</h2>
+
+
+
+
+<p>
+
+Type:
+
+${item.type}
+
+</p>
+
+
+
+
+<p>
+
+Level:
+
+${formatGearLevel(item)}
+
+</p>
+
+
+
+
+<p>
+
+Defense:
+
+${formatDefense(item)}
+
+</p>
+
+
+
+
+<p>
+
+Dexterity:
+
+${formatDexterity(item)}
+
+</p>
+
+
+${item.scaling ? `<p class="scaling-note">📈 Stats scale with player level</p>` : ""}
+
+
+
+
+<p>
+
+How to Obtain:
+
+${item.obtain}
+
+</p>
+
+
+
+`;
+
+
+
+box.style.display =
+"flex";
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// =========================
+// CLOSE POPUP
+// =========================
+
+
+document.addEventListener(
+"click",
+function(event){
+
+
+
+if(
+event.target.id === "close-details"
+){
+
+
+
+document
+.getElementById(
+"gear-details-box"
+)
+.style.display="none";
+
+
+
+}
+
+
+
+});
+
+// ===============================
+// OPEN ITEM FROM HOMEPAGE SEARCH
+// ===============================
+
+
+window.addEventListener(
+"load",
+function(){
+
+
+setTimeout(()=>{
+
+
+if(!location.hash)
+return;
+
+
+
+let itemName =
+
+decodeURIComponent(
+location.hash.substring(1)
+);
+
+
+
+
+
+
+let cards = document.querySelectorAll(".card");
+
+
+
+
+
+
+cards.forEach(card=>{
+
+
+if(card.innerText.includes(itemName)){
+
+
+
+
+
+card.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+
+
+card.style.border =
+"3px solid #4da6ff";
+
+
+
+}
+
+
+});
+
+
+},500);
+
+
+});
