@@ -213,12 +213,14 @@ function applyFilters() {
 
   if (currentCraftFilter === "almost") {
     filtered = filtered.filter(item => {
+      const total = item.materials.length;
       let missing = 0;
       item.materials.forEach(mat => {
         const owned = inventory[mat.name] || 0;
         if (owned < mat.amount) missing++;
       });
-      return missing > 0 && missing <= 2;
+      const haveAny = total - missing > 0;
+      return haveAny && missing > 0 && missing <= 2;
     });
   }
 
@@ -356,14 +358,21 @@ function canCraft(item) {
 }
 
 function getCraftStatus(item) {
+  const total = item.materials.length;
   let missing = 0;
   item.materials.forEach(mat => {
     const owned = inventory[mat.name] || 0;
     if (owned < mat.amount) missing++;
   });
 
+  const haveAny = total - missing > 0;
+
   if (missing === 0) return { text: "🟢 Can Craft", badgeClass: "badge-ready" };
-  if (missing <= 2) return { text: "🟡 Almost Ready", badgeClass: "badge-almost" };
+  // "Almost Ready" only makes sense if the player has made SOME progress
+  // on the recipe. With small recipes (e.g. 2 materials), owning 0 of
+  // everything used to still count as "missing <= 2" and get mislabeled
+  // as almost ready, even at 0% progress.
+  if (haveAny && missing <= 2) return { text: "🟡 Almost Ready", badgeClass: "badge-almost" };
   return { text: "🔴 Missing Materials", badgeClass: "badge-missing" };
 }
 
