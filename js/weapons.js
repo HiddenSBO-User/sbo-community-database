@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.json())
     .then(data => {
       allWeapons = data;
-      currentWeapons = data;
-      displayWeapons();
+      applyFilters();
     })
     .catch(error => {
       console.error("Weapon loading error:", error);
@@ -41,14 +40,35 @@ document.addEventListener("DOMContentLoaded", function () {
   setupCategoryButtons();
 });
 
+// Single source of truth for category + search + sort, run together on
+// every interaction (mirrors gear.js) so none of the three can go stale
+// relative to the others.
+function applyFilters() {
+  let weapons = selectedCategory === "All"
+    ? allWeapons.slice()
+    : allWeapons.filter(weapon => weapon.type === selectedCategory);
+
+  const search = document.getElementById("weapon-search");
+  const value = search ? search.value.toLowerCase().trim() : "";
+
+  if (value) {
+    weapons = weapons.filter(weapon => {
+      const name = (weapon.name || "").toLowerCase();
+      const type = (weapon.type || "").toLowerCase();
+      const obtain = (weapon.obtain || "").toLowerCase();
+      return name.includes(value) || type.includes(value) || obtain.includes(value);
+    });
+  }
+
+  applySort(weapons);
+  currentWeapons = weapons;
+  displayWeapons();
+}
+
 function displayWeapons() {
   const container = document.getElementById("weapon-container");
 
-  let weapons = [...currentWeapons];
-
-  if (selectedCategory !== "All") {
-    weapons = weapons.filter(weapon => weapon.type === selectedCategory);
-  }
+  const weapons = currentWeapons;
 
   if (weapons.length === 0) {
     container.innerHTML = `<h2 class="no-results">No weapons found</h2>`;
@@ -85,18 +105,6 @@ function displayWeapons() {
   setupDetails();
 }
 
-function filterWeaponsBySearch() {
-  const searchBox = document.getElementById("weapon-search");
-  const value = searchBox ? searchBox.value.toLowerCase().trim() : "";
-
-  return allWeapons.filter(weapon => {
-    const name = (weapon.name || "").toLowerCase();
-    const type = (weapon.type || "").toLowerCase();
-    const obtain = (weapon.obtain || "").toLowerCase();
-    return name.includes(value) || type.includes(value) || obtain.includes(value);
-  });
-}
-
 function applySort(list) {
   const sort = document.getElementById("weapon-sort");
   const value = sort ? sort.value : "default";
@@ -117,12 +125,6 @@ function applySort(list) {
   }
 }
 
-function refreshWeaponList() {
-  currentWeapons = filterWeaponsBySearch();
-  applySort(currentWeapons);
-  displayWeapons();
-}
-
 function setupSearch() {
   const search = document.getElementById("weapon-search");
   if (!search) return;
@@ -130,7 +132,7 @@ function setupSearch() {
   let debounce;
   search.addEventListener("input", function () {
     clearTimeout(debounce);
-    debounce = setTimeout(refreshWeaponList, 150);
+    debounce = setTimeout(applyFilters, 150);
   });
 }
 
@@ -139,7 +141,7 @@ function setupSorting() {
   if (!sort) return;
 
   sort.addEventListener("change", function () {
-    refreshWeaponList();
+    applyFilters();
   });
 }
 
@@ -157,7 +159,7 @@ function setupCategoryButtons() {
     button.onclick = function () {
       selectedCategory = this.dataset.type;
       setActive(this);
-      displayWeapons();
+      applyFilters();
     };
   });
 
@@ -165,7 +167,7 @@ function setupCategoryButtons() {
     showAll.onclick = function () {
       selectedCategory = "All";
       setActive(showAll);
-      displayWeapons();
+      applyFilters();
     };
   }
 }
@@ -187,11 +189,21 @@ function showWeaponDetails(weapon) {
 
   content.innerHTML = `
     <h2>${weapon.name}</h2>
-    <p>⚔ Attack: <span class="modal-value">${formatAttack(weapon)}</span></p>
-    <p>Level Requirement: <span class="modal-value">${formatLevel(weapon)}</span></p>
+    <span class="item-card-meta">${weapon.type}</span>
+
+    <div class="stat-row">
+      <span class="stat-row-label">⚔ Attack</span>
+      <span class="stat-row-value">${formatAttack(weapon)}</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-row-label">Level</span>
+      <span class="stat-row-value">${formatLevel(weapon)}</span>
+    </div>
+
     ${weapon.scaling ? `<p class="scaling-note">📈 Stats scale with player level</p>` : ""}
-    <p>Weapon Type: <span class="modal-value">${weapon.type}</span></p>
-    <p>How To Obtain:<br>${weapon.obtain}</p>
+
+    <h3>How To Obtain</h3>
+    <p>${weapon.obtain}</p>
   `;
 
   box.classList.add("visible");
