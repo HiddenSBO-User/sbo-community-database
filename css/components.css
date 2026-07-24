@@ -588,6 +588,24 @@
   border-left: 3px solid var(--border-strong);
 }
 
+.inventory-item.at-cap {
+  border-left: 3px solid var(--accent-amber, #d9a441);
+}
+
+.over-cap-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.over-cap-toggle input {
+  cursor: pointer;
+}
+
 .inventory-item-info h3 {
   font-size: 14px;
   margin: 0 0 2px;
