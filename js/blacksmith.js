@@ -232,7 +232,9 @@ subs=[
 
 "Dagger",
 
-"Weapon Handle"
+"Weapon Handle",
+
+"Melee"
 
 ];
 
