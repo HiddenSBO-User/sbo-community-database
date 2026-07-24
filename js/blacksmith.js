@@ -1708,6 +1708,8 @@ return;
 }
 
 
+let html = "";
+
 names.forEach(material=>{
 
 
@@ -1718,7 +1720,7 @@ const usedIn = materialUsage[material] || 0;
 const ownedClass = owned > 0 ? "has-stock" : "no-stock";
 
 
-container.innerHTML += `
+html += `
 
 
 <div class="inventory-item ${ownedClass}">
@@ -1763,6 +1765,9 @@ onchange="setMaterialAmount('${material}', this.value)"
 
 
 });
+
+
+container.innerHTML = html;
 
 
 }
@@ -1834,11 +1839,15 @@ document.getElementById("inventory-sort");
 
 if(searchInput){
 
+let searchDebounce;
+
 searchInput.oninput = function(){
 
 inventorySearchTerm = this.value;
 
-displayInventory();
+clearTimeout(searchDebounce);
+
+searchDebounce = setTimeout(displayInventory, 150);
 
 };
 
