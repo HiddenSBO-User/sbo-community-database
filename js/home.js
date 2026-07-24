@@ -30,8 +30,12 @@ function updateStats() {
   );
   document.getElementById("craft-count").innerText = craftableItems.length;
 
-  const materials = homeBlacksmith.filter(item => item.category === "Materials");
-  document.getElementById("material-count").innerText = materials.length;
+  const uniqueMaterials = new Set();
+  homeBlacksmith.forEach(item => {
+    if (!item.materials) return;
+    item.materials.forEach(mat => uniqueMaterials.add(mat.name));
+  });
+  document.getElementById("material-count").innerText = uniqueMaterials.size;
 }
 
 // =========================================
