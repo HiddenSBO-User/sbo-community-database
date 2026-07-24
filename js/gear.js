@@ -5,7 +5,53 @@
 
 let allGear = [];
 
-let currentCategory = "Armor";
+let currentCategory = "All";
+
+
+
+
+// =========================
+// SCALING STAT FORMATTING
+// =========================
+
+
+function formatDefense(item){
+
+if(item.scaling && item.defenseMin !== undefined){
+
+return `${item.defenseMin} - ${item.defense}`;
+
+}
+
+return item.defense;
+
+}
+
+
+function formatDexterity(item){
+
+if(item.scaling && item.dexterityMin !== undefined){
+
+return `${item.dexterityMin} - ${item.dexterity}`;
+
+}
+
+return item.dexterity;
+
+}
+
+
+function formatGearLevel(item){
+
+if(item.scaling && item.levelMin !== undefined){
+
+return `${item.levelMin} - ${item.level}`;
+
+}
+
+return item.level;
+
+}
 
 let currentGear = [];
 
@@ -85,12 +131,31 @@ document
 .querySelectorAll(".gear-category-button");
 
 
+const showAll =
+document.getElementById("show-all-gear");
+
+
+function setActive(activeButton){
+
+buttons.forEach(b =>
+b.classList.remove("active")
+);
+
+if(showAll)
+showAll.classList.remove("active");
+
+if(activeButton)
+activeButton.classList.add("active");
+
+}
+
+
 buttons.forEach(button => {
 
 
 if(button.dataset.type === currentCategory){
 
-button.classList.add("active");
+setActive(button);
 
 }
 
@@ -104,11 +169,7 @@ this.dataset.type;
 
 
 
-buttons.forEach(b =>
-b.classList.remove("active")
-);
-
-this.classList.add("active");
+setActive(this);
 
 
 
@@ -123,6 +184,25 @@ currentCategory
 
 
 });
+
+
+if(showAll){
+
+showAll.onclick = function(){
+
+currentCategory = "All";
+
+setActive(showAll);
+
+showCategory(currentCategory);
+
+};
+
+if(currentCategory === "All"){
+setActive(showAll);
+}
+
+}
 
 
 }
@@ -143,7 +223,9 @@ function showCategory(category){
 
 
 currentGear =
-allGear.filter(
+category === "All"
+? allGear.slice()
+: allGear.filter(
 item =>
 item.type === category
 );
@@ -227,7 +309,7 @@ ${item.name}
 <p>
 
 🛡 Defense:
-${item.defense}
+${formatDefense(item)}
 
 </p>
 
@@ -237,7 +319,7 @@ ${item.defense}
 <p>
 
 ⚡ Dexterity:
-${item.dexterity}
+${formatDexterity(item)}
 
 </p>
 
@@ -246,7 +328,7 @@ ${item.dexterity}
 
 <p>
 
-Lv. ${item.level}
+Lv. ${formatGearLevel(item)}
 
 </p>
 
@@ -661,7 +743,7 @@ ${item.type}
 
 Level:
 
-${item.level}
+${formatGearLevel(item)}
 
 </p>
 
@@ -672,7 +754,7 @@ ${item.level}
 
 Defense:
 
-${item.defense}
+${formatDefense(item)}
 
 </p>
 
@@ -683,9 +765,12 @@ ${item.defense}
 
 Dexterity:
 
-${item.dexterity}
+${formatDexterity(item)}
 
 </p>
+
+
+${item.scaling ? `<p class="scaling-note">📈 Stats scale with player level</p>` : ""}
 
 
 
@@ -776,7 +861,6 @@ location.hash.substring(1)
 
 
 
-console.log("Looking for:", itemName);
 
 
 
@@ -784,7 +868,6 @@ let cards = document.querySelectorAll(".card");
 
 
 
-console.log("Cards found:", cards.length);
 
 
 
@@ -794,7 +877,6 @@ cards.forEach(card=>{
 if(card.innerText.includes(itemName)){
 
 
-console.log("Found:", card);
 
 
 

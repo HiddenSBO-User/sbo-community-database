@@ -350,6 +350,38 @@ My Materials
 </h2>
 
 
+<div id="inventory-summary" class="inventory-summary">
+
+</div>
+
+
+<div class="inventory-toolbar">
+
+<input
+
+id="inventory-search"
+
+type="text"
+
+placeholder="Filter your materials..."
+
+>
+
+<select id="inventory-sort">
+
+<option value="az">Name A-Z</option>
+
+<option value="owned-high">Most Owned</option>
+
+<option value="owned-low">Least Owned</option>
+
+<option value="needed">Needed First (0 owned)</option>
+
+</select>
+
+</div>
+
+
 <div class="inventory-add">
 
 
@@ -357,9 +389,17 @@ My Materials
 
 id="material-name"
 
+list="material-name-options"
+
 placeholder="Material Name"
 
+autocomplete="off"
+
 >
+
+<datalist id="material-name-options">
+
+</datalist>
 
 
 <input
@@ -367,6 +407,8 @@ placeholder="Material Name"
 id="material-amount"
 
 type="number"
+
+min="0"
 
 placeholder="Amount"
 
@@ -381,6 +423,9 @@ Add
 
 
 </div>
+
+
+<div id="material-add-error" class="inventory-error"></div>
 
 
 
