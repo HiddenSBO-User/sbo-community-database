@@ -21,12 +21,6 @@ let currentCraftFilter = "all";
 
 let inventory = {};
 
-let inventorySearchTerm = "";
-
-let inventorySort = "az";
-
-let materialUsage = {};
-
 
 // =========================
 // LOAD BLACKSMITH JSON
@@ -50,9 +44,6 @@ fetch("data/blacksmith.json")
 allItems = items;
 
 
-buildMaterialUsage();
-
-
 loadInventory();
 
 
@@ -71,9 +62,6 @@ setupSorting();
 setupFilterButtons();
 
 setupDetailsButtons();
-
-setupInventoryControls();
-
 
 })
 
@@ -414,18 +402,11 @@ applyFilters();
 function displayItems(items){
 
 
-
 const container =
 
 document.getElementById(
 "blacksmith-container"
 );
-
-
-
-container.innerHTML="";
-
-
 
 
 if(items.length === 0){
@@ -445,8 +426,14 @@ return;
 }
 
 
+// Build all card markup into an array first, then write to the
+// DOM ONCE at the end. Using container.innerHTML += inside the
+// loop forces the browser to re-serialize and re-parse the
+// entire accumulated HTML on every single iteration (O(n^2) as
+// the item count grows) -- this is what caused the lag while
+// searching/filtering.
 
-items.forEach(item=>{
+const cardsHTML = items.map(item=>{
 
 let status = getCraftStatus(item);
 
@@ -502,7 +489,7 @@ cosmeticInfo += `
 
 }
 
-container.innerHTML += `
+return `
 
 
 
@@ -575,14 +562,13 @@ View Recipe
 
 `;
 
+}).join("");
 
 
-});
-
+container.innerHTML = cardsHTML;
 
 
 setupDetailsButtons();
-
 
 
 }
@@ -616,15 +602,21 @@ if(!search)
 return;
 
 
+// Debounce: wait for a short pause in typing before filtering.
+// Previously this fired a full filter + re-render on every single
+// keystroke, which -- combined with the innerHTML += rebuild in
+// displayItems -- caused the search box to lag badly as the item
+// list grew.
 
+let searchDebounce;
 
 search.addEventListener(
 "input",
 function(){
 
+clearTimeout(searchDebounce);
 
-applyFilters();
-
+searchDebounce = setTimeout(applyFilters, 150);
 
 });
 
@@ -1429,126 +1421,16 @@ document
 // =========================
 
 
-function buildMaterialUsage(){
-
-
-materialUsage = {};
-
-
-allItems.forEach(item=>{
-
-
-if(!item.materials) return;
-
-
-item.materials.forEach(mat=>{
-
-
-if(materialUsage[mat.name] === undefined){
-
-materialUsage[mat.name] = 0;
-
-}
-
-
-materialUsage[mat.name]++;
-
-
-});
-
-
-});
-
-
-}
-
-
-
-
-function createInventory(){
-
-
-let materials = [];
-
-
-
-allItems.forEach(item=>{
-
-
-if(item.materials){
-
-
-item.materials.forEach(mat=>{
-
-
-if(!materials.includes(mat.name)){
-
-
-materials.push(mat.name);
-
-
-}
-
-
-});
-
-
-}
-
-
-
-});
-
-
-
-
-
-materials.forEach(material=>{
-
-
-if(inventory[material] === undefined){
-
-
-inventory[material] = 0;
-
-
-}
-
-
-
-});
-
-
-
-
-
-saveInventory();
-
-populateMaterialOptions();
-
-
-displayInventory();
-
-
-
-
-
-}
-
-
-
-
-
-
 
 
 // =========================
 // LOAD INVENTORY
+// (materials.js owns the full inventory UI + saving;
+// this page only needs read access for craft-status checks)
 // =========================
 
 
 function loadInventory(){
-
 
 
 let saved =
@@ -1558,552 +1440,15 @@ localStorage.getItem(
 );
 
 
-
 if(saved){
-
-
 
 inventory =
 JSON.parse(saved);
 
-
-
-}
-
-
-
-createInventory();
-
-
-
-}
-
-
-
-
-
-
-
-
-// =========================
-// SAVE INVENTORY
-// =========================
-
-
-function saveInventory(){
-
-
-
-localStorage.setItem(
-
-"blacksmithInventory",
-
-JSON.stringify(inventory)
-
-);
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// =========================
-// DISPLAY INVENTORY
-// =========================
-
-
-function displayInventory(){
-
-
-const container =
-
-document.getElementById(
-"inventory-container"
-);
-
-
-if(!container)
-return;
-
-
-const summaryBox =
-document.getElementById("inventory-summary");
-
-
-let names = Object.keys(inventory);
-
-
-const totalCount = names.length;
-
-const collectedCount =
-names.filter(n => inventory[n] > 0).length;
-
-
-if(summaryBox){
-
-summaryBox.innerHTML =
-`<strong>${collectedCount}</strong> / ${totalCount} materials collected`;
-
-}
-
-
-const term = inventorySearchTerm.trim().toLowerCase();
-
-if(term){
-
-names = names.filter(n =>
-n.toLowerCase().includes(term)
-);
-
-}
-
-
-if(inventorySort === "az"){
-
-names.sort();
-
-}
-else if(inventorySort === "owned-high"){
-
-names.sort((a,b) => inventory[b] - inventory[a] || a.localeCompare(b));
-
-}
-else if(inventorySort === "owned-low"){
-
-names.sort((a,b) => inventory[a] - inventory[b] || a.localeCompare(b));
-
-}
-else if(inventorySort === "needed"){
-
-names.sort((a,b) => {
-
-const aZero = inventory[a] === 0 ? 0 : 1;
-
-const bZero = inventory[b] === 0 ? 0 : 1;
-
-return aZero - bZero || a.localeCompare(b);
-
-});
-
-}
-
-
-container.innerHTML="";
-
-
-if(names.length === 0){
-
-container.innerHTML =
-`<p class="inventory-empty">No materials match "${inventorySearchTerm}".</p>`;
-
-return;
-
-}
-
-
-names.forEach(material=>{
-
-
-const owned = inventory[material] || 0;
-
-const usedIn = materialUsage[material] || 0;
-
-const ownedClass = owned > 0 ? "has-stock" : "no-stock";
-
-
-container.innerHTML += `
-
-
-<div class="inventory-item ${ownedClass}">
-
-
-<div class="inventory-item-info">
-
-<h3>${material}</h3>
-
-<span class="inventory-usage">Used in ${usedIn} recipe${usedIn === 1 ? "" : "s"}</span>
-
-</div>
-
-
-<div class="inventory-item-controls">
-
-<button class="qty-btn" onclick="changeMaterial('${material}',-1)">-</button>
-
-<input
-
-class="qty-input"
-
-type="number"
-
-min="0"
-
-value="${owned}"
-
-onchange="setMaterialAmount('${material}', this.value)"
-
->
-
-<button class="qty-btn" onclick="changeMaterial('${material}',1)">+</button>
-
-</div>
-
-
-</div>
-
-
-`;
-
-
-});
-
-
-}
-
-
-
-
-function setMaterialAmount(name, value){
-
-
-let amount = Number(value);
-
-
-if(isNaN(amount) || amount < 0){
-
-amount = 0;
-
-}
-
-
-inventory[name] = amount;
-
-
-saveInventory();
-
-displayInventory();
-
-showCategory(currentCategory);
-
-
-}
-
-
-
-
-function populateMaterialOptions(){
-
-
-const list =
-document.getElementById("material-name-options");
-
-
-if(!list)
-return;
-
-
-list.innerHTML =
-Object.keys(inventory)
-.sort()
-.map(name => `<option value="${name}"></option>`)
-.join("");
-
-
-}
-
-
-
-
-function setupInventoryControls(){
-
-
-const searchInput =
-document.getElementById("inventory-search");
-
-
-const sortSelect =
-document.getElementById("inventory-sort");
-
-
-if(searchInput){
-
-searchInput.oninput = function(){
-
-inventorySearchTerm = this.value;
-
-displayInventory();
-
-};
-
-}
-
-
-if(sortSelect){
-
-sortSelect.onchange = function(){
-
-inventorySort = this.value;
-
-displayInventory();
-
-};
-
 }
 
 
 }
-
-
-
-
-
-
-
-
-
-// =========================
-// CHANGE AMOUNT
-// =========================
-
-
-function changeMaterial(name,amount){
-
-
-if(inventory[name] === undefined){
-
-inventory[name]=0;
-
-}
-
-
-inventory[name]+=amount;
-
-
-
-if(inventory[name]<0){
-
-inventory[name]=0;
-
-}
-
-
-
-saveInventory();
-
-displayInventory();
-
-showCategory(currentCategory);
-
-}
-
-
-
-
-
-
-
-
-
-
-// =========================
-// RESET INVENTORY
-// =========================
-
-
-document.addEventListener(
-
-"click",
-
-function(event){
-
-
-
-if(
-event.target.id === "reset-inventory"
-){
-
-
-if(!confirm("Reset all material quantities to 0? This can't be undone.")){
-
-return;
-
-}
-
-
-Object.keys(inventory)
-
-.forEach(material=>{
-
-
-inventory[material]=0;
-
-
-});
-
-
-
-saveInventory();
-
-
-displayInventory();
-
-showCategory(currentCategory);
-
-}
-
-
-
-});
-
-
-// =========================
-// MANUAL ADD MATERIAL
-// =========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-function(){
-
-
-const addButton =
-document.getElementById(
-"add-material"
-);
-
-
-
-if(!addButton)
-return;
-
-
-
-addButton.onclick=function(){
-
-
-
-const name =
-
-document
-.getElementById(
-"material-name"
-)
-.value
-.trim();
-
-
-
-const amount =
-
-Number(
-
-document
-.getElementById(
-"material-amount"
-)
-.value
-
-);
-
-
-
-
-
-if(!name || amount <= 0){
-
-return;
-
-}
-
-
-const errorBox =
-document.getElementById("material-add-error");
-
-
-// find matching material name
-
-let found =
-
-Object.keys(inventory)
-
-.find(
-
-material =>
-
-material.toLowerCase() === name.toLowerCase()
-
-);
-
-
-if(found){
-
-
-inventory[found]+=amount;
-
-if(errorBox) errorBox.textContent = "";
-
-}
-
-else{
-
-if(errorBox){
-
-errorBox.textContent =
-`No material named "${name}" found. Pick one from the suggestions list.`;
-
-}
-
-return;
-
-}
-
-
-
-
-
-saveInventory();
-
-
-displayInventory();
-
-
-showCategory(currentCategory);
-
-
-document
-.getElementById(
-"material-name"
-)
-.value="";
-
-
-
-document
-.getElementById(
-"material-amount"
-)
-.value="";
-
-
-
-};
-
-
-
-});
-
-
-// =========================
-// CHECK CAN CRAFT
-// =========================
-
 
 function canCraft(item){
 
