@@ -674,6 +674,18 @@
   background: rgba(226, 87, 76, 0.1);
 }
 
+@media (max-width: 480px) {
+  .inventory-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .inventory-item-controls {
+    justify-content: flex-end;
+  }
+}
+
 /* =========================
    FOOTER
    ========================= */
