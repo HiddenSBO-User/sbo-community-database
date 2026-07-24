@@ -161,6 +161,10 @@
   }
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* =========================
    MAIN CONTENT
    ========================= */
@@ -177,6 +181,17 @@
 @media (max-width: 900px) {
   .main-content {
     padding: 20px 16px 48px;
+  }
+
+  /* iOS Safari zooms the whole page in when a focused input/select is
+     smaller than 16px. Bump every form control up on mobile so tapping
+     search, sort, or a quantity field doesn't yank the viewport around. */
+  .search-input,
+  .sort-select,
+  .home-search-input,
+  .qty-input,
+  .inventory-add input {
+    font-size: 16px;
   }
 }
 
