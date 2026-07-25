@@ -102,6 +102,18 @@
   display: none;
 }
 
+/* On mobile the topbar must stack ABOVE main-content, not sit beside it
+   as a flex row sibling (that was the bug: .app-shell stayed row-direction
+   on mobile, so .topbar and .main-content rendered side-by-side, with
+   .topbar stretched to the full page height by the default row
+   align-items:stretch -- that stretched, squished topbar is what looked
+   like a giant unused sidebar column). */
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 900px) {
   .sidebar {
     position: fixed;
