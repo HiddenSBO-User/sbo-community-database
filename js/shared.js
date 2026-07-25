@@ -9,10 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const scrim = document.getElementById("sidebar-scrim");
 
   if (toggle && sidebar && scrim) {
+    let lockedScrollY = 0;
+
     function openSidebar() {
       sidebar.classList.add("open");
       scrim.classList.add("visible");
-      // Stop the page behind the drawer from scrolling while it's open.
+      // overflow:hidden alone doesn't reliably stop background scroll on
+      // iOS Safari, so pin the body with position:fixed instead. That
+      // resets scroll to 0 unless we offset it via top, so remember and
+      // restore the scroll position around the lock.
+      lockedScrollY = window.scrollY;
+      document.body.style.top = `-${lockedScrollY}px`;
       document.body.classList.add("no-scroll");
     }
 
@@ -20,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       sidebar.classList.remove("open");
       scrim.classList.remove("visible");
       document.body.classList.remove("no-scroll");
+      document.body.style.top = "";
+      window.scrollTo(0, lockedScrollY);
     }
 
     toggle.addEventListener("click", function () {
