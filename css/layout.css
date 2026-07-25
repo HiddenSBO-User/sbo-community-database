@@ -2,7 +2,11 @@
    LAYOUT: sidebar nav + page shell
    ========================================= */
 
-.app-shell { flex-direction: column }
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
 
 /* =========================
    SIDEBAR NAVIGATION
