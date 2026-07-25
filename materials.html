@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Materials | SBO: Rebirth Database</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -63,9 +63,11 @@
       </div>
 
       <div class="inventory-add">
-        <input id="material-name" list="material-name-options" placeholder="Material name" autocomplete="off">
-        <datalist id="material-name-options"></datalist>
-        <input id="material-amount" type="number" min="0" placeholder="Amount">
+        <div class="material-name-field">
+          <input id="material-name" placeholder="Material name" autocomplete="off">
+          <div id="material-name-suggestions" class="material-suggestions"></div>
+        </div>
+        <input id="material-amount" type="number" inputmode="numeric" min="0" placeholder="Amount">
         <button id="add-material" class="add-btn">Add</button>
       </div>
 
