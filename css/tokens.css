@@ -44,6 +44,16 @@
 
 * {
   box-sizing: border-box;
+  /* Android shows a grey highlight flash on tap by default; iOS doesn't.
+     Remove it everywhere and rely on our own :hover/:active states so
+     buttons feel the same on both platforms. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  /* Removes the ~300ms tap delay some mobile browsers use to detect
+     double-tap-to-zoom, and prevents accidental zoom on fast taps. */
+  touch-action: manipulation;
 }
 
 html {
