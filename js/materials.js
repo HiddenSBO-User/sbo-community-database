@@ -14,6 +14,8 @@ let inventorySort = "az";
 
 let materialUsage = {};
 
+let materialNameList = [];
+
 // Materials over the cap are ones people keep extra of on storage alts;
 // this flag is stored separately from the owned quantity itself so
 // checking it doesn't wipe out what they've already entered.
@@ -75,6 +77,8 @@ loadInventory();
 
 
 setupInventoryControls();
+
+setupMaterialNameAutocomplete();
 
 
 })
@@ -520,19 +524,88 @@ displayInventory();
 function populateMaterialOptions(){
 
 
-const list =
-document.getElementById("material-name-options");
+// Kept as the source list; the actual dropdown is built on demand in
+// setupMaterialNameAutocomplete so it can be filtered as the user types.
+materialNameList = Object.keys(inventory).sort();
 
 
-if(!list)
+}
+
+
+
+
+function setupMaterialNameAutocomplete(){
+
+
+const input = document.getElementById("material-name");
+
+const box = document.getElementById("material-name-suggestions");
+
+
+if(!input || !box) return;
+
+
+function render(matches){
+
+if(matches.length === 0){
+box.innerHTML = "";
+box.classList.remove("visible");
 return;
+}
 
-
-list.innerHTML =
-Object.keys(inventory)
-.sort()
-.map(name => `<option value="${name}"></option>`)
+box.innerHTML = matches
+.slice(0, 8)
+.map(name => `<div class="material-suggestion-row" data-name="${name}">${name}</div>`)
 .join("");
+
+box.classList.add("visible");
+
+box.querySelectorAll(".material-suggestion-row").forEach(row => {
+// touchstart fires before the input's blur/click race on mobile,
+// so the tap reliably registers on both iOS and Android instead
+// of the row disappearing before the tap lands.
+["touchstart", "mousedown"].forEach(evtName => {
+row.addEventListener(evtName, function(event){
+event.preventDefault();
+input.value = this.dataset.name;
+box.innerHTML = "";
+box.classList.remove("visible");
+});
+});
+});
+
+}
+
+
+input.addEventListener("input", function(){
+
+const value = this.value.trim().toLowerCase();
+
+if(!value){
+box.innerHTML = "";
+box.classList.remove("visible");
+return;
+}
+
+const matches = materialNameList.filter(name =>
+name.toLowerCase().includes(value)
+);
+
+render(matches);
+
+});
+
+
+input.addEventListener("blur", function(){
+
+// Small delay so a tap on a suggestion row still registers before
+// the list is cleared.
+setTimeout(() => {
+box.innerHTML = "";
+box.classList.remove("visible");
+}, 150);
+
+});
 
 
 }
