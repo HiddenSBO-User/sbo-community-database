@@ -206,7 +206,6 @@ body.no-scroll {
   min-width: 0;
   padding: 32px 40px 64px;
   max-width: var(--content-max);
-  margin: 0 auto;
   width: 100%;
 }
 
