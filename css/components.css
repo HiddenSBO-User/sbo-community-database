@@ -530,9 +530,44 @@
   font-size: 13px;
 }
 
-#material-name {
+.material-name-field {
+  position: relative;
   flex: 1;
   min-width: 180px;
+}
+
+#material-name {
+  width: 100%;
+}
+
+.material-suggestions {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.material-suggestions.visible {
+  display: block;
+}
+
+.material-suggestion-row {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.material-suggestion-row:hover {
+  background: var(--bg-surface);
 }
 
 #material-amount {
@@ -649,6 +684,17 @@
   color: var(--text-primary);
   font-family: var(--font-mono);
   padding: 6px 4px;
+  /* Android/desktop Chrome shows native up/down spinners on number
+     inputs; iOS never does. Hide them everywhere so the custom qty-btn
+     +/- controls aren't duplicated on some platforms and not others. */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .inventory-empty {
