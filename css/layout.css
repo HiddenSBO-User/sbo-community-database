@@ -5,6 +5,7 @@
 .app-shell {
   display: flex;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* =========================
@@ -23,6 +24,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  height: 100dvh;
 }
 
 .sidebar-brand {
@@ -106,10 +108,14 @@
     top: 0;
     left: 0;
     height: 100vh;
+    height: 100dvh;
     z-index: 100;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
     box-shadow: var(--shadow-elevated);
+    padding-top: calc(24px + env(safe-area-inset-top));
+    padding-left: calc(16px + env(safe-area-inset-left));
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
   }
 
   .sidebar.open {
@@ -126,6 +132,9 @@
     background: var(--bg-surface);
     border-bottom: 1px solid var(--border-subtle);
     padding: 14px 16px;
+    padding-top: calc(14px + env(safe-area-inset-top));
+    padding-left: calc(16px + env(safe-area-inset-left));
+    padding-right: calc(16px + env(safe-area-inset-right));
   }
 
   .topbar-brand {
@@ -142,10 +151,13 @@
     border: 1px solid var(--border-subtle);
     color: var(--text-primary);
     border-radius: var(--radius-sm);
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
     font-size: 18px;
     cursor: pointer;
+    /* Kill Android's grey tap flash and iOS's double-tap-to-zoom delay */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   .sidebar-scrim {
@@ -154,6 +166,7 @@
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
     z-index: 99;
+    overscroll-behavior: contain;
   }
 
   .sidebar-scrim.visible {
@@ -161,8 +174,15 @@
   }
 }
 
+/* overflow:hidden alone is unreliable on iOS Safari (it still allows
+   rubber-band scroll of the page behind a fixed overlay), so the drawer
+   toggle in shared.js also pins the body in place with position:fixed
+   while it's open; this just stops the scrollbar/layout shift on
+   browsers where overflow:hidden does work. */
 body.no-scroll {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 /* =========================
@@ -192,6 +212,22 @@ body.no-scroll {
   .qty-input,
   .inventory-add input {
     font-size: 16px;
+  }
+
+  /* Bump tappable controls up to platform touch-target minimums
+     (Apple HIG ~44pt, Material Design ~48dp) — the desktop sizing was
+     too small to hit reliably with a thumb on either platform. */
+  .qty-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .chip {
+    padding: 10px 16px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
   }
 }
 
