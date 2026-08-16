@@ -323,18 +323,17 @@ function showDetails(item) {
     <p>Type: <span class="modal-value">${item.subCategory}</span></p>
     <p>SK Required: <span class="modal-value">${item.sk}</span></p>
     <p>Craft EXP: <span class="modal-value">${item.exp}</span></p>
-
     <h3>Materials Required</h3>
     ${materialsHTML}
-
-<h3>Craft Progress</h3>
-<div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
-<p class="progress-label">${progress}% of materials ready</p>
-
-<button class="queue-add-button" onclick="addToCraftingQueue('${item.name.replace(/'/g,"\\'")}')">
-  🔨 Add to Crafting Queue
-</button>
-  `;
+    <h3>Craft Progress</h3>
+    <div class="progress-bar">
+        <div class="progress-fill" style="width:${progress}%"></div>
+    </div>
+    <p class="progress-label">${progress}% of materials ready</p>
+    <button class="queue-add-button" onclick="addToCraftingQueue(${JSON.stringify(item.name)})">
+        🔨 Add to Crafting Queue
+    </button>
+`;
 
   box.classList.add("visible");
 }
