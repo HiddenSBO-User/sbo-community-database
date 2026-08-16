@@ -641,7 +641,6 @@ function craftQueuedItem(index) {
     displayInventory();
   }
 
-  alert(`${item.name} crafted successfully!`);
 }
 
 function renderCraftingQueue() {
