@@ -1001,3 +1001,22 @@
         grid-template-columns:1fr;
     }
 }
+
+/* CRAFTING QUEUE ADD BUTTON */
+.queue-add-button{
+    width:100%;
+    margin-top:20px;
+    padding:12px 18px;
+    background:#8b5cf6;
+    color:white;
+    border:1px solid #a78bfa;
+    border-radius:9px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.2s;
+}
+.queue-add-button:hover{
+    background:#7c3aed;
+    transform:translateY(-1px);
+}
