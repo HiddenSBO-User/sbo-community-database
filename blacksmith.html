@@ -71,15 +71,55 @@
 
     <div class="chip-row" id="blacksmith-subcategories"></div>
 
-    <div class="chip-row" id="blacksmith-filter-row">
-      <button class="chip active" data-filter="all">All</button>
-      <button class="chip" data-filter="craftable">🟢 Can Craft</button>
-      <button class="chip" data-filter="almost">🟡 Almost Ready</button>
-      <button class="chip" data-filter="missing">🔴 Missing Materials</button>
+   <div id="blacksmith-filter-row">
+  <button class="chip active" data-filter="all">All</button>
+  <button class="chip" data-filter="craftable">🟢 Can Craft</button>
+  <button class="chip" data-filter="almost">🟡 Almost Ready</button>
+  <button class="chip" data-filter="missing">🔴 Missing Materials</button>
+</div>
+
+
+<!-- CRAFTING QUEUE -->
+
+<section id="crafting-queue-section" class="crafting-queue-section">
+
+  <div class="crafting-queue-header">
+
+    <div>
+      <p class="page-eyebrow">Blacksmith</p>
+      <h2>🔨 Crafting Queue</h2>
+      <p class="crafting-queue-subtitle">
+        Items you plan to craft.
+      </p>
     </div>
 
-    <div id="blacksmith-container" class="card-grid"></div>
+    <button
+      id="clear-crafting-queue"
+      class="queue-clear-button"
+      type="button"
+    >
+      Clear Queue
+    </button>
 
+  </div>
+
+
+  <div id="crafting-queue-container">
+
+    <div class="crafting-queue-empty">
+      <span>🔨</span>
+      <p>Your crafting queue is empty.</p>
+      <small>
+        Open an item's recipe and add it to your queue.
+      </small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div id="blacksmith-container" class="card-grid"></div>
   </main>
 
 </div>
