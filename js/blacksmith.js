@@ -768,8 +768,7 @@ function renderCraftingQueue() {
 
           </div>
 
-          <div class="crafting-queue-controls">
-
+<div class="crafting-queue-controls">
   <button
     class="queue-quantity-button"
     onclick="changeQueueQuantity(${index},-1)"
@@ -802,7 +801,6 @@ function renderCraftingQueue() {
   >
     Remove
   </button>
-
 </div>
 
         </div>
