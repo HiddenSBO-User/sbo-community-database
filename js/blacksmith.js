@@ -405,6 +405,7 @@ window.addEventListener("load", function () {
    CRAFTING QUEUE
 ========================================================= */
 
+
 let craftingQueue=JSON.parse(localStorage.getItem("blacksmithCraftingQueue")||"[]");
 
 function saveCraftingQueue(){
@@ -420,9 +421,7 @@ function saveInventory(inventory){
 }
 
 function getItemByName(name){
-    return allItems.find(item=>
-        String(item.name).toLowerCase()===String(name).toLowerCase()
-    );
+    return allItems.find(item=>item.name===name);
 }
 
 function getRecipeMaterials(item){
@@ -518,51 +517,55 @@ function getQueueMaterialTotals(){
 }
 
 function canCraftItem(item){
-    const inventory=getInventory();
-
-    for(const material of getRecipeMaterials(item)){
-        const name=getMaterialName(material);
-        const required=getMaterialAmount(material);
-        const owned=getInventoryAmount(inventory,name);
-
-        if(owned<required)return false;
+    if(!item||!item.materials)return false;
+    for(const mat of item.materials){
+        const owned=inventory[mat.name]||0;
+        if(owned<mat.amount)return false;
     }
-
     return true;
 }
 
 function craftQueuedItem(index){
     const entry=craftingQueue[index];
     if(!entry)return;
-
-    const item=getItemByName(entry.name);
-
+    const item=allItems.find(x=>x.name===entry.name);
     if(!item){
         alert("This item could not be found.");
         return;
     }
-
-    const inventory=getInventory();
-
-    for(const material of getRecipeMaterials(item)){
-        const name=getMaterialName(material);
-        const required=getMaterialAmount(material);
-        const owned=getInventoryAmount(inventory,name);
-
-        if(owned<required){
-            alert(`You do not have enough ${name}.`);
+    if(!item.materials||!item.materials.length){
+        alert("This item has no materials listed.");
+        return;
+    }
+    for(const mat of item.materials){
+        const owned=inventory[mat.name]||0;
+        if(owned<mat.amount){
+            alert(`You do not have enough ${mat.name}. You need ${mat.amount} but only have ${owned}.`);
             renderCraftingQueue();
             return;
         }
     }
-
-    getRecipeMaterials(item).forEach(material=>{
-        const name=getMaterialName(material);
-        const required=getMaterialAmount(material);
-
-        const key=Object.keys(inventory).find(key=>
-            key.toLowerCase()===name.toLowerCase()
-        );
+    item.materials.forEach(mat=>{
+        inventory[mat.name]-=mat.amount;
+        if(inventory[mat.name]<0)inventory[mat.name]=0;
+    });
+    if(inventory[item.name]===undefined){
+        inventory[item.name]=1;
+    }else{
+        inventory[item.name]++;
+    }
+    saveInventory();
+    entry.quantity--;
+    if(entry.quantity<=0){
+        craftingQueue.splice(index,1);
+    }
+    saveCraftingQueue();
+    if(typeof displayInventory==="function"){
+        displayInventory();
+    }
+    renderCraftingQueue();
+    alert(`${item.name} crafted successfully!`);
+}
 
         if(key){
             inventory[key]=Number(inventory[key])-required;
