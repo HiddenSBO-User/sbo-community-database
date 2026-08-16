@@ -327,9 +327,13 @@ function showDetails(item) {
     <h3>Materials Required</h3>
     ${materialsHTML}
 
-    <h3>Craft Progress</h3>
-    <div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
-    <p class="progress-label">${progress}% of materials ready</p>
+<h3>Craft Progress</h3>
+<div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
+<p class="progress-label">${progress}% of materials ready</p>
+
+<button class="queue-add-button" onclick="addToCraftingQueue('${item.name.replace(/'/g,"\\'")}')">
+  🔨 Add to Crafting Queue
+</button>
   `;
 
   box.classList.add("visible");
