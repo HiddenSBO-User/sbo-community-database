@@ -1,351 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Blacksmith</title>
-
-
-<link rel="stylesheet" href="css/blacksmith.css">
-
-
+<title>Blacksmith | SBO: Rebirth Database</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
-
-
 <body>
 
-    
+<div class="app-shell">
 
+  <div class="sidebar-scrim" id="sidebar-scrim"></div>
 
-<!-- =========================
-NAVIGATION
-========================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="sidebar-brand-mark">⚔</span>
+      <div>
+        <div class="sidebar-brand-text">SBO: Rebirth</div>
+        <div class="sidebar-brand-sub">Community Database</div>
+      </div>
+    </div>
 
-<nav class="site-navigation">
+    <a class="nav-link" href="index.html"><span class="nav-link-icon">🏠</span> Home</a>
+    <a class="nav-link" href="weapons.html"><span class="nav-link-icon">⚔</span> Weapons</a>
+    <a class="nav-link" href="gear.html"><span class="nav-link-icon">🛡</span> Gear</a>
+    <a class="nav-link active" href="blacksmith.html"><span class="nav-link-icon">🔨</span> Blacksmith</a>
+    <a class="nav-link" href="materials.html"><span class="nav-link-icon">🧱</span> Materials</a>
 
+    <div class="sidebar-footer">
+      Fan project, not affiliated with the developers of Sword Blox Online: Rebirth.
+    </div>
+  </aside>
 
-<a href="index.html">
-Home
-</a>
+  <div class="topbar">
+    <div class="topbar-brand"><span>⚔</span> SBO: Rebirth</div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
 
+  <main class="main-content">
 
-<a href="weapons.html">
-Weapons
-</a>
+    <div class="page-header">
+      <p class="page-eyebrow">Crafting</p>
+      <h1 class="page-title">Blacksmith</h1>
+      <p class="page-subtitle">Browse every craftable item and check your progress against materials you own on the Materials page.</p>
+    </div>
 
+    <div class="control-bar">
+      <input type="text" id="blacksmith-search" class="search-input" placeholder="Search items, materials, quests...">
+      <select id="blacksmith-sort" class="sort-select">
+        <option value="sk-high">SK Required: High to low</option>
+        <option value="sk-low">SK Required: Low to high</option>
+        <option value="exp-high">Craft EXP: High to low</option>
+        <option value="exp-low">Craft EXP: Low to high</option>
+        <option value="az">Name: A to Z</option>
+        <option value="za">Name: Z to A</option>
+      </select>
+    </div>
 
-<a href="gear.html">
-Gear
-</a>
+    <div class="chip-row" id="blacksmith-category-row">
+      <button class="chip active" data-category="Weapons">⚔ Weapons</button>
+      <button class="chip" data-category="Defense">🛡 Defense</button>
+      <button class="chip" data-category="Materials">🧱 Materials</button>
+      <button class="chip" data-category="Events / Overlays">✨ Events / Overlays</button>
+      <button class="chip" data-category="Legendary">👑 Legendary</button>
+    </div>
 
+    <div class="chip-row" id="blacksmith-subcategories"></div>
 
-<a href="blacksmith.html">
-Blacksmith
-</a>
+    <div class="chip-row" id="blacksmith-filter-row">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="craftable">🟢 Can Craft</button>
+      <button class="chip" data-filter="almost">🟡 Almost Ready</button>
+      <button class="chip" data-filter="missing">🔴 Missing Materials</button>
+    </div>
 
+    <div id="blacksmith-container" class="card-grid"></div>
 
-<a href="materials.html">
-Materials
-</a>
-
-
-</nav>
-
-<!-- =========================
-BLACKSMITH HEADER
-========================= -->
-
-
-<h1 class="page-title">
-
-Blacksmith
-
-</h1>
-
-
-
-<!-- =========================
-SEARCH + SORT
-========================= -->
-
-
-<div class="blacksmith-controls">
-
-
-<input
-
-type="text"
-
-id="blacksmith-search"
-
-placeholder="Search items, materials, quests..."
-
->
-
-
-
-<select id="blacksmith-sort">
-
-
-<option value="sk-high">
-
-Highest SK
-
-</option>
-
-
-<option value="sk-low">
-
-Lowest SK
-
-</option>
-
-
-<option value="exp-high">
-
-Highest EXP
-
-</option>
-
-
-<option value="exp-low">
-
-Lowest EXP
-
-</option>
-
-
-<option value="az">
-
-A-Z
-
-</option>
-
-
-<option value="za">
-
-Z-A
-
-</option>
-
-
-</select>
-
+  </main>
 
 </div>
 
-
-
-
-
-<!-- =========================
-MAIN CATEGORIES
-========================= -->
-
-
-<div class="blacksmith-category-buttons">
-
-
-<button
-
-class="blacksmith-category-button"
-
-data-category="Weapons"
-
->
-
-⚔ Weapons
-
-</button>
-
-
-
-<button
-
-class="blacksmith-category-button"
-
-data-category="Defense"
-
->
-
-🛡 Defense
-
-</button>
-
-
-
-<button
-
-class="blacksmith-category-button"
-
-data-category="Materials"
-
->
-
-🧱 Materials
-
-</button>
-
-
-
-
-<button
-
-class="blacksmith-category-button"
-
-data-category="Events / Overlays"
-
->
-
-✨ Events / Overlays
-
-</button>
-
-
-
-
-<button
-
-class="blacksmith-category-button"
-
-data-category="Legendary"
-
->
-
-👑 Legendary
-
-</button>
-
-
-
+<!-- DETAILS MODAL -->
+<div id="blacksmith-details-box" class="modal-backdrop">
+  <div class="modal-box">
+    <button id="close-details" class="modal-close" aria-label="Close">✕</button>
+    <div id="blacksmith-details-content"></div>
+  </div>
 </div>
 
-
-
-
-
-<!-- =========================
-SUB CATEGORY BUTTONS
-========================= -->
-
-
-<div id="blacksmith-subcategories">
-
-
-</div>
-
-
-
-
-
-<!-- =========================
-FILTER BUTTONS
-========================= -->
-
-
-<div class="blacksmith-filter-buttons">
-
-
-<button data-filter="all">
-
-All
-
-</button>
-
-
-<button data-filter="craftable">
-
-Can Craft
-
-</button>
-
-
-<button data-filter="almost">
-
-Almost Ready
-
-</button>
-
-
-<button data-filter="missing">
-
-Missing Materials
-
-</button>
-
-
-</div>
-
-
-
-
-
-<!-- =========================
-ITEM DISPLAY
-========================= -->
-
-
-<div id="blacksmith-container">
-
-
-</div>
-
-
-
-
-
-<!-- =========================
-DETAIL POPUP
-========================= -->
-
-
-<div
-
-id="blacksmith-details-box"
-
-class="details-popup"
-
-style="display:none;"
-
->
-
-
-<button
-
-id="close-details"
-
->
-
-X
-
-</button>
-
-
-
-<div
-
-id="blacksmith-details-content"
-
->
-
-
-</div>
-
-
-</div>
-
-
-
-
-
+<script src="js/shared.js"></script>
 <script src="js/blacksmith.js"></script>
 
-
 </body>
-
-
 </html>

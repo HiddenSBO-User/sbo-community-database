@@ -1,178 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gear</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+<title>Gear | SBO: Rebirth Database</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
-
-
 <body>
 
+<div class="app-shell">
 
-<nav>
+  <div class="sidebar-scrim" id="sidebar-scrim"></div>
 
-<h2>🛡 Gear</h2>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="sidebar-brand-mark">⚔</span>
+      <div>
+        <div class="sidebar-brand-text">SBO: Rebirth</div>
+        <div class="sidebar-brand-sub">Community Database</div>
+      </div>
+    </div>
 
-<a href="index.html">Home</a>
-<a href="weapons.html">Weapons</a>
-<a href="gear.html">Gear</a>
-<a href="blacksmith.html">Blacksmith</a>
+    <a class="nav-link" href="index.html"><span class="nav-link-icon">🏠</span> Home</a>
+    <a class="nav-link" href="weapons.html"><span class="nav-link-icon">⚔</span> Weapons</a>
+    <a class="nav-link active" href="gear.html"><span class="nav-link-icon">🛡</span> Gear</a>
+    <a class="nav-link" href="blacksmith.html"><span class="nav-link-icon">🔨</span> Blacksmith</a>
+    <a class="nav-link" href="materials.html"><span class="nav-link-icon">🧱</span> Materials</a>
 
-</nav>
+    <div class="sidebar-footer">
+      Fan project, not affiliated with the developers of Sword Blox Online: Rebirth.
+    </div>
+  </aside>
 
+  <div class="topbar">
+    <div class="topbar-brand"><span>⚔</span> SBO: Rebirth</div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
 
+  <main class="main-content">
 
+    <div class="page-header">
+      <p class="page-eyebrow">Database</p>
+      <h1 class="page-title">Gear</h1>
+      <p class="page-subtitle">Defense and dexterity stats for armor, shields, and headgear.</p>
+    </div>
 
-<h1 class="page-title">
-Gear Database
-</h1>
+    <div class="control-bar">
+      <input type="text" id="gear-search" class="search-input" placeholder="Search by name or obtain method...">
+      <select id="gear-sort" class="sort-select">
+        <option value="default">Sort: Default</option>
+        <option value="level-high">Level: High to low</option>
+        <option value="level-low">Level: Low to high</option>
+        <option value="defense-high">Defense: High to low</option>
+        <option value="defense-low">Defense: Low to high</option>
+        <option value="dex-high">Dexterity: High to low</option>
+        <option value="dex-low">Dexterity: Low to high</option>
+      </select>
+    </div>
 
+    <div class="chip-row" id="gear-category-row">
+      <button class="chip active" id="show-all-gear">All</button>
+      <button class="chip" data-type="Armor">Armor</button>
+      <button class="chip" data-type="Shield">Shield</button>
+      <button class="chip" data-type="Upper Gear">Upper Gear</button>
+      <button class="chip" data-type="Lower Gear">Lower Gear</button>
+    </div>
 
+    <div id="gear-container" class="card-grid"></div>
 
-
-
-<!-- CATEGORY BUTTONS -->
-
-<div class="gear-buttons">
-
-
-<button class="gear-category-button" data-type="Armor">
-Armor
-</button>
-
-
-<button class="gear-category-button" data-type="Shield">
-Shield
-</button>
-
-
-<button class="gear-category-button" data-type="Upper Gear">
-Upper Gear
-</button>
-
-
-<button class="gear-category-button" data-type="Lower Gear">
-Lower Gear
-</button>
-
-
-<button class="gear-category-button" id="show-all-gear">
-Show All
-</button>
-
-
-</div>
-
-
-
-
-
-
-<!-- SEARCH + SORT -->
-
-
-<div class="gear-controls">
-
-
-<input
-id="gear-search"
-type="text"
-placeholder="Search gear..."
->
-
-
-
-<select id="gear-sort">
-
-
-<option value="default">
-Default
-</option>
-
-
-<option value="level-high">
-Highest Level
-</option>
-
-
-<option value="level-low">
-Lowest Level
-</option>
-
-
-<option value="defense-high">
-Highest Defense
-</option>
-
-
-<option value="defense-low">
-Lowest Defense
-</option>
-
-
-<option value="dex-high">
-Highest Dexterity
-</option>
-
-
-<option value="dex-low">
-Lowest Dexterity
-</option>
-
-
-</select>
-
+  </main>
 
 </div>
 
-
-
-
-
-
-<div id="gear-container"></div>
-
-
-
-
-
-<!-- DETAILS -->
-
-<div id="gear-details-box" class="details-box">
-
-
-<div class="details-content">
-
-
-<button id="close-details">
-
-X
-
-</button>
-
-
-<div id="gear-details-content"></div>
-
-
+<!-- DETAILS MODAL -->
+<div id="gear-details-box" class="modal-backdrop">
+  <div class="modal-box">
+    <button id="close-details" class="modal-close" aria-label="Close">✕</button>
+    <div id="gear-details-content"></div>
+  </div>
 </div>
 
-
-</div>
-
-
-
-
+<script src="js/shared.js"></script>
 <script src="js/gear.js"></script>
 
-
 </body>
-
 </html>

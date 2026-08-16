@@ -1,207 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Weapons</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+<title>Weapons | SBO: Rebirth Database</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
-
-
 <body>
 
+<div class="app-shell">
 
-<nav>
+  <div class="sidebar-scrim" id="sidebar-scrim"></div>
 
-<h2>⚔ Weapons</h2>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="sidebar-brand-mark">⚔</span>
+      <div>
+        <div class="sidebar-brand-text">SBO: Rebirth</div>
+        <div class="sidebar-brand-sub">Community Database</div>
+      </div>
+    </div>
 
-<a href="index.html">Home</a>
+    <a class="nav-link" href="index.html"><span class="nav-link-icon">🏠</span> Home</a>
+    <a class="nav-link active" href="weapons.html"><span class="nav-link-icon">⚔</span> Weapons</a>
+    <a class="nav-link" href="gear.html"><span class="nav-link-icon">🛡</span> Gear</a>
+    <a class="nav-link" href="blacksmith.html"><span class="nav-link-icon">🔨</span> Blacksmith</a>
+    <a class="nav-link" href="materials.html"><span class="nav-link-icon">🧱</span> Materials</a>
 
-<a href="weapons.html">
-Weapons
-</a>
+    <div class="sidebar-footer">
+      Fan project, not affiliated with the developers of Sword Blox Online: Rebirth.
+    </div>
+  </aside>
 
-<a href="gear.html">
-Gear
-</a>
+  <div class="topbar">
+    <div class="topbar-brand"><span>⚔</span> SBO: Rebirth</div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
 
-<a href="blacksmith.html">
-Blacksmith
-</a>
+  <main class="main-content">
 
-<a href="materials.html">
-Materials
-</a>
+    <div class="page-header">
+      <p class="page-eyebrow">Database</p>
+      <h1 class="page-title">Weapons</h1>
+      <p class="page-subtitle">Attack values, level requirements, and how to obtain every weapon in the game.</p>
+    </div>
 
-</nav>
+    <div class="control-bar">
+      <input type="text" id="weapon-search" class="search-input" placeholder="Search by name, type, or obtain method...">
+      <select id="weapon-sort" class="sort-select">
+        <option value="default">Sort: Default</option>
+        <option value="level-high">Level: High to low</option>
+        <option value="level-low">Level: Low to high</option>
+        <option value="attack-high">Attack: High to low</option>
+        <option value="attack-low">Attack: Low to high</option>
+      </select>
+    </div>
 
+    <div class="chip-row" id="weapon-category-row">
+      <button class="chip active" id="show-all-weapons">All</button>
+      <button class="chip" data-type="1 Handed">1 Handed</button>
+      <button class="chip" data-type="2 Handed">2 Handed</button>
+      <button class="chip" data-type="Rapier">Rapier</button>
+      <button class="chip" data-type="Dagger">Dagger</button>
+    </div>
 
+    <div id="weapon-container" class="card-grid"></div>
 
-<h1 class="page-title">
-Weapon Database
-</h1>
-
-
-
-<div class="database-controls">
-
-
-<input
-
-type="text"
-
-id="weapon-search"
-
-placeholder="Search weapons..."
-
->
-
-
-
-<select id="weapon-sort">
-
-
-<option value="default">
-Default
-</option>
-
-
-<option value="level-high">
-Highest Level
-</option>
-
-
-<option value="level-low">
-Lowest Level
-</option>
-
-
-<option value="attack-high">
-Highest Attack
-</option>
-
-
-<option value="attack-low">
-Lowest Attack
-</option>
-
-
-</select>
-
+  </main>
 
 </div>
 
-
-
-
-
-<div class="category-buttons">
-
-
-<button 
-class="weapon-category-button"
-data-type="1 Handed">
-
-1 Handed
-
-</button>
-
-
-
-<button 
-class="weapon-category-button"
-data-type="2 Handed">
-
-2 Handed
-
-</button>
-
-
-
-
-<button 
-class="weapon-category-button"
-data-type="Rapier">
-
-Rapier
-
-</button>
-
-
-
-
-<button 
-class="weapon-category-button"
-data-type="Dagger">
-
-Dagger
-
-</button>
-
-
-<button 
-id="show-all-weapons">
-
-Show All
-
-</button>
-
-
+<!-- DETAILS MODAL -->
+<div id="weapon-details-box" class="modal-backdrop">
+  <div class="modal-box">
+    <button id="close-details" class="modal-close" aria-label="Close">✕</button>
+    <div id="weapon-details-content"></div>
+  </div>
 </div>
 
-
-
-
-
-<div id="weapon-container">
-
-</div>
-
-
-
-
-
-
-<!-- DETAILS POPUP -->
-
-
-<div id="weapon-details-box"
-class="details-box">
-
-
-<div class="details-content">
-
-
-<button id="close-details">
-
-X
-
-</button>
-
-
-<div id="weapon-details-content">
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
+<script src="js/shared.js"></script>
 <script src="js/weapons.js"></script>
 
-
 </body>
-
 </html>

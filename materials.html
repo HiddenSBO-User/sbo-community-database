@@ -1,189 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Materials</title>
-
-
-<link rel="stylesheet" href="css/blacksmith.css">
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Materials | SBO: Rebirth Database</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
-
-
 <body>
 
-    
+<div class="app-shell">
 
+  <div class="sidebar-scrim" id="sidebar-scrim"></div>
 
-<!-- =========================
-NAVIGATION
-========================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="sidebar-brand-mark">⚔</span>
+      <div>
+        <div class="sidebar-brand-text">SBO: Rebirth</div>
+        <div class="sidebar-brand-sub">Community Database</div>
+      </div>
+    </div>
 
-<nav class="site-navigation">
+    <a class="nav-link" href="index.html"><span class="nav-link-icon">🏠</span> Home</a>
+    <a class="nav-link" href="weapons.html"><span class="nav-link-icon">⚔</span> Weapons</a>
+    <a class="nav-link" href="gear.html"><span class="nav-link-icon">🛡</span> Gear</a>
+    <a class="nav-link" href="blacksmith.html"><span class="nav-link-icon">🔨</span> Blacksmith</a>
+    <a class="nav-link active" href="materials.html"><span class="nav-link-icon">🧱</span> Materials</a>
 
+    <div class="sidebar-footer">
+      Fan project, not affiliated with the developers of Sword Blox Online: Rebirth.
+    </div>
+  </aside>
 
-<a href="index.html">
-Home
-</a>
+  <div class="topbar">
+    <div class="topbar-brand"><span>⚔</span> SBO: Rebirth</div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
 
+  <main class="main-content">
 
-<a href="weapons.html">
-Weapons
-</a>
+    <div class="page-header">
+      <p class="page-eyebrow">Inventory</p>
+      <h1 class="page-title">Materials</h1>
+      <p class="page-subtitle">Track what you own. Saved to this browser only, and used by the Blacksmith page to show what you can craft.</p>
+    </div>
 
+    <div class="inventory-panel">
+      <div id="inventory-summary" class="inventory-summary"></div>
 
-<a href="gear.html">
-Gear
-</a>
+      <div class="inventory-toolbar">
+        <input type="text" id="inventory-search" class="search-input" placeholder="Filter your materials...">
+        <select id="inventory-sort" class="sort-select">
+          <option value="az">Name: A to Z</option>
+          <option value="owned-high">Most owned</option>
+          <option value="owned-low">Least owned</option>
+          <option value="needed">Needed first (0 owned)</option>
+        </select>
+      </div>
 
+      <div class="inventory-add">
+        <div class="material-name-field">
+          <input id="material-name" placeholder="Material name" autocomplete="off">
+          <div id="material-name-suggestions" class="material-suggestions"></div>
+        </div>
+        <input id="material-amount" type="number" inputmode="numeric" min="0" placeholder="Amount">
+        <button id="add-material" class="add-btn">Add</button>
+      </div>
 
-<a href="blacksmith.html">
-Blacksmith
-</a>
+      <div id="material-add-error" class="inventory-error"></div>
 
+      <div id="inventory-container" class="inventory-container"></div>
 
-<a href="materials.html">
-Materials
-</a>
+      <button id="reset-inventory" class="reset-btn">Reset Inventory</button>
+    </div>
 
-
-</nav>
-
-<!-- =========================
-MATERIALS HEADER
-========================= -->
-
-
-<h1 class="page-title">
-
-Materials
-
-</h1>
-
-
-
-<!-- =========================
-INVENTORY PANEL
-========================= -->
-
-
-<div class="inventory-panel">
-
-
-<h2>
-My Materials
-</h2>
-
-
-<div id="inventory-summary" class="inventory-summary">
-
-</div>
-
-
-<div class="inventory-toolbar">
-
-<input
-
-id="inventory-search"
-
-type="text"
-
-placeholder="Filter your materials..."
-
->
-
-<select id="inventory-sort">
-
-<option value="az">Name A-Z</option>
-
-<option value="owned-high">Most Owned</option>
-
-<option value="owned-low">Least Owned</option>
-
-<option value="needed">Needed First (0 owned)</option>
-
-</select>
+  </main>
 
 </div>
 
-
-<div class="inventory-add">
-
-
-<input
-
-id="material-name"
-
-list="material-name-options"
-
-placeholder="Material Name"
-
-autocomplete="off"
-
->
-
-<datalist id="material-name-options">
-
-</datalist>
-
-
-<input
-
-id="material-amount"
-
-type="number"
-
-min="0"
-
-placeholder="Amount"
-
->
-
-
-<button id="add-material">
-
-Add
-
-</button>
-
-
-</div>
-
-
-<div id="material-add-error" class="inventory-error"></div>
-
-
-
-
-<div id="inventory-container">
-
-</div>
-
-
-
-
-<button id="reset-inventory">
-
-Reset Inventory
-
-</button>
-
-
-</div>
-
-
-
-
+<script src="js/shared.js"></script>
 <script src="js/materials.js"></script>
 
-
 </body>
-
-
 </html>

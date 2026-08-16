@@ -14,6 +14,39 @@ let inventorySort = "az";
 
 let materialUsage = {};
 
+let materialNameList = [];
+
+// Materials over the cap are ones people keep extra of on storage alts;
+// this flag is stored separately from the owned quantity itself so
+// checking it doesn't wipe out what they've already entered.
+let overCap = {};
+
+// =========================
+// MATERIAL CAPS
+// =========================
+
+// In-game storage caps. Everything defaults to 500 unless it's named in
+// one of the lists below. These lists are a best-effort guess based on
+// naming conventions (e.g. "Token" items look like event currency) —
+// edit them directly if a material is capped differently in-game.
+const DEFAULT_MATERIAL_CAP = 500;
+const CONSUMABLE_MATERIAL_CAP = 999;
+const EVENT_CURRENCY_MATERIAL_CAP = 5000;
+
+const CONSUMABLE_MATERIALS = [
+  // Add consumable item names here, e.g. "Candy", "Turkey Leg"
+];
+
+const EVENT_CURRENCY_MATERIALS = [
+  // Add event currency item names here, e.g. "Easter Egg"
+];
+
+function getMaterialCap(name) {
+  if (CONSUMABLE_MATERIALS.includes(name)) return CONSUMABLE_MATERIAL_CAP;
+  if (EVENT_CURRENCY_MATERIALS.includes(name)) return EVENT_CURRENCY_MATERIAL_CAP;
+  return DEFAULT_MATERIAL_CAP;
+}
+
 
 // =========================
 // LOAD BLACKSMITH JSON
@@ -44,6 +77,8 @@ loadInventory();
 
 
 setupInventoryControls();
+
+setupMaterialNameAutocomplete();
 
 
 })
@@ -200,6 +235,13 @@ JSON.parse(saved);
 
 }
 
+let savedOverCap =
+localStorage.getItem("blacksmithOverCap");
+
+if(savedOverCap){
+overCap = JSON.parse(savedOverCap);
+}
+
 
 
 createInventory();
@@ -231,6 +273,16 @@ JSON.stringify(inventory)
 );
 
 
+
+}
+
+
+function saveOverCap(){
+
+localStorage.setItem(
+"blacksmithOverCap",
+JSON.stringify(overCap)
+);
 
 }
 
@@ -345,18 +397,33 @@ const usedIn = materialUsage[material] || 0;
 
 const ownedClass = owned > 0 ? "has-stock" : "no-stock";
 
+const cap = getMaterialCap(material);
+
+const isOverCap = !!overCap[material];
+
+const atCapClass = (!isOverCap && owned >= cap) ? "at-cap" : "";
+
 
 html += `
 
 
-<div class="inventory-item ${ownedClass}">
+<div class="inventory-item ${ownedClass} ${atCapClass}">
 
 
 <div class="inventory-item-info">
 
 <h3>${material}</h3>
 
-<span class="inventory-usage">Used in ${usedIn} recipe${usedIn === 1 ? "" : "s"}</span>
+<span class="inventory-usage">Used in ${usedIn} recipe${usedIn === 1 ? "" : "s"} · Cap: ${cap}</span>
+
+<label class="over-cap-toggle">
+<input
+type="checkbox"
+${isOverCap ? "checked" : ""}
+onchange="setOverCap('${material}', this.checked)"
+>
+On storage alt (more than ${cap})
+</label>
 
 </div>
 
@@ -372,6 +439,8 @@ class="qty-input"
 type="number"
 
 min="0"
+
+${isOverCap ? "" : `max="${cap}"`}
 
 value="${owned}"
 
@@ -413,6 +482,11 @@ amount = 0;
 
 }
 
+if(!overCap[name]){
+const cap = getMaterialCap(name);
+if(amount > cap) amount = cap;
+}
+
 
 inventory[name] = amount;
 
@@ -425,24 +499,113 @@ displayInventory();
 }
 
 
+function setOverCap(name, checked){
+
+overCap[name] = checked;
+
+saveOverCap();
+
+// Re-clamp the current amount if the flag was just turned off.
+if(!checked){
+const cap = getMaterialCap(name);
+if((inventory[name] || 0) > cap){
+inventory[name] = cap;
+saveInventory();
+}
+}
+
+displayInventory();
+
+}
+
+
 
 
 function populateMaterialOptions(){
 
 
-const list =
-document.getElementById("material-name-options");
+// Kept as the source list; the actual dropdown is built on demand in
+// setupMaterialNameAutocomplete so it can be filtered as the user types.
+materialNameList = Object.keys(inventory).sort();
 
 
-if(!list)
+}
+
+
+
+
+function setupMaterialNameAutocomplete(){
+
+
+const input = document.getElementById("material-name");
+
+const box = document.getElementById("material-name-suggestions");
+
+
+if(!input || !box) return;
+
+
+function render(matches){
+
+if(matches.length === 0){
+box.innerHTML = "";
+box.classList.remove("visible");
 return;
+}
 
-
-list.innerHTML =
-Object.keys(inventory)
-.sort()
-.map(name => `<option value="${name}"></option>`)
+box.innerHTML = matches
+.slice(0, 8)
+.map(name => `<div class="material-suggestion-row" data-name="${name}">${name}</div>`)
 .join("");
+
+box.classList.add("visible");
+
+box.querySelectorAll(".material-suggestion-row").forEach(row => {
+// touchstart fires before the input's blur/click race on mobile,
+// so the tap reliably registers on both iOS and Android instead
+// of the row disappearing before the tap lands.
+["touchstart", "mousedown"].forEach(evtName => {
+row.addEventListener(evtName, function(event){
+event.preventDefault();
+input.value = this.dataset.name;
+box.innerHTML = "";
+box.classList.remove("visible");
+});
+});
+});
+
+}
+
+
+input.addEventListener("input", function(){
+
+const value = this.value.trim().toLowerCase();
+
+if(!value){
+box.innerHTML = "";
+box.classList.remove("visible");
+return;
+}
+
+const matches = materialNameList.filter(name =>
+name.toLowerCase().includes(value)
+);
+
+render(matches);
+
+});
+
+
+input.addEventListener("blur", function(){
+
+// Small delay so a tap on a suggestion row still registers before
+// the list is cleared.
+setTimeout(() => {
+box.innerHTML = "";
+box.classList.remove("visible");
+}, 150);
+
+});
 
 
 }
@@ -522,6 +685,13 @@ if(inventory[name]<0){
 
 inventory[name]=0;
 
+}
+
+if(!overCap[name]){
+const cap = getMaterialCap(name);
+if(inventory[name] > cap){
+inventory[name] = cap;
+}
 }
 
 
@@ -665,6 +835,11 @@ if(found){
 
 
 inventory[found]+=amount;
+
+if(!overCap[found]){
+const cap = getMaterialCap(found);
+if(inventory[found] > cap) inventory[found] = cap;
+}
 
 if(errorBox) errorBox.textContent = "";
 
