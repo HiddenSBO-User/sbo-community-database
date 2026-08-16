@@ -289,10 +289,17 @@ function showDetails(item) {
   const content = document.getElementById("blacksmith-details-content");
 
   let cosmeticDetails = "";
+
   if (item.category === "Events / Overlays") {
     cosmeticDetails += `<p>Type: <span class="modal-value">${item.subCategory}</span></p>`;
-    if (item.event) cosmeticDetails += `<p>Event: <span class="modal-value">${item.event}</span></p>`;
-    if (item.limited === true) cosmeticDetails += `<span class="badge badge-limited">🔥 Limited</span>`;
+
+    if (item.event) {
+      cosmeticDetails += `<p>Event: <span class="modal-value">${item.event}</span></p>`;
+    }
+
+    if (item.limited === true) {
+      cosmeticDetails += `<span class="badge badge-limited">🔥 Limited</span>`;
+    }
   }
 
   let materialsHTML = "";
@@ -300,7 +307,11 @@ function showDetails(item) {
 
   item.materials.forEach(mat => {
     const owned = inventory[mat.name] || 0;
-    if (owned >= mat.amount) completed++;
+
+    if (owned >= mat.amount) {
+      completed++;
+    }
+
     const status = owned >= mat.amount ? "✅" : "❌";
 
     materialsHTML += `
@@ -312,30 +323,78 @@ function showDetails(item) {
   });
 
   let progress = 0;
+
   if (item.materials.length > 0) {
-    progress = Math.floor((completed / item.materials.length) * 100);
+    progress = Math.floor(
+      (completed / item.materials.length) * 100
+    );
   }
 
   content.innerHTML = `
     <h2>${item.name}</h2>
-    <p>Category: <span class="modal-value">${item.category}</span></p>
+
+    <p>
+      Category:
+      <span class="modal-value">${item.category}</span>
+    </p>
+
     ${cosmeticDetails}
-    <p>Type: <span class="modal-value">${item.subCategory}</span></p>
-    <p>SK Required: <span class="modal-value">${item.sk}</span></p>
-    <p>Craft EXP: <span class="modal-value">${item.exp}</span></p>
+
+    <p>
+      Type:
+      <span class="modal-value">${item.subCategory}</span>
+    </p>
+
+    <p>
+      SK Required:
+      <span class="modal-value">${item.sk}</span>
+    </p>
+
+    <p>
+      Craft EXP:
+      <span class="modal-value">${item.exp}</span>
+    </p>
+
     <h3>Materials Required</h3>
+
     ${materialsHTML}
+
     <h3>Craft Progress</h3>
+
     <div class="progress-bar">
-        <div class="progress-fill" style="width:${progress}%"></div>
+      <div
+        class="progress-fill"
+        style="width:${progress}%"
+      ></div>
     </div>
-    <p class="progress-label">${progress}% of materials ready</p>
-    <button class="queue-add-button" onclick="addToCraftingQueue(${JSON.stringify(item.name)}); document.getElementById('blacksmith-details-box').classList.remove('visible');">
-    🔨 Add to Crafting Queue
-</button>
-`;
+
+    <p class="progress-label">
+      ${progress}% of materials ready
+    </p>
+
+    <button
+      id="add-to-crafting-queue"
+      class="queue-add-button"
+      type="button"
+    >
+      🔨 Add to Crafting Queue
+    </button>
+  `;
 
   box.classList.add("visible");
+
+  const queueButton =
+    document.getElementById("add-to-crafting-queue");
+
+  if (queueButton) {
+    queueButton.addEventListener("click", function () {
+
+      addToCraftingQueue(item.name);
+
+      box.classList.remove("visible");
+
+    });
+  }
 }
 
 document.addEventListener("click", function (event) {
@@ -403,219 +462,298 @@ window.addEventListener("load", function () {
    CRAFTING QUEUE
 ========================================================= */
 
-let craftingQueue=JSON.parse(localStorage.getItem("blacksmithCraftingQueue")||"[]");
+let craftingQueue = JSON.parse(
+  localStorage.getItem("blacksmithCraftingQueue") || "[]"
+);
 
-function saveCraftingQueue(){
-    localStorage.setItem("blacksmithCraftingQueue",JSON.stringify(craftingQueue));
+function saveCraftingQueue() {
+  localStorage.setItem(
+    "blacksmithCraftingQueue",
+    JSON.stringify(craftingQueue)
+  );
 }
 
-function addToCraftingQueue(itemName){
-    const item=allItems.find(x=>x.name===itemName);
-    if(!item)return;
+function addToCraftingQueue(itemName) {
 
-    const existing=craftingQueue.find(x=>x.name===itemName);
+  console.log("Adding to queue:", itemName);
 
-    if(existing){
-        existing.quantity++;
-    }else{
-        craftingQueue.push({
-            name:itemName,
-            quantity:1
-        });
-    }
+  const item = allItems.find(
+    x => x.name === itemName
+  );
 
-    saveCraftingQueue();
-    renderCraftingQueue();
-}
+  if (!item) {
+    console.error("Queue item not found:", itemName);
+    console.error("Available items:", allItems);
+    alert("Could not find this item in the Blacksmith database.");
+    return;
+  }
 
-function removeFromCraftingQueue(index){
-    if(index<0||index>=craftingQueue.length)return;
+  const existing = craftingQueue.find(
+    x => x.name === itemName
+  );
 
-    craftingQueue.splice(index,1);
-    saveCraftingQueue();
-    renderCraftingQueue();
-}
-
-function changeQueueQuantity(index,amount){
-    if(!craftingQueue[index])return;
-
-    craftingQueue[index].quantity+=amount;
-
-    if(craftingQueue[index].quantity<=0){
-        craftingQueue.splice(index,1);
-    }
-
-    saveCraftingQueue();
-    renderCraftingQueue();
-}
-
-function clearCraftingQueue(){
-    if(!craftingQueue.length)return;
-
-    if(!confirm("Clear the entire crafting queue?"))return;
-
-    craftingQueue=[];
-    saveCraftingQueue();
-    renderCraftingQueue();
-}
-
-function queueCanCraft(item){
-    if(!item||!item.materials)return false;
-
-    return item.materials.every(mat=>{
-        return (inventory[mat.name]||0)>=mat.amount;
+  if (existing) {
+    existing.quantity++;
+  } else {
+    craftingQueue.push({
+      name: itemName,
+      quantity: 1
     });
+  }
+
+  saveCraftingQueue();
+
+  renderCraftingQueue();
+
+  console.log("Crafting queue:", craftingQueue);
 }
 
-function craftQueuedItem(index){
-    const entry=craftingQueue[index];
-    if(!entry)return;
+function removeFromCraftingQueue(index) {
 
-    const item=allItems.find(x=>x.name===entry.name);
+  if (
+    index < 0 ||
+    index >= craftingQueue.length
+  ) {
+    return;
+  }
 
-    if(!item){
-        alert("This item could not be found.");
-        return;
-    }
+  craftingQueue.splice(index, 1);
 
-    if(!item.materials||!item.materials.length){
-        alert("This item has no materials listed.");
-        return;
-    }
+  saveCraftingQueue();
 
-    for(const mat of item.materials){
-        const owned=inventory[mat.name]||0;
+  renderCraftingQueue();
+}
 
-        if(owned<mat.amount){
-            alert(`You do not have enough ${mat.name}. You need ${mat.amount} but only have ${owned}.`);
-            renderCraftingQueue();
-            return;
-        }
-    }
+function changeQueueQuantity(index, amount) {
 
-    item.materials.forEach(mat=>{
-        inventory[mat.name]-=mat.amount;
+  if (!craftingQueue[index]) {
+    return;
+  }
 
-        if(inventory[mat.name]<0){
-            inventory[mat.name]=0;
-        }
-    });
+  craftingQueue[index].quantity += amount;
 
-    saveInventory();
+  if (craftingQueue[index].quantity <= 0) {
+    craftingQueue.splice(index, 1);
+  }
 
-    entry.quantity--;
+  saveCraftingQueue();
 
-    if(entry.quantity<=0){
-        craftingQueue.splice(index,1);
-    }
+  renderCraftingQueue();
+}
 
-    saveCraftingQueue();
+function clearCraftingQueue() {
 
-    if(typeof displayInventory==="function"){
-        displayInventory();
-    }
+  if (!craftingQueue.length) {
+    return;
+  }
+
+  if (!confirm("Clear the entire crafting queue?")) {
+    return;
+  }
+
+  craftingQueue = [];
+
+  saveCraftingQueue();
+
+  renderCraftingQueue();
+}
+
+function queueCanCraft(item) {
+
+  if (!item || !item.materials) {
+    return false;
+  }
+
+  return item.materials.every(mat => {
+
+    const owned =
+      inventory[mat.name] || 0;
+
+    return owned >= mat.amount;
+  });
+}
+
+function renderCraftingQueue() {
+
+  const container =
+    document.getElementById(
+      "crafting-queue-container"
+    );
+
+  if (!container) {
+    return;
+  }
+
+  if (!craftingQueue.length) {
+
+    container.innerHTML = `
+      <div class="crafting-queue-empty">
+        <span>🔨</span>
+        <p>Your crafting queue is empty.</p>
+        <small>
+          Open an item's recipe and add it to your queue.
+        </small>
+      </div>
+    `;
+
+    return;
+  }
+
+  container.innerHTML = craftingQueue
+    .map((entry, index) => {
+
+      const item = allItems.find(
+        x => x.name === entry.name
+      );
+
+      if (!item) {
+
+        return `
+          <div class="crafting-queue-item">
+
+            <h3 class="crafting-queue-item-name">
+              ${entry.name}
+            </h3>
+
+            <p>
+              Item no longer exists in the
+              Blacksmith database.
+            </p>
+
+            <button
+              class="queue-remove-button"
+              onclick="removeFromCraftingQueue(${index})"
+            >
+              Remove
+            </button>
+
+          </div>
+        `;
+      }
+
+      const ready =
+        queueCanCraft(item);
+
+      let materialsHTML = "";
+
+      item.materials.forEach(mat => {
+
+        const owned =
+          inventory[mat.name] || 0;
+
+        const enough =
+          owned >= mat.amount;
+
+        materialsHTML += `
+          <div class="queue-material ${enough ? "ready" : "missing"}">
+
+            <span class="queue-material-name">
+              ${enough ? "✅" : "❌"} ${mat.name}
+            </span>
+
+            <span class="queue-material-amount">
+              Have:
+              <strong>${owned}</strong>
+              /
+              ${mat.amount}
+            </span>
+
+          </div>
+        `;
+      });
+
+      return `
+        <div class="crafting-queue-item">
+
+          <div class="crafting-queue-item-header">
+
+            <div>
+
+              <h3 class="crafting-queue-item-name">
+                ${item.name}
+              </h3>
+
+              <div class="crafting-queue-item-category">
+                ${item.category || ""}
+              </div>
+
+            </div>
+
+            <span class="queue-status ${ready ? "ready" : "missing"}">
+              ${ready
+                ? "🟢 Ready to Craft"
+                : "🔴 Missing Materials"}
+            </span>
+
+          </div>
+
+          <div class="crafting-queue-materials">
+
+            <h3>Materials Required</h3>
+
+            <div class="queue-material-list">
+              ${materialsHTML}
+            </div>
+
+          </div>
+
+          <div class="crafting-queue-controls">
+
+            <button
+              class="queue-quantity-button"
+              onclick="changeQueueQuantity(${index},-1)"
+            >
+              −
+            </button>
+
+            <span class="queue-quantity">
+              ${entry.quantity}
+            </span>
+
+            <button
+              class="queue-quantity-button"
+              onclick="changeQueueQuantity(${index},1)"
+            >
+              +
+            </button>
+
+            <button
+              class="queue-remove-button"
+              onclick="removeFromCraftingQueue(${index})"
+            >
+              Remove
+            </button>
+
+          </div>
+
+        </div>
+      `;
+    })
+    .join("");
+}
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
 
     renderCraftingQueue();
 
-    alert(`${item.name} crafted successfully!`);
-}
+    const clearButton =
+      document.getElementById(
+        "clear-crafting-queue"
+      );
 
-function renderCraftingQueue(){
-    const container=document.getElementById("crafting-queue-container");
+    if (clearButton) {
 
-    if(!container)return;
+      clearButton.addEventListener(
+        "click",
+        clearCraftingQueue
+      );
 
-    if(craftingQueue.length===0){
-        container.innerHTML=`
-            <div class="crafting-queue-empty">
-                <span>🔨</span>
-                <p>Your crafting queue is empty.</p>
-                <small>Open an item's recipe and add it to your queue.</small>
-            </div>
-        `;
-        return;
     }
 
-    container.innerHTML=craftingQueue.map((entry,index)=>{
-        const item=allItems.find(x=>x.name===entry.name);
-
-        if(!item){
-            return`
-                <div class="crafting-queue-item">
-                    <h3 class="crafting-queue-item-name">${entry.name}</h3>
-                    <p>Item no longer exists in the Blacksmith database.</p>
-                    <button class="queue-remove-button" onclick="removeFromCraftingQueue(${index})">Remove</button>
-                </div>
-            `;
-        }
-
-        const ready=queueCanCraft(item);
-
-        let materialsHTML="";
-
-        item.materials.forEach(mat=>{
-            const owned=inventory[mat.name]||0;
-            const enough=owned>=mat.amount;
-
-            materialsHTML+=`
-                <div class="queue-material ${enough?"ready":"missing"}">
-                    <span class="queue-material-name">${enough?"✅":"❌"} ${mat.name}</span>
-                    <span class="queue-material-amount">
-                        Have: <strong>${owned}</strong> / ${mat.amount}
-                    </span>
-                </div>
-            `;
-        });
-
-        return`
-            <div class="crafting-queue-item">
-                <div class="crafting-queue-item-header">
-                    <div>
-                        <h3 class="crafting-queue-item-name">${item.name}</h3>
-                        <div class="crafting-queue-item-category">${item.category||""}</div>
-                    </div>
-
-                    <span class="queue-status ${ready?"ready":"missing"}">
-                        ${ready?"🟢 Ready to Craft":"🔴 Missing Materials"}
-                    </span>
-                </div>
-
-                <div class="crafting-queue-materials">
-                    <h3>Materials Required</h3>
-                    <div class="queue-material-list">
-                        ${materialsHTML}
-                    </div>
-                </div>
-
-                <div class="crafting-queue-controls">
-                    <button class="queue-quantity-button" onclick="changeQueueQuantity(${index},-1)">−</button>
-
-                    <span class="queue-quantity">${entry.quantity}</span>
-
-                    <button class="queue-quantity-button" onclick="changeQueueQuantity(${index},1)">+</button>
-
-                    <button class="queue-craft-button" onclick="craftQueuedItem(${index})" ${ready?"":"disabled"}>
-                        Complete Craft
-                    </button>
-
-                    <button class="queue-remove-button" onclick="removeFromCraftingQueue(${index})">
-                        Remove
-                    </button>
-                </div>
-            </div>
-        `;
-    }).join("");
-}
-
-document.addEventListener("DOMContentLoaded",function(){
-    renderCraftingQueue();
-
-    const clearButton=document.getElementById("clear-crafting-queue");
-
-    if(clearButton){
-        clearButton.addEventListener("click",clearCraftingQueue);
-    }
-});
+  }
+);
 
 window.addToCraftingQueue=addToCraftingQueue;
 window.removeFromCraftingQueue=removeFromCraftingQueue;
