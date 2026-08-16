@@ -617,3 +617,8 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 });
 
+window.addToCraftingQueue=addToCraftingQueue;
+window.removeFromCraftingQueue=removeFromCraftingQueue;
+window.changeQueueQuantity=changeQueueQuantity;
+window.clearCraftingQueue=clearCraftingQueue;
+window.craftQueuedItem=craftQueuedItem;
