@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setupSearch();
       setupSorting();
       setupFilterButtons();
+      renderCraftingQueue();
     })
     .catch(error => {
       console.error("Blacksmith loading error:", error);
@@ -811,8 +812,6 @@ function renderCraftingQueue() {
 document.addEventListener(
   "DOMContentLoaded",
   function () {
-
-    renderCraftingQueue();
 
     const clearButton =
       document.getElementById(
