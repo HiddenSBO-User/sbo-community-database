@@ -330,9 +330,9 @@ function showDetails(item) {
         <div class="progress-fill" style="width:${progress}%"></div>
     </div>
     <p class="progress-label">${progress}% of materials ready</p>
-    <button class="queue-add-button" onclick="addToCraftingQueue(${JSON.stringify(item.name)})">
-        🔨 Add to Crafting Queue
-    </button>
+    <button class="queue-add-button" onclick="addToCraftingQueue(${JSON.stringify(item.name)}); document.getElementById('blacksmith-details-box').classList.remove('visible');">
+    🔨 Add to Crafting Queue
+</button>
 `;
 
   box.classList.add("visible");
