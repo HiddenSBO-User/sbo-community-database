@@ -573,6 +573,77 @@ function queueCanCraft(item) {
   });
 }
 
+function craftQueuedItem(index) {
+  const entry = craftingQueue[index];
+
+  if (!entry) {
+    return;
+  }
+
+  const item = allItems.find(
+    x => x.name === entry.name
+  );
+
+  if (!item) {
+    alert("This item could not be found.");
+    return;
+  }
+
+  if (!item.materials || !item.materials.length) {
+    alert("This item has no materials listed.");
+    return;
+  }
+
+  // Check all materials first
+  for (const mat of item.materials) {
+    const owned = inventory[mat.name] || 0;
+
+    if (owned < mat.amount) {
+      alert(
+        `You do not have enough ${mat.name}. ` +
+        `You need ${mat.amount} but only have ${owned}.`
+      );
+
+      renderCraftingQueue();
+      return;
+    }
+  }
+
+  // Remove materials
+  item.materials.forEach(mat => {
+    inventory[mat.name] -= mat.amount;
+
+    if (inventory[mat.name] < 0) {
+      inventory[mat.name] = 0;
+    }
+  });
+
+  // Save the shared inventory
+  localStorage.setItem(
+    "blacksmithInventory",
+    JSON.stringify(inventory)
+  );
+
+  // Reduce queue quantity
+  entry.quantity--;
+
+  if (entry.quantity <= 0) {
+    craftingQueue.splice(index, 1);
+  }
+
+  saveCraftingQueue();
+
+  // Update queue
+  renderCraftingQueue();
+
+  // Update any inventory display on this page
+  if (typeof displayInventory === "function") {
+    displayInventory();
+  }
+
+  alert(`${item.name} crafted successfully!`);
+}
+
 function renderCraftingQueue() {
 
   const container =
@@ -699,32 +770,40 @@ function renderCraftingQueue() {
 
           <div class="crafting-queue-controls">
 
-            <button
-              class="queue-quantity-button"
-              onclick="changeQueueQuantity(${index},-1)"
-            >
-              −
-            </button>
+  <button
+    class="queue-quantity-button"
+    onclick="changeQueueQuantity(${index},-1)"
+  >
+    −
+  </button>
 
-            <span class="queue-quantity">
-              ${entry.quantity}
-            </span>
+  <span class="queue-quantity">
+    ${entry.quantity}
+  </span>
 
-            <button
-              class="queue-quantity-button"
-              onclick="changeQueueQuantity(${index},1)"
-            >
-              +
-            </button>
+  <button
+    class="queue-quantity-button"
+    onclick="changeQueueQuantity(${index},1)"
+  >
+    +
+  </button>
 
-            <button
-              class="queue-remove-button"
-              onclick="removeFromCraftingQueue(${index})"
-            >
-              Remove
-            </button>
+  <button
+    class="queue-craft-button"
+    onclick="craftQueuedItem(${index})"
+    ${ready ? "" : "disabled"}
+  >
+    Complete Craft
+  </button>
 
-          </div>
+  <button
+    class="queue-remove-button"
+    onclick="removeFromCraftingQueue(${index})"
+  >
+    Remove
+  </button>
+
+</div>
 
         </div>
       `;
