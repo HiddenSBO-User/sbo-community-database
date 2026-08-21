@@ -784,49 +784,56 @@
 
 
   function getDeathCalculation() {
-    const {
-      currentLevel,
-      currentExp
-    } =
-      getProgressValues();
+  const {
+    currentLevel,
+    currentExp
+  } =
+    getProgressValues();
 
-    const preservation =
-      getPreservationData(
-        currentLevel
-      );
+  const preservation =
+    getPreservationData(
+      currentLevel
+    );
 
-    const expAfterDeath =
-      Math.min(
-        currentExp,
-        preservation.floor
-      );
+  let expAfterDeath;
 
-    const expLost =
-      Math.max(
-        0,
-        currentExp -
-          expAfterDeath
-      );
-
-    return {
-      level:
-        currentLevel,
-
-      expBefore:
-        currentExp,
-
-      preservationPercent:
-        preservation.percentage,
-
-      preservationFloor:
-        preservation.floor,
-
-      expLost,
-
-      expAfter:
-        expAfterDeath
-    };
+  if (
+    currentExp <=
+    preservation.floor
+  ) {
+    expAfterDeath =
+      currentExp;
+  } else {
+    expAfterDeath =
+      preservation.floor;
   }
+
+  const expLost =
+    Math.max(
+      0,
+      currentExp -
+        expAfterDeath
+    );
+
+  return {
+    level:
+      currentLevel,
+
+    expBefore:
+      currentExp,
+
+    preservationPercent:
+      preservation.percentage,
+
+    preservationFloor:
+      preservation.floor,
+
+    expLost,
+
+    expAfter:
+      expAfterDeath
+  };
+}
 
 
   // =========================================
