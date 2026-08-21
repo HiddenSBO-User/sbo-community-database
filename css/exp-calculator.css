@@ -112,54 +112,6 @@
 
 
 /* =========================================
-   EXP Preservation Status
-   ========================================= */
-
-.exp-preservation-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-
-  min-width: 220px;
-  padding: 10px 13px;
-
-  background: var(--surface-2, #1b212c);
-  border: 1px solid var(--border, #293241);
-  border-radius: 10px;
-}
-
-.exp-preservation-label {
-  color: var(--text-muted, #8f9bab);
-
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.exp-preservation-values {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.exp-preservation-values strong {
-  color: var(--accent, #4a9eff);
-
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-}
-
-.exp-preservation-values span {
-  color: var(--text-muted, #8f9bab);
-
-  font-family: "JetBrains Mono", monospace;
-  font-size: 11px;
-}
-
-
-/* =========================================
    Farming Mode
    ========================================= */
 
@@ -361,25 +313,18 @@
    I Levelled Button
    ========================================= */
 
-button.exp-levelled-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.exp-levelled-button {
   min-height: 54px;
   padding: 12px 18px;
 
-  color: #ffffff !important;
-  background: var(--accent, #4a9eff) !important;
-  border: 1px solid var(--accent, #4a9eff) !important;
-  border-radius: 10px !important;
+  color: #ffffff;
+  background: var(--accent, #4a9eff);
+  border: 1px solid var(--accent, #4a9eff);
+  border-radius: 10px;
 
   font-family: "Sora", sans-serif;
   font-size: 13px;
   font-weight: 800;
-
-  appearance: none;
-  -webkit-appearance: none;
 
   cursor: pointer;
 
@@ -388,12 +333,16 @@ button.exp-levelled-button {
     transform 0.1s ease;
 }
 
-button.exp-levelled-button:hover {
+.exp-levelled-button:hover {
   filter: brightness(1.08);
 }
 
-button.exp-levelled-button:active {
+.exp-levelled-button:active {
   transform: translateY(1px);
+}
+
+.exp-levelled-button.level-updated {
+  cursor: default;
 }
 
 
@@ -509,25 +458,18 @@ button.exp-levelled-button:active {
    I Died Button
    ========================================= */
 
-button.exp-died-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.exp-died-button {
   min-height: 54px;
   padding: 12px 18px;
 
-  color: #ffffff !important;
-  background: #c94b55 !important;
-  border: 1px solid #c94b55 !important;
-  border-radius: 10px !important;
+  color: #ffffff;
+  background: #c94b55;
+  border: 1px solid #c94b55;
+  border-radius: 10px;
 
   font-family: "Sora", sans-serif;
   font-size: 13px;
   font-weight: 800;
-
-  appearance: none;
-  -webkit-appearance: none;
 
   cursor: pointer;
 
@@ -536,11 +478,11 @@ button.exp-died-button {
     transform 0.1s ease;
 }
 
-button.exp-died-button:hover {
+.exp-died-button:hover {
   filter: brightness(1.08);
 }
 
-button.exp-died-button:active {
+.exp-died-button:active {
   transform: translateY(1px);
 }
 
@@ -927,16 +869,6 @@ button.exp-died-button:active {
     gap: 8px;
   }
 
-  .exp-section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .exp-preservation-card {
-    width: 100%;
-    min-width: 0;
-  }
-
   .exp-progress-controls {
     grid-template-columns: 1fr 1fr;
   }
@@ -962,6 +894,11 @@ button.exp-died-button:active {
     padding: 18px;
   }
 
+  .exp-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .exp-mode-toggle {
     display: flex;
     width: 100%;
@@ -969,10 +906,6 @@ button.exp-died-button:active {
 
   .exp-mode-button {
     flex: 1;
-  }
-
-  .exp-preservation-card {
-    padding: 10px 12px;
   }
 
   .exp-progress-controls {
@@ -1013,4 +946,62 @@ button.exp-died-button:active {
   .exp-death-preview-row {
     gap: 12px;
   }
+}
+
+/* =========================================
+   Progress Button Overrides
+   ========================================= */
+
+button.exp-levelled-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+  padding: 12px 18px;
+
+  color: #ffffff !important;
+  background: var(--accent, #4a9eff) !important;
+  border: 1px solid var(--accent, #4a9eff) !important;
+  border-radius: 10px !important;
+
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+}
+
+button.exp-levelled-button:hover {
+  filter: brightness(1.1);
+}
+
+button.exp-died-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+  padding: 12px 18px;
+
+  color: #ffffff !important;
+  background: #c94b55 !important;
+  border: 1px solid #c94b55 !important;
+  border-radius: 10px !important;
+
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+}
+
+button.exp-died-button:hover {
+  filter: brightness(1.1);
 }
