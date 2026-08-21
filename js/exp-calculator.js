@@ -1667,183 +1667,209 @@
   }
 
 
-  // =========================================
-  // Main Event Listeners
-  // =========================================
+// =========================================
+// Main Event Listeners
+// =========================================
 
-  document
-    .querySelectorAll(
-      ".exp-mode-button"
-    )
-    .forEach(
-      (button) => {
-        button.addEventListener(
-          "click",
-          () => {
-            setBossMode(
-              Number(
-                button.dataset.mode
-              )
-            );
-          }
-        );
-      }
-    );
-
-
-  elements.doubleXp
-    .addEventListener(
-      "change",
-      () => {
-        updateKillTrackers();
-
-        saveSettings();
-        recalculateIfReady();
-      }
-    );
-
-
-  elements.boss1Group
-    .addEventListener(
-      "change",
-      () => {
-        populateBossDropdown(
-          elements.boss1Group,
-          elements.boss1,
-          elements.boss1Exp
-        );
-
-        updateKillTrackers();
-
-        saveSettings();
-        recalculateIfReady();
-      }
-    );
-
-
-  elements.boss1
-    .addEventListener(
-      "change",
-      () => {
-        updateBossExpDisplay(
-          elements.boss1Group,
-          elements.boss1,
-          elements.boss1Exp
-        );
-
-        updateKillTrackers();
-
-        saveSettings();
-        recalculateIfReady();
-      }
-    );
-
-
-  elements.boss2Group
-    .addEventListener(
-      "change",
-      () => {
-        populateBossDropdown(
-          elements.boss2Group,
-          elements.boss2,
-          elements.boss2Exp
-        );
-
-        updateKillTrackers();
-
-        saveSettings();
-        recalculateIfReady();
-      }
-    );
-
-
-  elements.boss2
-    .addEventListener(
-      "change",
-      () => {
-        updateBossExpDisplay(
-          elements.boss2Group,
-          elements.boss2,
-          elements.boss2Exp
-        );
-
-        updateKillTrackers();
-
-        saveSettings();
-        recalculateIfReady();
-      }
-    );
-
-
-  [
-    elements.currentLevel,
-    elements.currentExp,
-    elements.targetLevel
-  ].forEach(
-    (input) => {
-      input.addEventListener(
-        "input",
+document
+  .querySelectorAll(
+    ".exp-mode-button"
+  )
+  .forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
         () => {
-          saveSettings();
+          setBossMode(
+            Number(
+              button.dataset.mode
+            )
+          );
 
-          updatePreservationDisplay();
-
-          recalculateIfReady();
+          updateKillTrackers();
         }
       );
     }
   );
 
 
-  // =========================================
-  // Boss Kill Tracker Events
-  // =========================================
+// =========================================
+// 2x EXP
+// =========================================
 
-  if (
-    elements
-      .trackBoss1
-  ) {
-    elements
-      .trackBoss1
-      .addEventListener(
-        "click",
-        () => {
-          const boss1 =
-            getSelectedBoss(
-              elements.boss1Group,
-              elements.boss1
-            );
+elements.doubleXp
+  .addEventListener(
+    "change",
+    () => {
+      updateKillTrackers();
 
-          addBossKillExp(
-            boss1
-          );
-        }
+      saveSettings();
+
+      recalculateIfReady();
+    }
+  );
+
+
+// =========================================
+// Boss 1 Floor Range
+// =========================================
+
+elements.boss1Group
+  .addEventListener(
+    "change",
+    () => {
+      populateBossDropdown(
+        elements.boss1Group,
+        elements.boss1,
+        elements.boss1Exp
       );
-  }
+
+      updateKillTrackers();
+
+      saveSettings();
+
+      recalculateIfReady();
+    }
+  );
 
 
-  if (
-    elements
-      .trackBoss2
-  ) {
-    elements
-      .trackBoss2
-      .addEventListener(
-        "click",
-        () => {
-          const boss2 =
-            getSelectedBoss(
-              elements.boss2Group,
-              elements.boss2
-            );
+// =========================================
+// Boss 1 Selection
+// =========================================
 
-          addBossKillExp(
-            boss2
-          );
-        }
+elements.boss1
+  .addEventListener(
+    "change",
+    () => {
+      updateBossExpDisplay(
+        elements.boss1Group,
+        elements.boss1,
+        elements.boss1Exp
       );
-  }
 
+      updateKillTrackers();
+
+      saveSettings();
+
+      recalculateIfReady();
+    }
+  );
+
+
+// =========================================
+// Boss 2 Floor Range
+// =========================================
+
+elements.boss2Group
+  .addEventListener(
+    "change",
+    () => {
+      populateBossDropdown(
+        elements.boss2Group,
+        elements.boss2,
+        elements.boss2Exp
+      );
+
+      updateKillTrackers();
+
+      saveSettings();
+
+      recalculateIfReady();
+    }
+  );
+
+
+// =========================================
+// Boss 2 Selection
+// =========================================
+
+elements.boss2
+  .addEventListener(
+    "change",
+    () => {
+      updateBossExpDisplay(
+        elements.boss2Group,
+        elements.boss2,
+        elements.boss2Exp
+      );
+
+      updateKillTrackers();
+
+      saveSettings();
+
+      recalculateIfReady();
+    }
+  );
+
+
+// =========================================
+// Level Progress Inputs
+// =========================================
+
+[
+  elements.currentLevel,
+  elements.currentExp,
+  elements.targetLevel
+].forEach(
+  (input) => {
+    input.addEventListener(
+      "input",
+      () => {
+        saveSettings();
+
+        updatePreservationDisplay();
+
+        recalculateIfReady();
+      }
+    );
+  }
+);
+
+
+// =========================================
+// Add Kill Tracker Events
+// =========================================
+
+if (
+  elements.trackBoss1
+) {
+  elements.trackBoss1
+    .addEventListener(
+      "click",
+      () => {
+        const boss1 =
+          getSelectedBoss(
+            elements.boss1Group,
+            elements.boss1
+          );
+
+        addBossKillExp(
+          boss1
+        );
+      }
+    );
+}
+
+
+if (
+  elements.trackBoss2
+) {
+  elements.trackBoss2
+    .addEventListener(
+      "click",
+      () => {
+        const boss2 =
+          getSelectedBoss(
+            elements.boss2Group,
+            elements.boss2
+          );
+
+        addBossKillExp(
+          boss2
+        );
+      }
+    );
+}
 
   // =========================================
   // I Levelled Events
