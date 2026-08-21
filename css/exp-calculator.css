@@ -425,13 +425,17 @@
 }
 
 .exp-result-card > span {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+
+  min-height: 32px;
 
   color: var(--text-muted, #8f9bab);
 
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.05em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
