@@ -1111,6 +1111,20 @@ button.exp-died-button:active {
   }
 }
 
+.exp-level-progress-heading {
+  flex-direction: column;
+}
+
+.exp-kill-trackers {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.exp-kill-tracker {
+  flex: 1;
+  max-width: none !important;
+}
+
 @media (max-width: 560px) {
   .exp-section-card {
     padding: 18px;
@@ -1187,4 +1201,13 @@ button.exp-died-button:active {
   .exp-death-preview-row {
     gap: 12px;
   }
+   .exp-kill-trackers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.exp-kill-tracker {
+  min-width: 0 !important;
+  width: 100%;
+}
 }
