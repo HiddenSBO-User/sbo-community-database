@@ -3,12 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>EXP Calculator | SBO: Rebirth Community Database</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/components.css">
@@ -17,6 +14,10 @@
 <body>
 
 <div class="app-shell">
+
+  <!-- ========================================
+       Sidebar
+       ======================================== -->
 
   <div class="sidebar-scrim" id="sidebar-scrim"></div>
 
@@ -53,41 +54,47 @@
     </div>
   </aside>
 
-  <div class="topbar">
-    <div class="topbar-brand">
-      <span>⚔</span> SBO: Rebirth
-    </div>
+  <!-- ========================================
+       Mobile Topbar
+       ======================================== -->
 
+  <div class="topbar">
+    <div class="topbar-brand"><span>⚔</span> SBO: Rebirth</div>
     <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
   </div>
 
+  <!-- ========================================
+       Main Content
+       ======================================== -->
+
   <main class="main-content">
+
+    <!-- ========================================
+         Page Header
+         ======================================== -->
 
     <section class="hero exp-calculator-hero">
       <p class="hero-eyebrow">Progression Tool</p>
-
       <h1 class="hero-title">SBO EXP Calculator</h1>
-
-      <p class="hero-description">
-        Calculate the EXP and boss kills required to reach your target level.
-      </p>
+      <p class="hero-description">Calculate the EXP and boss kills required to reach your target level.</p>
 
       <div class="exp-formula-card">
         <div>
           <div class="exp-formula-label">EXP Curve</div>
           <div class="exp-formula-value">3x² + 9x - 3</div>
         </div>
-
         <div class="exp-formula-level">x = Level</div>
       </div>
     </section>
 
-    <section class="exp-section-card">
+    <!-- ========================================
+         Farming Setup
+         ======================================== -->
 
+    <section class="exp-section-card">
       <div class="exp-section-heading">
         <div class="exp-section-heading-main">
           <div class="exp-section-number">01</div>
-
           <div>
             <h2>Farming Setup</h2>
             <p>Select whether you farm one boss or rotate between two bosses.</p>
@@ -101,16 +108,13 @@
       </div>
 
       <div class="exp-mode-toggle">
-        <button type="button" class="exp-mode-button active" data-mode="1">
-          1 Boss
-        </button>
-
-        <button type="button" class="exp-mode-button" data-mode="2">
-          2 Bosses
-        </button>
+        <button type="button" class="exp-mode-button active" data-mode="1">1 Boss</button>
+        <button type="button" class="exp-mode-button" data-mode="2">2 Bosses</button>
       </div>
 
       <div class="exp-boss-grid">
+
+        <!-- Boss 1 -->
 
         <div class="exp-boss-card">
           <div class="exp-boss-card-heading">
@@ -120,7 +124,6 @@
 
           <label class="exp-field">
             <span>Floor Range</span>
-
             <select id="boss-1-group">
               <option value="floors2to10">Floors 2–10</option>
               <option value="floors11to15">Floors 11–15</option>
@@ -140,6 +143,8 @@
           </div>
         </div>
 
+        <!-- Boss 2 -->
+
         <div class="exp-boss-card hidden" id="boss-2-card">
           <div class="exp-boss-card-heading">
             <h3>Boss 2</h3>
@@ -148,7 +153,6 @@
 
           <label class="exp-field">
             <span>Floor Range</span>
-
             <select id="boss-2-group">
               <option value="floors2to10">Floors 2–10</option>
               <option value="floors11to15">Floors 11–15</option>
@@ -167,17 +171,17 @@
             <strong id="boss-2-exp">0 EXP</strong>
           </div>
         </div>
-
       </div>
-
     </section>
 
-    <section class="exp-section-card">
+    <!-- ========================================
+         Level Progress
+         ======================================== -->
 
+    <section class="exp-section-card">
       <div class="exp-section-heading">
         <div class="exp-section-heading-main">
           <div class="exp-section-number">02</div>
-
           <div>
             <h2>Level Progress</h2>
             <p>Enter your current level, current EXP, and target level.</p>
@@ -186,65 +190,35 @@
       </div>
 
       <div class="exp-level-grid">
-
         <label class="exp-field">
           <span>Current Level</span>
-
-          <input
-            type="number"
-            id="current-level"
-            min="1"
-            max="1000"
-            step="1"
-            placeholder="474"
-          >
+          <input type="number" id="current-level" min="1" max="1000" step="1" placeholder="474">
         </label>
 
         <label class="exp-field">
           <span>Current EXP</span>
-
-          <input
-            type="number"
-            id="current-exp"
-            min="0"
-            step="1"
-            placeholder="290511"
-          >
+          <input type="number" id="current-exp" min="0" step="1" placeholder="290511">
         </label>
 
         <label class="exp-field">
           <span>Target Level</span>
-
-          <input
-            type="number"
-            id="target-level"
-            min="2"
-            max="1000"
-            step="1"
-            placeholder="500"
-          >
+          <input type="number" id="target-level" min="2" max="1000" step="1" placeholder="500">
         </label>
-
       </div>
 
-      <p class="exp-current-note">
-        Current EXP is the EXP already earned inside your current level.
-      </p>
-
-      <button type="button" class="exp-calculate-button" id="calculate-exp">
-        Calculate
-      </button>
-
+      <p class="exp-current-note">Current EXP is the EXP already earned inside your current level.</p>
+      <button type="button" class="exp-calculate-button" id="calculate-exp">Calculate</button>
       <p class="exp-error" id="exp-error" role="alert"></p>
-
     </section>
 
-    <section class="exp-section-card" id="exp-results" hidden>
+    <!-- ========================================
+         Results
+         ======================================== -->
 
+    <section class="exp-section-card" id="exp-results" hidden>
       <div class="exp-section-heading">
         <div class="exp-section-heading-main">
           <div class="exp-section-number">03</div>
-
           <div>
             <h2>Results</h2>
             <p>Your farming requirements based on the selected setup.</p>
@@ -253,7 +227,6 @@
       </div>
 
       <div class="exp-results-grid">
-
         <div class="exp-result-card exp-result-card-primary">
           <span>EXP Remaining</span>
           <strong id="result-exp-remaining">0</strong>
@@ -273,7 +246,6 @@
           <span>Total Boss Kills</span>
           <strong id="result-total-kills">0</strong>
         </div>
-
       </div>
 
       <div class="exp-result-details" id="result-details"></div>
@@ -281,8 +253,11 @@
       <div class="exp-rounding-note">
         Boss requirements are always rounded up so the displayed amount is enough to reach the target.
       </div>
-
     </section>
+
+    <!-- ========================================
+         Footer
+         ======================================== -->
 
     <footer class="site-footer">
       <strong>Sword Blox Online: Rebirth Community Database</strong>
@@ -290,8 +265,11 @@
     </footer>
 
   </main>
-
 </div>
+
+<!-- ========================================
+     Scripts
+     ======================================== -->
 
 <script src="data/bosses.js"></script>
 <script src="data/event-bosses.js"></script>
