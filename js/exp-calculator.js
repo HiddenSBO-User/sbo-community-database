@@ -68,12 +68,12 @@
     deathPreviewLevel: document.getElementById("death-preview-level"),
     deathPreviewBefore: document.getElementById("death-preview-before"),
     deathPreviewPreservation: document.getElementById("death-preview-preservation"),
+    deathPreviewFloor: document.getElementById("death-preview-floor"),
     deathPreviewLost: document.getElementById("death-preview-lost"),
     deathPreviewAfter: document.getElementById("death-preview-after")
   };
 
   let bossMode = 1;
-
   let pendingDeath = null;
 
 
@@ -328,6 +328,7 @@
       targetLevel > currentLevel
     ) {
       calculateExp();
+
       return;
     }
 
@@ -426,19 +427,10 @@
 
 
   function getProgressValues() {
-    const currentLevel =
-      Number(elements.currentLevel.value);
-
-    const currentExp =
-      Number(elements.currentExp.value || 0);
-
-    const targetLevel =
-      Number(elements.targetLevel.value);
-
     return {
-      currentLevel,
-      currentExp,
-      targetLevel
+      currentLevel: Number(elements.currentLevel.value),
+      currentExp: Number(elements.currentExp.value || 0),
+      targetLevel: Number(elements.targetLevel.value)
     };
   }
 
@@ -672,9 +664,6 @@
       return;
     }
 
-    const originalText =
-      "I Levelled";
-
     elements.levelledButton.textContent =
       "Level Updated ✓";
 
@@ -685,7 +674,7 @@
     window.setTimeout(
       () => {
         elements.levelledButton.textContent =
-          originalText;
+          "I Levelled";
 
         elements.levelledButton.classList.remove(
           "level-updated"
@@ -901,11 +890,8 @@
       return 0;
     }
 
-    const preservationPercent =
-      Math.floor(level / 100) * 10;
-
     return Math.min(
-      preservationPercent,
+      Math.floor(level / 100) * 10,
       90
     );
   }
@@ -922,12 +908,21 @@
         currentLevel
       );
 
-    const preservationRate =
-      preservationPercent / 100;
+    const levelRequirement =
+      getLevelExp(
+        currentLevel + 1
+      );
+
+    const preservationFloor =
+      Math.floor(
+        levelRequirement *
+        (preservationPercent / 100)
+      );
 
     const expAfterDeath =
-      Math.floor(
-        currentExp * preservationRate
+      Math.min(
+        currentExp,
+        preservationFloor
       );
 
     const expLost =
@@ -940,7 +935,8 @@
       level: currentLevel,
       expBefore: currentExp,
       preservationPercent,
-      expPreserved: expAfterDeath,
+      levelRequirement,
+      preservationFloor,
       expLost,
       expAfter: expAfterDeath
     };
@@ -971,6 +967,13 @@
 
     elements.deathPreviewPreservation.textContent =
       `${pendingDeath.preservationPercent}%`;
+
+    if (elements.deathPreviewFloor) {
+      elements.deathPreviewFloor.textContent =
+        numberFormatter.format(
+          pendingDeath.preservationFloor
+        );
+    }
 
     elements.deathPreviewLost.textContent =
       numberFormatter.format(
@@ -1023,7 +1026,7 @@
 
 
   // =========================================
-  // Event Listeners
+  // Main Event Listeners
   // =========================================
 
   document
