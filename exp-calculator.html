@@ -230,16 +230,59 @@
          ======================================== -->
 
     <section class="exp-section-card">
-      <div class="exp-section-heading">
-        <div class="exp-section-heading-main">
-          <div class="exp-section-number">02</div>
+      <div class="exp-section-heading exp-level-progress-heading">
 
-          <div>
-            <h2>Level Progress</h2>
-            <p>Enter your current level, current EXP, and target level.</p>
-          </div>
-        </div>
-      </div>
+  <div class="exp-section-heading-main">
+    <div class="exp-section-number">02</div>
+
+    <div>
+      <h2>Level Progress</h2>
+      <p>Enter your current level, current EXP, and target level.</p>
+    </div>
+  </div>
+
+  <!-- Boss Kill Trackers -->
+  <div class="exp-kill-trackers">
+
+    <button
+      type="button"
+      class="exp-kill-tracker"
+      id="track-boss-1"
+      title="Add Boss 1 EXP"
+    >
+      <span class="exp-kill-tracker-label">Boss 1</span>
+
+      <strong id="track-boss-1-name">
+        Boss 1
+      </strong>
+
+      <span id="track-boss-1-exp">
+        +0 EXP
+      </span>
+
+      <small>Add Kill</small>
+    </button>
+
+    <button
+      type="button"
+      class="exp-kill-tracker hidden"
+      id="track-boss-2"
+      title="Add Boss 2 EXP"
+    >
+      <span class="exp-kill-tracker-label">Boss 2</span>
+
+      <strong id="track-boss-2-name">
+        Boss 2
+      </strong>
+
+      <span id="track-boss-2-exp">
+        +0 EXP
+      </span>
+
+      <small>Add Kill</small>
+    </button>
+  </div>
+</div>
 
       <div class="exp-level-grid">
         <label class="exp-field">
