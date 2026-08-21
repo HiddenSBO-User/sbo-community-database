@@ -45,15 +45,19 @@
   // =========================================
 
   const STORAGE_KEYS = {
-    bossMode: "sboExpBossMode",
-    doubleXp: "sboExpDoubleXp",
+  bossMode: "sboExpBossMode",
+  doubleXp: "sboExpDoubleXp",
 
-    boss1Group: "sboExpBoss1Group",
-    boss1Boss: "sboExpBoss1Boss",
+  boss1Group: "sboExpBoss1Group",
+  boss1Boss: "sboExpBoss1Boss",
 
-    boss2Group: "sboExpBoss2Group",
-    boss2Boss: "sboExpBoss2Boss"
-  };
+  boss2Group: "sboExpBoss2Group",
+  boss2Boss: "sboExpBoss2Boss",
+
+  currentLevel: "sboExpCurrentLevel",
+  currentExp: "sboExpCurrentExp",
+  targetLevel: "sboExpTargetLevel"
+};
 
 
   function saveSettings() {
@@ -86,6 +90,21 @@
       STORAGE_KEYS.boss2Boss,
       elements.boss2.value
     );
+
+    localStorage.setItem(
+  STORAGE_KEYS.currentLevel,
+  elements.currentLevel.value
+);
+
+localStorage.setItem(
+  STORAGE_KEYS.currentExp,
+  elements.currentExp.value
+);
+
+localStorage.setItem(
+  STORAGE_KEYS.targetLevel,
+  elements.targetLevel.value
+);
   }
 
 
@@ -534,20 +553,27 @@
   );
 
 
-  [
-    elements.currentLevel,
-    elements.currentExp,
-    elements.targetLevel
-  ].forEach((input) => {
-    input.addEventListener(
-      "keydown",
-      (event) => {
-        if (event.key === "Enter") {
-          calculateExp();
-        }
+[
+  elements.currentLevel,
+  elements.currentExp,
+  elements.targetLevel
+].forEach((input) => {
+
+  input.addEventListener(
+    "input",
+    saveSettings
+  );
+
+  input.addEventListener(
+    "keydown",
+    (event) => {
+      if (event.key === "Enter") {
+        calculateExp();
       }
-    );
-  });
+    }
+  );
+
+});
 
 
   // =========================================
@@ -591,6 +617,7 @@
         )
       );
 
+    
 
     // First visit defaults to the beginning.
     elements.boss1Group.value =
@@ -632,6 +659,30 @@
         : 1,
       false
     );
+const savedCurrentLevel =
+  localStorage.getItem(
+    STORAGE_KEYS.currentLevel
+  );
+
+const savedCurrentExp =
+  localStorage.getItem(
+    STORAGE_KEYS.currentExp
+  );
+
+const savedTargetLevel =
+  localStorage.getItem(
+    STORAGE_KEYS.targetLevel
+  );
+
+elements.currentLevel.value =
+  savedCurrentLevel || "";
+
+elements.currentExp.value =
+  savedCurrentExp || "";
+
+elements.targetLevel.value =
+  savedTargetLevel || "";
+    
   }
 
 
