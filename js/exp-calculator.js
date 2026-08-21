@@ -5,6 +5,9 @@
 (() => {
   "use strict";
 
+  const MAX_LEVEL = 10000;
+  const DEFAULT_BOSS_GROUP = "floors2to10";
+
   const numberFormatter = new Intl.NumberFormat("en-US");
 
   const elements = {
@@ -45,19 +48,19 @@
   // =========================================
 
   const STORAGE_KEYS = {
-  bossMode: "sboExpBossMode",
-  doubleXp: "sboExpDoubleXp",
+    bossMode: "sboExpBossMode",
+    doubleXp: "sboExpDoubleXp",
 
-  boss1Group: "sboExpBoss1Group",
-  boss1Boss: "sboExpBoss1Boss",
+    boss1Group: "sboExpBoss1Group",
+    boss1Boss: "sboExpBoss1Boss",
 
-  boss2Group: "sboExpBoss2Group",
-  boss2Boss: "sboExpBoss2Boss",
+    boss2Group: "sboExpBoss2Group",
+    boss2Boss: "sboExpBoss2Boss",
 
-  currentLevel: "sboExpCurrentLevel",
-  currentExp: "sboExpCurrentExp",
-  targetLevel: "sboExpTargetLevel"
-};
+    currentLevel: "sboExpCurrentLevel",
+    currentExp: "sboExpCurrentExp",
+    targetLevel: "sboExpTargetLevel"
+  };
 
 
   function saveSettings() {
@@ -92,19 +95,19 @@
     );
 
     localStorage.setItem(
-  STORAGE_KEYS.currentLevel,
-  elements.currentLevel.value
-);
+      STORAGE_KEYS.currentLevel,
+      elements.currentLevel.value
+    );
 
-localStorage.setItem(
-  STORAGE_KEYS.currentExp,
-  elements.currentExp.value
-);
+    localStorage.setItem(
+      STORAGE_KEYS.currentExp,
+      elements.currentExp.value
+    );
 
-localStorage.setItem(
-  STORAGE_KEYS.targetLevel,
-  elements.targetLevel.value
-);
+    localStorage.setItem(
+      STORAGE_KEYS.targetLevel,
+      elements.targetLevel.value
+    );
   }
 
 
@@ -152,6 +155,18 @@ localStorage.setItem(
   }
 
 
+  function isValidBossGroup(groupName) {
+    if (groupName === "event") {
+      return true;
+    }
+
+    return Object.prototype.hasOwnProperty.call(
+      window.SBO_BOSSES || {},
+      groupName
+    );
+  }
+
+
   function getSelectedBoss(
     groupSelect,
     bossSelect
@@ -170,7 +185,7 @@ localStorage.setItem(
     groupSelect,
     bossSelect,
     expDisplay,
-    savedBossIndex = null
+    savedBossIndex = 0
   ) {
     const bossList =
       getBossGroup(groupSelect.value);
@@ -184,9 +199,10 @@ localStorage.setItem(
       option.value =
         String(index);
 
-      const floorText = boss.floor
-        ? `Floor ${boss.floor} · `
-        : "";
+      const floorText =
+        boss.floor
+          ? `Floor ${boss.floor} · `
+          : "";
 
       option.textContent =
         `${floorText}${boss.name} — ${numberFormatter.format(boss.exp)} EXP`;
@@ -194,15 +210,15 @@ localStorage.setItem(
       bossSelect.appendChild(option);
     });
 
-    if (
-      savedBossIndex !== null &&
-      bossList[savedBossIndex]
-    ) {
-      bossSelect.value =
-        String(savedBossIndex);
-    } else {
-      bossSelect.value = "0";
-    }
+    const validBossIndex =
+      Number.isInteger(savedBossIndex) &&
+      savedBossIndex >= 0 &&
+      savedBossIndex < bossList.length
+        ? savedBossIndex
+        : 0;
+
+    bossSelect.value =
+      String(validBossIndex);
 
     updateBossExpDisplay(
       groupSelect,
@@ -243,7 +259,10 @@ localStorage.setItem(
     mode,
     shouldSave = true
   ) {
-    bossMode = mode;
+    bossMode =
+      mode === 2
+        ? 2
+        : 1;
 
     document
       .querySelectorAll(".exp-mode-button")
@@ -288,13 +307,17 @@ localStorage.setItem(
   // =========================================
 
   function showError(message) {
-    elements.error.textContent = message;
-    elements.results.hidden = true;
+    elements.error.textContent =
+      message;
+
+    elements.results.hidden =
+      true;
   }
 
 
   function clearError() {
-    elements.error.textContent = "";
+    elements.error.textContent =
+      "";
   }
 
 
@@ -317,10 +340,10 @@ localStorage.setItem(
     if (
       !Number.isInteger(currentLevel) ||
       currentLevel < 1 ||
-      currentLevel > 10000
+      currentLevel > MAX_LEVEL
     ) {
       showError(
-        "Enter a valid Current Level between 1 and 10000."
+        `Enter a valid Current Level between 1 and ${MAX_LEVEL}.`
       );
 
       return;
@@ -329,10 +352,10 @@ localStorage.setItem(
     if (
       !Number.isInteger(targetLevel) ||
       targetLevel <= currentLevel ||
-      targetLevel > 10000
+      targetLevel > MAX_LEVEL
     ) {
       showError(
-        "Target Level must be higher than Current Level and no higher than 10000."
+        `Target Level must be higher than Current Level and no higher than ${MAX_LEVEL}.`
       );
 
       return;
@@ -444,7 +467,6 @@ localStorage.setItem(
         totalBossKills
       );
 
-
     let detailsHtml = `
       <strong>${boss1.name}</strong>
       — ${numberFormatter.format(boss1Exp)} EXP per kill
@@ -463,7 +485,8 @@ localStorage.setItem(
     elements.resultDetails.innerHTML =
       detailsHtml;
 
-    elements.results.hidden = false;
+    elements.results.hidden =
+      false;
   }
 
 
@@ -553,27 +576,25 @@ localStorage.setItem(
   );
 
 
-[
-  elements.currentLevel,
-  elements.currentExp,
-  elements.targetLevel
-].forEach((input) => {
+  [
+    elements.currentLevel,
+    elements.currentExp,
+    elements.targetLevel
+  ].forEach((input) => {
+    input.addEventListener(
+      "input",
+      saveSettings
+    );
 
-  input.addEventListener(
-    "input",
-    saveSettings
-  );
-
-  input.addEventListener(
-    "keydown",
-    (event) => {
-      if (event.key === "Enter") {
-        calculateExp();
+    input.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "Enter") {
+          calculateExp();
+        }
       }
-    }
-  );
-
-});
+    );
+  });
 
 
   // =========================================
@@ -617,17 +638,30 @@ localStorage.setItem(
         )
       );
 
-    
+    const savedCurrentLevel =
+      localStorage.getItem(
+        STORAGE_KEYS.currentLevel
+      );
 
-    // First visit defaults to the beginning.
+    const savedCurrentExp =
+      localStorage.getItem(
+        STORAGE_KEYS.currentExp
+      );
+
+    const savedTargetLevel =
+      localStorage.getItem(
+        STORAGE_KEYS.targetLevel
+      );
+
     elements.boss1Group.value =
-      savedBoss1Group ||
-      "floors2to10";
+      isValidBossGroup(savedBoss1Group)
+        ? savedBoss1Group
+        : DEFAULT_BOSS_GROUP;
 
     elements.boss2Group.value =
-      savedBoss2Group ||
-      "floors2to10";
-
+      isValidBossGroup(savedBoss2Group)
+        ? savedBoss2Group
+        : DEFAULT_BOSS_GROUP;
 
     populateBossDropdown(
       elements.boss1Group,
@@ -638,7 +672,6 @@ localStorage.setItem(
         : 0
     );
 
-
     populateBossDropdown(
       elements.boss2Group,
       elements.boss2,
@@ -648,10 +681,17 @@ localStorage.setItem(
         : 0
     );
 
-
     elements.doubleXp.checked =
       savedDoubleXp === "true";
 
+    elements.currentLevel.value =
+      savedCurrentLevel || "";
+
+    elements.currentExp.value =
+      savedCurrentExp || "";
+
+    elements.targetLevel.value =
+      savedTargetLevel || "";
 
     setBossMode(
       savedMode === 2
@@ -659,32 +699,12 @@ localStorage.setItem(
         : 1,
       false
     );
-const savedCurrentLevel =
-  localStorage.getItem(
-    STORAGE_KEYS.currentLevel
-  );
-
-const savedCurrentExp =
-  localStorage.getItem(
-    STORAGE_KEYS.currentExp
-  );
-
-const savedTargetLevel =
-  localStorage.getItem(
-    STORAGE_KEYS.targetLevel
-  );
-
-elements.currentLevel.value =
-  savedCurrentLevel || "";
-
-elements.currentExp.value =
-  savedCurrentExp || "";
-
-elements.targetLevel.value =
-  savedTargetLevel || "";
-    
   }
 
+
+  // =========================================
+  // Initialization
+  // =========================================
 
   loadSavedSettings();
 
