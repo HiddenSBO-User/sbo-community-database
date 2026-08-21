@@ -293,12 +293,62 @@
 
 
 /* =========================================
-   Level Progress Controls
+   Progress Controls
    ========================================= */
 
 .exp-progress-controls {
+  display: grid;
+  grid-template-columns:
+    minmax(130px, 0.35fr)
+    minmax(260px, 1fr)
+    minmax(110px, 0.3fr);
+  gap: 12px;
+  align-items: stretch;
+
   margin-top: 20px;
 }
+
+
+/* =========================================
+   I Levelled Button
+   ========================================= */
+
+.exp-levelled-button {
+  min-height: 54px;
+  padding: 12px 18px;
+
+  color: #ffffff;
+  background: var(--accent, #4a9eff);
+  border: 1px solid var(--accent, #4a9eff);
+  border-radius: 10px;
+
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    filter 0.2s ease,
+    transform 0.1s ease;
+}
+
+.exp-levelled-button:hover {
+  filter: brightness(1.08);
+}
+
+.exp-levelled-button:active {
+  transform: translateY(1px);
+}
+
+.exp-levelled-button.level-updated {
+  cursor: default;
+}
+
+
+/* =========================================
+   2x EXP Control
+   ========================================= */
 
 .exp-double-xp-control {
   display: flex;
@@ -403,26 +453,18 @@
   box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.12);
 }
 
+
 /* =========================================
-   I Levelled Button
+   I Died Button
    ========================================= */
 
-.exp-progress-controls {
-  display: grid;
-  grid-template-columns: minmax(140px, 0.45fr) minmax(260px, 1fr);
-  gap: 12px;
-  align-items: stretch;
-
-  margin-top: 20px;
-}
-
-.exp-levelled-button {
+.exp-died-button {
   min-height: 54px;
   padding: 12px 18px;
 
   color: #ffffff;
-  background: var(--accent, #4a9eff);
-  border: 1px solid var(--accent, #4a9eff);
+  background: #c94b55;
+  border: 1px solid #c94b55;
   border-radius: 10px;
 
   font-family: "Sora", sans-serif;
@@ -436,21 +478,17 @@
     transform 0.1s ease;
 }
 
-.exp-levelled-button:hover {
+.exp-died-button:hover {
   filter: brightness(1.08);
 }
 
-.exp-levelled-button:active {
+.exp-died-button:active {
   transform: translateY(1px);
-}
-
-.exp-levelled-button.level-updated {
-  cursor: default;
 }
 
 
 /* =========================================
-   Levelled Boss Selection Modal
+   Modal Backdrop
    ========================================= */
 
 .exp-modal-backdrop {
@@ -470,6 +508,11 @@
 .exp-modal-backdrop[hidden] {
   display: none !important;
 }
+
+
+/* =========================================
+   Modal
+   ========================================= */
 
 .exp-modal {
   width: 100%;
@@ -496,6 +539,8 @@
 .exp-modal-heading h2 {
   margin: 0;
 
+  color: var(--text, #f4f7fb);
+
   font-family: "Sora", sans-serif;
   font-size: 18px;
 }
@@ -506,6 +551,7 @@
   color: var(--text-muted, #8f9bab);
 
   font-size: 12px;
+  line-height: 1.5;
 }
 
 .exp-modal-close {
@@ -537,7 +583,7 @@
 
 
 /* =========================================
-   Modal Boss Options
+   Levelled Boss Options
    ========================================= */
 
 .exp-levelled-boss-options {
@@ -632,6 +678,96 @@
   border-color: var(--text-muted, #8f9bab);
 }
 
+
+/* =========================================
+   Death Preview
+   ========================================= */
+
+.exp-death-preview {
+  overflow: hidden;
+
+  background: var(--surface-2, #1b212c);
+  border: 1px solid var(--border, #293241);
+  border-radius: 10px;
+}
+
+.exp-death-preview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 12px 14px;
+
+  border-bottom: 1px solid var(--border, #293241);
+}
+
+.exp-death-preview-row:last-child {
+  border-bottom: 0;
+}
+
+.exp-death-preview-row span {
+  color: var(--text-muted, #8f9bab);
+
+  font-size: 12px;
+}
+
+.exp-death-preview-row strong {
+  color: var(--text, #f4f7fb);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+}
+
+.exp-death-preview-loss strong {
+  color: #ff7f87;
+}
+
+
+/* =========================================
+   Death Modal Actions
+   ========================================= */
+
+.exp-death-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+.exp-death-modal-actions .exp-modal-cancel {
+  margin-top: 0;
+}
+
+.exp-confirm-death-button {
+  min-height: 40px;
+
+  color: #ffffff;
+  background: #c94b55;
+  border: 1px solid #c94b55;
+  border-radius: 9px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    filter 0.2s ease,
+    transform 0.1s ease;
+}
+
+.exp-confirm-death-button:hover {
+  filter: brightness(1.08);
+}
+
+.exp-confirm-death-button:active {
+  transform: translateY(1px);
+}
+
+
 /* =========================================
    Results
    ========================================= */
@@ -715,6 +851,7 @@
   display: none !important;
 }
 
+
 /* =========================================
    Responsive
    ========================================= */
@@ -731,35 +868,82 @@
     flex-direction: column;
     gap: 8px;
   }
+
+  .exp-progress-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exp-double-xp-control {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .exp-levelled-button {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .exp-died-button {
+    grid-column: 2;
+    grid-row: 2;
+  }
 }
 
 @media (max-width: 560px) {
   .exp-section-card {
     padding: 18px;
   }
+
   .exp-section-heading {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .exp-mode-toggle {
     display: flex;
     width: 100%;
   }
+
   .exp-mode-button {
     flex: 1;
   }
+
   .exp-progress-controls {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
+
   .exp-double-xp-control {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
     gap: 14px;
 
     padding: 12px 14px;
   }
+
+  .exp-levelled-button {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .exp-died-button {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
   .exp-levelled-boss-options {
     grid-template-columns: 1fr;
   }
+
+  .exp-death-modal-actions {
+    grid-template-columns: 1fr;
+  }
+
   .exp-modal {
     padding: 18px;
+  }
+
+  .exp-death-preview-row {
+    gap: 12px;
   }
 }
