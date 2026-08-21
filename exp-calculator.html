@@ -106,12 +106,6 @@
           </div>
         </div>
 
-        <label class="exp-xp-toggle">
-          <span>2× EXP</span>
-          <input type="checkbox" id="doubleXp">
-        </label>
-      </div>
-
       <div class="exp-mode-toggle">
         <button type="button" class="exp-mode-button active" data-mode="1">1 Boss</button>
         <button type="button" class="exp-mode-button" data-mode="2">2 Bosses</button>
@@ -211,9 +205,25 @@
         </label>
       </div>
 
-      <p class="exp-current-note">Current EXP is the total EXP you have at your current Level.</p>
-      <button type="button" class="exp-calculate-button" id="calculate-exp">Calculate</button>
-      <p class="exp-error" id="exp-error" role="alert"></p>
+<p class="exp-current-note">Current EXP is the total EXP you have at your current Level.</p>
+
+<div class="exp-progress-controls">
+  <div class="exp-double-xp-control">
+    <div>
+      <strong>2× EXP</strong>
+      <span>Apply double EXP to selected bosses.</span>
+    </div>
+
+    <label class="exp-switch">
+      <input type="checkbox" id="doubleXp">
+      <span class="exp-switch-track">
+        <span class="exp-switch-thumb"></span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<p class="exp-error" id="exp-error" role="alert"></p>
     </section>
 
     <!-- ========================================
