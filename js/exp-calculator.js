@@ -26,7 +26,6 @@
     currentExp: document.getElementById("current-exp"),
     targetLevel: document.getElementById("target-level"),
 
-    calculateButton: document.getElementById("calculate-exp"),
     error: document.getElementById("exp-error"),
 
     results: document.getElementById("exp-results"),
@@ -259,6 +258,25 @@
 
 
   // =========================================
+  // Auto Calculation
+  // =========================================
+
+  function canAutoCalculate() {
+    return (
+      elements.currentLevel.value !== "" &&
+      elements.targetLevel.value !== ""
+    );
+  }
+
+
+  function recalculateIfReady() {
+    if (canAutoCalculate()) {
+      calculateExp();
+    }
+  }
+
+
+  // =========================================
   // Boss Mode
   // =========================================
 
@@ -308,6 +326,7 @@
 
     if (shouldSave) {
       saveSettings();
+      recalculateIfReady();
     }
   }
 
@@ -539,10 +558,7 @@
     "change",
     () => {
       saveSettings();
-
-      if (!elements.results.hidden) {
-        calculateExp();
-      }
+      recalculateIfReady();
     }
   );
 
@@ -557,10 +573,7 @@
       );
 
       saveSettings();
-
-      if (!elements.results.hidden) {
-        calculateExp();
-      }
+      recalculateIfReady();
     }
   );
 
@@ -575,10 +588,7 @@
       );
 
       saveSettings();
-
-      if (!elements.results.hidden) {
-        calculateExp();
-      }
+      recalculateIfReady();
     }
   );
 
@@ -593,10 +603,7 @@
       );
 
       saveSettings();
-
-      if (!elements.results.hidden) {
-        calculateExp();
-      }
+      recalculateIfReady();
     }
   );
 
@@ -611,17 +618,8 @@
       );
 
       saveSettings();
-
-      if (!elements.results.hidden) {
-        calculateExp();
-      }
+      recalculateIfReady();
     }
-  );
-
-
-  elements.calculateButton.addEventListener(
-    "click",
-    calculateExp
   );
 
 
@@ -634,19 +632,7 @@
       "input",
       () => {
         saveSettings();
-
-        if (!elements.results.hidden) {
-          calculateExp();
-        }
-      }
-    );
-
-    input.addEventListener(
-      "keydown",
-      (event) => {
-        if (event.key === "Enter") {
-          calculateExp();
-        }
+        recalculateIfReady();
       }
     );
   });
@@ -748,7 +734,7 @@
 
 
     // =========================================
-    // Restore 2× EXP
+    // Restore 2x EXP
     // =========================================
 
     elements.doubleXp.checked =
@@ -782,14 +768,10 @@
 
 
     // =========================================
-    // Automatically Restore Results
+    // Restore Results
     // =========================================
 
-    const hasSavedProgress =
-      elements.currentLevel.value !== "" &&
-      elements.targetLevel.value !== "";
-
-    if (hasSavedProgress) {
+    if (canAutoCalculate()) {
       calculateExp();
     } else {
       elements.results.hidden =
