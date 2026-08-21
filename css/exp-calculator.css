@@ -7,44 +7,97 @@
   margin-bottom: 24px;
 }
 
-.exp-formula-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+/* =========================================
+   Calculator Information Cards
+   ========================================= */
+
+.exp-info-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(190px, 0.75fr)
+    minmax(260px, 1.15fr)
+    minmax(230px, 1fr);
+  gap: 12px;
 
   margin-top: 24px;
-  padding: 16px 18px;
+}
+
+.exp-info-card {
+  min-height: 92px;
+  padding: 14px 16px;
 
   background: var(--surface, #12161f);
   border: 1px solid var(--border, #293241);
   border-radius: 12px;
 }
 
-.exp-formula-label {
-  margin-bottom: 4px;
+.exp-info-label {
+  margin-bottom: 9px;
 
   color: var(--text-muted, #8f9bab);
 
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.exp-formula-value {
-  color: var(--accent, #4a9eff);
+.exp-info-card p {
+  margin: 0;
 
-  font-family: "JetBrains Mono", monospace;
-  font-size: 18px;
+  color: var(--text-muted, #8f9bab);
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.exp-info-card p strong {
+  color: var(--text, #f4f7fb);
   font-weight: 700;
 }
 
-.exp-formula-level {
+
+/* =========================================
+   EXP Curve Card
+   ========================================= */
+
+.exp-info-formula-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.exp-info-formula-row strong {
+  color: var(--accent, #4a9eff);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.exp-info-formula-row span {
   color: var(--text-muted, #8f9bab);
 
   font-family: "JetBrains Mono", monospace;
-  font-size: 12px;
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   Recommended Usage Card
+   ========================================= */
+
+.exp-info-recommended {
+  background: rgba(74, 158, 255, 0.06);
+}
+
+.exp-info-recommended .exp-info-label {
+  color: var(--accent, #4a9eff);
 }
 
 
