@@ -112,6 +112,59 @@
 
 
 /* =========================================
+   EXP Preservation Status
+   ========================================= */
+
+.exp-preservation-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex: 0 0 auto;
+
+  padding: 8px 12px;
+
+  background: var(--surface-2, #1b212c);
+  border: 1px solid var(--border, #293241);
+  border-radius: 9px;
+}
+
+.exp-preservation-label {
+  color: var(--text-muted, #8f9bab);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.exp-preservation-values {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  white-space: nowrap;
+}
+
+.exp-preservation-values strong {
+  color: var(--accent, #4a9eff);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.exp-preservation-values span {
+  color: var(--text-muted, #8f9bab);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+}
+
+
+/* =========================================
    Farming Mode
    ========================================= */
 
@@ -313,18 +366,25 @@
    I Levelled Button
    ========================================= */
 
-.exp-levelled-button {
+button.exp-levelled-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   min-height: 54px;
   padding: 12px 18px;
 
-  color: #ffffff;
-  background: var(--accent, #4a9eff);
-  border: 1px solid var(--accent, #4a9eff);
-  border-radius: 10px;
+  color: #ffffff !important;
+  background: var(--accent, #4a9eff) !important;
+  border: 1px solid var(--accent, #4a9eff) !important;
+  border-radius: 10px !important;
 
   font-family: "Sora", sans-serif;
   font-size: 13px;
   font-weight: 800;
+
+  appearance: none;
+  -webkit-appearance: none;
 
   cursor: pointer;
 
@@ -333,15 +393,15 @@
     transform 0.1s ease;
 }
 
-.exp-levelled-button:hover {
+button.exp-levelled-button:hover {
   filter: brightness(1.08);
 }
 
-.exp-levelled-button:active {
+button.exp-levelled-button:active {
   transform: translateY(1px);
 }
 
-.exp-levelled-button.level-updated {
+button.exp-levelled-button.level-updated {
   cursor: default;
 }
 
@@ -458,18 +518,25 @@
    I Died Button
    ========================================= */
 
-.exp-died-button {
+button.exp-died-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   min-height: 54px;
   padding: 12px 18px;
 
-  color: #ffffff;
-  background: #c94b55;
-  border: 1px solid #c94b55;
-  border-radius: 10px;
+  color: #ffffff !important;
+  background: #c94b55 !important;
+  border: 1px solid #c94b55 !important;
+  border-radius: 10px !important;
 
   font-family: "Sora", sans-serif;
   font-size: 13px;
   font-weight: 800;
+
+  appearance: none;
+  -webkit-appearance: none;
 
   cursor: pointer;
 
@@ -478,11 +545,11 @@
     transform 0.1s ease;
 }
 
-.exp-died-button:hover {
+button.exp-died-button:hover {
   filter: brightness(1.08);
 }
 
-.exp-died-button:active {
+button.exp-died-button:active {
   transform: translateY(1px);
 }
 
@@ -899,6 +966,11 @@
     flex-direction: column;
   }
 
+  .exp-preservation-card {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .exp-mode-toggle {
     display: flex;
     width: 100%;
@@ -946,62 +1018,4 @@
   .exp-death-preview-row {
     gap: 12px;
   }
-}
-
-/* =========================================
-   Progress Button Overrides
-   ========================================= */
-
-button.exp-levelled-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 54px;
-  padding: 12px 18px;
-
-  color: #ffffff !important;
-  background: var(--accent, #4a9eff) !important;
-  border: 1px solid var(--accent, #4a9eff) !important;
-  border-radius: 10px !important;
-
-  font-family: "Sora", sans-serif;
-  font-size: 13px;
-  font-weight: 800;
-
-  appearance: none;
-  -webkit-appearance: none;
-
-  cursor: pointer;
-}
-
-button.exp-levelled-button:hover {
-  filter: brightness(1.1);
-}
-
-button.exp-died-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 54px;
-  padding: 12px 18px;
-
-  color: #ffffff !important;
-  background: #c94b55 !important;
-  border: 1px solid #c94b55 !important;
-  border-radius: 10px !important;
-
-  font-family: "Sora", sans-serif;
-  font-size: 13px;
-  font-weight: 800;
-
-  appearance: none;
-  -webkit-appearance: none;
-
-  cursor: pointer;
-}
-
-button.exp-died-button:hover {
-  filter: brightness(1.1);
 }
