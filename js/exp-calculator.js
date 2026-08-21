@@ -8,69 +8,144 @@
   const MAX_LEVEL = 10000;
   const DEFAULT_BOSS_GROUP = "floors2to10";
 
-  const numberFormatter = new Intl.NumberFormat("en-US");
+  const numberFormatter =
+    new Intl.NumberFormat("en-US");
 
   const elements = {
-    doubleXp: document.getElementById("doubleXp"),
+    doubleXp:
+      document.getElementById("doubleXp"),
 
-    boss1Group: document.getElementById("boss-1-group"),
-    boss1: document.getElementById("boss-1"),
-    boss1Exp: document.getElementById("boss-1-exp"),
+    boss1Group:
+      document.getElementById("boss-1-group"),
 
-    boss2Card: document.getElementById("boss-2-card"),
-    boss2Group: document.getElementById("boss-2-group"),
-    boss2: document.getElementById("boss-2"),
-    boss2Exp: document.getElementById("boss-2-exp"),
+    boss1:
+      document.getElementById("boss-1"),
 
-    currentLevel: document.getElementById("current-level"),
-    currentExp: document.getElementById("current-exp"),
-    targetLevel: document.getElementById("target-level"),
+    boss1Exp:
+      document.getElementById("boss-1-exp"),
 
-    error: document.getElementById("exp-error"),
+    boss2Card:
+      document.getElementById("boss-2-card"),
 
-    levelledButton: document.getElementById("levelled-button"),
-    diedButton: document.getElementById("died-button"),
+    boss2Group:
+      document.getElementById("boss-2-group"),
 
-    results: document.getElementById("exp-results"),
+    boss2:
+      document.getElementById("boss-2"),
 
-    resultExpRemaining: document.getElementById("result-exp-remaining"),
-    resultNextLevel: document.getElementById("result-next-level"),
+    boss2Exp:
+      document.getElementById("boss-2-exp"),
 
-    resultExpLabel: document.getElementById("result-exp-label"),
-    resultExpPerRotation: document.getElementById("result-exp-per-rotation"),
+    currentLevel:
+      document.getElementById("current-level"),
 
-    resultCountCard: document.getElementById("result-count-card"),
-    resultCountLabel: document.getElementById("result-count-label"),
-    resultCount: document.getElementById("result-count"),
+    currentExp:
+      document.getElementById("current-exp"),
 
-    resultTotalCard: document.getElementById("result-total-card"),
-    resultTotalKills: document.getElementById("result-total-kills"),
+    targetLevel:
+      document.getElementById("target-level"),
 
-    resultDetails: document.getElementById("result-details"),
+    error:
+      document.getElementById("exp-error"),
 
-    levelledModal: document.getElementById("levelled-modal"),
-    levelledModalClose: document.getElementById("levelled-modal-close"),
-    levelledModalCancel: document.getElementById("levelled-modal-cancel"),
+    preservationPercent:
+      document.getElementById("preservation-percent"),
 
-    levelledBoss1Button: document.getElementById("levelled-boss-1"),
-    levelledBoss1Name: document.getElementById("levelled-boss-1-name"),
-    levelledBoss1Exp: document.getElementById("levelled-boss-1-exp"),
+    preservationFloor:
+      document.getElementById("preservation-floor"),
 
-    levelledBoss2Button: document.getElementById("levelled-boss-2"),
-    levelledBoss2Name: document.getElementById("levelled-boss-2-name"),
-    levelledBoss2Exp: document.getElementById("levelled-boss-2-exp"),
+    levelledButton:
+      document.getElementById("levelled-button"),
 
-    deathModal: document.getElementById("death-modal"),
-    deathModalClose: document.getElementById("death-modal-close"),
-    deathModalCancel: document.getElementById("death-modal-cancel"),
-    confirmDeathButton: document.getElementById("confirm-death-button"),
+    diedButton:
+      document.getElementById("died-button"),
 
-    deathPreviewLevel: document.getElementById("death-preview-level"),
-    deathPreviewBefore: document.getElementById("death-preview-before"),
-    deathPreviewPreservation: document.getElementById("death-preview-preservation"),
-    deathPreviewFloor: document.getElementById("death-preview-floor"),
-    deathPreviewLost: document.getElementById("death-preview-lost"),
-    deathPreviewAfter: document.getElementById("death-preview-after")
+    results:
+      document.getElementById("exp-results"),
+
+    resultExpRemaining:
+      document.getElementById("result-exp-remaining"),
+
+    resultNextLevel:
+      document.getElementById("result-next-level"),
+
+    resultExpLabel:
+      document.getElementById("result-exp-label"),
+
+    resultExpPerRotation:
+      document.getElementById("result-exp-per-rotation"),
+
+    resultCountCard:
+      document.getElementById("result-count-card"),
+
+    resultCountLabel:
+      document.getElementById("result-count-label"),
+
+    resultCount:
+      document.getElementById("result-count"),
+
+    resultTotalCard:
+      document.getElementById("result-total-card"),
+
+    resultTotalKills:
+      document.getElementById("result-total-kills"),
+
+    resultDetails:
+      document.getElementById("result-details"),
+
+    levelledModal:
+      document.getElementById("levelled-modal"),
+
+    levelledModalClose:
+      document.getElementById("levelled-modal-close"),
+
+    levelledModalCancel:
+      document.getElementById("levelled-modal-cancel"),
+
+    levelledBoss1Button:
+      document.getElementById("levelled-boss-1"),
+
+    levelledBoss1Name:
+      document.getElementById("levelled-boss-1-name"),
+
+    levelledBoss1Exp:
+      document.getElementById("levelled-boss-1-exp"),
+
+    levelledBoss2Button:
+      document.getElementById("levelled-boss-2"),
+
+    levelledBoss2Name:
+      document.getElementById("levelled-boss-2-name"),
+
+    levelledBoss2Exp:
+      document.getElementById("levelled-boss-2-exp"),
+
+    deathModal:
+      document.getElementById("death-modal"),
+
+    deathModalClose:
+      document.getElementById("death-modal-close"),
+
+    deathModalCancel:
+      document.getElementById("death-modal-cancel"),
+
+    confirmDeathButton:
+      document.getElementById("confirm-death-button"),
+
+    deathPreviewLevel:
+      document.getElementById("death-preview-level"),
+
+    deathPreviewBefore:
+      document.getElementById("death-preview-before"),
+
+    deathPreviewPreservation:
+      document.getElementById("death-preview-preservation"),
+
+    deathPreviewLost:
+      document.getElementById("death-preview-lost"),
+
+    deathPreviewAfter:
+      document.getElementById("death-preview-after")
   };
 
   let bossMode = 1;
@@ -82,18 +157,32 @@
   // =========================================
 
   const STORAGE_KEYS = {
-    bossMode: "sboExpBossMode",
-    doubleXp: "sboExpDoubleXp",
+    bossMode:
+      "sboExpBossMode",
 
-    boss1Group: "sboExpBoss1Group",
-    boss1Boss: "sboExpBoss1Boss",
+    doubleXp:
+      "sboExpDoubleXp",
 
-    boss2Group: "sboExpBoss2Group",
-    boss2Boss: "sboExpBoss2Boss",
+    boss1Group:
+      "sboExpBoss1Group",
 
-    currentLevel: "sboExpCurrentLevel",
-    currentExp: "sboExpCurrentExp",
-    targetLevel: "sboExpTargetLevel"
+    boss1Boss:
+      "sboExpBoss1Boss",
+
+    boss2Group:
+      "sboExpBoss2Group",
+
+    boss2Boss:
+      "sboExpBoss2Boss",
+
+    currentLevel:
+      "sboExpCurrentLevel",
+
+    currentExp:
+      "sboExpCurrentExp",
+
+    targetLevel:
+      "sboExpTargetLevel"
   };
 
 
@@ -150,7 +239,11 @@
   // =========================================
 
   function getLevelExp(level) {
-    return (3 * level * level) + (9 * level) - 3;
+    return (
+      (3 * level * level) +
+      (9 * level) -
+      3
+    );
   }
 
 
@@ -162,11 +255,15 @@
     let requiredExp = 0;
 
     for (
-      let level = currentLevel + 1;
+      let level =
+        currentLevel + 1;
+
       level <= targetLevel;
+
       level += 1
     ) {
-      requiredExp += getLevelExp(level);
+      requiredExp +=
+        getLevelExp(level);
     }
 
     return Math.max(
@@ -180,24 +277,45 @@
   // Boss Data
   // =========================================
 
-  function getBossGroup(groupName) {
-    if (groupName === "event") {
-      return window.SBO_EVENT_BOSSES || [];
+  function getBossGroup(
+    groupName
+  ) {
+    if (
+      groupName ===
+      "event"
+    ) {
+      return (
+        window.SBO_EVENT_BOSSES ||
+        []
+      );
     }
 
-    return (window.SBO_BOSSES || {})[groupName] || [];
+    return (
+      (window.SBO_BOSSES || {})[
+        groupName
+      ] ||
+      []
+    );
   }
 
 
-  function isValidBossGroup(groupName) {
-    if (groupName === "event") {
+  function isValidBossGroup(
+    groupName
+  ) {
+    if (
+      groupName ===
+      "event"
+    ) {
       return true;
     }
 
-    return Object.prototype.hasOwnProperty.call(
-      window.SBO_BOSSES || {},
-      groupName
-    );
+    return Object
+      .prototype
+      .hasOwnProperty
+      .call(
+        window.SBO_BOSSES || {},
+        groupName
+      );
   }
 
 
@@ -206,16 +324,25 @@
     bossSelect
   ) {
     const bossList =
-      getBossGroup(groupSelect.value);
+      getBossGroup(
+        groupSelect.value
+      );
 
     const bossIndex =
-      Number(bossSelect.value);
+      Number(
+        bossSelect.value
+      );
 
-    return bossList[bossIndex] || null;
+    return (
+      bossList[bossIndex] ||
+      null
+    );
   }
 
 
-  function getBossActualExp(boss) {
+  function getBossActualExp(
+    boss
+  ) {
     if (!boss) {
       return 0;
     }
@@ -225,7 +352,10 @@
         ? 2
         : 1;
 
-    return boss.exp * multiplier;
+    return (
+      boss.exp *
+      multiplier
+    );
   }
 
 
@@ -236,37 +366,51 @@
     savedBossIndex = 0
   ) {
     const bossList =
-      getBossGroup(groupSelect.value);
+      getBossGroup(
+        groupSelect.value
+      );
 
-    bossSelect.innerHTML = "";
+    bossSelect.innerHTML =
+      "";
 
-    bossList.forEach((boss, index) => {
-      const option =
-        document.createElement("option");
+    bossList.forEach(
+      (boss, index) => {
+        const option =
+          document.createElement(
+            "option"
+          );
 
-      option.value =
-        String(index);
+        option.value =
+          String(index);
 
-      const floorText =
-        boss.floor
-          ? `Floor ${boss.floor} · `
-          : "";
+        const floorText =
+          boss.floor
+            ? `Floor ${boss.floor} · `
+            : "";
 
-      option.textContent =
-        `${floorText}${boss.name} — ${numberFormatter.format(boss.exp)} EXP`;
+        option.textContent =
+          `${floorText}${boss.name} — ${numberFormatter.format(boss.exp)} EXP`;
 
-      bossSelect.appendChild(option);
-    });
+        bossSelect.appendChild(
+          option
+        );
+      }
+    );
 
     const validBossIndex =
-      Number.isInteger(savedBossIndex) &&
+      Number.isInteger(
+        savedBossIndex
+      ) &&
       savedBossIndex >= 0 &&
-      savedBossIndex < bossList.length
+      savedBossIndex <
+        bossList.length
         ? savedBossIndex
         : 0;
 
     bossSelect.value =
-      String(validBossIndex);
+      String(
+        validBossIndex
+      );
 
     updateBossExpDisplay(
       groupSelect,
@@ -305,27 +449,40 @@
 
   function canAutoCalculate() {
     return (
-      elements.currentLevel.value !== "" &&
-      elements.targetLevel.value !== ""
+      elements.currentLevel.value !==
+        "" &&
+      elements.targetLevel.value !==
+        ""
     );
   }
 
 
   function recalculateIfReady() {
-    if (!canAutoCalculate()) {
+    if (
+      !canAutoCalculate()
+    ) {
       return;
     }
 
     const currentLevel =
-      Number(elements.currentLevel.value);
+      Number(
+        elements.currentLevel.value
+      );
 
     const targetLevel =
-      Number(elements.targetLevel.value);
+      Number(
+        elements.targetLevel.value
+      );
 
     if (
-      Number.isInteger(currentLevel) &&
-      Number.isInteger(targetLevel) &&
-      targetLevel > currentLevel
+      Number.isInteger(
+        currentLevel
+      ) &&
+      Number.isInteger(
+        targetLevel
+      ) &&
+      targetLevel >
+        currentLevel
     ) {
       calculateExp();
 
@@ -333,13 +490,20 @@
     }
 
     if (
-      Number.isInteger(currentLevel) &&
-      Number.isInteger(targetLevel) &&
-      currentLevel >= targetLevel
+      Number.isInteger(
+        currentLevel
+      ) &&
+      Number.isInteger(
+        targetLevel
+      ) &&
+      currentLevel >=
+        targetLevel
     ) {
       clearError();
 
-      if (elements.results) {
+      if (
+        elements.results
+      ) {
         elements.results.hidden =
           true;
       }
@@ -361,39 +525,56 @@
         : 1;
 
     document
-      .querySelectorAll(".exp-mode-button")
-      .forEach((button) => {
-        const buttonMode =
-          Number(button.dataset.mode);
+      .querySelectorAll(
+        ".exp-mode-button"
+      )
+      .forEach(
+        (button) => {
+          const buttonMode =
+            Number(
+              button.dataset.mode
+            );
 
-        button.classList.toggle(
-          "active",
-          buttonMode === bossMode
-        );
-      });
+          button
+            .classList
+            .toggle(
+              "active",
+              buttonMode ===
+                bossMode
+            );
+        }
+      );
 
-    elements.boss2Card.classList.toggle(
-      "hidden",
-      bossMode !== 2
-    );
+    elements.boss2Card
+      .classList
+      .toggle(
+        "hidden",
+        bossMode !== 2
+      );
 
-    elements.resultCountCard.classList.toggle(
-      "hidden",
-      bossMode === 2
-    );
+    elements.resultCountCard
+      .classList
+      .toggle(
+        "hidden",
+        bossMode === 2
+      );
 
-    elements.resultTotalCard.classList.toggle(
-      "hidden",
-      bossMode !== 2
-    );
+    elements.resultTotalCard
+      .classList
+      .toggle(
+        "hidden",
+        bossMode !== 2
+      );
 
-    elements.resultExpLabel.textContent =
-      bossMode === 2
-        ? "EXP Per Rotation"
-        : "EXP Per Kill";
+    elements.resultExpLabel
+      .textContent =
+        bossMode === 2
+          ? "EXP Per Rotation"
+          : "EXP Per Kill";
 
-    elements.resultCountLabel.textContent =
-      "Bosses Required";
+    elements.resultCountLabel
+      .textContent =
+        "Bosses Required";
 
     if (shouldSave) {
       saveSettings();
@@ -406,8 +587,12 @@
   // Validation
   // =========================================
 
-  function showError(message) {
-    if (!elements.error) {
+  function showError(
+    message
+  ) {
+    if (
+      !elements.error
+    ) {
       return;
     }
 
@@ -417,7 +602,9 @@
 
 
   function clearError() {
-    if (!elements.error) {
+    if (
+      !elements.error
+    ) {
       return;
     }
 
@@ -428,9 +615,27 @@
 
   function getProgressValues() {
     return {
-      currentLevel: Number(elements.currentLevel.value),
-      currentExp: Number(elements.currentExp.value || 0),
-      targetLevel: Number(elements.targetLevel.value)
+      currentLevel:
+        Number(
+          elements
+            .currentLevel
+            .value
+        ),
+
+      currentExp:
+        Number(
+          elements
+            .currentExp
+            .value ||
+          0
+        ),
+
+      targetLevel:
+        Number(
+          elements
+            .targetLevel
+            .value
+        )
     };
   }
 
@@ -441,12 +646,16 @@
     const {
       currentLevel,
       currentExp
-    } = getProgressValues();
+    } =
+      getProgressValues();
 
     if (
-      !Number.isInteger(currentLevel) ||
+      !Number.isInteger(
+        currentLevel
+      ) ||
       currentLevel < 1 ||
-      currentLevel > MAX_LEVEL
+      currentLevel >
+        MAX_LEVEL
     ) {
       showError(
         `Enter a valid Current Level between 1 and ${MAX_LEVEL}.`
@@ -456,12 +665,17 @@
     }
 
     const nextLevelRequirement =
-      getLevelExp(currentLevel + 1);
+      getLevelExp(
+        currentLevel + 1
+      );
 
     if (
-      !Number.isFinite(currentExp) ||
+      !Number.isFinite(
+        currentExp
+      ) ||
       currentExp < 0 ||
-      currentExp >= nextLevelRequirement
+      currentExp >=
+        nextLevelRequirement
     ) {
       showError(
         `Current EXP must be between 0 and ${numberFormatter.format(nextLevelRequirement - 1)}.`
@@ -475,7 +689,148 @@
 
 
   // =========================================
-  // Calculation
+  // Death Preservation
+  // =========================================
+
+  function getDeathPreservation(
+    level
+  ) {
+    if (
+      !Number.isInteger(level) ||
+      level < 100
+    ) {
+      return 0;
+    }
+
+    return Math.min(
+      Math.floor(
+        level / 100
+      ) * 10,
+      90
+    );
+  }
+
+
+  function getPreservationData(
+    level
+  ) {
+    if (
+      !Number.isInteger(
+        level
+      ) ||
+      level < 1
+    ) {
+      return {
+        percentage: 0,
+        floor: 0
+      };
+    }
+
+    const percentage =
+      getDeathPreservation(
+        level
+      );
+
+    const levelRequirement =
+      getLevelExp(
+        level + 1
+      );
+
+    const floor =
+      Math.floor(
+        levelRequirement *
+        (percentage / 100)
+      );
+
+    return {
+      percentage,
+      floor
+    };
+  }
+
+
+  function updatePreservationDisplay() {
+    if (
+      !elements
+        .preservationPercent ||
+      !elements
+        .preservationFloor
+    ) {
+      return;
+    }
+
+    const currentLevel =
+      Number(
+        elements
+          .currentLevel
+          .value
+      );
+
+    const preservation =
+      getPreservationData(
+        currentLevel
+      );
+
+    elements
+      .preservationPercent
+      .textContent =
+        `${preservation.percentage}%`;
+
+    elements
+      .preservationFloor
+      .textContent =
+        `${numberFormatter.format(preservation.floor)} EXP`;
+  }
+
+
+  function getDeathCalculation() {
+    const {
+      currentLevel,
+      currentExp
+    } =
+      getProgressValues();
+
+    const preservation =
+      getPreservationData(
+        currentLevel
+      );
+
+    const expAfterDeath =
+      Math.min(
+        currentExp,
+        preservation.floor
+      );
+
+    const expLost =
+      Math.max(
+        0,
+        currentExp -
+          expAfterDeath
+      );
+
+    return {
+      level:
+        currentLevel,
+
+      expBefore:
+        currentExp,
+
+      preservationPercent:
+        preservation.percentage,
+
+      preservationFloor:
+        preservation.floor,
+
+      expLost,
+
+      expAfter:
+        expAfterDeath
+    };
+  }
+
+
+  // =========================================
+  // Main Calculation
   // =========================================
 
   function calculateExp() {
@@ -485,12 +840,16 @@
       currentLevel,
       currentExp,
       targetLevel
-    } = getProgressValues();
+    } =
+      getProgressValues();
 
     if (
-      !Number.isInteger(currentLevel) ||
+      !Number.isInteger(
+        currentLevel
+      ) ||
       currentLevel < 1 ||
-      currentLevel > MAX_LEVEL
+      currentLevel >
+        MAX_LEVEL
     ) {
       showError(
         `Enter a valid Current Level between 1 and ${MAX_LEVEL}.`
@@ -500,9 +859,13 @@
     }
 
     if (
-      !Number.isInteger(targetLevel) ||
-      targetLevel <= currentLevel ||
-      targetLevel > MAX_LEVEL
+      !Number.isInteger(
+        targetLevel
+      ) ||
+      targetLevel <=
+        currentLevel ||
+      targetLevel >
+        MAX_LEVEL
     ) {
       showError(
         `Target Level must be higher than Current Level and no higher than ${MAX_LEVEL}.`
@@ -512,12 +875,17 @@
     }
 
     const nextLevelRequirement =
-      getLevelExp(currentLevel + 1);
+      getLevelExp(
+        currentLevel + 1
+      );
 
     if (
-      !Number.isFinite(currentExp) ||
+      !Number.isFinite(
+        currentExp
+      ) ||
       currentExp < 0 ||
-      currentExp >= nextLevelRequirement
+      currentExp >=
+        nextLevelRequirement
     ) {
       showError(
         `Current EXP must be between 0 and ${numberFormatter.format(nextLevelRequirement - 1)}.`
@@ -529,7 +897,8 @@
     const expTillNextLevel =
       Math.max(
         0,
-        nextLevelRequirement - currentExp
+        nextLevelRequirement -
+          currentExp
       );
 
     const boss1 =
@@ -557,7 +926,10 @@
 
     if (
       bossMode === 2 &&
-      (!boss2 || boss2.exp <= 0)
+      (
+        !boss2 ||
+        boss2.exp <= 0
+      )
     ) {
       showError(
         "Select an active Boss 2 with an EXP value above 0."
@@ -567,15 +939,20 @@
     }
 
     const boss1Exp =
-      getBossActualExp(boss1);
+      getBossActualExp(
+        boss1
+      );
 
     const boss2Exp =
       bossMode === 2
-        ? getBossActualExp(boss2)
+        ? getBossActualExp(
+            boss2
+          )
         : 0;
 
     const expPerRotation =
-      boss1Exp + boss2Exp;
+      boss1Exp +
+      boss2Exp;
 
     const remainingExp =
       getRemainingExp(
@@ -591,7 +968,8 @@
       );
 
     const totalBossKills =
-      requiredRotations * bossMode;
+      requiredRotations *
+      bossMode;
 
     const nextLevelRotations =
       Math.ceil(
@@ -600,35 +978,46 @@
       );
 
     const nextLevelBossKills =
-      nextLevelRotations * bossMode;
+      nextLevelRotations *
+      bossMode;
 
 
     // =========================================
     // Results
     // =========================================
 
-    elements.resultExpRemaining.textContent =
-      numberFormatter.format(
-        remainingExp
-      );
+    elements
+      .resultExpRemaining
+      .textContent =
+        numberFormatter.format(
+          remainingExp
+        );
 
-    elements.resultNextLevel.textContent =
-      `${numberFormatter.format(expTillNextLevel)} / ${numberFormatter.format(nextLevelBossKills)}`;
+    elements
+      .resultNextLevel
+      .textContent =
+        `${numberFormatter.format(expTillNextLevel)} / ${numberFormatter.format(nextLevelBossKills)}`;
 
-    elements.resultExpPerRotation.textContent =
-      numberFormatter.format(
-        expPerRotation
-      );
+    elements
+      .resultExpPerRotation
+      .textContent =
+        numberFormatter.format(
+          expPerRotation
+        );
 
-    elements.resultCount.textContent =
-      numberFormatter.format(
-        requiredRotations
-      );
+    elements
+      .resultCount
+      .textContent =
+        numberFormatter.format(
+          requiredRotations
+        );
 
-    elements.resultTotalKills.textContent =
-      numberFormatter.format(
-        totalBossKills
-      );
+    elements
+      .resultTotalKills
+      .textContent =
+        numberFormatter.format(
+          totalBossKills
+        );
 
     let detailsHtml = `
       <strong>${boss1.name}</strong>
@@ -636,7 +1025,9 @@
       — ${numberFormatter.format(requiredRotations)} kills
     `;
 
-    if (bossMode === 2) {
+    if (
+      bossMode === 2
+    ) {
       detailsHtml += `
         <br>
         <strong>${boss2.name}</strong>
@@ -645,11 +1036,15 @@
       `;
     }
 
-    elements.resultDetails.innerHTML =
-      detailsHtml;
+    elements
+      .resultDetails
+      .innerHTML =
+        detailsHtml;
 
-    elements.results.hidden =
-      false;
+    elements
+      .results
+      .hidden =
+        false;
 
     return true;
   }
@@ -660,33 +1055,36 @@
   // =========================================
 
   function showLevelUpdatedMessage() {
-    if (!elements.levelledButton) {
+    if (
+      !elements
+        .levelledButton
+    ) {
       return;
     }
 
-    elements.levelledButton.textContent =
-      "Level Updated ✓";
-
-    elements.levelledButton.classList.add(
-      "level-updated"
-    );
+    elements
+      .levelledButton
+      .textContent =
+        "Level Updated ✓";
 
     window.setTimeout(
       () => {
-        elements.levelledButton.textContent =
-          "I Levelled";
-
-        elements.levelledButton.classList.remove(
-          "level-updated"
-        );
+        elements
+          .levelledButton
+          .textContent =
+            "I Levelled";
       },
       1200
     );
   }
 
 
-  function applyLevelUp(boss) {
-    if (!validateCurrentProgress()) {
+  function applyLevelUp(
+    boss
+  ) {
+    if (
+      !validateCurrentProgress()
+    ) {
       return;
     }
 
@@ -704,9 +1102,13 @@
     let {
       currentLevel,
       currentExp
-    } = getProgressValues();
+    } =
+      getProgressValues();
 
-    if (currentLevel >= MAX_LEVEL) {
+    if (
+      currentLevel >=
+      MAX_LEVEL
+    ) {
       showError(
         `Level ${MAX_LEVEL} is the maximum supported calculator level.`
       );
@@ -715,38 +1117,42 @@
     }
 
     const bossExp =
-      getBossActualExp(boss);
+      getBossActualExp(
+        boss
+      );
 
     let updatedExp =
-      currentExp + bossExp;
+      currentExp +
+      bossExp;
 
-    const firstLevelRequirement =
-      getLevelExp(currentLevel + 1);
+    const firstRequirement =
+      getLevelExp(
+        currentLevel + 1
+      );
 
     if (
       updatedExp <
-      firstLevelRequirement
+      firstRequirement
     ) {
       const missingExp =
-        firstLevelRequirement - updatedExp;
+        firstRequirement -
+        updatedExp;
 
       showError(
-        `${boss.name} does not provide enough EXP to level up from your current progress. You would still need ${numberFormatter.format(missingExp)} EXP.`
+        `${boss.name} does not provide enough EXP to level up. You would still need ${numberFormatter.format(missingExp)} EXP.`
       );
 
       return;
     }
 
-
-    // =========================================
-    // Process Level Up + Overflow
-    // =========================================
-
     while (
-      currentLevel < MAX_LEVEL
+      currentLevel <
+      MAX_LEVEL
     ) {
       const requirement =
-        getLevelExp(currentLevel + 1);
+        getLevelExp(
+          currentLevel + 1
+        );
 
       if (
         updatedExp <
@@ -762,24 +1168,29 @@
         1;
     }
 
+    elements
+      .currentLevel
+      .value =
+        String(
+          currentLevel
+        );
 
-    // =========================================
-    // Save Updated Progress
-    // =========================================
-
-    elements.currentLevel.value =
-      String(currentLevel);
-
-    elements.currentExp.value =
-      String(
-        Math.floor(updatedExp)
-      );
+    elements
+      .currentExp
+      .value =
+        String(
+          Math.floor(
+            updatedExp
+          )
+        );
 
     saveSettings();
 
     closeLevelledModal();
 
     clearError();
+
+    updatePreservationDisplay();
 
     showLevelUpdatedMessage();
 
@@ -788,7 +1199,9 @@
 
 
   function openLevelledModal() {
-    if (!validateCurrentProgress()) {
+    if (
+      !validateCurrentProgress()
+    ) {
       return;
     }
 
@@ -826,41 +1239,58 @@
       return;
     }
 
-    elements.levelledBoss1Name.textContent =
-      boss1.name;
+    elements
+      .levelledBoss1Name
+      .textContent =
+        boss1.name;
 
-    elements.levelledBoss1Exp.textContent =
-      `${numberFormatter.format(getBossActualExp(boss1))} EXP`;
+    elements
+      .levelledBoss1Exp
+      .textContent =
+        `${numberFormatter.format(getBossActualExp(boss1))} EXP`;
 
-    elements.levelledBoss2Name.textContent =
-      boss2.name;
+    elements
+      .levelledBoss2Name
+      .textContent =
+        boss2.name;
 
-    elements.levelledBoss2Exp.textContent =
-      `${numberFormatter.format(getBossActualExp(boss2))} EXP`;
+    elements
+      .levelledBoss2Exp
+      .textContent =
+        `${numberFormatter.format(getBossActualExp(boss2))} EXP`;
 
-    elements.levelledModal.hidden =
-      false;
+    elements
+      .levelledModal
+      .hidden =
+        false;
   }
 
 
   function closeLevelledModal() {
-    if (!elements.levelledModal) {
-      return;
+    if (
+      elements
+        .levelledModal
+    ) {
+      elements
+        .levelledModal
+        .hidden =
+          true;
     }
-
-    elements.levelledModal.hidden =
-      true;
   }
 
 
   function handleLevelledButton() {
     clearError();
 
-    if (!validateCurrentProgress()) {
+    if (
+      !validateCurrentProgress()
+    ) {
       return;
     }
 
-    if (bossMode === 1) {
+    if (
+      bossMode === 1
+    ) {
       const boss1 =
         getSelectedBoss(
           elements.boss1Group,
@@ -879,124 +1309,69 @@
 
 
   // =========================================
-  // Death Preservation
-  // =========================================
-
-  function getDeathPreservation(level) {
-    if (
-      !Number.isInteger(level) ||
-      level < 100
-    ) {
-      return 0;
-    }
-
-    return Math.min(
-      Math.floor(level / 100) * 10,
-      90
-    );
-  }
-
-
-  function getDeathCalculation() {
-    const {
-      currentLevel,
-      currentExp
-    } = getProgressValues();
-
-    const preservationPercent =
-      getDeathPreservation(
-        currentLevel
-      );
-
-    const levelRequirement =
-      getLevelExp(
-        currentLevel + 1
-      );
-
-    const preservationFloor =
-      Math.floor(
-        levelRequirement *
-        (preservationPercent / 100)
-      );
-
-    const expAfterDeath =
-      Math.min(
-        currentExp,
-        preservationFloor
-      );
-
-    const expLost =
-      Math.max(
-        0,
-        currentExp - expAfterDeath
-      );
-
-    return {
-      level: currentLevel,
-      expBefore: currentExp,
-      preservationPercent,
-      levelRequirement,
-      preservationFloor,
-      expLost,
-      expAfter: expAfterDeath
-    };
-  }
-
-
-  // =========================================
   // I Died
   // =========================================
 
   function openDeathModal() {
-    if (!validateCurrentProgress()) {
+    if (
+      !validateCurrentProgress()
+    ) {
       return;
     }
 
     pendingDeath =
       getDeathCalculation();
 
-    elements.deathPreviewLevel.textContent =
-      numberFormatter.format(
-        pendingDeath.level
-      );
-
-    elements.deathPreviewBefore.textContent =
-      numberFormatter.format(
-        pendingDeath.expBefore
-      );
-
-    elements.deathPreviewPreservation.textContent =
-      `${pendingDeath.preservationPercent}%`;
-
-    if (elements.deathPreviewFloor) {
-      elements.deathPreviewFloor.textContent =
+    elements
+      .deathPreviewLevel
+      .textContent =
         numberFormatter.format(
-          pendingDeath.preservationFloor
+          pendingDeath.level
         );
-    }
 
-    elements.deathPreviewLost.textContent =
-      numberFormatter.format(
-        pendingDeath.expLost
-      );
+    elements
+      .deathPreviewBefore
+      .textContent =
+        numberFormatter.format(
+          pendingDeath.expBefore
+        );
 
-    elements.deathPreviewAfter.textContent =
-      numberFormatter.format(
-        pendingDeath.expAfter
-      );
+    elements
+      .deathPreviewPreservation
+      .textContent =
+        `${pendingDeath.preservationPercent}%`;
 
-    elements.deathModal.hidden =
-      false;
+    elements
+      .deathPreviewLost
+      .textContent =
+        numberFormatter.format(
+          pendingDeath.expLost
+        );
+
+    elements
+      .deathPreviewAfter
+      .textContent =
+        numberFormatter.format(
+          pendingDeath.expAfter
+        );
+
+    elements
+      .deathModal
+      .hidden =
+        false;
   }
 
 
   function closeDeathModal() {
-    if (!elements.deathModal) {
-      return;
+    if (
+      elements
+        .deathModal
+    ) {
+      elements
+        .deathModal
+        .hidden =
+          true;
     }
-
-    elements.deathModal.hidden =
-      true;
 
     pendingDeath =
       null;
@@ -1004,22 +1379,28 @@
 
 
   function confirmDeath() {
-    if (!pendingDeath) {
+    if (
+      !pendingDeath
+    ) {
       closeDeathModal();
 
       return;
     }
 
-    elements.currentExp.value =
-      String(
-        pendingDeath.expAfter
-      );
+    elements
+      .currentExp
+      .value =
+        String(
+          pendingDeath.expAfter
+        );
 
     saveSettings();
 
     closeDeathModal();
 
     clearError();
+
+    updatePreservationDisplay();
 
     recalculateIfReady();
   }
@@ -1030,164 +1411,205 @@
   // =========================================
 
   document
-    .querySelectorAll(".exp-mode-button")
-    .forEach((button) => {
-      button.addEventListener(
-        "click",
-        () => {
-          setBossMode(
-            Number(button.dataset.mode)
-          );
-        }
-      );
-    });
+    .querySelectorAll(
+      ".exp-mode-button"
+    )
+    .forEach(
+      (button) => {
+        button.addEventListener(
+          "click",
+          () => {
+            setBossMode(
+              Number(
+                button.dataset.mode
+              )
+            );
+          }
+        );
+      }
+    );
 
 
-  elements.doubleXp.addEventListener(
-    "change",
-    () => {
-      saveSettings();
-      recalculateIfReady();
-    }
-  );
+  elements.doubleXp
+    .addEventListener(
+      "change",
+      () => {
+        saveSettings();
+        recalculateIfReady();
+      }
+    );
 
 
-  elements.boss1Group.addEventListener(
-    "change",
-    () => {
-      populateBossDropdown(
-        elements.boss1Group,
-        elements.boss1,
-        elements.boss1Exp
-      );
+  elements.boss1Group
+    .addEventListener(
+      "change",
+      () => {
+        populateBossDropdown(
+          elements.boss1Group,
+          elements.boss1,
+          elements.boss1Exp
+        );
 
-      saveSettings();
-      recalculateIfReady();
-    }
-  );
-
-
-  elements.boss1.addEventListener(
-    "change",
-    () => {
-      updateBossExpDisplay(
-        elements.boss1Group,
-        elements.boss1,
-        elements.boss1Exp
-      );
-
-      saveSettings();
-      recalculateIfReady();
-    }
-  );
+        saveSettings();
+        recalculateIfReady();
+      }
+    );
 
 
-  elements.boss2Group.addEventListener(
-    "change",
-    () => {
-      populateBossDropdown(
-        elements.boss2Group,
-        elements.boss2,
-        elements.boss2Exp
-      );
+  elements.boss1
+    .addEventListener(
+      "change",
+      () => {
+        updateBossExpDisplay(
+          elements.boss1Group,
+          elements.boss1,
+          elements.boss1Exp
+        );
 
-      saveSettings();
-      recalculateIfReady();
-    }
-  );
+        saveSettings();
+        recalculateIfReady();
+      }
+    );
 
 
-  elements.boss2.addEventListener(
-    "change",
-    () => {
-      updateBossExpDisplay(
-        elements.boss2Group,
-        elements.boss2,
-        elements.boss2Exp
-      );
+  elements.boss2Group
+    .addEventListener(
+      "change",
+      () => {
+        populateBossDropdown(
+          elements.boss2Group,
+          elements.boss2,
+          elements.boss2Exp
+        );
 
-      saveSettings();
-      recalculateIfReady();
-    }
-  );
+        saveSettings();
+        recalculateIfReady();
+      }
+    );
+
+
+  elements.boss2
+    .addEventListener(
+      "change",
+      () => {
+        updateBossExpDisplay(
+          elements.boss2Group,
+          elements.boss2,
+          elements.boss2Exp
+        );
+
+        saveSettings();
+        recalculateIfReady();
+      }
+    );
 
 
   [
     elements.currentLevel,
     elements.currentExp,
     elements.targetLevel
-  ].forEach((input) => {
-    input.addEventListener(
-      "input",
-      () => {
-        saveSettings();
-        recalculateIfReady();
-      }
-    );
-  });
+  ].forEach(
+    (input) => {
+      input.addEventListener(
+        "input",
+        () => {
+          saveSettings();
+
+          updatePreservationDisplay();
+
+          recalculateIfReady();
+        }
+      );
+    }
+  );
 
 
   // =========================================
   // I Levelled Events
   // =========================================
 
-  if (elements.levelledButton) {
-    elements.levelledButton.addEventListener(
-      "click",
-      handleLevelledButton
-    );
+  if (
+    elements
+      .levelledButton
+  ) {
+    elements
+      .levelledButton
+      .addEventListener(
+        "click",
+        handleLevelledButton
+      );
   }
 
 
-  if (elements.levelledBoss1Button) {
-    elements.levelledBoss1Button.addEventListener(
-      "click",
-      () => {
-        const boss1 =
-          getSelectedBoss(
-            elements.boss1Group,
-            elements.boss1
+  if (
+    elements
+      .levelledBoss1Button
+  ) {
+    elements
+      .levelledBoss1Button
+      .addEventListener(
+        "click",
+        () => {
+          const boss1 =
+            getSelectedBoss(
+              elements.boss1Group,
+              elements.boss1
+            );
+
+          applyLevelUp(
+            boss1
           );
-
-        applyLevelUp(
-          boss1
-        );
-      }
-    );
+        }
+      );
   }
 
 
-  if (elements.levelledBoss2Button) {
-    elements.levelledBoss2Button.addEventListener(
-      "click",
-      () => {
-        const boss2 =
-          getSelectedBoss(
-            elements.boss2Group,
-            elements.boss2
+  if (
+    elements
+      .levelledBoss2Button
+  ) {
+    elements
+      .levelledBoss2Button
+      .addEventListener(
+        "click",
+        () => {
+          const boss2 =
+            getSelectedBoss(
+              elements.boss2Group,
+              elements.boss2
+            );
+
+          applyLevelUp(
+            boss2
           );
-
-        applyLevelUp(
-          boss2
-        );
-      }
-    );
+        }
+      );
   }
 
 
-  if (elements.levelledModalClose) {
-    elements.levelledModalClose.addEventListener(
-      "click",
-      closeLevelledModal
-    );
+  if (
+    elements
+      .levelledModalClose
+  ) {
+    elements
+      .levelledModalClose
+      .addEventListener(
+        "click",
+        closeLevelledModal
+      );
   }
 
 
-  if (elements.levelledModalCancel) {
-    elements.levelledModalCancel.addEventListener(
-      "click",
-      closeLevelledModal
-    );
+  if (
+    elements
+      .levelledModalCancel
+  ) {
+    elements
+      .levelledModalCancel
+      .addEventListener(
+        "click",
+        closeLevelledModal
+      );
   }
 
 
@@ -1195,35 +1617,55 @@
   // I Died Events
   // =========================================
 
-  if (elements.diedButton) {
-    elements.diedButton.addEventListener(
-      "click",
-      openDeathModal
-    );
+  if (
+    elements
+      .diedButton
+  ) {
+    elements
+      .diedButton
+      .addEventListener(
+        "click",
+        openDeathModal
+      );
   }
 
 
-  if (elements.deathModalClose) {
-    elements.deathModalClose.addEventListener(
-      "click",
-      closeDeathModal
-    );
+  if (
+    elements
+      .deathModalClose
+  ) {
+    elements
+      .deathModalClose
+      .addEventListener(
+        "click",
+        closeDeathModal
+      );
   }
 
 
-  if (elements.deathModalCancel) {
-    elements.deathModalCancel.addEventListener(
-      "click",
-      closeDeathModal
-    );
+  if (
+    elements
+      .deathModalCancel
+  ) {
+    elements
+      .deathModalCancel
+      .addEventListener(
+        "click",
+        closeDeathModal
+      );
   }
 
 
-  if (elements.confirmDeathButton) {
-    elements.confirmDeathButton.addEventListener(
-      "click",
-      confirmDeath
-    );
+  if (
+    elements
+      .confirmDeathButton
+  ) {
+    elements
+      .confirmDeathButton
+      .addEventListener(
+        "click",
+        confirmDeath
+      );
   }
 
 
@@ -1231,33 +1673,43 @@
   // Modal Backdrop Click
   // =========================================
 
-  if (elements.levelledModal) {
-    elements.levelledModal.addEventListener(
-      "click",
-      (event) => {
-        if (
-          event.target ===
-          elements.levelledModal
-        ) {
-          closeLevelledModal();
+  if (
+    elements
+      .levelledModal
+  ) {
+    elements
+      .levelledModal
+      .addEventListener(
+        "click",
+        (event) => {
+          if (
+            event.target ===
+            elements.levelledModal
+          ) {
+            closeLevelledModal();
+          }
         }
-      }
-    );
+      );
   }
 
 
-  if (elements.deathModal) {
-    elements.deathModal.addEventListener(
-      "click",
-      (event) => {
-        if (
-          event.target ===
-          elements.deathModal
-        ) {
-          closeDeathModal();
+  if (
+    elements
+      .deathModal
+  ) {
+    elements
+      .deathModal
+      .addEventListener(
+        "click",
+        (event) => {
+          if (
+            event.target ===
+            elements.deathModal
+          ) {
+            closeDeathModal();
+          }
         }
-      }
-    );
+      );
   }
 
 
@@ -1343,12 +1795,16 @@
     // =========================================
 
     elements.boss1Group.value =
-      isValidBossGroup(savedBoss1Group)
+      isValidBossGroup(
+        savedBoss1Group
+      )
         ? savedBoss1Group
         : DEFAULT_BOSS_GROUP;
 
     elements.boss2Group.value =
-      isValidBossGroup(savedBoss2Group)
+      isValidBossGroup(
+        savedBoss2Group
+      )
         ? savedBoss2Group
         : DEFAULT_BOSS_GROUP;
 
@@ -1361,7 +1817,9 @@
       elements.boss1Group,
       elements.boss1,
       elements.boss1Exp,
-      Number.isInteger(savedBoss1Boss)
+      Number.isInteger(
+        savedBoss1Boss
+      )
         ? savedBoss1Boss
         : 0
     );
@@ -1370,7 +1828,9 @@
       elements.boss2Group,
       elements.boss2,
       elements.boss2Exp,
-      Number.isInteger(savedBoss2Boss)
+      Number.isInteger(
+        savedBoss2Boss
+      )
         ? savedBoss2Boss
         : 0
     );
@@ -1381,7 +1841,8 @@
     // =========================================
 
     elements.doubleXp.checked =
-      savedDoubleXp === "true";
+      savedDoubleXp ===
+      "true";
 
 
     // =========================================
@@ -1389,13 +1850,16 @@
     // =========================================
 
     elements.currentLevel.value =
-      savedCurrentLevel || "";
+      savedCurrentLevel ||
+      "";
 
     elements.currentExp.value =
-      savedCurrentExp || "";
+      savedCurrentExp ||
+      "";
 
     elements.targetLevel.value =
-      savedTargetLevel || "";
+      savedTargetLevel ||
+      "";
 
 
     // =========================================
@@ -1411,8 +1875,10 @@
 
 
     // =========================================
-    // Restore Results
+    // Restore Preservation + Results
     // =========================================
+
+    updatePreservationDisplay();
 
     recalculateIfReady();
   }
