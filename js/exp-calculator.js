@@ -321,14 +321,6 @@
   function showError(message) {
     elements.error.textContent =
       message;
-
-    elements.results.hidden =
-      true;
-
-    localStorage.setItem(
-      STORAGE_KEYS.resultsOpen,
-      "false"
-    );
   }
 
 
@@ -706,6 +698,11 @@
         STORAGE_KEYS.resultsOpen
       );
 
+
+    // =========================================
+    // Restore Boss Groups
+    // =========================================
+
     elements.boss1Group.value =
       isValidBossGroup(savedBoss1Group)
         ? savedBoss1Group
@@ -715,6 +712,11 @@
       isValidBossGroup(savedBoss2Group)
         ? savedBoss2Group
         : DEFAULT_BOSS_GROUP;
+
+
+    // =========================================
+    // Restore Boss Selections
+    // =========================================
 
     populateBossDropdown(
       elements.boss1Group,
@@ -734,8 +736,18 @@
         : 0
     );
 
+
+    // =========================================
+    // Restore 2× EXP
+    // =========================================
+
     elements.doubleXp.checked =
       savedDoubleXp === "true";
+
+
+    // =========================================
+    // Restore Level Progress
+    // =========================================
 
     elements.currentLevel.value =
       savedCurrentLevel || "";
@@ -746,6 +758,11 @@
     elements.targetLevel.value =
       savedTargetLevel || "";
 
+
+    // =========================================
+    // Restore Boss Mode
+    // =========================================
+
     setBossMode(
       savedMode === 2
         ? 2
@@ -753,7 +770,15 @@
       false
     );
 
+
+    // =========================================
+    // Restore Results
+    // =========================================
+
     if (savedResultsOpen === "true") {
+      elements.results.hidden =
+        false;
+
       calculateExp(false);
     } else {
       elements.results.hidden =
