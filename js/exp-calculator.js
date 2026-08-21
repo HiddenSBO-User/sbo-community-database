@@ -66,7 +66,9 @@
 
     currentLevel: "sboExpCurrentLevel",
     currentExp: "sboExpCurrentExp",
-    targetLevel: "sboExpTargetLevel"
+    targetLevel: "sboExpTargetLevel",
+
+    resultsOpen: "sboExpResultsOpen"
   };
 
 
@@ -322,6 +324,11 @@
 
     elements.results.hidden =
       true;
+
+    localStorage.setItem(
+      STORAGE_KEYS.resultsOpen,
+      "false"
+    );
   }
 
 
@@ -335,7 +342,9 @@
   // Calculation
   // =========================================
 
-  function calculateExp() {
+  function calculateExp(
+    saveResultsState = true
+  ) {
     clearError();
 
     const currentLevel =
@@ -356,7 +365,7 @@
         `Enter a valid Current Level between 1 and ${MAX_LEVEL}.`
       );
 
-      return;
+      return false;
     }
 
     if (
@@ -368,7 +377,7 @@
         `Target Level must be higher than Current Level and no higher than ${MAX_LEVEL}.`
       );
 
-      return;
+      return false;
     }
 
     const nextLevelRequirement =
@@ -383,7 +392,7 @@
         `Current EXP must be between 0 and ${numberFormatter.format(nextLevelRequirement - 1)}.`
       );
 
-      return;
+      return false;
     }
 
     const expTillNextLevel =
@@ -412,7 +421,7 @@
         "Select an active Boss 1 with an EXP value above 0."
       );
 
-      return;
+      return false;
     }
 
     if (
@@ -423,7 +432,7 @@
         "Select an active Boss 2 with an EXP value above 0."
       );
 
-      return;
+      return false;
     }
 
     const xpMultiplier =
@@ -515,6 +524,15 @@
 
     elements.results.hidden =
       false;
+
+    if (saveResultsState) {
+      localStorage.setItem(
+        STORAGE_KEYS.resultsOpen,
+        "true"
+      );
+    }
+
+    return true;
   }
 
 
@@ -600,7 +618,9 @@
 
   elements.calculateButton.addEventListener(
     "click",
-    calculateExp
+    () => {
+      calculateExp(true);
+    }
   );
 
 
@@ -618,7 +638,7 @@
       "keydown",
       (event) => {
         if (event.key === "Enter") {
-          calculateExp();
+          calculateExp(true);
         }
       }
     );
@@ -681,6 +701,11 @@
         STORAGE_KEYS.targetLevel
       );
 
+    const savedResultsOpen =
+      localStorage.getItem(
+        STORAGE_KEYS.resultsOpen
+      );
+
     elements.boss1Group.value =
       isValidBossGroup(savedBoss1Group)
         ? savedBoss1Group
@@ -727,6 +752,13 @@
         : 1,
       false
     );
+
+    if (savedResultsOpen === "true") {
+      calculateExp(false);
+    } else {
+      elements.results.hidden =
+        true;
+    }
   }
 
 
