@@ -211,33 +211,35 @@
       </p>
 
       <!-- ========================================
-           Progress Controls
-           ======================================== -->
+     Progress Controls
+     ======================================== -->
 
-      <div class="exp-progress-controls">
+<div class="exp-progress-controls">
 
-        <button type="button" class="exp-levelled-button" id="levelled-button">
-          I Levelled
-        </button>
+  <button type="button" class="exp-levelled-button" id="levelled-button">
+    I Levelled
+  </button>
 
-        <div class="exp-double-xp-control">
-          <div>
-            <strong>2× EXP</strong>
-            <span>Apply double EXP to selected bosses.</span>
-          </div>
+  <div class="exp-double-xp-control">
+    <div>
+      <strong>2× EXP</strong>
+      <span>Apply double EXP to selected bosses.</span>
+    </div>
 
-          <label class="exp-switch">
-            <input type="checkbox" id="doubleXp">
-            <span class="exp-switch-track">
-              <span class="exp-switch-thumb"></span>
-            </span>
-          </label>
-        </div>
-      </div>
+    <label class="exp-switch">
+      <input type="checkbox" id="doubleXp">
+      <span class="exp-switch-track">
+        <span class="exp-switch-thumb"></span>
+      </span>
+    </label>
+  </div>
 
-      <p class="exp-error" id="exp-error" role="alert"></p>
-    </section>
+  <button type="button" class="exp-died-button" id="died-button">
+    I Died
+  </button>
 
+</div>
+      
     <!-- ========================================
          Results
          ======================================== -->
@@ -339,10 +341,63 @@
 
   </div>
 </div>
-
 <!-- ========================================
-     Scripts
+     Death Confirmation Modal
      ======================================== -->
+
+<div class="exp-modal-backdrop" id="death-modal" hidden>
+  <div class="exp-modal exp-death-modal" role="dialog" aria-modal="true" aria-labelledby="death-modal-title">
+
+    <div class="exp-modal-heading">
+      <div>
+        <h2 id="death-modal-title">Apply Death EXP Loss?</h2>
+        <p>This will update your Current EXP and recalculate your farming requirements.</p>
+      </div>
+
+      <button type="button" class="exp-modal-close" id="death-modal-close" aria-label="Close">
+        ×
+      </button>
+    </div>
+
+    <div class="exp-death-preview">
+      <div class="exp-death-preview-row">
+        <span>Current Level</span>
+        <strong id="death-preview-level">0</strong>
+      </div>
+
+      <div class="exp-death-preview-row">
+        <span>Current EXP</span>
+        <strong id="death-preview-before">0</strong>
+      </div>
+
+      <div class="exp-death-preview-row">
+        <span>EXP Preservation</span>
+        <strong id="death-preview-preservation">0%</strong>
+      </div>
+
+      <div class="exp-death-preview-row exp-death-preview-loss">
+        <span>EXP Lost</span>
+        <strong id="death-preview-lost">0</strong>
+      </div>
+
+      <div class="exp-death-preview-row">
+        <span>EXP After Death</span>
+        <strong id="death-preview-after">0</strong>
+      </div>
+    </div>
+
+    <div class="exp-death-modal-actions">
+      <button type="button" class="exp-modal-cancel" id="death-modal-cancel">
+        Cancel
+      </button>
+
+      <button type="button" class="exp-confirm-death-button" id="confirm-death-button">
+        Confirm Death
+      </button>
+    </div>
+
+  </div>
+</div>
   
 <!-- ========================================
      Scripts
