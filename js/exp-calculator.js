@@ -329,10 +329,10 @@ localStorage.setItem(
     if (
       !Number.isInteger(targetLevel) ||
       targetLevel <= currentLevel ||
-      targetLevel > 1000
+      targetLevel > 10000
     ) {
       showError(
-        "Target Level must be higher than Current Level and no higher than 1000."
+        "Target Level must be higher than Current Level and no higher than 10000."
       );
 
       return;
