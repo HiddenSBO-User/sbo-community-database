@@ -66,9 +66,7 @@
 
     currentLevel: "sboExpCurrentLevel",
     currentExp: "sboExpCurrentExp",
-    targetLevel: "sboExpTargetLevel",
-
-    resultsOpen: "sboExpResultsOpen"
+    targetLevel: "sboExpTargetLevel"
   };
 
 
@@ -334,9 +332,7 @@
   // Calculation
   // =========================================
 
-  function calculateExp(
-    saveResultsState = true
-  ) {
+  function calculateExp() {
     clearError();
 
     const currentLevel =
@@ -517,13 +513,6 @@
     elements.results.hidden =
       false;
 
-    if (saveResultsState) {
-      localStorage.setItem(
-        STORAGE_KEYS.resultsOpen,
-        "true"
-      );
-    }
-
     return true;
   }
 
@@ -548,7 +537,13 @@
 
   elements.doubleXp.addEventListener(
     "change",
-    saveSettings
+    () => {
+      saveSettings();
+
+      if (!elements.results.hidden) {
+        calculateExp();
+      }
+    }
   );
 
 
@@ -562,6 +557,10 @@
       );
 
       saveSettings();
+
+      if (!elements.results.hidden) {
+        calculateExp();
+      }
     }
   );
 
@@ -576,6 +575,10 @@
       );
 
       saveSettings();
+
+      if (!elements.results.hidden) {
+        calculateExp();
+      }
     }
   );
 
@@ -590,6 +593,10 @@
       );
 
       saveSettings();
+
+      if (!elements.results.hidden) {
+        calculateExp();
+      }
     }
   );
 
@@ -604,15 +611,17 @@
       );
 
       saveSettings();
+
+      if (!elements.results.hidden) {
+        calculateExp();
+      }
     }
   );
 
 
   elements.calculateButton.addEventListener(
     "click",
-    () => {
-      calculateExp(true);
-    }
+    calculateExp
   );
 
 
@@ -623,14 +632,20 @@
   ].forEach((input) => {
     input.addEventListener(
       "input",
-      saveSettings
+      () => {
+        saveSettings();
+
+        if (!elements.results.hidden) {
+          calculateExp();
+        }
+      }
     );
 
     input.addEventListener(
       "keydown",
       (event) => {
         if (event.key === "Enter") {
-          calculateExp(true);
+          calculateExp();
         }
       }
     );
@@ -691,11 +706,6 @@
     const savedTargetLevel =
       localStorage.getItem(
         STORAGE_KEYS.targetLevel
-      );
-
-    const savedResultsOpen =
-      localStorage.getItem(
-        STORAGE_KEYS.resultsOpen
       );
 
 
@@ -772,14 +782,15 @@
 
 
     // =========================================
-    // Restore Results
+    // Automatically Restore Results
     // =========================================
 
-    if (savedResultsOpen === "true") {
-      elements.results.hidden =
-        false;
+    const hasSavedProgress =
+      elements.currentLevel.value !== "" &&
+      elements.targetLevel.value !== "";
 
-      calculateExp(false);
+    if (hasSavedProgress) {
+      calculateExp();
     } else {
       elements.results.hidden =
         true;
