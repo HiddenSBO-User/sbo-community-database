@@ -415,6 +415,10 @@
 }
 
 .exp-result-card {
+  display: grid;
+  grid-template-rows: 44px auto;
+  align-content: start;
+
   min-height: 108px;
 
   padding: 17px;
@@ -425,27 +429,26 @@
 }
 
 .exp-result-card > span {
-  display: flex;
-  align-items: flex-start;
-
-  min-height: 32px;
+  display: block;
 
   color: var(--text-muted, #8f9bab);
 
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  line-height: 1.4;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
 .exp-result-card > strong {
   display: block;
+  align-self: start;
 
   margin-top: 12px;
 
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(19px, 2.2vw, 26px);
+  line-height: 1;
 }
 
 .exp-result-card-primary strong {
@@ -482,7 +485,6 @@
 .hidden {
   display: none !important;
 }
-
 
 /* =========================================
    Responsive
