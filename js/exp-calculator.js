@@ -41,6 +41,55 @@
 
 
   // =========================================
+  // Saved Settings
+  // =========================================
+
+  const STORAGE_KEYS = {
+    bossMode: "sboExpBossMode",
+    doubleXp: "sboExpDoubleXp",
+
+    boss1Group: "sboExpBoss1Group",
+    boss1Boss: "sboExpBoss1Boss",
+
+    boss2Group: "sboExpBoss2Group",
+    boss2Boss: "sboExpBoss2Boss"
+  };
+
+
+  function saveSettings() {
+    localStorage.setItem(
+      STORAGE_KEYS.bossMode,
+      String(bossMode)
+    );
+
+    localStorage.setItem(
+      STORAGE_KEYS.doubleXp,
+      String(elements.doubleXp.checked)
+    );
+
+    localStorage.setItem(
+      STORAGE_KEYS.boss1Group,
+      elements.boss1Group.value
+    );
+
+    localStorage.setItem(
+      STORAGE_KEYS.boss1Boss,
+      elements.boss1.value
+    );
+
+    localStorage.setItem(
+      STORAGE_KEYS.boss2Group,
+      elements.boss2Group.value
+    );
+
+    localStorage.setItem(
+      STORAGE_KEYS.boss2Boss,
+      elements.boss2.value
+    );
+  }
+
+
+  // =========================================
   // EXP Formula
   // =========================================
 
@@ -49,7 +98,11 @@
   }
 
 
-  function getRemainingExp(currentLevel, currentExp, targetLevel) {
+  function getRemainingExp(
+    currentLevel,
+    currentExp,
+    targetLevel
+  ) {
     let requiredExp = 0;
 
     for (
@@ -60,7 +113,10 @@
       requiredExp += getLevelExp(level);
     }
 
-    return Math.max(0, requiredExp - currentExp);
+    return Math.max(
+      0,
+      requiredExp - currentExp
+    );
   }
 
 
@@ -77,23 +133,37 @@
   }
 
 
-  function getSelectedBoss(groupSelect, bossSelect) {
-    const bossList = getBossGroup(groupSelect.value);
-    const bossIndex = Number(bossSelect.value);
+  function getSelectedBoss(
+    groupSelect,
+    bossSelect
+  ) {
+    const bossList =
+      getBossGroup(groupSelect.value);
+
+    const bossIndex =
+      Number(bossSelect.value);
 
     return bossList[bossIndex] || null;
   }
 
 
-  function populateBossDropdown(groupSelect, bossSelect, expDisplay) {
-    const bossList = getBossGroup(groupSelect.value);
+  function populateBossDropdown(
+    groupSelect,
+    bossSelect,
+    expDisplay,
+    savedBossIndex = null
+  ) {
+    const bossList =
+      getBossGroup(groupSelect.value);
 
     bossSelect.innerHTML = "";
 
     bossList.forEach((boss, index) => {
-      const option = document.createElement("option");
+      const option =
+        document.createElement("option");
 
-      option.value = String(index);
+      option.value =
+        String(index);
 
       const floorText = boss.floor
         ? `Floor ${boss.floor} · `
@@ -105,15 +175,39 @@
       bossSelect.appendChild(option);
     });
 
-    updateBossExpDisplay(groupSelect, bossSelect, expDisplay);
+    if (
+      savedBossIndex !== null &&
+      bossList[savedBossIndex]
+    ) {
+      bossSelect.value =
+        String(savedBossIndex);
+    } else {
+      bossSelect.value = "0";
+    }
+
+    updateBossExpDisplay(
+      groupSelect,
+      bossSelect,
+      expDisplay
+    );
   }
 
 
-  function updateBossExpDisplay(groupSelect, bossSelect, expDisplay) {
-    const boss = getSelectedBoss(groupSelect, bossSelect);
+  function updateBossExpDisplay(
+    groupSelect,
+    bossSelect,
+    expDisplay
+  ) {
+    const boss =
+      getSelectedBoss(
+        groupSelect,
+        bossSelect
+      );
 
     if (!boss) {
-      expDisplay.textContent = "0 EXP";
+      expDisplay.textContent =
+        "0 EXP";
+
       return;
     }
 
@@ -126,17 +220,23 @@
   // Boss Mode
   // =========================================
 
-  function setBossMode(mode) {
+  function setBossMode(
+    mode,
+    shouldSave = true
+  ) {
     bossMode = mode;
 
-    document.querySelectorAll(".exp-mode-button").forEach((button) => {
-      const buttonMode = Number(button.dataset.mode);
+    document
+      .querySelectorAll(".exp-mode-button")
+      .forEach((button) => {
+        const buttonMode =
+          Number(button.dataset.mode);
 
-      button.classList.toggle(
-        "active",
-        buttonMode === bossMode
-      );
-    });
+        button.classList.toggle(
+          "active",
+          buttonMode === bossMode
+        );
+      });
 
     elements.boss2Card.classList.toggle(
       "hidden",
@@ -157,6 +257,10 @@
       bossMode === 2
         ? "Rotations Required"
         : "Bosses Required";
+
+    if (shouldSave) {
+      saveSettings();
+    }
   }
 
 
@@ -182,9 +286,14 @@
   function calculateExp() {
     clearError();
 
-    const currentLevel = Number(elements.currentLevel.value);
-    const currentExp = Number(elements.currentExp.value || 0);
-    const targetLevel = Number(elements.targetLevel.value);
+    const currentLevel =
+      Number(elements.currentLevel.value);
+
+    const currentExp =
+      Number(elements.currentExp.value || 0);
+
+    const targetLevel =
+      Number(elements.targetLevel.value);
 
     if (
       !Number.isInteger(currentLevel) ||
@@ -194,6 +303,7 @@
       showError(
         "Enter a valid Current Level between 1 and 1000."
       );
+
       return;
     }
 
@@ -205,6 +315,7 @@
       showError(
         "Target Level must be higher than Current Level and no higher than 1000."
       );
+
       return;
     }
 
@@ -219,23 +330,30 @@
       showError(
         `Current EXP must be between 0 and ${numberFormatter.format(nextLevelRequirement - 1)}.`
       );
+
       return;
     }
 
-    const boss1 = getSelectedBoss(
-      elements.boss1Group,
-      elements.boss1
-    );
+    const boss1 =
+      getSelectedBoss(
+        elements.boss1Group,
+        elements.boss1
+      );
 
-    const boss2 = getSelectedBoss(
-      elements.boss2Group,
-      elements.boss2
-    );
+    const boss2 =
+      getSelectedBoss(
+        elements.boss2Group,
+        elements.boss2
+      );
 
-    if (!boss1 || boss1.exp <= 0) {
+    if (
+      !boss1 ||
+      boss1.exp <= 0
+    ) {
       showError(
         "Select an active Boss 1 with an EXP value above 0."
       );
+
       return;
     }
 
@@ -246,6 +364,7 @@
       showError(
         "Select an active Boss 2 with an EXP value above 0."
       );
+
       return;
     }
 
@@ -265,15 +384,18 @@
     const expPerRotation =
       boss1Exp + boss2Exp;
 
-    const remainingExp = getRemainingExp(
-      currentLevel,
-      currentExp,
-      targetLevel
-    );
+    const remainingExp =
+      getRemainingExp(
+        currentLevel,
+        currentExp,
+        targetLevel
+      );
 
-    const requiredRotations = Math.ceil(
-      remainingExp / expPerRotation
-    );
+    const requiredRotations =
+      Math.ceil(
+        remainingExp /
+        expPerRotation
+      );
 
     const totalBossKills =
       requiredRotations * bossMode;
@@ -284,16 +406,24 @@
     // =========================================
 
     elements.resultExpRemaining.textContent =
-      numberFormatter.format(remainingExp);
+      numberFormatter.format(
+        remainingExp
+      );
 
     elements.resultExpPerRotation.textContent =
-      numberFormatter.format(expPerRotation);
+      numberFormatter.format(
+        expPerRotation
+      );
 
     elements.resultCount.textContent =
-      numberFormatter.format(requiredRotations);
+      numberFormatter.format(
+        requiredRotations
+      );
 
     elements.resultTotalKills.textContent =
-      numberFormatter.format(totalBossKills);
+      numberFormatter.format(
+        totalBossKills
+      );
 
 
     let detailsHtml = `
@@ -311,7 +441,8 @@
       `;
     }
 
-    elements.resultDetails.innerHTML = detailsHtml;
+    elements.resultDetails.innerHTML =
+      detailsHtml;
 
     elements.results.hidden = false;
   }
@@ -321,47 +452,80 @@
   // Event Listeners
   // =========================================
 
-  document.querySelectorAll(".exp-mode-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      setBossMode(Number(button.dataset.mode));
+  document
+    .querySelectorAll(".exp-mode-button")
+    .forEach((button) => {
+      button.addEventListener(
+        "click",
+        () => {
+          setBossMode(
+            Number(button.dataset.mode)
+          );
+        }
+      );
     });
-  });
 
 
-  elements.boss1Group.addEventListener("change", () => {
-    populateBossDropdown(
-      elements.boss1Group,
-      elements.boss1,
-      elements.boss1Exp
-    );
-  });
+  elements.doubleXp.addEventListener(
+    "change",
+    saveSettings
+  );
 
 
-  elements.boss1.addEventListener("change", () => {
-    updateBossExpDisplay(
-      elements.boss1Group,
-      elements.boss1,
-      elements.boss1Exp
-    );
-  });
+  elements.boss1Group.addEventListener(
+    "change",
+    () => {
+      populateBossDropdown(
+        elements.boss1Group,
+        elements.boss1,
+        elements.boss1Exp
+      );
+
+      saveSettings();
+    }
+  );
 
 
-  elements.boss2Group.addEventListener("change", () => {
-    populateBossDropdown(
-      elements.boss2Group,
-      elements.boss2,
-      elements.boss2Exp
-    );
-  });
+  elements.boss1.addEventListener(
+    "change",
+    () => {
+      updateBossExpDisplay(
+        elements.boss1Group,
+        elements.boss1,
+        elements.boss1Exp
+      );
+
+      saveSettings();
+    }
+  );
 
 
-  elements.boss2.addEventListener("change", () => {
-    updateBossExpDisplay(
-      elements.boss2Group,
-      elements.boss2,
-      elements.boss2Exp
-    );
-  });
+  elements.boss2Group.addEventListener(
+    "change",
+    () => {
+      populateBossDropdown(
+        elements.boss2Group,
+        elements.boss2,
+        elements.boss2Exp
+      );
+
+      saveSettings();
+    }
+  );
+
+
+  elements.boss2.addEventListener(
+    "change",
+    () => {
+      updateBossExpDisplay(
+        elements.boss2Group,
+        elements.boss2,
+        elements.boss2Exp
+      );
+
+      saveSettings();
+    }
+  );
 
 
   elements.calculateButton.addEventListener(
@@ -375,78 +539,102 @@
     elements.currentExp,
     elements.targetLevel
   ].forEach((input) => {
-    input.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        calculateExp();
+    input.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "Enter") {
+          calculateExp();
+        }
       }
-    });
+    );
   });
 
 
   // =========================================
-  // Default Boss Selection
+  // Load Saved Settings
   // =========================================
 
-  elements.boss1Group.value = "floors16to19";
-  elements.boss2Group.value = "floors16to19";
+  function loadSavedSettings() {
+    const savedMode =
+      Number(
+        localStorage.getItem(
+          STORAGE_KEYS.bossMode
+        )
+      );
+
+    const savedDoubleXp =
+      localStorage.getItem(
+        STORAGE_KEYS.doubleXp
+      );
+
+    const savedBoss1Group =
+      localStorage.getItem(
+        STORAGE_KEYS.boss1Group
+      );
+
+    const savedBoss1Boss =
+      Number(
+        localStorage.getItem(
+          STORAGE_KEYS.boss1Boss
+        )
+      );
+
+    const savedBoss2Group =
+      localStorage.getItem(
+        STORAGE_KEYS.boss2Group
+      );
+
+    const savedBoss2Boss =
+      Number(
+        localStorage.getItem(
+          STORAGE_KEYS.boss2Boss
+        )
+      );
 
 
-  populateBossDropdown(
-    elements.boss1Group,
-    elements.boss1,
-    elements.boss1Exp
-  );
+    // First visit defaults to the beginning.
+    elements.boss1Group.value =
+      savedBoss1Group ||
+      "floors2to10";
+
+    elements.boss2Group.value =
+      savedBoss2Group ||
+      "floors2to10";
 
 
-  populateBossDropdown(
-    elements.boss2Group,
-    elements.boss2,
-    elements.boss2Exp
-  );
-
-
-  const floor16to19Bosses =
-    getBossGroup("floors16to19");
-
-
-  const thugBossIndex =
-    floor16to19Bosses.findIndex(
-      (boss) => boss.name === "Thug Boss"
+    populateBossDropdown(
+      elements.boss1Group,
+      elements.boss1,
+      elements.boss1Exp,
+      Number.isInteger(savedBoss1Boss)
+        ? savedBoss1Boss
+        : 0
     );
 
 
-  const loanSharkIndex =
-    floor16to19Bosses.findIndex(
-      (boss) => boss.name === "Loan Shark Boss"
+    populateBossDropdown(
+      elements.boss2Group,
+      elements.boss2,
+      elements.boss2Exp,
+      Number.isInteger(savedBoss2Boss)
+        ? savedBoss2Boss
+        : 0
     );
 
 
-  if (thugBossIndex >= 0) {
-    elements.boss1.value =
-      String(thugBossIndex);
+    elements.doubleXp.checked =
+      savedDoubleXp === "true";
+
+
+    setBossMode(
+      savedMode === 2
+        ? 2
+        : 1,
+      false
+    );
   }
 
 
-  if (loanSharkIndex >= 0) {
-    elements.boss2.value =
-      String(loanSharkIndex);
-  }
-
-
-  updateBossExpDisplay(
-    elements.boss1Group,
-    elements.boss1,
-    elements.boss1Exp
-  );
-
-
-  updateBossExpDisplay(
-    elements.boss2Group,
-    elements.boss2,
-    elements.boss2Exp
-  );
-
-
-  setBossMode(1);
+  loadSavedSettings();
 
 })();
