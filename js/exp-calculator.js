@@ -317,10 +317,10 @@ localStorage.setItem(
     if (
       !Number.isInteger(currentLevel) ||
       currentLevel < 1 ||
-      currentLevel > 1000
+      currentLevel > 10000
     ) {
       showError(
-        "Enter a valid Current Level between 1 and 1000."
+        "Enter a valid Current Level between 1 and 10000."
       );
 
       return;
