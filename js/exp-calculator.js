@@ -30,13 +30,20 @@
     error: document.getElementById("exp-error"),
 
     results: document.getElementById("exp-results"),
+
     resultExpRemaining: document.getElementById("result-exp-remaining"),
+    resultNextLevel: document.getElementById("result-next-level"),
+
     resultExpLabel: document.getElementById("result-exp-label"),
     resultExpPerRotation: document.getElementById("result-exp-per-rotation"),
+
+    resultCountCard: document.getElementById("result-count-card"),
     resultCountLabel: document.getElementById("result-count-label"),
     resultCount: document.getElementById("result-count"),
+
     resultTotalCard: document.getElementById("result-total-card"),
     resultTotalKills: document.getElementById("result-total-kills"),
+
     resultDetails: document.getElementById("result-details")
   };
 
@@ -281,6 +288,11 @@
       bossMode !== 2
     );
 
+    elements.resultCountCard.classList.toggle(
+      "hidden",
+      bossMode === 2
+    );
+
     elements.resultTotalCard.classList.toggle(
       "hidden",
       bossMode !== 2
@@ -292,9 +304,7 @@
         : "EXP Per Kill";
 
     elements.resultCountLabel.textContent =
-      bossMode === 2
-        ? "Rotations Required"
-        : "Bosses Required";
+      "Bosses Required";
 
     if (shouldSave) {
       saveSettings();
@@ -376,6 +386,12 @@
       return;
     }
 
+    const expTillNextLevel =
+      Math.max(
+        0,
+        nextLevelRequirement - currentExp
+      );
+
     const boss1 =
       getSelectedBoss(
         elements.boss1Group,
@@ -442,6 +458,15 @@
     const totalBossKills =
       requiredRotations * bossMode;
 
+    const nextLevelRotations =
+      Math.ceil(
+        expTillNextLevel /
+        expPerRotation
+      );
+
+    const nextLevelBossKills =
+      nextLevelRotations * bossMode;
+
 
     // =========================================
     // Results
@@ -451,6 +476,9 @@
       numberFormatter.format(
         remainingExp
       );
+
+    elements.resultNextLevel.textContent =
+      `${numberFormatter.format(expTillNextLevel)} / ${numberFormatter.format(nextLevelBossKills)}`;
 
     elements.resultExpPerRotation.textContent =
       numberFormatter.format(
