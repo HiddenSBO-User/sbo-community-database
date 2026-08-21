@@ -8,6 +8,7 @@ A fan-made community database containing:
 - Gear list
 - Blacksmith crafting tracker
 - Material tracking
+- EXP Calculator
 
 Created by HiddenSBO-User
 
