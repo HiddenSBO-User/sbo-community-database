@@ -983,10 +983,12 @@ button.exp-died-button:active {
     grid-template-columns: 1fr;
   }
 
-  .exp-formula-card {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
+  .exp-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-info-card {
+    min-height: auto;
   }
 
   .exp-progress-controls {
@@ -1031,6 +1033,20 @@ button.exp-died-button:active {
 
   .exp-mode-button {
     flex: 1;
+  }
+
+  .exp-info-grid {
+    gap: 10px;
+  }
+
+  .exp-info-card {
+    padding: 13px 14px;
+  }
+
+  .exp-info-formula-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .exp-progress-controls {
