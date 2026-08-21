@@ -415,11 +415,9 @@
 }
 
 .exp-result-card {
-  display: grid;
-  grid-template-rows: 44px auto;
-  align-content: start;
+  position: relative;
 
-  min-height: 108px;
+  min-height: 120px;
 
   padding: 17px;
 
@@ -431,6 +429,8 @@
 .exp-result-card > span {
   display: block;
 
+  max-width: 100%;
+
   color: var(--text-muted, #8f9bab);
 
   font-size: 11px;
@@ -441,10 +441,11 @@
 }
 
 .exp-result-card > strong {
-  display: block;
-  align-self: start;
+  position: absolute;
+  left: 17px;
+  bottom: 17px;
 
-  margin-top: 12px;
+  display: block;
 
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(19px, 2.2vw, 26px);
