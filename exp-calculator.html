@@ -88,7 +88,10 @@
           <div class="exp-formula-label">EXP Curve</div>
           <div class="exp-formula-value">3x² + 9x - 3</div>
         </div>
-        <div class="exp-formula-level">x = Level</div>
+
+        <div class="exp-formula-level">
+          x = Level
+        </div>
       </div>
     </section>
 
@@ -100,6 +103,7 @@
       <div class="exp-section-heading">
         <div class="exp-section-heading-main">
           <div class="exp-section-number">01</div>
+
           <div>
             <h2>Farming Setup</h2>
             <p>Select whether you farm one boss or rotate between two bosses.</p>
@@ -108,13 +112,20 @@
       </div>
 
       <div class="exp-mode-toggle">
-        <button type="button" class="exp-mode-button active" data-mode="1">1 Boss</button>
-        <button type="button" class="exp-mode-button" data-mode="2">2 Bosses</button>
+        <button type="button" class="exp-mode-button active" data-mode="1">
+          1 Boss
+        </button>
+
+        <button type="button" class="exp-mode-button" data-mode="2">
+          2 Bosses
+        </button>
       </div>
 
       <div class="exp-boss-grid">
 
-        <!-- Boss 1 -->
+        <!-- ========================================
+             Boss 1
+             ======================================== -->
 
         <div class="exp-boss-card">
           <div class="exp-boss-card-heading">
@@ -124,6 +135,7 @@
 
           <label class="exp-field">
             <span>Floor Range</span>
+
             <select id="boss-1-group">
               <option value="floors2to10">Floors 2–10</option>
               <option value="floors11to15">Floors 11–15</option>
@@ -143,7 +155,9 @@
           </div>
         </div>
 
-        <!-- Boss 2 -->
+        <!-- ========================================
+             Boss 2
+             ======================================== -->
 
         <div class="exp-boss-card hidden" id="boss-2-card">
           <div class="exp-boss-card-heading">
@@ -153,6 +167,7 @@
 
           <label class="exp-field">
             <span>Floor Range</span>
+
             <select id="boss-2-group">
               <option value="floors2to10">Floors 2–10</option>
               <option value="floors11to15">Floors 11–15</option>
@@ -171,6 +186,7 @@
             <strong id="boss-2-exp">0 EXP</strong>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -182,6 +198,7 @@
       <div class="exp-section-heading">
         <div class="exp-section-heading-main">
           <div class="exp-section-number">02</div>
+
           <div>
             <h2>Level Progress</h2>
             <p>Enter your current level, current EXP, and target level.</p>
@@ -211,35 +228,39 @@
       </p>
 
       <!-- ========================================
-     Progress Controls
-     ======================================== -->
+           Progress Controls
+           ======================================== -->
 
-<div class="exp-progress-controls">
+      <div class="exp-progress-controls">
 
-  <button type="button" class="exp-levelled-button" id="levelled-button">
-    I Levelled
-  </button>
+        <button type="button" class="exp-levelled-button" id="levelled-button">
+          I Levelled
+        </button>
 
-  <div class="exp-double-xp-control">
-    <div>
-      <strong>2× EXP</strong>
-      <span>Apply double EXP to selected bosses.</span>
-    </div>
+        <div class="exp-double-xp-control">
+          <div>
+            <strong>2× EXP</strong>
+            <span>Apply double EXP to selected bosses.</span>
+          </div>
 
-    <label class="exp-switch">
-      <input type="checkbox" id="doubleXp">
-      <span class="exp-switch-track">
-        <span class="exp-switch-thumb"></span>
-      </span>
-    </label>
-  </div>
+          <label class="exp-switch">
+            <input type="checkbox" id="doubleXp">
 
-  <button type="button" class="exp-died-button" id="died-button">
-    I Died
-  </button>
+            <span class="exp-switch-track">
+              <span class="exp-switch-thumb"></span>
+            </span>
+          </label>
+        </div>
 
-</div>
-      
+        <button type="button" class="exp-died-button" id="died-button">
+          I Died
+        </button>
+
+      </div>
+
+      <p class="exp-error" id="exp-error" role="alert"></p>
+    </section>
+
     <!-- ========================================
          Results
          ======================================== -->
@@ -248,6 +269,7 @@
       <div class="exp-section-heading">
         <div class="exp-section-heading-main">
           <div class="exp-section-number">03</div>
+
           <div>
             <h2>Results</h2>
             <p>Your farming requirements based on the selected setup.</p>
@@ -302,7 +324,7 @@
 </div>
 
 <!-- ========================================
-     Levelled Boss Selection Modal
+     I Levelled Boss Selection Modal
      ======================================== -->
 
 <div class="exp-modal-backdrop" id="levelled-modal" hidden>
@@ -341,6 +363,7 @@
 
   </div>
 </div>
+
 <!-- ========================================
      Death Confirmation Modal
      ======================================== -->
@@ -398,7 +421,7 @@
 
   </div>
 </div>
-  
+
 <!-- ========================================
      Scripts
      ======================================== -->
