@@ -111,8 +111,6 @@
 }
 
 
-
-
 /* =========================================
    Farming Mode
    ========================================= */
@@ -283,28 +281,6 @@
   font-size: 12px;
 }
 
-.exp-calculate-button {
-  width: 100%;
-  min-height: 48px;
-
-  margin-top: 20px;
-
-  color: #ffffff;
-  background: var(--accent, #4a9eff);
-  border: 0;
-  border-radius: 9px;
-
-  font-family: "Sora", sans-serif;
-  font-size: 13px;
-  font-weight: 800;
-
-  cursor: pointer;
-}
-
-.exp-calculate-button:hover {
-  filter: brightness(1.08);
-}
-
 .exp-error {
   min-height: 18px;
 
@@ -314,6 +290,7 @@
 
   font-size: 13px;
 }
+
 
 /* =========================================
    Level Progress Controls
@@ -365,7 +342,6 @@
   position: relative;
 
   display: inline-flex;
-
   flex: 0 0 auto;
 
   cursor: pointer;
@@ -426,6 +402,7 @@
 .exp-switch input:focus-visible + .exp-switch-track {
   box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.12);
 }
+
 
 /* =========================================
    Results
@@ -531,11 +508,6 @@
     flex-direction: column;
   }
 
-  .exp-xp-toggle {
-    width: 100%;
-    justify-content: space-between;
-  }
-
   .exp-mode-toggle {
     display: flex;
     width: 100%;
@@ -543,5 +515,11 @@
 
   .exp-mode-button {
     flex: 1;
+  }
+
+  .exp-double-xp-control {
+    gap: 14px;
+
+    padding: 12px 14px;
   }
 }
