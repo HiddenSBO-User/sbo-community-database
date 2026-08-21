@@ -300,6 +300,51 @@
 </div>
 
 <!-- ========================================
+     Levelled Boss Selection Modal
+     ======================================== -->
+
+<div class="exp-modal-backdrop" id="levelled-modal" hidden>
+  <div class="exp-modal" role="dialog" aria-modal="true" aria-labelledby="levelled-modal-title">
+
+    <div class="exp-modal-heading">
+      <div>
+        <h2 id="levelled-modal-title">Which boss did you defeat?</h2>
+        <p>Select the boss that caused you to level up.</p>
+      </div>
+
+      <button type="button" class="exp-modal-close" id="levelled-modal-close" aria-label="Close">
+        ×
+      </button>
+    </div>
+
+    <div class="exp-levelled-boss-options">
+
+      <button type="button" class="exp-levelled-boss-button" id="levelled-boss-1">
+        <span class="exp-levelled-boss-label">Boss 1</span>
+        <strong id="levelled-boss-1-name">Boss 1</strong>
+        <span id="levelled-boss-1-exp">0 EXP</span>
+      </button>
+
+      <button type="button" class="exp-levelled-boss-button" id="levelled-boss-2">
+        <span class="exp-levelled-boss-label">Boss 2</span>
+        <strong id="levelled-boss-2-name">Boss 2</strong>
+        <span id="levelled-boss-2-exp">0 EXP</span>
+      </button>
+
+    </div>
+
+    <button type="button" class="exp-modal-cancel" id="levelled-modal-cancel">
+      Cancel
+    </button>
+
+  </div>
+</div>
+
+<!-- ========================================
+     Scripts
+     ======================================== -->
+  
+<!-- ========================================
      Scripts
      ======================================== -->
 
