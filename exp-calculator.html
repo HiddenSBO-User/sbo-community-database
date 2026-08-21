@@ -197,21 +197,21 @@
       <div class="exp-level-grid">
         <label class="exp-field">
           <span>Current Level</span>
-          <input type="number" id="current-level" min="1" max="1000" step="1" placeholder="474">
+          <input type="number" id="current-level" min="1" max="10000" step="1">
         </label>
 
         <label class="exp-field">
           <span>Current EXP</span>
-          <input type="number" id="current-exp" min="0" step="1" placeholder="290511">
+          <input type="number" id="current-exp" min="0" step="1">
         </label>
 
         <label class="exp-field">
           <span>Target Level</span>
-          <input type="number" id="target-level" min="2" max="1000" step="1" placeholder="500">
+          <input type="number" id="target-level" min="2" max="10000" step="1">
         </label>
       </div>
 
-      <p class="exp-current-note">Current EXP is the EXP already earned inside your current level.</p>
+      <p class="exp-current-note">Current EXP is the total EXP you have at your current Level.</p>
       <button type="button" class="exp-calculate-button" id="calculate-exp">Calculate</button>
       <p class="exp-error" id="exp-error" role="alert"></p>
     </section>
