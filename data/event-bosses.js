@@ -1,0 +1,1 @@
+window.SBO_EVENT_BOSSES=[{name:"N/A ATM",exp:0}];
