@@ -369,18 +369,24 @@
    ========================================= */
 
 .exp-level-progress-heading {
+  position: relative;
+
   align-items: flex-start;
+
+  /* Leave room on the right for two tracker buttons */
+  padding-right: 250px;
+  min-height: 66px;
 }
 
 .exp-kill-trackers {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
   gap: 7px;
-
-  flex: 0 0 auto;
-
-  margin-left: auto;
 }
 
 button.exp-kill-tracker {
@@ -388,8 +394,8 @@ button.exp-kill-tracker {
   align-items: flex-start;
   flex-direction: column;
 
-  width: 118px;
-  min-width: 118px;
+  width: 115px;
+  min-width: 115px;
 
   padding: 7px 9px;
 
@@ -466,7 +472,6 @@ button.exp-kill-tracker:active {
   font-weight: 600;
   text-transform: uppercase;
 }
-
 /* =========================================
    Level Inputs
    ========================================= */
