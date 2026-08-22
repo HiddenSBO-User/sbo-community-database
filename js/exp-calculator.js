@@ -470,21 +470,23 @@
     }
   }
 
-  function recordSessionEvent(event) {
-    const timestamp = Date.now();
+ function recordSessionEvent(event) {
+  const timestamp = Date.now();
 
-    trackSessionActivity(
-      timestamp
-    );
+  trackSessionActivity(
+    timestamp
+  );
 
-    sessionState.events.push({
-      ...event,
-      timestamp
-    });
+  sessionState.events.push({
+    ...event,
+    timestamp
+  });
 
-    renderSessionTracking();
-  }
+  saveSession();
 
+  renderSessionTracking();
+}
+  
   function recordKill(boss, gainedExp, levelBefore, levelAfter, doubleXpUsed) {
     sessionState.bossKills += 1;
     sessionState.expGained += gainedExp;
@@ -566,34 +568,37 @@
   // Saved Settings
   // =========================================
 
-  const STORAGE_KEYS = {
-    bossMode:
-      "sboExpBossMode",
+const STORAGE_KEYS = {
+  bossMode:
+    "sboExpBossMode",
 
-    doubleXp:
-      "sboExpDoubleXp",
+  doubleXp:
+    "sboExpDoubleXp",
 
-    boss1Group:
-      "sboExpBoss1Group",
+  boss1Group:
+    "sboExpBoss1Group",
 
-    boss1Boss:
-      "sboExpBoss1Boss",
+  boss1Boss:
+    "sboExpBoss1Boss",
 
-    boss2Group:
-      "sboExpBoss2Group",
+  boss2Group:
+    "sboExpBoss2Group",
 
-    boss2Boss:
-      "sboExpBoss2Boss",
+  boss2Boss:
+    "sboExpBoss2Boss",
 
-    currentLevel:
-      "sboExpCurrentLevel",
+  currentLevel:
+    "sboExpCurrentLevel",
 
-    currentExp:
-      "sboExpCurrentExp",
+  currentExp:
+    "sboExpCurrentExp",
 
-    targetLevel:
-      "sboExpTargetLevel"
-  };
+  targetLevel:
+    "sboExpTargetLevel",
+
+  session:
+    "sboExpSessionV1"
+};
 
 
   function saveSettings() {
@@ -2660,13 +2665,83 @@ if (
     recalculateIfReady();
   }
 
+// =========================================
+// Session Persistence
+// =========================================
+
+function saveSession() {
+  try {
+    localStorage.setItem(
+      STORAGE_KEYS.session,
+      JSON.stringify(sessionState)
+    );
+  } catch (error) {
+    console.warn(
+      "Could not save session:",
+      error
+    );
+  }
+}
 
 
+function loadSession() {
+  try {
+    const saved =
+      localStorage.getItem(
+        STORAGE_KEYS.session
+      );
+
+    if (!saved) {
+      return;
+    }
+
+    const data =
+      JSON.parse(saved);
+
+    sessionState.bossKills =
+      Number(data.bossKills) || 0;
+
+    sessionState.expGained =
+      Number(data.expGained) || 0;
+
+    sessionState.levelsGained =
+      Number(data.levelsGained) || 0;
+
+    sessionState.deaths =
+      Number(data.deaths) || 0;
+
+    sessionState.expLost =
+      Number(data.expLost) || 0;
+
+    sessionState.activeTimeMs =
+      Number(data.activeTimeMs) || 0;
+
+    sessionState.startedAt =
+      data.startedAt || null;
+
+    sessionState.lastActivityAt =
+      data.lastActivityAt || null;
+
+    sessionState.events =
+      Array.isArray(data.events)
+        ? data.events
+        : [];
+
+  } catch (error) {
+    console.warn(
+      "Could not load session:",
+      error
+    );
+  }
+}
+  
 // =========================================
 // Initialization
 // =========================================
 
 loadSavedSettings();
+
+loadSession();
 
 renderSessionTracking();
 
