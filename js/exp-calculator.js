@@ -2233,52 +2233,76 @@ if (
   }
 
 
-  // =========================================
-  // Initialization
-  // =========================================
-
-  loadSavedSettings();
-
-// =========================================
+ // =========================================
 // Activity & Session Log Tabs
 // =========================================
 
-const activityTabs =
-  document.querySelectorAll(".exp-activity-tab");
+function setupActivityTabs() {
+  const activityTabs =
+    document.querySelectorAll(
+      ".exp-activity-tab"
+    );
 
-const activityPanels =
-  document.querySelectorAll(".exp-activity-panel");
+  const activityPanels =
+    document.querySelectorAll(
+      ".exp-activity-panel"
+    );
 
-activityTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const selectedTab =
-      tab.dataset.activityTab;
+  activityTabs.forEach(
+    (tab) => {
+      tab.addEventListener(
+        "click",
+        () => {
+          const selectedTab =
+            tab.dataset.activityTab;
 
-    // Remove active state from all tabs
-    activityTabs.forEach((button) => {
-      button.classList.remove("active");
-    });
+          activityTabs.forEach(
+            (button) => {
+              button.classList.remove(
+                "active"
+              );
+            }
+          );
 
-    // Hide all activity panels
-    activityPanels.forEach((panel) => {
-      panel.hidden = true;
-      panel.classList.remove("active");
-    });
+          activityPanels.forEach(
+            (panel) => {
+              panel.hidden = true;
+              panel.classList.remove(
+                "active"
+              );
+            }
+          );
 
-    // Activate clicked tab
-    tab.classList.add("active");
+          tab.classList.add(
+            "active"
+          );
 
-    // Find matching panel
-    const selectedPanel =
-      document.querySelector(
-        `[data-activity-panel="${selectedTab}"]`
+          const selectedPanel =
+            document.querySelector(
+              `[data-activity-panel="${selectedTab}"]`
+            );
+
+          if (selectedPanel) {
+            selectedPanel.hidden =
+              false;
+
+            selectedPanel.classList.add(
+              "active"
+            );
+          }
+        }
       );
-
-    if (selectedPanel) {
-      selectedPanel.hidden = false;
-      selectedPanel.classList.add("active");
     }
-  });
-});
-  
+  );
+}
+
+
+// =========================================
+// Initialization
+// =========================================
+
+loadSavedSettings();
+
+setupActivityTabs();
+
 })();
