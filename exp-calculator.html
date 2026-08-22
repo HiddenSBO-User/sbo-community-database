@@ -387,6 +387,273 @@
       <div class="exp-rounding-note">
         Boss requirements are always rounded up so the displayed amount is enough to reach the target.
       </div>
+
+    </section>
+
+    <!-- ========================================
+         Activity & Session Logs
+         ======================================== -->
+
+    <section class="exp-section-card" id="activity-section">
+
+      <div class="exp-section-heading">
+        <div class="exp-section-heading-main">
+          <div class="exp-section-number">04</div>
+
+          <div>
+            <h2>Activity & Session Logs</h2>
+            <p>Track your farming activity, deaths, kills, and level progress.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           Activity Tabs
+           ======================================== -->
+
+      <div class="exp-activity-tabs">
+        <button
+          type="button"
+          class="exp-activity-tab active"
+          data-activity-tab="overview"
+        >
+          Overview
+        </button>
+
+        <button
+          type="button"
+          class="exp-activity-tab"
+          data-activity-tab="session"
+        >
+          Session Log
+        </button>
+
+        <button
+          type="button"
+          class="exp-activity-tab"
+          data-activity-tab="deaths"
+        >
+          Death History
+        </button>
+
+        <button
+          type="button"
+          class="exp-activity-tab"
+          data-activity-tab="kills"
+        >
+          Kill / Level History
+        </button>
+      </div>
+
+
+      <!-- ========================================
+           Overview
+           ======================================== -->
+
+      <div
+        class="exp-activity-panel active"
+        id="activity-overview"
+        data-activity-panel="overview"
+      >
+
+        <div class="exp-activity-panel-heading">
+          <div>
+            <span class="exp-activity-panel-label">Session Overview</span>
+            <h3>Current Farming Session</h3>
+          </div>
+        </div>
+
+        <div class="exp-activity-stats-grid">
+
+          <div class="exp-activity-stat">
+            <span>Boss Kills</span>
+            <strong id="activity-boss-kills">0</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>EXP Gained</span>
+            <strong id="activity-exp-gained">0</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>Levels Gained</span>
+            <strong id="activity-levels-gained">0</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>Deaths</span>
+            <strong id="activity-deaths">0</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>EXP Lost</span>
+            <strong id="activity-exp-lost">0</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>Active Time</span>
+            <strong id="activity-active-time">00:00:00</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>EXP / Hour</span>
+            <strong id="activity-exp-hour">0</strong>
+          </div>
+
+          <div class="exp-activity-stat">
+            <span>Kills / Hour</span>
+            <strong id="activity-kills-hour">0</strong>
+          </div>
+
+        </div>
+
+        <div class="exp-activity-session-details">
+
+          <div>
+            <span>Session Started</span>
+            <strong id="activity-session-started">—</strong>
+          </div>
+
+          <div>
+            <span>Last Activity</span>
+            <strong id="activity-last-activity">—</strong>
+          </div>
+
+        </div>
+
+        <div class="exp-activity-subsection">
+          <div class="exp-activity-subsection-heading">
+            <h4>Recent Activity</h4>
+          </div>
+
+          <div
+            class="exp-activity-empty"
+            id="activity-recent-empty"
+          >
+            No activity recorded yet.
+          </div>
+
+          <div
+            class="exp-activity-list hidden"
+            id="activity-recent-list"
+          ></div>
+        </div>
+
+      </div>
+
+
+      <!-- ========================================
+           Session Log
+           ======================================== -->
+
+      <div
+        class="exp-activity-panel"
+        id="activity-session"
+        data-activity-panel="session"
+        hidden
+      >
+
+        <div class="exp-activity-panel-heading">
+          <div>
+            <span class="exp-activity-panel-label">Full Timeline</span>
+            <h3>Session Log</h3>
+          </div>
+        </div>
+
+        <div
+          class="exp-activity-empty"
+          id="activity-session-empty"
+        >
+          Your session log will appear here after you begin tracking activity.
+        </div>
+
+        <div
+          class="exp-activity-list exp-activity-scroll hidden"
+          id="activity-session-list"
+        ></div>
+
+      </div>
+
+
+      <!-- ========================================
+           Death History
+           ======================================== -->
+
+      <div
+        class="exp-activity-panel"
+        id="activity-deaths"
+        data-activity-panel="deaths"
+        hidden
+      >
+
+        <div class="exp-activity-panel-heading">
+          <div>
+            <span class="exp-activity-panel-label">Recorded Deaths</span>
+            <h3>Death History</h3>
+          </div>
+
+          <span class="exp-activity-count" id="activity-death-count">
+            0 Deaths
+          </span>
+        </div>
+
+        <div
+          class="exp-activity-empty"
+          id="activity-deaths-empty"
+        >
+          No deaths recorded this session.
+        </div>
+
+        <div
+          class="exp-activity-list exp-activity-scroll hidden"
+          id="activity-deaths-list"
+        ></div>
+
+      </div>
+
+
+      <!-- ========================================
+           Kill / Level History
+           ======================================== -->
+
+      <div
+        class="exp-activity-panel"
+        id="activity-kills"
+        data-activity-panel="kills"
+        hidden
+      >
+
+        <div class="exp-activity-panel-heading">
+          <div>
+            <span class="exp-activity-panel-label">Farming Progress</span>
+            <h3>Kill / Level History</h3>
+          </div>
+
+          <span class="exp-activity-count" id="activity-kill-count">
+            0 Events
+          </span>
+        </div>
+
+        <div
+          class="exp-activity-empty"
+          id="activity-kills-empty"
+        >
+          No kills or level-ups recorded this session.
+        </div>
+
+        <div
+          class="exp-activity-list exp-activity-scroll hidden"
+          id="activity-kills-list"
+        ></div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================
+         Footer
+         ======================================== -->
+      
     </section>
 
     <!-- ========================================
