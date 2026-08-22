@@ -2233,69 +2233,6 @@ if (
   }
 
 
- // =========================================
-// Activity & Session Log Tabs
-// =========================================
-
-function setupActivityTabs() {
-  const activityTabs =
-    document.querySelectorAll(
-      ".exp-activity-tab"
-    );
-
-  const activityPanels =
-    document.querySelectorAll(
-      ".exp-activity-panel"
-    );
-
-  activityTabs.forEach(
-    (tab) => {
-      tab.addEventListener(
-        "click",
-        () => {
-          const selectedTab =
-            tab.dataset.activityTab;
-
-          activityTabs.forEach(
-            (button) => {
-              button.classList.remove(
-                "active"
-              );
-            }
-          );
-
-          activityPanels.forEach(
-            (panel) => {
-              panel.hidden = true;
-              panel.classList.remove(
-                "active"
-              );
-            }
-          );
-
-          tab.classList.add(
-            "active"
-          );
-
-          const selectedPanel =
-            document.querySelector(
-              `[data-activity-panel="${selectedTab}"]`
-            );
-
-          if (selectedPanel) {
-            selectedPanel.hidden =
-              false;
-
-            selectedPanel.classList.add(
-              "active"
-            );
-          }
-        }
-      );
-    }
-  );
-}
-
 
 // =========================================
 // Initialization
