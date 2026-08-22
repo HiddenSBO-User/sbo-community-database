@@ -1469,6 +1469,15 @@ button.exp-activity-tab.active {
     margin-left: auto;
     justify-content: flex-end;
   }
+     /* Activity & Session Logs */
+
+  .exp-activity-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .exp-activity-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 
@@ -1575,5 +1584,64 @@ button.exp-activity-tab.active {
   button.exp-kill-tracker {
     width: 100%;
     min-width: 0;
+  }
+     /* Activity & Session Logs */
+
+  .exp-activity-panel {
+    padding: 14px;
+  }
+
+  .exp-activity-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  button.exp-activity-tab {
+    min-height: 38px;
+    padding: 8px 7px;
+
+    font-size: 10px;
+  }
+
+  .exp-activity-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .exp-activity-stat {
+    min-height: 84px;
+    padding: 12px;
+  }
+
+  .exp-activity-stat > strong {
+    left: 12px;
+    bottom: 12px;
+
+    font-size: 16px;
+  }
+
+  .exp-activity-session-details {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-activity-session-details > div {
+    gap: 12px;
+  }
+
+  .exp-activity-panel-heading {
+    align-items: flex-start;
+  }
+
+  .exp-activity-entry {
+    grid-template-columns: 58px minmax(0, 1fr) auto;
+    gap: 8px;
+
+    padding: 11px 10px;
+  }
+
+  .exp-activity-entry-type {
+    display: none;
+  }
+
+  .exp-activity-scroll {
+    max-height: 320px;
   }
 }
